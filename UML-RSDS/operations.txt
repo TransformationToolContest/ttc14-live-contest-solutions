@@ -1,0 +1,48 @@
+Operations are:
+*** Operations of entity Ball:
+blueTeamhasBall(): boolean
+pre: true
+post: player.size > 0 & "RED" /: player.team => result = true
+
+
+*** Operations of entity AbstractField:
+*** Operations of entity SoccerPitch:
+*** Operations of entity Player:
+cmaction(u: Update,theball: Ball)
+pre: true
+post: ( ball.size > 0 & field.xPos < 39 => MovePlayer->exists( m | m.playerNumber = number & m.xDist = 2 & m.yDist = 0 & m : u.actions ) ) & ( ball.size > 0 & field.xPos >= 39 => ShootBall->exists( m | m.playerNumber = number & m.xDist = 44 - field.xPos & m.yDist = 0 & m : u.actions ) ) & ( theball.blueTeamhasBall() = false => moveToBall(u,theball) )
+
+
+withinShootingDist(x: int,y: int): boolean
+pre: true
+post: ( field.xPos - x <= 7 & field.xPos - x >= -7 & field.yPos - y <= 7 & field.yPos - y >= -7 => result = true ) & ( field.xPos - x > 7 or field.xPos - x < -7 or field.yPos - y > 7 or field.yPos - y < -7 => result = false )
+
+
+goalkeeperaction(u: Update)
+pre: true
+post: ( ball.size > 0 => ShootBall->exists( a | a.playerNumber = number & a.xDist = 7 & a.yDist = -3 & a : u.actions ) & MovePlayer->exists( m | m.playerNumber = 5 & m.xDist = -3 & m.yDist = -3 & m : u.actions ) )
+
+
+defenderaction(u: Update,theball: Ball)
+pre: true
+post: ( ball.size > 0 & field.xPos < 22 => MovePlayer->exists( m | m.playerNumber = number & m.xDist = 2 & m.yDist = 0 & m : u.actions ) ) & ( ball.size > 0 & field.xPos >= 22 & field.yPos <= 12 => ShootBall->exists( s | s.playerNumber = number & s.xDist = 0 & s.yDist = 4 & s : u.actions ) ) & ( ball.size > 0 & field.xPos >= 22 & field.yPos > 12 => ShootBall->exists( s1 | s1.playerNumber = number & s1.xDist = 0 & s1.yDist = -4 & s1 : u.actions ) ) & ( ball.size = 0 & theball.blueTeamhasBall() & field.xPos < 22 => MovePlayer->exists( mp | mp.playerNumber = number & mp.xDist = 2 & mp.yDist = 0 & mp : u.actions ) ) & ( theball.blueTeamhasBall() = false => moveToBall(u,theball) )
+
+
+moveToBall(u: Update,b: Ball)
+pre: true
+post: ( field.xPos > b.field.xPos & field.yPos > b.field.yPos => MovePlayer->exists( mp | mp.playerNumber = number & mp.xDist = -Set{( field.xPos - b.field.xPos ),3}->min() & mp.yDist = -Set{( field.yPos - b.field.yPos ),3}->min() & mp : u.actions ) ) & ( field.xPos > b.field.xPos & field.yPos <= b.field.yPos => MovePlayer->exists( mp1 | mp1.playerNumber = number & mp1.xDist = -Set{( field.xPos - b.field.xPos ),3}->min() & mp1.yDist = Set{( b.field.yPos - field.yPos ),3}->min() & mp1 : u.actions ) ) & ( field.xPos <= b.field.xPos & field.yPos > b.field.yPos => MovePlayer->exists( mp2 | mp2.playerNumber = number & mp2.xDist = Set{( b.field.xPos - field.xPos ),3}->min() & mp2.yDist = -Set{( field.yPos - b.field.yPos ),3}->min() & mp2 : u.actions ) ) & ( field.xPos <= b.field.xPos & field.yPos <= b.field.yPos => MovePlayer->exists( mp3 | mp3.playerNumber = number & mp3.xDist = Set{( b.field.xPos - field.xPos ),3}->min() & mp3.yDist = Set{( b.field.yPos - field.yPos ),3}->min() & mp3 : u.actions ) )
+
+
+midfielderaction(u: Update,theball: Ball)
+pre: true
+post: ( ball.size > 0 & field.xPos >= 37 & 2 <= field.yPos & field.yPos <= 22 => ShootBall->exists( sb | sb.playerNumber = number & sb.xDist = 44 - field.xPos & sb.yDist = Set{( 22 - field.yPos ),( field.yPos - 2 )}->min() & sb : u.actions ) ) & ( ball.size > 0 & field.xPos < 37 => MovePlayer->exists( mp | mp.playerNumber = number & mp.xDist = 2 & mp.yDist = 0 & mp : u.actions ) ) & ( ball.size > 0 & field.xPos >= 37 & field.yPos < 2 => MovePlayer->exists( mp1 | mp1.playerNumber = number & mp1.xDist = 0 & mp1.yDist = 2 & mp1 : u.actions ) ) & ( ball.size > 0 & field.xPos >= 37 & field.yPos > 22 => MovePlayer->exists( mp2 | mp2.playerNumber = number & mp2.xDist = 0 & mp2.yDist = -2 & mp2 : u.actions ) ) & ( ball.size = 0 & field.xPos < 42 & theball.blueTeamhasBall() => MovePlayer->exists( mp3 | mp3.playerNumber = number & mp3.xDist = 2 & mp3.yDist = 0 & mp3 : u.actions ) ) & ( theball.blueTeamhasBall() = false => moveToBall(u,theball) )
+
+
+*** Operations of entity FieldPlayer:
+*** Operations of entity GoalKeeper:
+*** Operations of entity GoalField:
+*** Operations of entity Field:
+*** Operations of entity Update:
+*** Operations of entity Action:
+*** Operations of entity MovePlayer:
+*** Operations of entity ShootBall:

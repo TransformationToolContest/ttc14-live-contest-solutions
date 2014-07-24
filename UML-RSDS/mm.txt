@@ -1,0 +1,202 @@
+Entity:
+Ball 190 36
+null  * 
+
+
+Operation:
+blueTeamhasBall
+Ball
+boolean
+
+ query
+true
+player.size > 0 & "RED" /: player.team => result = true
+
+
+Entity:
+AbstractField 59 129
+null  * abstract 
+xPos int 3 false false false yPos int 3 false false false
+
+Entity:
+SoccerPitch 224 135
+null  * 
+
+
+Entity:
+Player 396 162
+null  * abstract 
+team String 3 false false false number int 3 false false false
+
+Operation:
+cmaction
+Player
+void
+u Update theball Ball
+
+true
+( ball.size > 0 & field.xPos < 39 => MovePlayer->exists( m | m.playerNumber = number & m.xDist = 2 & m.yDist = 0 & m : u.actions ) ) & ( ball.size > 0 & field.xPos >= 39 => ShootBall->exists( m | m.playerNumber = number & m.xDist = 44 - field.xPos & m.yDist = 0 & m : u.actions ) ) & ( theball.blueTeamhasBall() = false => moveToBall(u,theball) )
+
+
+Operation:
+withinShootingDist
+Player
+boolean
+x int y int 
+ query
+true
+( field.xPos - x <= 7 & field.xPos - x >= -7 & field.yPos - y <= 7 & field.yPos - y >= -7 => result = true ) & ( field.xPos - x > 7 or field.xPos - x < -7 or field.yPos - y > 7 or field.yPos - y < -7 => result = false )
+
+
+Operation:
+goalkeeperaction
+Player
+void
+u Update 
+
+true
+( ball.size > 0 => ShootBall->exists( a | a.playerNumber = number & a.xDist = 7 & a.yDist = -3 & a : u.actions ) & MovePlayer->exists( m | m.playerNumber = 5 & m.xDist = -3 & m.yDist = -3 & m : u.actions ) )
+
+
+Operation:
+defenderaction
+Player
+void
+u Update theball Ball 
+
+true
+( ball.size > 0 & field.xPos < 22 => MovePlayer->exists( m | m.playerNumber = number & m.xDist = 2 & m.yDist = 0 & m : u.actions ) ) & ( ball.size > 0 & field.xPos >= 22 & field.yPos <= 12 => ShootBall->exists( s | s.playerNumber = number & s.xDist = 0 & s.yDist = 4 & s : u.actions ) ) & ( ball.size > 0 & field.xPos >= 22 & field.yPos > 12 => ShootBall->exists( s1 | s1.playerNumber = number & s1.xDist = 0 & s1.yDist = -4 & s1 : u.actions ) ) & ( ball.size = 0 & theball.blueTeamhasBall() & field.xPos < 22 => MovePlayer->exists( mp | mp.playerNumber = number & mp.xDist = 2 & mp.yDist = 0 & mp : u.actions ) ) & ( theball.blueTeamhasBall() = false => moveToBall(u,theball) )
+
+
+Operation:
+moveToBall
+Player
+void
+u Update b Ball 
+
+true
+( field.xPos > b.field.xPos & field.yPos > b.field.yPos => MovePlayer->exists( mp | mp.playerNumber = number & mp.xDist = -(Set{( field.xPos - b.field.xPos ),3}->min()) & mp.yDist = -(Set{( field.yPos - b.field.yPos ),3}->min()) & mp : u.actions ) ) & ( field.xPos > b.field.xPos & field.yPos <= b.field.yPos => MovePlayer->exists( mp1 | mp1.playerNumber = number & mp1.xDist = -(Set{( field.xPos - b.field.xPos ),3}->min()) & mp1.yDist = Set{( b.field.yPos - field.yPos ),3}->min() & mp1 : u.actions ) ) & ( field.xPos <= b.field.xPos & field.yPos > b.field.yPos => MovePlayer->exists( mp2 | mp2.playerNumber = number & mp2.xDist = Set{( b.field.xPos - field.xPos ),3}->min() & mp2.yDist = -(Set{( field.yPos - b.field.yPos ),3}->min()) & mp2 : u.actions ) ) & ( field.xPos <= b.field.xPos & field.yPos <= b.field.yPos => MovePlayer->exists( mp3 | mp3.playerNumber = number & mp3.xDist = Set{( b.field.xPos - field.xPos ),3}->min() & mp3.yDist = Set{( b.field.yPos - field.yPos ),3}->min() & mp3 : u.actions ) )
+
+
+Operation:
+midfielderaction
+Player
+void
+u Update theball Ball 
+
+true
+( ball.size > 0 & field.xPos >= 37 & 2 <= field.yPos & field.yPos <= 22 => ShootBall->exists( sb | sb.playerNumber = number & sb.xDist = 44 - field.xPos & sb.yDist = Set{( 22 - field.yPos ),( field.yPos - 2 )}->min() & sb : u.actions ) ) & ( ball.size > 0 & field.xPos < 37 => MovePlayer->exists( mp | mp.playerNumber = number & mp.xDist = 2 & mp.yDist = 0 & mp : u.actions ) ) & ( ball.size > 0 & field.xPos >= 37 & field.yPos < 2 => MovePlayer->exists( mp1 | mp1.playerNumber = number & mp1.xDist = 0 & mp1.yDist = 2 & mp1 : u.actions ) ) & ( ball.size > 0 & field.xPos >= 37 & field.yPos > 22 => MovePlayer->exists( mp2 | mp2.playerNumber = number & mp2.xDist = 0 & mp2.yDist = -2 & mp2 : u.actions ) ) & ( ball.size = 0 & field.xPos < 42 & theball.blueTeamhasBall() => MovePlayer->exists( mp3 | mp3.playerNumber = number & mp3.xDist = 2 & mp3.yDist = 0 & mp3 : u.actions ) ) & ( theball.blueTeamhasBall() = false => moveToBall(u,theball) )
+
+
+Entity:
+FieldPlayer 365 293
+Player  * 
+
+
+Entity:
+GoalKeeper 492 294
+Player  * 
+
+
+Entity:
+GoalField 28 275
+AbstractField  * 
+team String 3 false false false
+
+Entity:
+Field 132 280
+AbstractField  * 
+
+
+Entity:
+Update 555 66
+null  * 
+
+
+Entity:
+Action 734 70
+null  * abstract 
+playerNumber int 3 false false false xDist int 3 false false false yDist int 3 false false false
+
+Entity:
+MovePlayer 672 242
+Action  * 
+
+
+Entity:
+ShootBall 821 245
+Action  * 
+
+
+Association:
+SoccerPitch Player 1 296 143 399 168 0 players null 
+
+
+Association:
+SoccerPitch Ball -1 229 138 228 58 1 balls null 
+
+
+Association:
+SoccerPitch AbstractField 1 225 146 138 152 0 fields null 
+
+
+Association:
+Ball AbstractField -1 192 42 109 131 1 field ball 110 41 
+
+
+Association:
+Player AbstractField 0 398 208 138 174 1 field players 
+
+
+Association:
+Ball Player -1 238 41 431 164 -1 player ball 431 45 
+
+
+Association:
+Update Action 1 603 70 736 74 0 actions null 
+
+
+Generalisation:
+Player FieldPlayer 414 294 414 214
+
+
+
+Generalisation:
+Player GoalKeeper 504 297 470 214
+
+
+
+Generalisation:
+AbstractField GoalField 67 278 67 181
+
+
+
+Generalisation:
+AbstractField Field 141 282 136 182
+
+
+
+Generalisation:
+Action MovePlayer 736 243 742 139
+
+
+
+Generalisation:
+Action ShootBall 843 247 838 137
+
+
+
+GeneralUseCase:
+play 
+
+
+
+Constraint:
+null
+theball = Ball->any() & goalkeeper = GoalKeeper->select(team /= "RED")->any() & player5 = FieldPlayer->select(team /= "RED" & number = 5)->any() & player2 = FieldPlayer->select(team /= "RED" & number = 2)->any() & player3 = FieldPlayer->select(team /= "RED" & number = 3)->any() & player4 = FieldPlayer->select(team /= "RED" & number = 4)->any() & player6 = FieldPlayer->select(team /= "RED" & number = 6)->any() & player7 = FieldPlayer->select(team /= "RED" & number = 7)->any() & player8 = FieldPlayer->select(team /= "RED" & number = 8)->any() & player9 = FieldPlayer->select(team /= "RED" & number = 9)->any()
+Update->exists( u | goalkeeper.goalkeeperaction(u) & player5.cmaction(u,theball) & player2.defenderaction(u,theball) & player3.defenderaction(u,theball) & player4.midfielderaction(u,theball) & player6.midfielderaction(u,theball) & player7.midfielderaction(u,theball) & player8.midfielderaction(u,theball) & player9.midfielderaction(u,theball) )
+null play
+false
+
+
+

@@ -1,0 +1,41 @@
+import java.io.*;
+import java.net.*;
+
+public class SoccerClientUMLRSDS
+{ private String sserver = "";
+  private Socket client;
+
+  public SoccerClientUMLRSDS(String host)
+  { sserver = host; }
+
+  public static void main(String[] args)
+  { SoccerClientUMLRSDS cl = new SoccerClientUMLRSDS("127.0.0.1");
+    cl.runClient();
+  }
+
+  public void runClient()
+  { try
+     { client = new Socket(InetAddress.getByName(sserver), 2000);
+        System.out.println("Connected to " + client.getInetAddress().getHostName() );
+        BufferedReader in = new BufferedReader(
+            new InputStreamReader(client.getInputStream()));
+      PrintWriter out = new PrintWriter(
+          new OutputStreamWriter(client.getOutputStream()));
+        System.out.println("Got streams");
+
+        String data = in.readLine();
+        System.out.println(data);
+        out.println("UML-RSDS");
+        out.flush();
+        String s = in.readLine();
+        while (s != null)
+        { System.out.println(s);
+          s = in.readLine();
+        }
+        in.close();
+        out.close();
+        client.close();
+    } catch (Exception e) 
+      { e.printStackTrace(); }
+  }
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ASCII"?><updatemodel:Update xmi:version="2.0" xmln
+s:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-insta
+nce" xmlns:updatemodel="http://www.transformation-tool-contest.eu/updatemodel/1.
+0"><actions xsi:type="updatemodel:MovePlayer" playerNumber="5"  xDist="2"  yDist
+="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="4"  xDist="2"
+yDist="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="6"  xDist=
+"2"  yDist="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="7"  x
+Dist="2"  yDist="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="
+8"  xDist="2"  yDist="0"  /></updatemodel:Update>
+<?xml version="1.0" encoding="ASCII"?><updatemodel:Update xmi:version="2.0" xmln
+s:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-insta
+nce" xmlns:updatemodel="http://www.transformation-tool-contest.eu/updatemodel/1.
+0"><actions xsi:type="updatemodel:MovePlayer" playerNumber="5"  xDist="2"  yDist
+="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="4"  xDist="2"
+yDist="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="6"  xDist=
+"2"  yDist="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="7"  x
+Dist="2"  yDist="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="
+8"  xDist="2"  yDist="0"  /></updatemodel:Update>
+<?xml version="1.0" encoding="ASCII"?><updatemodel:Update xmi:version="2.0" xmln
+s:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-insta
+nce" xmlns:updatemodel="http://www.transformation-tool-contest.eu/updatemodel/1.
+0"><actions xsi:type="updatemodel:MovePlayer" playerNumber="5"  xDist="2"  yDist
+="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="4"  xDist="2"
+yDist="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="6"  xDist=
+"2"  yDist="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="7"  x
+Dist="2"  yDist="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="
+8"  xDist="2"  yDist="0"  /></updatemodel:Update>
+<?xml version="1.0" encoding="ASCII"?><updatemodel:Update xmi:version="2.0" xmln
+s:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-insta
+nce" xmlns:updatemodel="http://www.transformation-tool-contest.eu/updatemodel/1.
+0"><actions xsi:type="updatemodel:MovePlayer" playerNumber="5"  xDist="2"  yDist
+="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="4"  xDist="2"
+yDist="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="6"  xDist=
+"2"  yDist="0"  /></updatemodel:Update>
+<?xml version="1.0" encoding="ASCII"?><updatemodel:Update xmi:version="2.0" xmln
+s:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-insta
+nce" xmlns:updatemodel="http://www.transformation-tool-contest.eu/updatemodel/1.
+0"><actions xsi:type="updatemodel:MovePlayer" playerNumber="5"  xDist="2"  yDist
+="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="4"  xDist="2"
+yDist="0"  /><actions xsi:type="updatemodel:MovePlayer" playerNumber="6"  xDist=
+"2"  yDist="0"  /></updatemodel:Update>
+<?xml version="1.0" encoding="ASCII"?><updatemodel:Update xmi:version="2.0" xmln
+s:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-insta
+nce" xmlns:updatemodel="http://www.transformation-tool-contest.eu/updatemodel/1.
+0"><actions xsi:type="updatemodel:MovePlayer" playerNumber="5"  xDist="2"  yDist
+="0"  /></updatemodel:Update>
+
+
+C:\Users\Olga\Documents\soccer>java -jar SoccerServer.jar 2000 400 500
+Client for team BLUE connected!
+Client for team RED connected!
+The BLUE team kicks off.
+Player 1 of team BLUE shoots the ball.
+Player 5 of team BLUE receives the ball.
+Player 5 of team BLUE shoots the ball.
+Team BLUE scores a goal!!!
+The RED team kicks off.
+
+C:\Users\Olga\Documents\soccer>

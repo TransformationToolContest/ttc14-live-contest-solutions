@@ -1,0 +1,15 @@
+
+Use Case, name: play
+Parameters: []
+Result type: null
+Superclass: null
+Description: 
+Postcondition 0 is: theball = Ball->any() & goalkeeper = GoalKeeper->select(team /= "RED")->any() & player5 = FieldPlayer->select(team /= "RED" & number = 5)->any() & player2 = FieldPlayer->select(team /= "RED" & number = 2)->any() & player3 = FieldPlayer->select(team /= "RED" & number = 3)->any() & player4 = FieldPlayer->select(team /= "RED" & number = 4)->any() & player6 = FieldPlayer->select(team /= "RED" & number = 6)->any() & player7 = FieldPlayer->select(team /= "RED" & number = 7)->any() & player8 = FieldPlayer->select(team /= "RED" & number = 8)->any() & player9 = FieldPlayer->select(team /= "RED" & number = 9)->any() => Update->exists( u | goalkeeper.goalkeeperaction(u) & player5.cmaction(u,theball) & player2.defenderaction(u,theball) & player3.defenderaction(u,theball) & player4.midfielderaction(u,theball) & player6.midfielderaction(u,theball) & player7.midfielderaction(u,theball) & player8.midfielderaction(u,theball) & player9.midfielderaction(u,theball) ) on [] owner null
+
+complexity = 110
+
+Behaviour code: 
+
+Activity: 
+null
+
