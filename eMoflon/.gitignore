@@ -1,8 +1,4 @@
 .metadata/
-SoccerPitchPackage
-UpdatePackage
-ttc14_specification/.project
-ttc14_specification/.temp/*
 ttc14_specification/*.ldb
 SoccerStrategy/.classpath
 SoccerStrategy/bin/

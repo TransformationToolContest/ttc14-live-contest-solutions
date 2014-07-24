@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="CSPCodeAdapter" nsURI="http://www.moflon.org.CSPCodeAdapter" nsPrefix="CSPCodeAdapter">
+  <eClassifiers xsi:type="ecore:EClass" name="VariableTypeManager">
+    <eOperations name="deriveVariableTypes">
+      <eParameters name="csp">
+        <eType xsi:type="ecore:EClass" href="http://www.moflon.org.TGGLanguage#//csp/CSP"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="eType2JavaType">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="eClassifier">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EClassifier"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="propagateSignature">
+      <eParameters name="constraint">
+        <eType xsi:type="ecore:EClass" href="http://www.moflon.org.TGGLanguage#//csp/TGGConstraint"/>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tggrule" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="http://www.moflon.org.TGGLanguage#//TGGRule"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transformer">
+    <eOperations name="allowedAdornmentsMissing">
+      <eParameters name="constraintNode">
+        <eType xsi:type="ecore:EClass" href="http://www.moflon.org.MocaTree#//Node"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="filterUserDefinedConstraints">
+      <eParameters name="tree">
+        <eType xsi:type="ecore:EClass" href="http://www.moflon.org.MocaTree#//Node"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="transformAllowedAdornments">
+      <eParameters name="allowedAdornmentsForConstraint">
+        <eType xsi:type="ecore:EClass" href="http://www.moflon.org.MocaTree#//Node"/>
+      </eParameters>
+      <eParameters name="constraint">
+        <eType xsi:type="ecore:EClass" href="http://www.moflon.org.TGGLanguage#//csp/TGGConstraint"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="transformNode">
+      <eType xsi:type="ecore:EClass" href="http://www.moflon.org.TGGLanguage#//csp/CSP"/>
+      <eParameters name="node">
+        <eType xsi:type="ecore:EClass" href="http://www.moflon.org.MocaTree#//Node"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="transformSignature">
+      <eParameters name="signature">
+        <eType xsi:type="ecore:EClass" href="http://www.moflon.org.MocaTree#//Node"/>
+      </eParameters>
+      <eParameters name="constraint">
+        <eType xsi:type="ecore:EClass" href="http://www.moflon.org.TGGLanguage#//csp/TGGConstraint"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="transformVariables">
+      <eParameters name="constraint">
+        <eType xsi:type="ecore:EClass" href="http://www.moflon.org.TGGLanguage#//csp/TGGConstraint"/>
+      </eParameters>
+      <eParameters name="csp">
+        <eType xsi:type="ecore:EClass" href="http://www.moflon.org.TGGLanguage#//csp/CSP"/>
+      </eParameters>
+      <eParameters name="constraintNode">
+        <eType xsi:type="ecore:EClass" href="http://www.moflon.org.MocaTree#//Node"/>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tggrule" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="http://www.moflon.org.TGGLanguage#//TGGRule"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="userDefinedConstraints" upperBound="-1">
+      <eType xsi:type="ecore:EClass" href="http://www.moflon.org.MocaTree#//Node"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>
