@@ -1,0 +1,8 @@
+TTC 2014 Live Contest: BrazEOL
+
+To run the solution:
+
+java -jar ttc14-epsilon-client.jar <host> <port>
+
+The files 'engine.eol', 'soccerpitch.ecore', and 'updatemodel.ecore' all 
+need to be in the same directory as the jar file.

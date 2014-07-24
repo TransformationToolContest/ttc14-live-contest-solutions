@@ -1,0 +1,320 @@
+/*
+ Two models are available here:
+ SPM -> Soccer pitch model (input)
+ UM -> Update model (output)
+ And two string variables:
+ teamColor -> RED/BLUE (our team)
+ otherTeamColor -> RED/BLUE (the other team)
+ X positions: 0 - 44
+ Y position: 0 - 24
+*/
+
+setupTeam();
+var update : new UM!Update;
+var shootingField = SPM!Field.all.selectOne(f|f.xPos = 44 and f.yPos = 10);
+if (teamColor == "RED") {
+	shootingField = SPM!Field.all.selectOne(f|f.xPos = 0 and f.yPos = 10);
+}
+var ballOwner = getBallOwner();
+var defending = (ballOwner.isDefined() and not ballOwner.inOurTeam()) or ballOwner.isUndefined();
+var attacking = not defending;
+var chaser;
+
+if (defending) {
+	chaser = getClosestPlayersToTheBall(teamColor).first();
+}
+
+// Iterate through all players starting with the one that has the ball
+for (player in getPlayers(teamColor).sortBy(p|p <> ballOwner)) {
+	
+	// If the ball is with our keeper, return to defence
+	if (ballOwner.isDefined() and ballOwner.inOurTeam() and ballOwner.isTypeOf(SPM!GoalKeeper) and ballOwner <> player) {
+		player.moveTowardsDefaultPosition(true);
+	}
+	// Player in shooting range
+	else if (attacking and player == ballOwner and player.isInShootingRange()) {
+		update.shootBallToField(player, shootingField);
+	}
+	else if (attacking and (player == ballOwner)) {
+		var reachableTeammates = player.getReachableTeammates().excluding(player).sortBy(p | -p.field.getHorizontalDistanceFromHome());
+		
+		// Try to find a more advanced teammate in a safe position
+		var receivers = reachableTeammates.select(p | p.isAheadOf(player));
+		if (receivers.size() > 0) {
+			ballOwner = receivers.first();
+			player.passTheBallTo(receivers.first());
+			continue;
+		}
+		
+		// Try to find a safe field to move to (avoid occupied fields)
+		var accessibleFields = player.getAccessibleFields().excluding(player.field).
+			select(f|f.isSafe() and not f.isOccupied()).sortBy(f|-f.getHorizontalDistanceFromHome());
+		
+		if (not accessibleFields.isEmpty() and not player.isTypeOf(SPM!GoalKeeper)) {
+			player.moveTowards(accessibleFields.first());
+			continue;
+		}
+		
+		// Try to find a teammate in a safe position
+		if (reachableTeammates.size() > 0) {
+			ballOwner = reachableTeammates.first();
+			player.passTheBallTo(reachableTeammates.first());
+			continue;
+		}
+		
+		// If the player is in a safe field they can stay there
+		if (player.field.isSafe()) { 
+			continue;
+		}
+		
+		// Find a safe place to kick the ball to a safe position
+		var reachableFields = player.getReachableFields().excluding(player.field).select(f|f.isSafe()).sortBy(f|-f.getHorizontalDistanceFromHome());
+		if (reachableFields.size() > 0) {
+			player.kickTheBallTo(reachableFields.first());
+		}
+	}
+	else if (defending and (player == chaser)) {
+		chaser.moveTowards(getBall().field);
+		ballOwner = chaser;
+	}
+	else if (not player.isTypeOf(SPM!GoalKeeper)){
+		player.moveTowardsDefaultPosition(defending);
+	}
+}
+
+operation SPM!Field getHorizontalDistanceFromHome() {
+	if (teamColor == "BLUE") {
+		return self.xPos;
+	}
+	else {
+		return 44 - self.xPos;
+	}
+}
+
+operation SPM!Field isOccupied() {
+	return not self.players.isEmpty();
+}
+
+operation SPM!Player getReachableFields() {
+	return SPM!Field.all.select(f | 
+		(f.xPos - self.field.xPos).abs() <= 7 and
+		(f.yPos - self.field.yPos).abs() <= 7
+	);
+}
+
+operation SPM!Player getAccessibleFields() {
+	var limit = 3;
+	if (self == ballOwner) limit = 2;
+	return SPM!Field.all.select(f | 
+		(f.xPos - self.field.xPos).abs() <= limit and
+		(f.yPos - self.field.yPos).abs() <= limit
+	);
+}
+
+operation SPM!Player isInShootingRange() {
+	if (teamColor == "BLUE") return self.field.xPos >= 37;
+	else return self.field.xPos <= 7;
+}
+
+operation SPM!Player isAheadOf(p : SPM!Player) {
+	if (teamColor == "BLUE") return self.field.xPos > p.field.xPos;
+	else return self.field.xPos < p.field.xPos;
+}
+
+operation SPM!Player getReachableTeammates() : Sequence(SMP!Player) {
+	return getPlayers(teamColor).select(p | 
+		p.isSafe() and
+		(p.field.xPos - self.field.xPos).abs() <= 7 and
+		(p.field.yPos - self.field.yPos).abs() <= 7);
+}
+
+operation SPM!FieldPlayer moveTowardsDefaultPosition(defending : Boolean) {
+	if (defending) {
+		self.moveTowards(self.~defX, self.~defY);
+	}
+	else {
+		self.moveTowards(self.~offX, self.~offY);
+	}
+}
+
+operation setupTeam() {
+	for (player in getFieldPlayers(teamColor)) {
+		
+		var xPos = 0;
+		var yPos = 0;
+		
+		player.~mayControlTheBall = false;
+		
+		switch (player.number) {
+			case 2: xPos = 7; yPos = 12;
+			case 3: xPos = 7; yPos = 11;
+			case 4: xPos = 7; yPos = 13;
+			case 5: xPos = 14; yPos = 11;
+			case 6: xPos = 14; yPos = 13;
+			case 7: xPos = 21; yPos = 8;
+			case 8: xPos = 21; yPos = 16;
+			case 9: xPos = 21; yPos = 12;			
+		}
+		
+		if (teamColor == "RED") {xPos = 44 - xPos;}
+		player.~defX = xPos;
+		
+		player.~defY = yPos;
+		player.~offY = player.~defY;
+		
+		var offset = 22;
+		if (player.number < 3) offset = 6;
+		else if (player.number < 6) offset = 12;
+		else offset = 18;
+		
+		if (teamColor == "RED") offset = -1 * offset;
+		
+		player.~offX = player.~defX + offset;
+	}
+}
+
+operation SPM!Player isSafe() {
+	return self.field.isSafe();
+}
+
+operation SPM!Field isSafe() {
+	return getFieldPlayers(otherTeamColor).forAll(p |
+		(p.field.xPos - self.xPos).abs() > 3 or 
+		(p.field.yPos - self.yPos).abs() > 3
+	);
+}
+
+operation SPM!Player moveTowards(field : Field) {
+	return self.moveTowards(field.xPos, field.yPos);
+}
+
+operation SPM!Player moveTowards(xPos : Integer, yPos : Integer) {
+	var limit = 3;
+	if (self=ballOwner) { limit = 2; }
+	var negativeLimit = -1 * limit;
+
+	var distX = xPos - self.field.xPos;
+	if (distX > limit) distX = limit;
+	if (distX < negativeLimit) distX = negativeLimit;
+	var distY = yPos - self.field.yPos;
+	if (distY > limit) distY = limit;
+	if (distY < negativeLimit) distY = negativeLimit;
+	update.movePlayer(self, distX, distY);
+}
+
+operation getOurFieldPlayer(number : Integer) {
+	return getFieldPlayers(teamColor).selectOne(p|p.number = number);
+}
+
+operation SPM!Player passTheBallTo(teammate : SPM!Player) {
+	update.shootBall(self, teammate.field.xPos - self.field.xPos, 
+		teammate.field.yPos - self.field.yPos);
+}
+
+operation SPM!Player kickTheBallTo(field : SPM!Field) {
+	update.shootBall(self, field.xPos - self.field.xPos, 
+		field.yPos - self.field.yPos);
+}
+
+operation SPM!Player inOurTeam() {
+	return self.inTeam(teamColor);
+}
+
+operation UM!Update movePlayer(player: Player, xDist : Integer, yDist : Integer) {
+	
+	if (UM!MovePlayer.all.exists(mp|mp.playerNumber = player.number)) return;
+	
+	var movePlayer = new UM!MovePlayer;
+	movePlayer.playerNumber = player.number;
+	movePlayer.xDist = xDist;
+	movePlayer.yDist = yDist;
+	self.actions.add(movePlayer);
+	
+	var field = SPM!Field.all.selectOne(f | f.xPos = player.field.xPos + xDist and f.yPos = player.field.yPos + yDist);
+	player.field = field;
+}
+
+operation UM!Update shootBall(player: SPM!Player, xDist : Integer, yDist : Integer) {
+	
+	if (UM!ShootBall.all.size() > 3) return;
+	
+	var shootBall = new UM!ShootBall;
+	shootBall.playerNumber = player.number;
+	shootBall.xDist = xDist;
+	shootBall.yDist = yDist;
+	self.actions.add(shootBall);
+	
+	var ball = getBall();
+	var field = SPM!Field.all.selectOne(f | f.xPos = ball.field.xPos + xDist and f.yPos = ball.field.yPos + yDist);
+	ball.field = field;
+}
+
+/*
+operation UM!Update movePlayer(player: Player, xDist : Integer, yDist : Integer) {
+	var movePlayer = new UM!MovePlayer;
+	movePlayer.playerNumber = player.number;
+	movePlayer.xDist = xDist;
+	movePlayer.yDist = yDist;
+	self.actions.add(movePlayer);
+}
+
+operation UM!Update shootBall(player: SPM!Player, xDist : Integer, yDist : Integer) {
+	var shootBall = new UM!ShootBall;
+	shootBall.playerNumber = player.number;
+	shootBall.xDist = xDist;
+	shootBall.yDist = yDist;
+	self.actions.add(shootBall);
+}*/
+
+operation UM!Update shootBallToField(player: SPM!Player, field : SPM!Field) {
+	var xDist = field.xPos - player.field.xPos;
+	var yDist = field.yPos - player.field.yPos;
+	self.shootBall(player, xDist, yDist);
+}
+
+operation UM!Update movePlayerToField(player: SPM!Player, field : SPM!Field) {
+	var xDist = player.field.xPos - field.xPos;
+	var yDist = player.field.yPos - field.yPos;
+	self.movePlayer(player, xDist, yDist);
+}
+
+operation getFieldPlayers(tc : String) : Sequence(SPM!Player) {
+	return SPM!FieldPlayer.all.select(p|p.team = getTeam(tc));
+}
+
+operation getPlayers(teamColor : String) : Sequence(SPM!Player) {
+	return SPM!Player.all.select(p|p.team = getTeam(teamColor));
+}
+
+operation getClosestPlayersToTheBall(teamColor : String) {
+	return getFieldPlayers(teamColor).sortBy(p | p.getDistanceFromTheBall());
+}
+
+operation getBallOwner() : SPM!Player {
+	return SPM!Player.all.selectOne(p|p.field = getBall().field);
+}
+
+operation getBall() {
+	return SPM!Ball.all.first();
+}
+
+operation SPM!Player getDistanceFromTheBall() {
+	return self.getDistanceFromField(getBall().field);
+}
+
+operation SPM!Player getDistanceFromField(field : SPM!Field ) {
+	return self.field.getDistanceFromField(field);
+}
+
+operation SPM!Field getDistanceFromField(field : SPM!Field ) {
+	return (field.xPos - self.xPos).abs().max((field.yPos - self.yPos).abs());
+}
+
+operation getTeam(teamColor : String) {
+	if (teamColor == "BLUE") return SPM!Teams#BLUE;
+	else return SPM!Teams#RED;
+}
+
+operation SPM!Player inTeam(teamColor : String) {
+	return self.team = getTeam(teamColor);
+}

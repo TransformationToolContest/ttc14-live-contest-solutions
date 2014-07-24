@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="soccerpitch" nsURI="http://www.transformation-tool-contest.eu/soccerpitch/1.0"
+    nsPrefix="soccerpitch">
+  <eClassifiers xsi:type="ecore:EClass" name="Field">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Ball"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="xPos" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="yPos" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="north" eType="#//Field"
+        eOpposite="#//Field/south">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Ball"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="south" eType="#//Field"
+        eOpposite="#//Field/north"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="east" eType="#//Field"
+        eOpposite="#//Field/west">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Ball"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="west" eType="#//Field"
+        eOpposite="#//Field/east"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ball" eType="#//Ball" eOpposite="#//Ball/field"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="players" upperBound="-1"
+        eType="#//Player" eOpposite="#//Player/field">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Ball"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Player" abstract="true">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Ball"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="team" eType="#//Teams"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ball" eType="#//Ball" eOpposite="#//Ball/player"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="field" lowerBound="1" eType="#//Field"
+        eOpposite="#//Field/players"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Ball">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="player" eType="#//Player"
+        eOpposite="#//Player/ball">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Ball"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="field" lowerBound="1" eType="#//Field"
+        eOpposite="#//Field/ball">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Ball"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldPlayer" eSuperTypes="#//Player">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Ball"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GoalKeeper" eSuperTypes="#//Player">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Ball"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Teams">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Ball"/>
+    </eAnnotations>
+    <eLiterals name="BLUE"/>
+    <eLiterals name="RED"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GoalField" eSuperTypes="#//Field">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Ball"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="team" eType="#//Teams"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SoccerPitch">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Ball"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fields" upperBound="-1"
+        eType="#//Field" containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Ball"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ball" lowerBound="1" eType="#//Ball"
+        containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Ball"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="players" upperBound="-1"
+        eType="#//Player" containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Ball"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>
