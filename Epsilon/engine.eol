@@ -51,7 +51,7 @@ for (player in getPlayers(teamColor).sortBy(p|p <> ballOwner)) {
 			select(f|f.isSafe() and not f.isOccupied()).sortBy(f|-f.getHorizontalDistanceFromHome());
 		
 		if (not accessibleFields.isEmpty() and not player.isTypeOf(SPM!GoalKeeper)) {
-			player.moveTowards(accessibleFields.first());
+			player.moveTowards(accessibleFields.random());
 			continue;
 		}
 		
@@ -70,7 +70,7 @@ for (player in getPlayers(teamColor).sortBy(p|p <> ballOwner)) {
 		// Find a safe place to kick the ball to a safe position
 		var reachableFields = player.getReachableFields().excluding(player.field).select(f|f.isSafe()).sortBy(f|-f.getHorizontalDistanceFromHome());
 		if (reachableFields.size() > 0) {
-			player.kickTheBallTo(reachableFields.first());
+			player.kickTheBallTo(reachableFields.random());
 		}
 	}
 	else if (defending and (player == chaser)) {
