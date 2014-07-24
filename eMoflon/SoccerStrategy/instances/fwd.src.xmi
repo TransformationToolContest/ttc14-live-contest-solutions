@@ -1,0 +1,1147 @@
+<?xml version="1.0" encoding="ASCII"?>
+<soccerpitch:SoccerPitch xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soccerpitch="http://www.transformation-tool-contest.eu/soccerpitch/1.0" opponentTeam="BLUE">
+  <players xsi:type="soccerpitch:GoalKeeper" field="//@fields.15" number="1"/>
+  <players xsi:type="soccerpitch:GoalKeeper" field="//@fields.1109" number="1" team="RED"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.183" number="2"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.791" number="2" team="RED"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.191" number="3"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.783" number="3" team="RED"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.355" number="4"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.668" number="4" team="RED"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.537" number="5"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.662" number="5" team="RED"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.369" number="6"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.656" number="6" team="RED"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.707" number="7"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.541" number="7" team="RED"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.717" number="8"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.533" number="8" team="RED"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.1092" ball="//@ball" number="9"/>
+  <players xsi:type="soccerpitch:FieldPlayer" field="//@fields.412" number="9" team="RED"/>
+  <fields south="//@fields.1" east="//@fields.25"/>
+  <fields south="//@fields.2" north="//@fields.0" east="//@fields.26" yPos="1"/>
+  <fields south="//@fields.3" north="//@fields.1" east="//@fields.27" yPos="2"/>
+  <fields south="//@fields.4" north="//@fields.2" east="//@fields.28" yPos="3"/>
+  <fields south="//@fields.5" north="//@fields.3" east="//@fields.29" yPos="4"/>
+  <fields south="//@fields.6" north="//@fields.4" east="//@fields.30" yPos="5"/>
+  <fields south="//@fields.7" north="//@fields.5" east="//@fields.31" yPos="6"/>
+  <fields south="//@fields.8" north="//@fields.6" east="//@fields.32" yPos="7"/>
+  <fields south="//@fields.9" north="//@fields.7" east="//@fields.33" yPos="8"/>
+  <fields xsi:type="soccerpitch:GoalField" south="//@fields.10" north="//@fields.8" east="//@fields.34" yPos="9"/>
+  <fields xsi:type="soccerpitch:GoalField" south="//@fields.11" north="//@fields.9" east="//@fields.35" yPos="10"/>
+  <fields xsi:type="soccerpitch:GoalField" south="//@fields.12" north="//@fields.10" east="//@fields.36" yPos="11"/>
+  <fields xsi:type="soccerpitch:GoalField" south="//@fields.13" north="//@fields.11" east="//@fields.37" yPos="12"/>
+  <fields xsi:type="soccerpitch:GoalField" south="//@fields.14" north="//@fields.12" east="//@fields.38" yPos="13"/>
+  <fields xsi:type="soccerpitch:GoalField" south="//@fields.15" north="//@fields.13" east="//@fields.39" yPos="14"/>
+  <fields xsi:type="soccerpitch:GoalField" players="//@players.0" south="//@fields.16" north="//@fields.14" east="//@fields.40" yPos="15"/>
+  <fields south="//@fields.17" north="//@fields.15" east="//@fields.41" yPos="16"/>
+  <fields south="//@fields.18" north="//@fields.16" east="//@fields.42" yPos="17"/>
+  <fields south="//@fields.19" north="//@fields.17" east="//@fields.43" yPos="18"/>
+  <fields south="//@fields.20" north="//@fields.18" east="//@fields.44" yPos="19"/>
+  <fields south="//@fields.21" north="//@fields.19" east="//@fields.45" yPos="20"/>
+  <fields south="//@fields.22" north="//@fields.20" east="//@fields.46" yPos="21"/>
+  <fields south="//@fields.23" north="//@fields.21" east="//@fields.47" yPos="22"/>
+  <fields south="//@fields.24" north="//@fields.22" east="//@fields.48" yPos="23"/>
+  <fields north="//@fields.23" east="//@fields.49" yPos="24"/>
+  <fields south="//@fields.26" west="//@fields.0" east="//@fields.50" xPos="1"/>
+  <fields south="//@fields.27" north="//@fields.25" west="//@fields.1" east="//@fields.51" xPos="1" yPos="1"/>
+  <fields south="//@fields.28" north="//@fields.26" west="//@fields.2" east="//@fields.52" xPos="1" yPos="2"/>
+  <fields south="//@fields.29" north="//@fields.27" west="//@fields.3" east="//@fields.53" xPos="1" yPos="3"/>
+  <fields south="//@fields.30" north="//@fields.28" west="//@fields.4" east="//@fields.54" xPos="1" yPos="4"/>
+  <fields south="//@fields.31" north="//@fields.29" west="//@fields.5" east="//@fields.55" xPos="1" yPos="5"/>
+  <fields south="//@fields.32" north="//@fields.30" west="//@fields.6" east="//@fields.56" xPos="1" yPos="6"/>
+  <fields south="//@fields.33" north="//@fields.31" west="//@fields.7" east="//@fields.57" xPos="1" yPos="7"/>
+  <fields south="//@fields.34" north="//@fields.32" west="//@fields.8" east="//@fields.58" xPos="1" yPos="8"/>
+  <fields south="//@fields.35" north="//@fields.33" west="//@fields.9" east="//@fields.59" xPos="1" yPos="9"/>
+  <fields south="//@fields.36" north="//@fields.34" west="//@fields.10" east="//@fields.60" xPos="1" yPos="10"/>
+  <fields south="//@fields.37" north="//@fields.35" west="//@fields.11" east="//@fields.61" xPos="1" yPos="11"/>
+  <fields south="//@fields.38" north="//@fields.36" west="//@fields.12" east="//@fields.62" xPos="1" yPos="12"/>
+  <fields south="//@fields.39" north="//@fields.37" west="//@fields.13" east="//@fields.63" xPos="1" yPos="13"/>
+  <fields south="//@fields.40" north="//@fields.38" west="//@fields.14" east="//@fields.64" xPos="1" yPos="14"/>
+  <fields south="//@fields.41" north="//@fields.39" west="//@fields.15" east="//@fields.65" xPos="1" yPos="15"/>
+  <fields south="//@fields.42" north="//@fields.40" west="//@fields.16" east="//@fields.66" xPos="1" yPos="16"/>
+  <fields south="//@fields.43" north="//@fields.41" west="//@fields.17" east="//@fields.67" xPos="1" yPos="17"/>
+  <fields south="//@fields.44" north="//@fields.42" west="//@fields.18" east="//@fields.68" xPos="1" yPos="18"/>
+  <fields south="//@fields.45" north="//@fields.43" west="//@fields.19" east="//@fields.69" xPos="1" yPos="19"/>
+  <fields south="//@fields.46" north="//@fields.44" west="//@fields.20" east="//@fields.70" xPos="1" yPos="20"/>
+  <fields south="//@fields.47" north="//@fields.45" west="//@fields.21" east="//@fields.71" xPos="1" yPos="21"/>
+  <fields south="//@fields.48" north="//@fields.46" west="//@fields.22" east="//@fields.72" xPos="1" yPos="22"/>
+  <fields south="//@fields.49" north="//@fields.47" west="//@fields.23" east="//@fields.73" xPos="1" yPos="23"/>
+  <fields north="//@fields.48" west="//@fields.24" east="//@fields.74" xPos="1" yPos="24"/>
+  <fields south="//@fields.51" west="//@fields.25" east="//@fields.75" xPos="2"/>
+  <fields south="//@fields.52" north="//@fields.50" west="//@fields.26" east="//@fields.76" xPos="2" yPos="1"/>
+  <fields south="//@fields.53" north="//@fields.51" west="//@fields.27" east="//@fields.77" xPos="2" yPos="2"/>
+  <fields south="//@fields.54" north="//@fields.52" west="//@fields.28" east="//@fields.78" xPos="2" yPos="3"/>
+  <fields south="//@fields.55" north="//@fields.53" west="//@fields.29" east="//@fields.79" xPos="2" yPos="4"/>
+  <fields south="//@fields.56" north="//@fields.54" west="//@fields.30" east="//@fields.80" xPos="2" yPos="5"/>
+  <fields south="//@fields.57" north="//@fields.55" west="//@fields.31" east="//@fields.81" xPos="2" yPos="6"/>
+  <fields south="//@fields.58" north="//@fields.56" west="//@fields.32" east="//@fields.82" xPos="2" yPos="7"/>
+  <fields south="//@fields.59" north="//@fields.57" west="//@fields.33" east="//@fields.83" xPos="2" yPos="8"/>
+  <fields south="//@fields.60" north="//@fields.58" west="//@fields.34" east="//@fields.84" xPos="2" yPos="9"/>
+  <fields south="//@fields.61" north="//@fields.59" west="//@fields.35" east="//@fields.85" xPos="2" yPos="10"/>
+  <fields south="//@fields.62" north="//@fields.60" west="//@fields.36" east="//@fields.86" xPos="2" yPos="11"/>
+  <fields south="//@fields.63" north="//@fields.61" west="//@fields.37" east="//@fields.87" xPos="2" yPos="12"/>
+  <fields south="//@fields.64" north="//@fields.62" west="//@fields.38" east="//@fields.88" xPos="2" yPos="13"/>
+  <fields south="//@fields.65" north="//@fields.63" west="//@fields.39" east="//@fields.89" xPos="2" yPos="14"/>
+  <fields south="//@fields.66" north="//@fields.64" west="//@fields.40" east="//@fields.90" xPos="2" yPos="15"/>
+  <fields south="//@fields.67" north="//@fields.65" west="//@fields.41" east="//@fields.91" xPos="2" yPos="16"/>
+  <fields south="//@fields.68" north="//@fields.66" west="//@fields.42" east="//@fields.92" xPos="2" yPos="17"/>
+  <fields south="//@fields.69" north="//@fields.67" west="//@fields.43" east="//@fields.93" xPos="2" yPos="18"/>
+  <fields south="//@fields.70" north="//@fields.68" west="//@fields.44" east="//@fields.94" xPos="2" yPos="19"/>
+  <fields south="//@fields.71" north="//@fields.69" west="//@fields.45" east="//@fields.95" xPos="2" yPos="20"/>
+  <fields south="//@fields.72" north="//@fields.70" west="//@fields.46" east="//@fields.96" xPos="2" yPos="21"/>
+  <fields south="//@fields.73" north="//@fields.71" west="//@fields.47" east="//@fields.97" xPos="2" yPos="22"/>
+  <fields south="//@fields.74" north="//@fields.72" west="//@fields.48" east="//@fields.98" xPos="2" yPos="23"/>
+  <fields north="//@fields.73" west="//@fields.49" east="//@fields.99" xPos="2" yPos="24"/>
+  <fields south="//@fields.76" west="//@fields.50" east="//@fields.100" xPos="3"/>
+  <fields south="//@fields.77" north="//@fields.75" west="//@fields.51" east="//@fields.101" xPos="3" yPos="1"/>
+  <fields south="//@fields.78" north="//@fields.76" west="//@fields.52" east="//@fields.102" xPos="3" yPos="2"/>
+  <fields south="//@fields.79" north="//@fields.77" west="//@fields.53" east="//@fields.103" xPos="3" yPos="3"/>
+  <fields south="//@fields.80" north="//@fields.78" west="//@fields.54" east="//@fields.104" xPos="3" yPos="4"/>
+  <fields south="//@fields.81" north="//@fields.79" west="//@fields.55" east="//@fields.105" xPos="3" yPos="5"/>
+  <fields south="//@fields.82" north="//@fields.80" west="//@fields.56" east="//@fields.106" xPos="3" yPos="6"/>
+  <fields south="//@fields.83" north="//@fields.81" west="//@fields.57" east="//@fields.107" xPos="3" yPos="7"/>
+  <fields south="//@fields.84" north="//@fields.82" west="//@fields.58" east="//@fields.108" xPos="3" yPos="8"/>
+  <fields south="//@fields.85" north="//@fields.83" west="//@fields.59" east="//@fields.109" xPos="3" yPos="9"/>
+  <fields south="//@fields.86" north="//@fields.84" west="//@fields.60" east="//@fields.110" xPos="3" yPos="10"/>
+  <fields south="//@fields.87" north="//@fields.85" west="//@fields.61" east="//@fields.111" xPos="3" yPos="11"/>
+  <fields south="//@fields.88" north="//@fields.86" west="//@fields.62" east="//@fields.112" xPos="3" yPos="12"/>
+  <fields south="//@fields.89" north="//@fields.87" west="//@fields.63" east="//@fields.113" xPos="3" yPos="13"/>
+  <fields south="//@fields.90" north="//@fields.88" west="//@fields.64" east="//@fields.114" xPos="3" yPos="14"/>
+  <fields south="//@fields.91" north="//@fields.89" west="//@fields.65" east="//@fields.115" xPos="3" yPos="15"/>
+  <fields south="//@fields.92" north="//@fields.90" west="//@fields.66" east="//@fields.116" xPos="3" yPos="16"/>
+  <fields south="//@fields.93" north="//@fields.91" west="//@fields.67" east="//@fields.117" xPos="3" yPos="17"/>
+  <fields south="//@fields.94" north="//@fields.92" west="//@fields.68" east="//@fields.118" xPos="3" yPos="18"/>
+  <fields south="//@fields.95" north="//@fields.93" west="//@fields.69" east="//@fields.119" xPos="3" yPos="19"/>
+  <fields south="//@fields.96" north="//@fields.94" west="//@fields.70" east="//@fields.120" xPos="3" yPos="20"/>
+  <fields south="//@fields.97" north="//@fields.95" west="//@fields.71" east="//@fields.121" xPos="3" yPos="21"/>
+  <fields south="//@fields.98" north="//@fields.96" west="//@fields.72" east="//@fields.122" xPos="3" yPos="22"/>
+  <fields south="//@fields.99" north="//@fields.97" west="//@fields.73" east="//@fields.123" xPos="3" yPos="23"/>
+  <fields north="//@fields.98" west="//@fields.74" east="//@fields.124" xPos="3" yPos="24"/>
+  <fields south="//@fields.101" west="//@fields.75" east="//@fields.125" xPos="4"/>
+  <fields south="//@fields.102" north="//@fields.100" west="//@fields.76" east="//@fields.126" xPos="4" yPos="1"/>
+  <fields south="//@fields.103" north="//@fields.101" west="//@fields.77" east="//@fields.127" xPos="4" yPos="2"/>
+  <fields south="//@fields.104" north="//@fields.102" west="//@fields.78" east="//@fields.128" xPos="4" yPos="3"/>
+  <fields south="//@fields.105" north="//@fields.103" west="//@fields.79" east="//@fields.129" xPos="4" yPos="4"/>
+  <fields south="//@fields.106" north="//@fields.104" west="//@fields.80" east="//@fields.130" xPos="4" yPos="5"/>
+  <fields south="//@fields.107" north="//@fields.105" west="//@fields.81" east="//@fields.131" xPos="4" yPos="6"/>
+  <fields south="//@fields.108" north="//@fields.106" west="//@fields.82" east="//@fields.132" xPos="4" yPos="7"/>
+  <fields south="//@fields.109" north="//@fields.107" west="//@fields.83" east="//@fields.133" xPos="4" yPos="8"/>
+  <fields south="//@fields.110" north="//@fields.108" west="//@fields.84" east="//@fields.134" xPos="4" yPos="9"/>
+  <fields south="//@fields.111" north="//@fields.109" west="//@fields.85" east="//@fields.135" xPos="4" yPos="10"/>
+  <fields south="//@fields.112" north="//@fields.110" west="//@fields.86" east="//@fields.136" xPos="4" yPos="11"/>
+  <fields south="//@fields.113" north="//@fields.111" west="//@fields.87" east="//@fields.137" xPos="4" yPos="12"/>
+  <fields south="//@fields.114" north="//@fields.112" west="//@fields.88" east="//@fields.138" xPos="4" yPos="13"/>
+  <fields south="//@fields.115" north="//@fields.113" west="//@fields.89" east="//@fields.139" xPos="4" yPos="14"/>
+  <fields south="//@fields.116" north="//@fields.114" west="//@fields.90" east="//@fields.140" xPos="4" yPos="15"/>
+  <fields south="//@fields.117" north="//@fields.115" west="//@fields.91" east="//@fields.141" xPos="4" yPos="16"/>
+  <fields south="//@fields.118" north="//@fields.116" west="//@fields.92" east="//@fields.142" xPos="4" yPos="17"/>
+  <fields south="//@fields.119" north="//@fields.117" west="//@fields.93" east="//@fields.143" xPos="4" yPos="18"/>
+  <fields south="//@fields.120" north="//@fields.118" west="//@fields.94" east="//@fields.144" xPos="4" yPos="19"/>
+  <fields south="//@fields.121" north="//@fields.119" west="//@fields.95" east="//@fields.145" xPos="4" yPos="20"/>
+  <fields south="//@fields.122" north="//@fields.120" west="//@fields.96" east="//@fields.146" xPos="4" yPos="21"/>
+  <fields south="//@fields.123" north="//@fields.121" west="//@fields.97" east="//@fields.147" xPos="4" yPos="22"/>
+  <fields south="//@fields.124" north="//@fields.122" west="//@fields.98" east="//@fields.148" xPos="4" yPos="23"/>
+  <fields north="//@fields.123" west="//@fields.99" east="//@fields.149" xPos="4" yPos="24"/>
+  <fields south="//@fields.126" west="//@fields.100" east="//@fields.150" xPos="5"/>
+  <fields south="//@fields.127" north="//@fields.125" west="//@fields.101" east="//@fields.151" xPos="5" yPos="1"/>
+  <fields south="//@fields.128" north="//@fields.126" west="//@fields.102" east="//@fields.152" xPos="5" yPos="2"/>
+  <fields south="//@fields.129" north="//@fields.127" west="//@fields.103" east="//@fields.153" xPos="5" yPos="3"/>
+  <fields south="//@fields.130" north="//@fields.128" west="//@fields.104" east="//@fields.154" xPos="5" yPos="4"/>
+  <fields south="//@fields.131" north="//@fields.129" west="//@fields.105" east="//@fields.155" xPos="5" yPos="5"/>
+  <fields south="//@fields.132" north="//@fields.130" west="//@fields.106" east="//@fields.156" xPos="5" yPos="6"/>
+  <fields south="//@fields.133" north="//@fields.131" west="//@fields.107" east="//@fields.157" xPos="5" yPos="7"/>
+  <fields south="//@fields.134" north="//@fields.132" west="//@fields.108" east="//@fields.158" xPos="5" yPos="8"/>
+  <fields south="//@fields.135" north="//@fields.133" west="//@fields.109" east="//@fields.159" xPos="5" yPos="9"/>
+  <fields south="//@fields.136" north="//@fields.134" west="//@fields.110" east="//@fields.160" xPos="5" yPos="10"/>
+  <fields south="//@fields.137" north="//@fields.135" west="//@fields.111" east="//@fields.161" xPos="5" yPos="11"/>
+  <fields south="//@fields.138" north="//@fields.136" west="//@fields.112" east="//@fields.162" xPos="5" yPos="12"/>
+  <fields south="//@fields.139" north="//@fields.137" west="//@fields.113" east="//@fields.163" xPos="5" yPos="13"/>
+  <fields south="//@fields.140" north="//@fields.138" west="//@fields.114" east="//@fields.164" xPos="5" yPos="14"/>
+  <fields south="//@fields.141" north="//@fields.139" west="//@fields.115" east="//@fields.165" xPos="5" yPos="15"/>
+  <fields south="//@fields.142" north="//@fields.140" west="//@fields.116" east="//@fields.166" xPos="5" yPos="16"/>
+  <fields south="//@fields.143" north="//@fields.141" west="//@fields.117" east="//@fields.167" xPos="5" yPos="17"/>
+  <fields south="//@fields.144" north="//@fields.142" west="//@fields.118" east="//@fields.168" xPos="5" yPos="18"/>
+  <fields south="//@fields.145" north="//@fields.143" west="//@fields.119" east="//@fields.169" xPos="5" yPos="19"/>
+  <fields south="//@fields.146" north="//@fields.144" west="//@fields.120" east="//@fields.170" xPos="5" yPos="20"/>
+  <fields south="//@fields.147" north="//@fields.145" west="//@fields.121" east="//@fields.171" xPos="5" yPos="21"/>
+  <fields south="//@fields.148" north="//@fields.146" west="//@fields.122" east="//@fields.172" xPos="5" yPos="22"/>
+  <fields south="//@fields.149" north="//@fields.147" west="//@fields.123" east="//@fields.173" xPos="5" yPos="23"/>
+  <fields north="//@fields.148" west="//@fields.124" east="//@fields.174" xPos="5" yPos="24"/>
+  <fields south="//@fields.151" west="//@fields.125" east="//@fields.175" xPos="6"/>
+  <fields south="//@fields.152" north="//@fields.150" west="//@fields.126" east="//@fields.176" xPos="6" yPos="1"/>
+  <fields south="//@fields.153" north="//@fields.151" west="//@fields.127" east="//@fields.177" xPos="6" yPos="2"/>
+  <fields south="//@fields.154" north="//@fields.152" west="//@fields.128" east="//@fields.178" xPos="6" yPos="3"/>
+  <fields south="//@fields.155" north="//@fields.153" west="//@fields.129" east="//@fields.179" xPos="6" yPos="4"/>
+  <fields south="//@fields.156" north="//@fields.154" west="//@fields.130" east="//@fields.180" xPos="6" yPos="5"/>
+  <fields south="//@fields.157" north="//@fields.155" west="//@fields.131" east="//@fields.181" xPos="6" yPos="6"/>
+  <fields south="//@fields.158" north="//@fields.156" west="//@fields.132" east="//@fields.182" xPos="6" yPos="7"/>
+  <fields south="//@fields.159" north="//@fields.157" west="//@fields.133" east="//@fields.183" xPos="6" yPos="8"/>
+  <fields south="//@fields.160" north="//@fields.158" west="//@fields.134" east="//@fields.184" xPos="6" yPos="9"/>
+  <fields south="//@fields.161" north="//@fields.159" west="//@fields.135" east="//@fields.185" xPos="6" yPos="10"/>
+  <fields south="//@fields.162" north="//@fields.160" west="//@fields.136" east="//@fields.186" xPos="6" yPos="11"/>
+  <fields south="//@fields.163" north="//@fields.161" west="//@fields.137" east="//@fields.187" xPos="6" yPos="12"/>
+  <fields south="//@fields.164" north="//@fields.162" west="//@fields.138" east="//@fields.188" xPos="6" yPos="13"/>
+  <fields south="//@fields.165" north="//@fields.163" west="//@fields.139" east="//@fields.189" xPos="6" yPos="14"/>
+  <fields south="//@fields.166" north="//@fields.164" west="//@fields.140" east="//@fields.190" xPos="6" yPos="15"/>
+  <fields south="//@fields.167" north="//@fields.165" west="//@fields.141" east="//@fields.191" xPos="6" yPos="16"/>
+  <fields south="//@fields.168" north="//@fields.166" west="//@fields.142" east="//@fields.192" xPos="6" yPos="17"/>
+  <fields south="//@fields.169" north="//@fields.167" west="//@fields.143" east="//@fields.193" xPos="6" yPos="18"/>
+  <fields south="//@fields.170" north="//@fields.168" west="//@fields.144" east="//@fields.194" xPos="6" yPos="19"/>
+  <fields south="//@fields.171" north="//@fields.169" west="//@fields.145" east="//@fields.195" xPos="6" yPos="20"/>
+  <fields south="//@fields.172" north="//@fields.170" west="//@fields.146" east="//@fields.196" xPos="6" yPos="21"/>
+  <fields south="//@fields.173" north="//@fields.171" west="//@fields.147" east="//@fields.197" xPos="6" yPos="22"/>
+  <fields south="//@fields.174" north="//@fields.172" west="//@fields.148" east="//@fields.198" xPos="6" yPos="23"/>
+  <fields north="//@fields.173" west="//@fields.149" east="//@fields.199" xPos="6" yPos="24"/>
+  <fields south="//@fields.176" west="//@fields.150" east="//@fields.200" xPos="7"/>
+  <fields south="//@fields.177" north="//@fields.175" west="//@fields.151" east="//@fields.201" xPos="7" yPos="1"/>
+  <fields south="//@fields.178" north="//@fields.176" west="//@fields.152" east="//@fields.202" xPos="7" yPos="2"/>
+  <fields south="//@fields.179" north="//@fields.177" west="//@fields.153" east="//@fields.203" xPos="7" yPos="3"/>
+  <fields south="//@fields.180" north="//@fields.178" west="//@fields.154" east="//@fields.204" xPos="7" yPos="4"/>
+  <fields south="//@fields.181" north="//@fields.179" west="//@fields.155" east="//@fields.205" xPos="7" yPos="5"/>
+  <fields south="//@fields.182" north="//@fields.180" west="//@fields.156" east="//@fields.206" xPos="7" yPos="6"/>
+  <fields south="//@fields.183" north="//@fields.181" west="//@fields.157" east="//@fields.207" xPos="7" yPos="7"/>
+  <fields players="//@players.2" south="//@fields.184" north="//@fields.182" west="//@fields.158" east="//@fields.208" xPos="7" yPos="8"/>
+  <fields south="//@fields.185" north="//@fields.183" west="//@fields.159" east="//@fields.209" xPos="7" yPos="9"/>
+  <fields south="//@fields.186" north="//@fields.184" west="//@fields.160" east="//@fields.210" xPos="7" yPos="10"/>
+  <fields south="//@fields.187" north="//@fields.185" west="//@fields.161" east="//@fields.211" xPos="7" yPos="11"/>
+  <fields south="//@fields.188" north="//@fields.186" west="//@fields.162" east="//@fields.212" xPos="7" yPos="12"/>
+  <fields south="//@fields.189" north="//@fields.187" west="//@fields.163" east="//@fields.213" xPos="7" yPos="13"/>
+  <fields south="//@fields.190" north="//@fields.188" west="//@fields.164" east="//@fields.214" xPos="7" yPos="14"/>
+  <fields south="//@fields.191" north="//@fields.189" west="//@fields.165" east="//@fields.215" xPos="7" yPos="15"/>
+  <fields players="//@players.4" south="//@fields.192" north="//@fields.190" west="//@fields.166" east="//@fields.216" xPos="7" yPos="16"/>
+  <fields south="//@fields.193" north="//@fields.191" west="//@fields.167" east="//@fields.217" xPos="7" yPos="17"/>
+  <fields south="//@fields.194" north="//@fields.192" west="//@fields.168" east="//@fields.218" xPos="7" yPos="18"/>
+  <fields south="//@fields.195" north="//@fields.193" west="//@fields.169" east="//@fields.219" xPos="7" yPos="19"/>
+  <fields south="//@fields.196" north="//@fields.194" west="//@fields.170" east="//@fields.220" xPos="7" yPos="20"/>
+  <fields south="//@fields.197" north="//@fields.195" west="//@fields.171" east="//@fields.221" xPos="7" yPos="21"/>
+  <fields south="//@fields.198" north="//@fields.196" west="//@fields.172" east="//@fields.222" xPos="7" yPos="22"/>
+  <fields south="//@fields.199" north="//@fields.197" west="//@fields.173" east="//@fields.223" xPos="7" yPos="23"/>
+  <fields north="//@fields.198" west="//@fields.174" east="//@fields.224" xPos="7" yPos="24"/>
+  <fields south="//@fields.201" west="//@fields.175" east="//@fields.225" xPos="8"/>
+  <fields south="//@fields.202" north="//@fields.200" west="//@fields.176" east="//@fields.226" xPos="8" yPos="1"/>
+  <fields south="//@fields.203" north="//@fields.201" west="//@fields.177" east="//@fields.227" xPos="8" yPos="2"/>
+  <fields south="//@fields.204" north="//@fields.202" west="//@fields.178" east="//@fields.228" xPos="8" yPos="3"/>
+  <fields south="//@fields.205" north="//@fields.203" west="//@fields.179" east="//@fields.229" xPos="8" yPos="4"/>
+  <fields south="//@fields.206" north="//@fields.204" west="//@fields.180" east="//@fields.230" xPos="8" yPos="5"/>
+  <fields south="//@fields.207" north="//@fields.205" west="//@fields.181" east="//@fields.231" xPos="8" yPos="6"/>
+  <fields south="//@fields.208" north="//@fields.206" west="//@fields.182" east="//@fields.232" xPos="8" yPos="7"/>
+  <fields south="//@fields.209" north="//@fields.207" west="//@fields.183" east="//@fields.233" xPos="8" yPos="8"/>
+  <fields south="//@fields.210" north="//@fields.208" west="//@fields.184" east="//@fields.234" xPos="8" yPos="9"/>
+  <fields south="//@fields.211" north="//@fields.209" west="//@fields.185" east="//@fields.235" xPos="8" yPos="10"/>
+  <fields south="//@fields.212" north="//@fields.210" west="//@fields.186" east="//@fields.236" xPos="8" yPos="11"/>
+  <fields south="//@fields.213" north="//@fields.211" west="//@fields.187" east="//@fields.237" xPos="8" yPos="12"/>
+  <fields south="//@fields.214" north="//@fields.212" west="//@fields.188" east="//@fields.238" xPos="8" yPos="13"/>
+  <fields south="//@fields.215" north="//@fields.213" west="//@fields.189" east="//@fields.239" xPos="8" yPos="14"/>
+  <fields south="//@fields.216" north="//@fields.214" west="//@fields.190" east="//@fields.240" xPos="8" yPos="15"/>
+  <fields south="//@fields.217" north="//@fields.215" west="//@fields.191" east="//@fields.241" xPos="8" yPos="16"/>
+  <fields south="//@fields.218" north="//@fields.216" west="//@fields.192" east="//@fields.242" xPos="8" yPos="17"/>
+  <fields south="//@fields.219" north="//@fields.217" west="//@fields.193" east="//@fields.243" xPos="8" yPos="18"/>
+  <fields south="//@fields.220" north="//@fields.218" west="//@fields.194" east="//@fields.244" xPos="8" yPos="19"/>
+  <fields south="//@fields.221" north="//@fields.219" west="//@fields.195" east="//@fields.245" xPos="8" yPos="20"/>
+  <fields south="//@fields.222" north="//@fields.220" west="//@fields.196" east="//@fields.246" xPos="8" yPos="21"/>
+  <fields south="//@fields.223" north="//@fields.221" west="//@fields.197" east="//@fields.247" xPos="8" yPos="22"/>
+  <fields south="//@fields.224" north="//@fields.222" west="//@fields.198" east="//@fields.248" xPos="8" yPos="23"/>
+  <fields north="//@fields.223" west="//@fields.199" east="//@fields.249" xPos="8" yPos="24"/>
+  <fields south="//@fields.226" west="//@fields.200" east="//@fields.250" xPos="9"/>
+  <fields south="//@fields.227" north="//@fields.225" west="//@fields.201" east="//@fields.251" xPos="9" yPos="1"/>
+  <fields south="//@fields.228" north="//@fields.226" west="//@fields.202" east="//@fields.252" xPos="9" yPos="2"/>
+  <fields south="//@fields.229" north="//@fields.227" west="//@fields.203" east="//@fields.253" xPos="9" yPos="3"/>
+  <fields south="//@fields.230" north="//@fields.228" west="//@fields.204" east="//@fields.254" xPos="9" yPos="4"/>
+  <fields south="//@fields.231" north="//@fields.229" west="//@fields.205" east="//@fields.255" xPos="9" yPos="5"/>
+  <fields south="//@fields.232" north="//@fields.230" west="//@fields.206" east="//@fields.256" xPos="9" yPos="6"/>
+  <fields south="//@fields.233" north="//@fields.231" west="//@fields.207" east="//@fields.257" xPos="9" yPos="7"/>
+  <fields south="//@fields.234" north="//@fields.232" west="//@fields.208" east="//@fields.258" xPos="9" yPos="8"/>
+  <fields south="//@fields.235" north="//@fields.233" west="//@fields.209" east="//@fields.259" xPos="9" yPos="9"/>
+  <fields south="//@fields.236" north="//@fields.234" west="//@fields.210" east="//@fields.260" xPos="9" yPos="10"/>
+  <fields south="//@fields.237" north="//@fields.235" west="//@fields.211" east="//@fields.261" xPos="9" yPos="11"/>
+  <fields south="//@fields.238" north="//@fields.236" west="//@fields.212" east="//@fields.262" xPos="9" yPos="12"/>
+  <fields south="//@fields.239" north="//@fields.237" west="//@fields.213" east="//@fields.263" xPos="9" yPos="13"/>
+  <fields south="//@fields.240" north="//@fields.238" west="//@fields.214" east="//@fields.264" xPos="9" yPos="14"/>
+  <fields south="//@fields.241" north="//@fields.239" west="//@fields.215" east="//@fields.265" xPos="9" yPos="15"/>
+  <fields south="//@fields.242" north="//@fields.240" west="//@fields.216" east="//@fields.266" xPos="9" yPos="16"/>
+  <fields south="//@fields.243" north="//@fields.241" west="//@fields.217" east="//@fields.267" xPos="9" yPos="17"/>
+  <fields south="//@fields.244" north="//@fields.242" west="//@fields.218" east="//@fields.268" xPos="9" yPos="18"/>
+  <fields south="//@fields.245" north="//@fields.243" west="//@fields.219" east="//@fields.269" xPos="9" yPos="19"/>
+  <fields south="//@fields.246" north="//@fields.244" west="//@fields.220" east="//@fields.270" xPos="9" yPos="20"/>
+  <fields south="//@fields.247" north="//@fields.245" west="//@fields.221" east="//@fields.271" xPos="9" yPos="21"/>
+  <fields south="//@fields.248" north="//@fields.246" west="//@fields.222" east="//@fields.272" xPos="9" yPos="22"/>
+  <fields south="//@fields.249" north="//@fields.247" west="//@fields.223" east="//@fields.273" xPos="9" yPos="23"/>
+  <fields north="//@fields.248" west="//@fields.224" east="//@fields.274" xPos="9" yPos="24"/>
+  <fields south="//@fields.251" west="//@fields.225" east="//@fields.275" xPos="10"/>
+  <fields south="//@fields.252" north="//@fields.250" west="//@fields.226" east="//@fields.276" xPos="10" yPos="1"/>
+  <fields south="//@fields.253" north="//@fields.251" west="//@fields.227" east="//@fields.277" xPos="10" yPos="2"/>
+  <fields south="//@fields.254" north="//@fields.252" west="//@fields.228" east="//@fields.278" xPos="10" yPos="3"/>
+  <fields south="//@fields.255" north="//@fields.253" west="//@fields.229" east="//@fields.279" xPos="10" yPos="4"/>
+  <fields south="//@fields.256" north="//@fields.254" west="//@fields.230" east="//@fields.280" xPos="10" yPos="5"/>
+  <fields south="//@fields.257" north="//@fields.255" west="//@fields.231" east="//@fields.281" xPos="10" yPos="6"/>
+  <fields south="//@fields.258" north="//@fields.256" west="//@fields.232" east="//@fields.282" xPos="10" yPos="7"/>
+  <fields south="//@fields.259" north="//@fields.257" west="//@fields.233" east="//@fields.283" xPos="10" yPos="8"/>
+  <fields south="//@fields.260" north="//@fields.258" west="//@fields.234" east="//@fields.284" xPos="10" yPos="9"/>
+  <fields south="//@fields.261" north="//@fields.259" west="//@fields.235" east="//@fields.285" xPos="10" yPos="10"/>
+  <fields south="//@fields.262" north="//@fields.260" west="//@fields.236" east="//@fields.286" xPos="10" yPos="11"/>
+  <fields south="//@fields.263" north="//@fields.261" west="//@fields.237" east="//@fields.287" xPos="10" yPos="12"/>
+  <fields south="//@fields.264" north="//@fields.262" west="//@fields.238" east="//@fields.288" xPos="10" yPos="13"/>
+  <fields south="//@fields.265" north="//@fields.263" west="//@fields.239" east="//@fields.289" xPos="10" yPos="14"/>
+  <fields south="//@fields.266" north="//@fields.264" west="//@fields.240" east="//@fields.290" xPos="10" yPos="15"/>
+  <fields south="//@fields.267" north="//@fields.265" west="//@fields.241" east="//@fields.291" xPos="10" yPos="16"/>
+  <fields south="//@fields.268" north="//@fields.266" west="//@fields.242" east="//@fields.292" xPos="10" yPos="17"/>
+  <fields south="//@fields.269" north="//@fields.267" west="//@fields.243" east="//@fields.293" xPos="10" yPos="18"/>
+  <fields south="//@fields.270" north="//@fields.268" west="//@fields.244" east="//@fields.294" xPos="10" yPos="19"/>
+  <fields south="//@fields.271" north="//@fields.269" west="//@fields.245" east="//@fields.295" xPos="10" yPos="20"/>
+  <fields south="//@fields.272" north="//@fields.270" west="//@fields.246" east="//@fields.296" xPos="10" yPos="21"/>
+  <fields south="//@fields.273" north="//@fields.271" west="//@fields.247" east="//@fields.297" xPos="10" yPos="22"/>
+  <fields south="//@fields.274" north="//@fields.272" west="//@fields.248" east="//@fields.298" xPos="10" yPos="23"/>
+  <fields north="//@fields.273" west="//@fields.249" east="//@fields.299" xPos="10" yPos="24"/>
+  <fields south="//@fields.276" west="//@fields.250" east="//@fields.300" xPos="11"/>
+  <fields south="//@fields.277" north="//@fields.275" west="//@fields.251" east="//@fields.301" xPos="11" yPos="1"/>
+  <fields south="//@fields.278" north="//@fields.276" west="//@fields.252" east="//@fields.302" xPos="11" yPos="2"/>
+  <fields south="//@fields.279" north="//@fields.277" west="//@fields.253" east="//@fields.303" xPos="11" yPos="3"/>
+  <fields south="//@fields.280" north="//@fields.278" west="//@fields.254" east="//@fields.304" xPos="11" yPos="4"/>
+  <fields south="//@fields.281" north="//@fields.279" west="//@fields.255" east="//@fields.305" xPos="11" yPos="5"/>
+  <fields south="//@fields.282" north="//@fields.280" west="//@fields.256" east="//@fields.306" xPos="11" yPos="6"/>
+  <fields south="//@fields.283" north="//@fields.281" west="//@fields.257" east="//@fields.307" xPos="11" yPos="7"/>
+  <fields south="//@fields.284" north="//@fields.282" west="//@fields.258" east="//@fields.308" xPos="11" yPos="8"/>
+  <fields south="//@fields.285" north="//@fields.283" west="//@fields.259" east="//@fields.309" xPos="11" yPos="9"/>
+  <fields south="//@fields.286" north="//@fields.284" west="//@fields.260" east="//@fields.310" xPos="11" yPos="10"/>
+  <fields south="//@fields.287" north="//@fields.285" west="//@fields.261" east="//@fields.311" xPos="11" yPos="11"/>
+  <fields south="//@fields.288" north="//@fields.286" west="//@fields.262" east="//@fields.312" xPos="11" yPos="12"/>
+  <fields south="//@fields.289" north="//@fields.287" west="//@fields.263" east="//@fields.313" xPos="11" yPos="13"/>
+  <fields south="//@fields.290" north="//@fields.288" west="//@fields.264" east="//@fields.314" xPos="11" yPos="14"/>
+  <fields south="//@fields.291" north="//@fields.289" west="//@fields.265" east="//@fields.315" xPos="11" yPos="15"/>
+  <fields south="//@fields.292" north="//@fields.290" west="//@fields.266" east="//@fields.316" xPos="11" yPos="16"/>
+  <fields south="//@fields.293" north="//@fields.291" west="//@fields.267" east="//@fields.317" xPos="11" yPos="17"/>
+  <fields south="//@fields.294" north="//@fields.292" west="//@fields.268" east="//@fields.318" xPos="11" yPos="18"/>
+  <fields south="//@fields.295" north="//@fields.293" west="//@fields.269" east="//@fields.319" xPos="11" yPos="19"/>
+  <fields south="//@fields.296" north="//@fields.294" west="//@fields.270" east="//@fields.320" xPos="11" yPos="20"/>
+  <fields south="//@fields.297" north="//@fields.295" west="//@fields.271" east="//@fields.321" xPos="11" yPos="21"/>
+  <fields south="//@fields.298" north="//@fields.296" west="//@fields.272" east="//@fields.322" xPos="11" yPos="22"/>
+  <fields south="//@fields.299" north="//@fields.297" west="//@fields.273" east="//@fields.323" xPos="11" yPos="23"/>
+  <fields north="//@fields.298" west="//@fields.274" east="//@fields.324" xPos="11" yPos="24"/>
+  <fields south="//@fields.301" west="//@fields.275" east="//@fields.325" xPos="12"/>
+  <fields south="//@fields.302" north="//@fields.300" west="//@fields.276" east="//@fields.326" xPos="12" yPos="1"/>
+  <fields south="//@fields.303" north="//@fields.301" west="//@fields.277" east="//@fields.327" xPos="12" yPos="2"/>
+  <fields south="//@fields.304" north="//@fields.302" west="//@fields.278" east="//@fields.328" xPos="12" yPos="3"/>
+  <fields south="//@fields.305" north="//@fields.303" west="//@fields.279" east="//@fields.329" xPos="12" yPos="4"/>
+  <fields south="//@fields.306" north="//@fields.304" west="//@fields.280" east="//@fields.330" xPos="12" yPos="5"/>
+  <fields south="//@fields.307" north="//@fields.305" west="//@fields.281" east="//@fields.331" xPos="12" yPos="6"/>
+  <fields south="//@fields.308" north="//@fields.306" west="//@fields.282" east="//@fields.332" xPos="12" yPos="7"/>
+  <fields south="//@fields.309" north="//@fields.307" west="//@fields.283" east="//@fields.333" xPos="12" yPos="8"/>
+  <fields south="//@fields.310" north="//@fields.308" west="//@fields.284" east="//@fields.334" xPos="12" yPos="9"/>
+  <fields south="//@fields.311" north="//@fields.309" west="//@fields.285" east="//@fields.335" xPos="12" yPos="10"/>
+  <fields south="//@fields.312" north="//@fields.310" west="//@fields.286" east="//@fields.336" xPos="12" yPos="11"/>
+  <fields south="//@fields.313" north="//@fields.311" west="//@fields.287" east="//@fields.337" xPos="12" yPos="12"/>
+  <fields south="//@fields.314" north="//@fields.312" west="//@fields.288" east="//@fields.338" xPos="12" yPos="13"/>
+  <fields south="//@fields.315" north="//@fields.313" west="//@fields.289" east="//@fields.339" xPos="12" yPos="14"/>
+  <fields south="//@fields.316" north="//@fields.314" west="//@fields.290" east="//@fields.340" xPos="12" yPos="15"/>
+  <fields south="//@fields.317" north="//@fields.315" west="//@fields.291" east="//@fields.341" xPos="12" yPos="16"/>
+  <fields south="//@fields.318" north="//@fields.316" west="//@fields.292" east="//@fields.342" xPos="12" yPos="17"/>
+  <fields south="//@fields.319" north="//@fields.317" west="//@fields.293" east="//@fields.343" xPos="12" yPos="18"/>
+  <fields south="//@fields.320" north="//@fields.318" west="//@fields.294" east="//@fields.344" xPos="12" yPos="19"/>
+  <fields south="//@fields.321" north="//@fields.319" west="//@fields.295" east="//@fields.345" xPos="12" yPos="20"/>
+  <fields south="//@fields.322" north="//@fields.320" west="//@fields.296" east="//@fields.346" xPos="12" yPos="21"/>
+  <fields south="//@fields.323" north="//@fields.321" west="//@fields.297" east="//@fields.347" xPos="12" yPos="22"/>
+  <fields south="//@fields.324" north="//@fields.322" west="//@fields.298" east="//@fields.348" xPos="12" yPos="23"/>
+  <fields north="//@fields.323" west="//@fields.299" east="//@fields.349" xPos="12" yPos="24"/>
+  <fields south="//@fields.326" west="//@fields.300" east="//@fields.350" xPos="13"/>
+  <fields south="//@fields.327" north="//@fields.325" west="//@fields.301" east="//@fields.351" xPos="13" yPos="1"/>
+  <fields south="//@fields.328" north="//@fields.326" west="//@fields.302" east="//@fields.352" xPos="13" yPos="2"/>
+  <fields south="//@fields.329" north="//@fields.327" west="//@fields.303" east="//@fields.353" xPos="13" yPos="3"/>
+  <fields south="//@fields.330" north="//@fields.328" west="//@fields.304" east="//@fields.354" xPos="13" yPos="4"/>
+  <fields south="//@fields.331" north="//@fields.329" west="//@fields.305" east="//@fields.355" xPos="13" yPos="5"/>
+  <fields south="//@fields.332" north="//@fields.330" west="//@fields.306" east="//@fields.356" xPos="13" yPos="6"/>
+  <fields south="//@fields.333" north="//@fields.331" west="//@fields.307" east="//@fields.357" xPos="13" yPos="7"/>
+  <fields south="//@fields.334" north="//@fields.332" west="//@fields.308" east="//@fields.358" xPos="13" yPos="8"/>
+  <fields south="//@fields.335" north="//@fields.333" west="//@fields.309" east="//@fields.359" xPos="13" yPos="9"/>
+  <fields south="//@fields.336" north="//@fields.334" west="//@fields.310" east="//@fields.360" xPos="13" yPos="10"/>
+  <fields south="//@fields.337" north="//@fields.335" west="//@fields.311" east="//@fields.361" xPos="13" yPos="11"/>
+  <fields south="//@fields.338" north="//@fields.336" west="//@fields.312" east="//@fields.362" xPos="13" yPos="12"/>
+  <fields south="//@fields.339" north="//@fields.337" west="//@fields.313" east="//@fields.363" xPos="13" yPos="13"/>
+  <fields south="//@fields.340" north="//@fields.338" west="//@fields.314" east="//@fields.364" xPos="13" yPos="14"/>
+  <fields south="//@fields.341" north="//@fields.339" west="//@fields.315" east="//@fields.365" xPos="13" yPos="15"/>
+  <fields south="//@fields.342" north="//@fields.340" west="//@fields.316" east="//@fields.366" xPos="13" yPos="16"/>
+  <fields south="//@fields.343" north="//@fields.341" west="//@fields.317" east="//@fields.367" xPos="13" yPos="17"/>
+  <fields south="//@fields.344" north="//@fields.342" west="//@fields.318" east="//@fields.368" xPos="13" yPos="18"/>
+  <fields south="//@fields.345" north="//@fields.343" west="//@fields.319" east="//@fields.369" xPos="13" yPos="19"/>
+  <fields south="//@fields.346" north="//@fields.344" west="//@fields.320" east="//@fields.370" xPos="13" yPos="20"/>
+  <fields south="//@fields.347" north="//@fields.345" west="//@fields.321" east="//@fields.371" xPos="13" yPos="21"/>
+  <fields south="//@fields.348" north="//@fields.346" west="//@fields.322" east="//@fields.372" xPos="13" yPos="22"/>
+  <fields south="//@fields.349" north="//@fields.347" west="//@fields.323" east="//@fields.373" xPos="13" yPos="23"/>
+  <fields north="//@fields.348" west="//@fields.324" east="//@fields.374" xPos="13" yPos="24"/>
+  <fields south="//@fields.351" west="//@fields.325" east="//@fields.375" xPos="14"/>
+  <fields south="//@fields.352" north="//@fields.350" west="//@fields.326" east="//@fields.376" xPos="14" yPos="1"/>
+  <fields south="//@fields.353" north="//@fields.351" west="//@fields.327" east="//@fields.377" xPos="14" yPos="2"/>
+  <fields south="//@fields.354" north="//@fields.352" west="//@fields.328" east="//@fields.378" xPos="14" yPos="3"/>
+  <fields south="//@fields.355" north="//@fields.353" west="//@fields.329" east="//@fields.379" xPos="14" yPos="4"/>
+  <fields players="//@players.6" south="//@fields.356" north="//@fields.354" west="//@fields.330" east="//@fields.380" xPos="14" yPos="5"/>
+  <fields south="//@fields.357" north="//@fields.355" west="//@fields.331" east="//@fields.381" xPos="14" yPos="6"/>
+  <fields south="//@fields.358" north="//@fields.356" west="//@fields.332" east="//@fields.382" xPos="14" yPos="7"/>
+  <fields south="//@fields.359" north="//@fields.357" west="//@fields.333" east="//@fields.383" xPos="14" yPos="8"/>
+  <fields south="//@fields.360" north="//@fields.358" west="//@fields.334" east="//@fields.384" xPos="14" yPos="9"/>
+  <fields south="//@fields.361" north="//@fields.359" west="//@fields.335" east="//@fields.385" xPos="14" yPos="10"/>
+  <fields south="//@fields.362" north="//@fields.360" west="//@fields.336" east="//@fields.386" xPos="14" yPos="11"/>
+  <fields south="//@fields.363" north="//@fields.361" west="//@fields.337" east="//@fields.387" xPos="14" yPos="12"/>
+  <fields south="//@fields.364" north="//@fields.362" west="//@fields.338" east="//@fields.388" xPos="14" yPos="13"/>
+  <fields south="//@fields.365" north="//@fields.363" west="//@fields.339" east="//@fields.389" xPos="14" yPos="14"/>
+  <fields south="//@fields.366" north="//@fields.364" west="//@fields.340" east="//@fields.390" xPos="14" yPos="15"/>
+  <fields south="//@fields.367" north="//@fields.365" west="//@fields.341" east="//@fields.391" xPos="14" yPos="16"/>
+  <fields south="//@fields.368" north="//@fields.366" west="//@fields.342" east="//@fields.392" xPos="14" yPos="17"/>
+  <fields south="//@fields.369" north="//@fields.367" west="//@fields.343" east="//@fields.393" xPos="14" yPos="18"/>
+  <fields players="//@players.10" south="//@fields.370" north="//@fields.368" west="//@fields.344" east="//@fields.394" xPos="14" yPos="19"/>
+  <fields south="//@fields.371" north="//@fields.369" west="//@fields.345" east="//@fields.395" xPos="14" yPos="20"/>
+  <fields south="//@fields.372" north="//@fields.370" west="//@fields.346" east="//@fields.396" xPos="14" yPos="21"/>
+  <fields south="//@fields.373" north="//@fields.371" west="//@fields.347" east="//@fields.397" xPos="14" yPos="22"/>
+  <fields south="//@fields.374" north="//@fields.372" west="//@fields.348" east="//@fields.398" xPos="14" yPos="23"/>
+  <fields north="//@fields.373" west="//@fields.349" east="//@fields.399" xPos="14" yPos="24"/>
+  <fields south="//@fields.376" west="//@fields.350" east="//@fields.400" xPos="15"/>
+  <fields south="//@fields.377" north="//@fields.375" west="//@fields.351" east="//@fields.401" xPos="15" yPos="1"/>
+  <fields south="//@fields.378" north="//@fields.376" west="//@fields.352" east="//@fields.402" xPos="15" yPos="2"/>
+  <fields south="//@fields.379" north="//@fields.377" west="//@fields.353" east="//@fields.403" xPos="15" yPos="3"/>
+  <fields south="//@fields.380" north="//@fields.378" west="//@fields.354" east="//@fields.404" xPos="15" yPos="4"/>
+  <fields south="//@fields.381" north="//@fields.379" west="//@fields.355" east="//@fields.405" xPos="15" yPos="5"/>
+  <fields south="//@fields.382" north="//@fields.380" west="//@fields.356" east="//@fields.406" xPos="15" yPos="6"/>
+  <fields south="//@fields.383" north="//@fields.381" west="//@fields.357" east="//@fields.407" xPos="15" yPos="7"/>
+  <fields south="//@fields.384" north="//@fields.382" west="//@fields.358" east="//@fields.408" xPos="15" yPos="8"/>
+  <fields south="//@fields.385" north="//@fields.383" west="//@fields.359" east="//@fields.409" xPos="15" yPos="9"/>
+  <fields south="//@fields.386" north="//@fields.384" west="//@fields.360" east="//@fields.410" xPos="15" yPos="10"/>
+  <fields south="//@fields.387" north="//@fields.385" west="//@fields.361" east="//@fields.411" xPos="15" yPos="11"/>
+  <fields south="//@fields.388" north="//@fields.386" west="//@fields.362" east="//@fields.412" xPos="15" yPos="12"/>
+  <fields south="//@fields.389" north="//@fields.387" west="//@fields.363" east="//@fields.413" xPos="15" yPos="13"/>
+  <fields south="//@fields.390" north="//@fields.388" west="//@fields.364" east="//@fields.414" xPos="15" yPos="14"/>
+  <fields south="//@fields.391" north="//@fields.389" west="//@fields.365" east="//@fields.415" xPos="15" yPos="15"/>
+  <fields south="//@fields.392" north="//@fields.390" west="//@fields.366" east="//@fields.416" xPos="15" yPos="16"/>
+  <fields south="//@fields.393" north="//@fields.391" west="//@fields.367" east="//@fields.417" xPos="15" yPos="17"/>
+  <fields south="//@fields.394" north="//@fields.392" west="//@fields.368" east="//@fields.418" xPos="15" yPos="18"/>
+  <fields south="//@fields.395" north="//@fields.393" west="//@fields.369" east="//@fields.419" xPos="15" yPos="19"/>
+  <fields south="//@fields.396" north="//@fields.394" west="//@fields.370" east="//@fields.420" xPos="15" yPos="20"/>
+  <fields south="//@fields.397" north="//@fields.395" west="//@fields.371" east="//@fields.421" xPos="15" yPos="21"/>
+  <fields south="//@fields.398" north="//@fields.396" west="//@fields.372" east="//@fields.422" xPos="15" yPos="22"/>
+  <fields south="//@fields.399" north="//@fields.397" west="//@fields.373" east="//@fields.423" xPos="15" yPos="23"/>
+  <fields north="//@fields.398" west="//@fields.374" east="//@fields.424" xPos="15" yPos="24"/>
+  <fields south="//@fields.401" west="//@fields.375" east="//@fields.425" xPos="16"/>
+  <fields south="//@fields.402" north="//@fields.400" west="//@fields.376" east="//@fields.426" xPos="16" yPos="1"/>
+  <fields south="//@fields.403" north="//@fields.401" west="//@fields.377" east="//@fields.427" xPos="16" yPos="2"/>
+  <fields south="//@fields.404" north="//@fields.402" west="//@fields.378" east="//@fields.428" xPos="16" yPos="3"/>
+  <fields south="//@fields.405" north="//@fields.403" west="//@fields.379" east="//@fields.429" xPos="16" yPos="4"/>
+  <fields south="//@fields.406" north="//@fields.404" west="//@fields.380" east="//@fields.430" xPos="16" yPos="5"/>
+  <fields south="//@fields.407" north="//@fields.405" west="//@fields.381" east="//@fields.431" xPos="16" yPos="6"/>
+  <fields south="//@fields.408" north="//@fields.406" west="//@fields.382" east="//@fields.432" xPos="16" yPos="7"/>
+  <fields south="//@fields.409" north="//@fields.407" west="//@fields.383" east="//@fields.433" xPos="16" yPos="8"/>
+  <fields south="//@fields.410" north="//@fields.408" west="//@fields.384" east="//@fields.434" xPos="16" yPos="9"/>
+  <fields south="//@fields.411" north="//@fields.409" west="//@fields.385" east="//@fields.435" xPos="16" yPos="10"/>
+  <fields south="//@fields.412" north="//@fields.410" west="//@fields.386" east="//@fields.436" xPos="16" yPos="11"/>
+  <fields players="//@players.17" south="//@fields.413" north="//@fields.411" west="//@fields.387" east="//@fields.437" xPos="16" yPos="12"/>
+  <fields south="//@fields.414" north="//@fields.412" west="//@fields.388" east="//@fields.438" xPos="16" yPos="13"/>
+  <fields south="//@fields.415" north="//@fields.413" west="//@fields.389" east="//@fields.439" xPos="16" yPos="14"/>
+  <fields south="//@fields.416" north="//@fields.414" west="//@fields.390" east="//@fields.440" xPos="16" yPos="15"/>
+  <fields south="//@fields.417" north="//@fields.415" west="//@fields.391" east="//@fields.441" xPos="16" yPos="16"/>
+  <fields south="//@fields.418" north="//@fields.416" west="//@fields.392" east="//@fields.442" xPos="16" yPos="17"/>
+  <fields south="//@fields.419" north="//@fields.417" west="//@fields.393" east="//@fields.443" xPos="16" yPos="18"/>
+  <fields south="//@fields.420" north="//@fields.418" west="//@fields.394" east="//@fields.444" xPos="16" yPos="19"/>
+  <fields south="//@fields.421" north="//@fields.419" west="//@fields.395" east="//@fields.445" xPos="16" yPos="20"/>
+  <fields south="//@fields.422" north="//@fields.420" west="//@fields.396" east="//@fields.446" xPos="16" yPos="21"/>
+  <fields south="//@fields.423" north="//@fields.421" west="//@fields.397" east="//@fields.447" xPos="16" yPos="22"/>
+  <fields south="//@fields.424" north="//@fields.422" west="//@fields.398" east="//@fields.448" xPos="16" yPos="23"/>
+  <fields north="//@fields.423" west="//@fields.399" east="//@fields.449" xPos="16" yPos="24"/>
+  <fields south="//@fields.426" west="//@fields.400" east="//@fields.450" xPos="17"/>
+  <fields south="//@fields.427" north="//@fields.425" west="//@fields.401" east="//@fields.451" xPos="17" yPos="1"/>
+  <fields south="//@fields.428" north="//@fields.426" west="//@fields.402" east="//@fields.452" xPos="17" yPos="2"/>
+  <fields south="//@fields.429" north="//@fields.427" west="//@fields.403" east="//@fields.453" xPos="17" yPos="3"/>
+  <fields south="//@fields.430" north="//@fields.428" west="//@fields.404" east="//@fields.454" xPos="17" yPos="4"/>
+  <fields south="//@fields.431" north="//@fields.429" west="//@fields.405" east="//@fields.455" xPos="17" yPos="5"/>
+  <fields south="//@fields.432" north="//@fields.430" west="//@fields.406" east="//@fields.456" xPos="17" yPos="6"/>
+  <fields south="//@fields.433" north="//@fields.431" west="//@fields.407" east="//@fields.457" xPos="17" yPos="7"/>
+  <fields south="//@fields.434" north="//@fields.432" west="//@fields.408" east="//@fields.458" xPos="17" yPos="8"/>
+  <fields south="//@fields.435" north="//@fields.433" west="//@fields.409" east="//@fields.459" xPos="17" yPos="9"/>
+  <fields south="//@fields.436" north="//@fields.434" west="//@fields.410" east="//@fields.460" xPos="17" yPos="10"/>
+  <fields south="//@fields.437" north="//@fields.435" west="//@fields.411" east="//@fields.461" xPos="17" yPos="11"/>
+  <fields south="//@fields.438" north="//@fields.436" west="//@fields.412" east="//@fields.462" xPos="17" yPos="12"/>
+  <fields south="//@fields.439" north="//@fields.437" west="//@fields.413" east="//@fields.463" xPos="17" yPos="13"/>
+  <fields south="//@fields.440" north="//@fields.438" west="//@fields.414" east="//@fields.464" xPos="17" yPos="14"/>
+  <fields south="//@fields.441" north="//@fields.439" west="//@fields.415" east="//@fields.465" xPos="17" yPos="15"/>
+  <fields south="//@fields.442" north="//@fields.440" west="//@fields.416" east="//@fields.466" xPos="17" yPos="16"/>
+  <fields south="//@fields.443" north="//@fields.441" west="//@fields.417" east="//@fields.467" xPos="17" yPos="17"/>
+  <fields south="//@fields.444" north="//@fields.442" west="//@fields.418" east="//@fields.468" xPos="17" yPos="18"/>
+  <fields south="//@fields.445" north="//@fields.443" west="//@fields.419" east="//@fields.469" xPos="17" yPos="19"/>
+  <fields south="//@fields.446" north="//@fields.444" west="//@fields.420" east="//@fields.470" xPos="17" yPos="20"/>
+  <fields south="//@fields.447" north="//@fields.445" west="//@fields.421" east="//@fields.471" xPos="17" yPos="21"/>
+  <fields south="//@fields.448" north="//@fields.446" west="//@fields.422" east="//@fields.472" xPos="17" yPos="22"/>
+  <fields south="//@fields.449" north="//@fields.447" west="//@fields.423" east="//@fields.473" xPos="17" yPos="23"/>
+  <fields north="//@fields.448" west="//@fields.424" east="//@fields.474" xPos="17" yPos="24"/>
+  <fields south="//@fields.451" west="//@fields.425" east="//@fields.475" xPos="18"/>
+  <fields south="//@fields.452" north="//@fields.450" west="//@fields.426" east="//@fields.476" xPos="18" yPos="1"/>
+  <fields south="//@fields.453" north="//@fields.451" west="//@fields.427" east="//@fields.477" xPos="18" yPos="2"/>
+  <fields south="//@fields.454" north="//@fields.452" west="//@fields.428" east="//@fields.478" xPos="18" yPos="3"/>
+  <fields south="//@fields.455" north="//@fields.453" west="//@fields.429" east="//@fields.479" xPos="18" yPos="4"/>
+  <fields south="//@fields.456" north="//@fields.454" west="//@fields.430" east="//@fields.480" xPos="18" yPos="5"/>
+  <fields south="//@fields.457" north="//@fields.455" west="//@fields.431" east="//@fields.481" xPos="18" yPos="6"/>
+  <fields south="//@fields.458" north="//@fields.456" west="//@fields.432" east="//@fields.482" xPos="18" yPos="7"/>
+  <fields south="//@fields.459" north="//@fields.457" west="//@fields.433" east="//@fields.483" xPos="18" yPos="8"/>
+  <fields south="//@fields.460" north="//@fields.458" west="//@fields.434" east="//@fields.484" xPos="18" yPos="9"/>
+  <fields south="//@fields.461" north="//@fields.459" west="//@fields.435" east="//@fields.485" xPos="18" yPos="10"/>
+  <fields south="//@fields.462" north="//@fields.460" west="//@fields.436" east="//@fields.486" xPos="18" yPos="11"/>
+  <fields south="//@fields.463" north="//@fields.461" west="//@fields.437" east="//@fields.487" xPos="18" yPos="12"/>
+  <fields south="//@fields.464" north="//@fields.462" west="//@fields.438" east="//@fields.488" xPos="18" yPos="13"/>
+  <fields south="//@fields.465" north="//@fields.463" west="//@fields.439" east="//@fields.489" xPos="18" yPos="14"/>
+  <fields south="//@fields.466" north="//@fields.464" west="//@fields.440" east="//@fields.490" xPos="18" yPos="15"/>
+  <fields south="//@fields.467" north="//@fields.465" west="//@fields.441" east="//@fields.491" xPos="18" yPos="16"/>
+  <fields south="//@fields.468" north="//@fields.466" west="//@fields.442" east="//@fields.492" xPos="18" yPos="17"/>
+  <fields south="//@fields.469" north="//@fields.467" west="//@fields.443" east="//@fields.493" xPos="18" yPos="18"/>
+  <fields south="//@fields.470" north="//@fields.468" west="//@fields.444" east="//@fields.494" xPos="18" yPos="19"/>
+  <fields south="//@fields.471" north="//@fields.469" west="//@fields.445" east="//@fields.495" xPos="18" yPos="20"/>
+  <fields south="//@fields.472" north="//@fields.470" west="//@fields.446" east="//@fields.496" xPos="18" yPos="21"/>
+  <fields south="//@fields.473" north="//@fields.471" west="//@fields.447" east="//@fields.497" xPos="18" yPos="22"/>
+  <fields south="//@fields.474" north="//@fields.472" west="//@fields.448" east="//@fields.498" xPos="18" yPos="23"/>
+  <fields north="//@fields.473" west="//@fields.449" east="//@fields.499" xPos="18" yPos="24"/>
+  <fields south="//@fields.476" west="//@fields.450" east="//@fields.500" xPos="19"/>
+  <fields south="//@fields.477" north="//@fields.475" west="//@fields.451" east="//@fields.501" xPos="19" yPos="1"/>
+  <fields south="//@fields.478" north="//@fields.476" west="//@fields.452" east="//@fields.502" xPos="19" yPos="2"/>
+  <fields south="//@fields.479" north="//@fields.477" west="//@fields.453" east="//@fields.503" xPos="19" yPos="3"/>
+  <fields south="//@fields.480" north="//@fields.478" west="//@fields.454" east="//@fields.504" xPos="19" yPos="4"/>
+  <fields south="//@fields.481" north="//@fields.479" west="//@fields.455" east="//@fields.505" xPos="19" yPos="5"/>
+  <fields south="//@fields.482" north="//@fields.480" west="//@fields.456" east="//@fields.506" xPos="19" yPos="6"/>
+  <fields south="//@fields.483" north="//@fields.481" west="//@fields.457" east="//@fields.507" xPos="19" yPos="7"/>
+  <fields south="//@fields.484" north="//@fields.482" west="//@fields.458" east="//@fields.508" xPos="19" yPos="8"/>
+  <fields south="//@fields.485" north="//@fields.483" west="//@fields.459" east="//@fields.509" xPos="19" yPos="9"/>
+  <fields south="//@fields.486" north="//@fields.484" west="//@fields.460" east="//@fields.510" xPos="19" yPos="10"/>
+  <fields south="//@fields.487" north="//@fields.485" west="//@fields.461" east="//@fields.511" xPos="19" yPos="11"/>
+  <fields south="//@fields.488" north="//@fields.486" west="//@fields.462" east="//@fields.512" xPos="19" yPos="12"/>
+  <fields south="//@fields.489" north="//@fields.487" west="//@fields.463" east="//@fields.513" xPos="19" yPos="13"/>
+  <fields south="//@fields.490" north="//@fields.488" west="//@fields.464" east="//@fields.514" xPos="19" yPos="14"/>
+  <fields south="//@fields.491" north="//@fields.489" west="//@fields.465" east="//@fields.515" xPos="19" yPos="15"/>
+  <fields south="//@fields.492" north="//@fields.490" west="//@fields.466" east="//@fields.516" xPos="19" yPos="16"/>
+  <fields south="//@fields.493" north="//@fields.491" west="//@fields.467" east="//@fields.517" xPos="19" yPos="17"/>
+  <fields south="//@fields.494" north="//@fields.492" west="//@fields.468" east="//@fields.518" xPos="19" yPos="18"/>
+  <fields south="//@fields.495" north="//@fields.493" west="//@fields.469" east="//@fields.519" xPos="19" yPos="19"/>
+  <fields south="//@fields.496" north="//@fields.494" west="//@fields.470" east="//@fields.520" xPos="19" yPos="20"/>
+  <fields south="//@fields.497" north="//@fields.495" west="//@fields.471" east="//@fields.521" xPos="19" yPos="21"/>
+  <fields south="//@fields.498" north="//@fields.496" west="//@fields.472" east="//@fields.522" xPos="19" yPos="22"/>
+  <fields south="//@fields.499" north="//@fields.497" west="//@fields.473" east="//@fields.523" xPos="19" yPos="23"/>
+  <fields north="//@fields.498" west="//@fields.474" east="//@fields.524" xPos="19" yPos="24"/>
+  <fields south="//@fields.501" west="//@fields.475" east="//@fields.525" xPos="20"/>
+  <fields south="//@fields.502" north="//@fields.500" west="//@fields.476" east="//@fields.526" xPos="20" yPos="1"/>
+  <fields south="//@fields.503" north="//@fields.501" west="//@fields.477" east="//@fields.527" xPos="20" yPos="2"/>
+  <fields south="//@fields.504" north="//@fields.502" west="//@fields.478" east="//@fields.528" xPos="20" yPos="3"/>
+  <fields south="//@fields.505" north="//@fields.503" west="//@fields.479" east="//@fields.529" xPos="20" yPos="4"/>
+  <fields south="//@fields.506" north="//@fields.504" west="//@fields.480" east="//@fields.530" xPos="20" yPos="5"/>
+  <fields south="//@fields.507" north="//@fields.505" west="//@fields.481" east="//@fields.531" xPos="20" yPos="6"/>
+  <fields south="//@fields.508" north="//@fields.506" west="//@fields.482" east="//@fields.532" xPos="20" yPos="7"/>
+  <fields south="//@fields.509" north="//@fields.507" west="//@fields.483" east="//@fields.533" xPos="20" yPos="8"/>
+  <fields south="//@fields.510" north="//@fields.508" west="//@fields.484" east="//@fields.534" xPos="20" yPos="9"/>
+  <fields south="//@fields.511" north="//@fields.509" west="//@fields.485" east="//@fields.535" xPos="20" yPos="10"/>
+  <fields south="//@fields.512" north="//@fields.510" west="//@fields.486" east="//@fields.536" xPos="20" yPos="11"/>
+  <fields south="//@fields.513" north="//@fields.511" west="//@fields.487" east="//@fields.537" xPos="20" yPos="12"/>
+  <fields south="//@fields.514" north="//@fields.512" west="//@fields.488" east="//@fields.538" xPos="20" yPos="13"/>
+  <fields south="//@fields.515" north="//@fields.513" west="//@fields.489" east="//@fields.539" xPos="20" yPos="14"/>
+  <fields south="//@fields.516" north="//@fields.514" west="//@fields.490" east="//@fields.540" xPos="20" yPos="15"/>
+  <fields south="//@fields.517" north="//@fields.515" west="//@fields.491" east="//@fields.541" xPos="20" yPos="16"/>
+  <fields south="//@fields.518" north="//@fields.516" west="//@fields.492" east="//@fields.542" xPos="20" yPos="17"/>
+  <fields south="//@fields.519" north="//@fields.517" west="//@fields.493" east="//@fields.543" xPos="20" yPos="18"/>
+  <fields south="//@fields.520" north="//@fields.518" west="//@fields.494" east="//@fields.544" xPos="20" yPos="19"/>
+  <fields south="//@fields.521" north="//@fields.519" west="//@fields.495" east="//@fields.545" xPos="20" yPos="20"/>
+  <fields south="//@fields.522" north="//@fields.520" west="//@fields.496" east="//@fields.546" xPos="20" yPos="21"/>
+  <fields south="//@fields.523" north="//@fields.521" west="//@fields.497" east="//@fields.547" xPos="20" yPos="22"/>
+  <fields south="//@fields.524" north="//@fields.522" west="//@fields.498" east="//@fields.548" xPos="20" yPos="23"/>
+  <fields north="//@fields.523" west="//@fields.499" east="//@fields.549" xPos="20" yPos="24"/>
+  <fields south="//@fields.526" west="//@fields.500" east="//@fields.550" xPos="21"/>
+  <fields south="//@fields.527" north="//@fields.525" west="//@fields.501" east="//@fields.551" xPos="21" yPos="1"/>
+  <fields south="//@fields.528" north="//@fields.526" west="//@fields.502" east="//@fields.552" xPos="21" yPos="2"/>
+  <fields south="//@fields.529" north="//@fields.527" west="//@fields.503" east="//@fields.553" xPos="21" yPos="3"/>
+  <fields south="//@fields.530" north="//@fields.528" west="//@fields.504" east="//@fields.554" xPos="21" yPos="4"/>
+  <fields south="//@fields.531" north="//@fields.529" west="//@fields.505" east="//@fields.555" xPos="21" yPos="5"/>
+  <fields south="//@fields.532" north="//@fields.530" west="//@fields.506" east="//@fields.556" xPos="21" yPos="6"/>
+  <fields south="//@fields.533" north="//@fields.531" west="//@fields.507" east="//@fields.557" xPos="21" yPos="7"/>
+  <fields players="//@players.15" south="//@fields.534" north="//@fields.532" west="//@fields.508" east="//@fields.558" xPos="21" yPos="8"/>
+  <fields south="//@fields.535" north="//@fields.533" west="//@fields.509" east="//@fields.559" xPos="21" yPos="9"/>
+  <fields south="//@fields.536" north="//@fields.534" west="//@fields.510" east="//@fields.560" xPos="21" yPos="10"/>
+  <fields south="//@fields.537" north="//@fields.535" west="//@fields.511" east="//@fields.561" xPos="21" yPos="11"/>
+  <fields players="//@players.8" south="//@fields.538" north="//@fields.536" west="//@fields.512" east="//@fields.562" xPos="21" yPos="12"/>
+  <fields south="//@fields.539" north="//@fields.537" west="//@fields.513" east="//@fields.563" xPos="21" yPos="13"/>
+  <fields south="//@fields.540" north="//@fields.538" west="//@fields.514" east="//@fields.564" xPos="21" yPos="14"/>
+  <fields south="//@fields.541" north="//@fields.539" west="//@fields.515" east="//@fields.565" xPos="21" yPos="15"/>
+  <fields players="//@players.13" south="//@fields.542" north="//@fields.540" west="//@fields.516" east="//@fields.566" xPos="21" yPos="16"/>
+  <fields south="//@fields.543" north="//@fields.541" west="//@fields.517" east="//@fields.567" xPos="21" yPos="17"/>
+  <fields south="//@fields.544" north="//@fields.542" west="//@fields.518" east="//@fields.568" xPos="21" yPos="18"/>
+  <fields south="//@fields.545" north="//@fields.543" west="//@fields.519" east="//@fields.569" xPos="21" yPos="19"/>
+  <fields south="//@fields.546" north="//@fields.544" west="//@fields.520" east="//@fields.570" xPos="21" yPos="20"/>
+  <fields south="//@fields.547" north="//@fields.545" west="//@fields.521" east="//@fields.571" xPos="21" yPos="21"/>
+  <fields south="//@fields.548" north="//@fields.546" west="//@fields.522" east="//@fields.572" xPos="21" yPos="22"/>
+  <fields south="//@fields.549" north="//@fields.547" west="//@fields.523" east="//@fields.573" xPos="21" yPos="23"/>
+  <fields north="//@fields.548" west="//@fields.524" east="//@fields.574" xPos="21" yPos="24"/>
+  <fields south="//@fields.551" west="//@fields.525" east="//@fields.575" xPos="22"/>
+  <fields south="//@fields.552" north="//@fields.550" west="//@fields.526" east="//@fields.576" xPos="22" yPos="1"/>
+  <fields south="//@fields.553" north="//@fields.551" west="//@fields.527" east="//@fields.577" xPos="22" yPos="2"/>
+  <fields south="//@fields.554" north="//@fields.552" west="//@fields.528" east="//@fields.578" xPos="22" yPos="3"/>
+  <fields south="//@fields.555" north="//@fields.553" west="//@fields.529" east="//@fields.579" xPos="22" yPos="4"/>
+  <fields south="//@fields.556" north="//@fields.554" west="//@fields.530" east="//@fields.580" xPos="22" yPos="5"/>
+  <fields south="//@fields.557" north="//@fields.555" west="//@fields.531" east="//@fields.581" xPos="22" yPos="6"/>
+  <fields south="//@fields.558" north="//@fields.556" west="//@fields.532" east="//@fields.582" xPos="22" yPos="7"/>
+  <fields south="//@fields.559" north="//@fields.557" west="//@fields.533" east="//@fields.583" xPos="22" yPos="8"/>
+  <fields south="//@fields.560" north="//@fields.558" west="//@fields.534" east="//@fields.584" xPos="22" yPos="9"/>
+  <fields south="//@fields.561" north="//@fields.559" west="//@fields.535" east="//@fields.585" xPos="22" yPos="10"/>
+  <fields south="//@fields.562" north="//@fields.560" west="//@fields.536" east="//@fields.586" xPos="22" yPos="11"/>
+  <fields south="//@fields.563" north="//@fields.561" west="//@fields.537" east="//@fields.587" xPos="22" yPos="12"/>
+  <fields south="//@fields.564" north="//@fields.562" west="//@fields.538" east="//@fields.588" xPos="22" yPos="13"/>
+  <fields south="//@fields.565" north="//@fields.563" west="//@fields.539" east="//@fields.589" xPos="22" yPos="14"/>
+  <fields south="//@fields.566" north="//@fields.564" west="//@fields.540" east="//@fields.590" xPos="22" yPos="15"/>
+  <fields south="//@fields.567" north="//@fields.565" west="//@fields.541" east="//@fields.591" xPos="22" yPos="16"/>
+  <fields south="//@fields.568" north="//@fields.566" west="//@fields.542" east="//@fields.592" xPos="22" yPos="17"/>
+  <fields south="//@fields.569" north="//@fields.567" west="//@fields.543" east="//@fields.593" xPos="22" yPos="18"/>
+  <fields south="//@fields.570" north="//@fields.568" west="//@fields.544" east="//@fields.594" xPos="22" yPos="19"/>
+  <fields south="//@fields.571" north="//@fields.569" west="//@fields.545" east="//@fields.595" xPos="22" yPos="20"/>
+  <fields south="//@fields.572" north="//@fields.570" west="//@fields.546" east="//@fields.596" xPos="22" yPos="21"/>
+  <fields south="//@fields.573" north="//@fields.571" west="//@fields.547" east="//@fields.597" xPos="22" yPos="22"/>
+  <fields south="//@fields.574" north="//@fields.572" west="//@fields.548" east="//@fields.598" xPos="22" yPos="23"/>
+  <fields north="//@fields.573" west="//@fields.549" east="//@fields.599" xPos="22" yPos="24"/>
+  <fields south="//@fields.576" west="//@fields.550" east="//@fields.600" xPos="23"/>
+  <fields south="//@fields.577" north="//@fields.575" west="//@fields.551" east="//@fields.601" xPos="23" yPos="1"/>
+  <fields south="//@fields.578" north="//@fields.576" west="//@fields.552" east="//@fields.602" xPos="23" yPos="2"/>
+  <fields south="//@fields.579" north="//@fields.577" west="//@fields.553" east="//@fields.603" xPos="23" yPos="3"/>
+  <fields south="//@fields.580" north="//@fields.578" west="//@fields.554" east="//@fields.604" xPos="23" yPos="4"/>
+  <fields south="//@fields.581" north="//@fields.579" west="//@fields.555" east="//@fields.605" xPos="23" yPos="5"/>
+  <fields south="//@fields.582" north="//@fields.580" west="//@fields.556" east="//@fields.606" xPos="23" yPos="6"/>
+  <fields south="//@fields.583" north="//@fields.581" west="//@fields.557" east="//@fields.607" xPos="23" yPos="7"/>
+  <fields south="//@fields.584" north="//@fields.582" west="//@fields.558" east="//@fields.608" xPos="23" yPos="8"/>
+  <fields south="//@fields.585" north="//@fields.583" west="//@fields.559" east="//@fields.609" xPos="23" yPos="9"/>
+  <fields south="//@fields.586" north="//@fields.584" west="//@fields.560" east="//@fields.610" xPos="23" yPos="10"/>
+  <fields south="//@fields.587" north="//@fields.585" west="//@fields.561" east="//@fields.611" xPos="23" yPos="11"/>
+  <fields south="//@fields.588" north="//@fields.586" west="//@fields.562" east="//@fields.612" xPos="23" yPos="12"/>
+  <fields south="//@fields.589" north="//@fields.587" west="//@fields.563" east="//@fields.613" xPos="23" yPos="13"/>
+  <fields south="//@fields.590" north="//@fields.588" west="//@fields.564" east="//@fields.614" xPos="23" yPos="14"/>
+  <fields south="//@fields.591" north="//@fields.589" west="//@fields.565" east="//@fields.615" xPos="23" yPos="15"/>
+  <fields south="//@fields.592" north="//@fields.590" west="//@fields.566" east="//@fields.616" xPos="23" yPos="16"/>
+  <fields south="//@fields.593" north="//@fields.591" west="//@fields.567" east="//@fields.617" xPos="23" yPos="17"/>
+  <fields south="//@fields.594" north="//@fields.592" west="//@fields.568" east="//@fields.618" xPos="23" yPos="18"/>
+  <fields south="//@fields.595" north="//@fields.593" west="//@fields.569" east="//@fields.619" xPos="23" yPos="19"/>
+  <fields south="//@fields.596" north="//@fields.594" west="//@fields.570" east="//@fields.620" xPos="23" yPos="20"/>
+  <fields south="//@fields.597" north="//@fields.595" west="//@fields.571" east="//@fields.621" xPos="23" yPos="21"/>
+  <fields south="//@fields.598" north="//@fields.596" west="//@fields.572" east="//@fields.622" xPos="23" yPos="22"/>
+  <fields south="//@fields.599" north="//@fields.597" west="//@fields.573" east="//@fields.623" xPos="23" yPos="23"/>
+  <fields north="//@fields.598" west="//@fields.574" east="//@fields.624" xPos="23" yPos="24"/>
+  <fields south="//@fields.601" west="//@fields.575" east="//@fields.625" xPos="24"/>
+  <fields south="//@fields.602" north="//@fields.600" west="//@fields.576" east="//@fields.626" xPos="24" yPos="1"/>
+  <fields south="//@fields.603" north="//@fields.601" west="//@fields.577" east="//@fields.627" xPos="24" yPos="2"/>
+  <fields south="//@fields.604" north="//@fields.602" west="//@fields.578" east="//@fields.628" xPos="24" yPos="3"/>
+  <fields south="//@fields.605" north="//@fields.603" west="//@fields.579" east="//@fields.629" xPos="24" yPos="4"/>
+  <fields south="//@fields.606" north="//@fields.604" west="//@fields.580" east="//@fields.630" xPos="24" yPos="5"/>
+  <fields south="//@fields.607" north="//@fields.605" west="//@fields.581" east="//@fields.631" xPos="24" yPos="6"/>
+  <fields south="//@fields.608" north="//@fields.606" west="//@fields.582" east="//@fields.632" xPos="24" yPos="7"/>
+  <fields south="//@fields.609" north="//@fields.607" west="//@fields.583" east="//@fields.633" xPos="24" yPos="8"/>
+  <fields south="//@fields.610" north="//@fields.608" west="//@fields.584" east="//@fields.634" xPos="24" yPos="9"/>
+  <fields south="//@fields.611" north="//@fields.609" west="//@fields.585" east="//@fields.635" xPos="24" yPos="10"/>
+  <fields south="//@fields.612" north="//@fields.610" west="//@fields.586" east="//@fields.636" xPos="24" yPos="11"/>
+  <fields south="//@fields.613" north="//@fields.611" west="//@fields.587" east="//@fields.637" xPos="24" yPos="12"/>
+  <fields south="//@fields.614" north="//@fields.612" west="//@fields.588" east="//@fields.638" xPos="24" yPos="13"/>
+  <fields south="//@fields.615" north="//@fields.613" west="//@fields.589" east="//@fields.639" xPos="24" yPos="14"/>
+  <fields south="//@fields.616" north="//@fields.614" west="//@fields.590" east="//@fields.640" xPos="24" yPos="15"/>
+  <fields south="//@fields.617" north="//@fields.615" west="//@fields.591" east="//@fields.641" xPos="24" yPos="16"/>
+  <fields south="//@fields.618" north="//@fields.616" west="//@fields.592" east="//@fields.642" xPos="24" yPos="17"/>
+  <fields south="//@fields.619" north="//@fields.617" west="//@fields.593" east="//@fields.643" xPos="24" yPos="18"/>
+  <fields south="//@fields.620" north="//@fields.618" west="//@fields.594" east="//@fields.644" xPos="24" yPos="19"/>
+  <fields south="//@fields.621" north="//@fields.619" west="//@fields.595" east="//@fields.645" xPos="24" yPos="20"/>
+  <fields south="//@fields.622" north="//@fields.620" west="//@fields.596" east="//@fields.646" xPos="24" yPos="21"/>
+  <fields south="//@fields.623" north="//@fields.621" west="//@fields.597" east="//@fields.647" xPos="24" yPos="22"/>
+  <fields south="//@fields.624" north="//@fields.622" west="//@fields.598" east="//@fields.648" xPos="24" yPos="23"/>
+  <fields north="//@fields.623" west="//@fields.599" east="//@fields.649" xPos="24" yPos="24"/>
+  <fields south="//@fields.626" west="//@fields.600" east="//@fields.650" xPos="25"/>
+  <fields south="//@fields.627" north="//@fields.625" west="//@fields.601" east="//@fields.651" xPos="25" yPos="1"/>
+  <fields south="//@fields.628" north="//@fields.626" west="//@fields.602" east="//@fields.652" xPos="25" yPos="2"/>
+  <fields south="//@fields.629" north="//@fields.627" west="//@fields.603" east="//@fields.653" xPos="25" yPos="3"/>
+  <fields south="//@fields.630" north="//@fields.628" west="//@fields.604" east="//@fields.654" xPos="25" yPos="4"/>
+  <fields south="//@fields.631" north="//@fields.629" west="//@fields.605" east="//@fields.655" xPos="25" yPos="5"/>
+  <fields south="//@fields.632" north="//@fields.630" west="//@fields.606" east="//@fields.656" xPos="25" yPos="6"/>
+  <fields south="//@fields.633" north="//@fields.631" west="//@fields.607" east="//@fields.657" xPos="25" yPos="7"/>
+  <fields south="//@fields.634" north="//@fields.632" west="//@fields.608" east="//@fields.658" xPos="25" yPos="8"/>
+  <fields south="//@fields.635" north="//@fields.633" west="//@fields.609" east="//@fields.659" xPos="25" yPos="9"/>
+  <fields south="//@fields.636" north="//@fields.634" west="//@fields.610" east="//@fields.660" xPos="25" yPos="10"/>
+  <fields south="//@fields.637" north="//@fields.635" west="//@fields.611" east="//@fields.661" xPos="25" yPos="11"/>
+  <fields south="//@fields.638" north="//@fields.636" west="//@fields.612" east="//@fields.662" xPos="25" yPos="12"/>
+  <fields south="//@fields.639" north="//@fields.637" west="//@fields.613" east="//@fields.663" xPos="25" yPos="13"/>
+  <fields south="//@fields.640" north="//@fields.638" west="//@fields.614" east="//@fields.664" xPos="25" yPos="14"/>
+  <fields south="//@fields.641" north="//@fields.639" west="//@fields.615" east="//@fields.665" xPos="25" yPos="15"/>
+  <fields south="//@fields.642" north="//@fields.640" west="//@fields.616" east="//@fields.666" xPos="25" yPos="16"/>
+  <fields south="//@fields.643" north="//@fields.641" west="//@fields.617" east="//@fields.667" xPos="25" yPos="17"/>
+  <fields south="//@fields.644" north="//@fields.642" west="//@fields.618" east="//@fields.668" xPos="25" yPos="18"/>
+  <fields south="//@fields.645" north="//@fields.643" west="//@fields.619" east="//@fields.669" xPos="25" yPos="19"/>
+  <fields south="//@fields.646" north="//@fields.644" west="//@fields.620" east="//@fields.670" xPos="25" yPos="20"/>
+  <fields south="//@fields.647" north="//@fields.645" west="//@fields.621" east="//@fields.671" xPos="25" yPos="21"/>
+  <fields south="//@fields.648" north="//@fields.646" west="//@fields.622" east="//@fields.672" xPos="25" yPos="22"/>
+  <fields south="//@fields.649" north="//@fields.647" west="//@fields.623" east="//@fields.673" xPos="25" yPos="23"/>
+  <fields north="//@fields.648" west="//@fields.624" east="//@fields.674" xPos="25" yPos="24"/>
+  <fields south="//@fields.651" west="//@fields.625" east="//@fields.675" xPos="26"/>
+  <fields south="//@fields.652" north="//@fields.650" west="//@fields.626" east="//@fields.676" xPos="26" yPos="1"/>
+  <fields south="//@fields.653" north="//@fields.651" west="//@fields.627" east="//@fields.677" xPos="26" yPos="2"/>
+  <fields south="//@fields.654" north="//@fields.652" west="//@fields.628" east="//@fields.678" xPos="26" yPos="3"/>
+  <fields south="//@fields.655" north="//@fields.653" west="//@fields.629" east="//@fields.679" xPos="26" yPos="4"/>
+  <fields south="//@fields.656" north="//@fields.654" west="//@fields.630" east="//@fields.680" xPos="26" yPos="5"/>
+  <fields players="//@players.11" south="//@fields.657" north="//@fields.655" west="//@fields.631" east="//@fields.681" xPos="26" yPos="6"/>
+  <fields south="//@fields.658" north="//@fields.656" west="//@fields.632" east="//@fields.682" xPos="26" yPos="7"/>
+  <fields south="//@fields.659" north="//@fields.657" west="//@fields.633" east="//@fields.683" xPos="26" yPos="8"/>
+  <fields south="//@fields.660" north="//@fields.658" west="//@fields.634" east="//@fields.684" xPos="26" yPos="9"/>
+  <fields south="//@fields.661" north="//@fields.659" west="//@fields.635" east="//@fields.685" xPos="26" yPos="10"/>
+  <fields south="//@fields.662" north="//@fields.660" west="//@fields.636" east="//@fields.686" xPos="26" yPos="11"/>
+  <fields players="//@players.9" south="//@fields.663" north="//@fields.661" west="//@fields.637" east="//@fields.687" xPos="26" yPos="12"/>
+  <fields south="//@fields.664" north="//@fields.662" west="//@fields.638" east="//@fields.688" xPos="26" yPos="13"/>
+  <fields south="//@fields.665" north="//@fields.663" west="//@fields.639" east="//@fields.689" xPos="26" yPos="14"/>
+  <fields south="//@fields.666" north="//@fields.664" west="//@fields.640" east="//@fields.690" xPos="26" yPos="15"/>
+  <fields south="//@fields.667" north="//@fields.665" west="//@fields.641" east="//@fields.691" xPos="26" yPos="16"/>
+  <fields south="//@fields.668" north="//@fields.666" west="//@fields.642" east="//@fields.692" xPos="26" yPos="17"/>
+  <fields players="//@players.7" south="//@fields.669" north="//@fields.667" west="//@fields.643" east="//@fields.693" xPos="26" yPos="18"/>
+  <fields south="//@fields.670" north="//@fields.668" west="//@fields.644" east="//@fields.694" xPos="26" yPos="19"/>
+  <fields south="//@fields.671" north="//@fields.669" west="//@fields.645" east="//@fields.695" xPos="26" yPos="20"/>
+  <fields south="//@fields.672" north="//@fields.670" west="//@fields.646" east="//@fields.696" xPos="26" yPos="21"/>
+  <fields south="//@fields.673" north="//@fields.671" west="//@fields.647" east="//@fields.697" xPos="26" yPos="22"/>
+  <fields south="//@fields.674" north="//@fields.672" west="//@fields.648" east="//@fields.698" xPos="26" yPos="23"/>
+  <fields north="//@fields.673" west="//@fields.649" east="//@fields.699" xPos="26" yPos="24"/>
+  <fields south="//@fields.676" west="//@fields.650" east="//@fields.700" xPos="27"/>
+  <fields south="//@fields.677" north="//@fields.675" west="//@fields.651" east="//@fields.701" xPos="27" yPos="1"/>
+  <fields south="//@fields.678" north="//@fields.676" west="//@fields.652" east="//@fields.702" xPos="27" yPos="2"/>
+  <fields south="//@fields.679" north="//@fields.677" west="//@fields.653" east="//@fields.703" xPos="27" yPos="3"/>
+  <fields south="//@fields.680" north="//@fields.678" west="//@fields.654" east="//@fields.704" xPos="27" yPos="4"/>
+  <fields south="//@fields.681" north="//@fields.679" west="//@fields.655" east="//@fields.705" xPos="27" yPos="5"/>
+  <fields south="//@fields.682" north="//@fields.680" west="//@fields.656" east="//@fields.706" xPos="27" yPos="6"/>
+  <fields south="//@fields.683" north="//@fields.681" west="//@fields.657" east="//@fields.707" xPos="27" yPos="7"/>
+  <fields south="//@fields.684" north="//@fields.682" west="//@fields.658" east="//@fields.708" xPos="27" yPos="8"/>
+  <fields south="//@fields.685" north="//@fields.683" west="//@fields.659" east="//@fields.709" xPos="27" yPos="9"/>
+  <fields south="//@fields.686" north="//@fields.684" west="//@fields.660" east="//@fields.710" xPos="27" yPos="10"/>
+  <fields south="//@fields.687" north="//@fields.685" west="//@fields.661" east="//@fields.711" xPos="27" yPos="11"/>
+  <fields south="//@fields.688" north="//@fields.686" west="//@fields.662" east="//@fields.712" xPos="27" yPos="12"/>
+  <fields south="//@fields.689" north="//@fields.687" west="//@fields.663" east="//@fields.713" xPos="27" yPos="13"/>
+  <fields south="//@fields.690" north="//@fields.688" west="//@fields.664" east="//@fields.714" xPos="27" yPos="14"/>
+  <fields south="//@fields.691" north="//@fields.689" west="//@fields.665" east="//@fields.715" xPos="27" yPos="15"/>
+  <fields south="//@fields.692" north="//@fields.690" west="//@fields.666" east="//@fields.716" xPos="27" yPos="16"/>
+  <fields south="//@fields.693" north="//@fields.691" west="//@fields.667" east="//@fields.717" xPos="27" yPos="17"/>
+  <fields south="//@fields.694" north="//@fields.692" west="//@fields.668" east="//@fields.718" xPos="27" yPos="18"/>
+  <fields south="//@fields.695" north="//@fields.693" west="//@fields.669" east="//@fields.719" xPos="27" yPos="19"/>
+  <fields south="//@fields.696" north="//@fields.694" west="//@fields.670" east="//@fields.720" xPos="27" yPos="20"/>
+  <fields south="//@fields.697" north="//@fields.695" west="//@fields.671" east="//@fields.721" xPos="27" yPos="21"/>
+  <fields south="//@fields.698" north="//@fields.696" west="//@fields.672" east="//@fields.722" xPos="27" yPos="22"/>
+  <fields south="//@fields.699" north="//@fields.697" west="//@fields.673" east="//@fields.723" xPos="27" yPos="23"/>
+  <fields north="//@fields.698" west="//@fields.674" east="//@fields.724" xPos="27" yPos="24"/>
+  <fields south="//@fields.701" west="//@fields.675" east="//@fields.725" xPos="28"/>
+  <fields south="//@fields.702" north="//@fields.700" west="//@fields.676" east="//@fields.726" xPos="28" yPos="1"/>
+  <fields south="//@fields.703" north="//@fields.701" west="//@fields.677" east="//@fields.727" xPos="28" yPos="2"/>
+  <fields south="//@fields.704" north="//@fields.702" west="//@fields.678" east="//@fields.728" xPos="28" yPos="3"/>
+  <fields south="//@fields.705" north="//@fields.703" west="//@fields.679" east="//@fields.729" xPos="28" yPos="4"/>
+  <fields south="//@fields.706" north="//@fields.704" west="//@fields.680" east="//@fields.730" xPos="28" yPos="5"/>
+  <fields south="//@fields.707" north="//@fields.705" west="//@fields.681" east="//@fields.731" xPos="28" yPos="6"/>
+  <fields players="//@players.12" south="//@fields.708" north="//@fields.706" west="//@fields.682" east="//@fields.732" xPos="28" yPos="7"/>
+  <fields south="//@fields.709" north="//@fields.707" west="//@fields.683" east="//@fields.733" xPos="28" yPos="8"/>
+  <fields south="//@fields.710" north="//@fields.708" west="//@fields.684" east="//@fields.734" xPos="28" yPos="9"/>
+  <fields south="//@fields.711" north="//@fields.709" west="//@fields.685" east="//@fields.735" xPos="28" yPos="10"/>
+  <fields south="//@fields.712" north="//@fields.710" west="//@fields.686" east="//@fields.736" xPos="28" yPos="11"/>
+  <fields south="//@fields.713" north="//@fields.711" west="//@fields.687" east="//@fields.737" xPos="28" yPos="12"/>
+  <fields south="//@fields.714" north="//@fields.712" west="//@fields.688" east="//@fields.738" xPos="28" yPos="13"/>
+  <fields south="//@fields.715" north="//@fields.713" west="//@fields.689" east="//@fields.739" xPos="28" yPos="14"/>
+  <fields south="//@fields.716" north="//@fields.714" west="//@fields.690" east="//@fields.740" xPos="28" yPos="15"/>
+  <fields south="//@fields.717" north="//@fields.715" west="//@fields.691" east="//@fields.741" xPos="28" yPos="16"/>
+  <fields players="//@players.14" south="//@fields.718" north="//@fields.716" west="//@fields.692" east="//@fields.742" xPos="28" yPos="17"/>
+  <fields south="//@fields.719" north="//@fields.717" west="//@fields.693" east="//@fields.743" xPos="28" yPos="18"/>
+  <fields south="//@fields.720" north="//@fields.718" west="//@fields.694" east="//@fields.744" xPos="28" yPos="19"/>
+  <fields south="//@fields.721" north="//@fields.719" west="//@fields.695" east="//@fields.745" xPos="28" yPos="20"/>
+  <fields south="//@fields.722" north="//@fields.720" west="//@fields.696" east="//@fields.746" xPos="28" yPos="21"/>
+  <fields south="//@fields.723" north="//@fields.721" west="//@fields.697" east="//@fields.747" xPos="28" yPos="22"/>
+  <fields south="//@fields.724" north="//@fields.722" west="//@fields.698" east="//@fields.748" xPos="28" yPos="23"/>
+  <fields north="//@fields.723" west="//@fields.699" east="//@fields.749" xPos="28" yPos="24"/>
+  <fields south="//@fields.726" west="//@fields.700" east="//@fields.750" xPos="29"/>
+  <fields south="//@fields.727" north="//@fields.725" west="//@fields.701" east="//@fields.751" xPos="29" yPos="1"/>
+  <fields south="//@fields.728" north="//@fields.726" west="//@fields.702" east="//@fields.752" xPos="29" yPos="2"/>
+  <fields south="//@fields.729" north="//@fields.727" west="//@fields.703" east="//@fields.753" xPos="29" yPos="3"/>
+  <fields south="//@fields.730" north="//@fields.728" west="//@fields.704" east="//@fields.754" xPos="29" yPos="4"/>
+  <fields south="//@fields.731" north="//@fields.729" west="//@fields.705" east="//@fields.755" xPos="29" yPos="5"/>
+  <fields south="//@fields.732" north="//@fields.730" west="//@fields.706" east="//@fields.756" xPos="29" yPos="6"/>
+  <fields south="//@fields.733" north="//@fields.731" west="//@fields.707" east="//@fields.757" xPos="29" yPos="7"/>
+  <fields south="//@fields.734" north="//@fields.732" west="//@fields.708" east="//@fields.758" xPos="29" yPos="8"/>
+  <fields south="//@fields.735" north="//@fields.733" west="//@fields.709" east="//@fields.759" xPos="29" yPos="9"/>
+  <fields south="//@fields.736" north="//@fields.734" west="//@fields.710" east="//@fields.760" xPos="29" yPos="10"/>
+  <fields south="//@fields.737" north="//@fields.735" west="//@fields.711" east="//@fields.761" xPos="29" yPos="11"/>
+  <fields south="//@fields.738" north="//@fields.736" west="//@fields.712" east="//@fields.762" xPos="29" yPos="12"/>
+  <fields south="//@fields.739" north="//@fields.737" west="//@fields.713" east="//@fields.763" xPos="29" yPos="13"/>
+  <fields south="//@fields.740" north="//@fields.738" west="//@fields.714" east="//@fields.764" xPos="29" yPos="14"/>
+  <fields south="//@fields.741" north="//@fields.739" west="//@fields.715" east="//@fields.765" xPos="29" yPos="15"/>
+  <fields south="//@fields.742" north="//@fields.740" west="//@fields.716" east="//@fields.766" xPos="29" yPos="16"/>
+  <fields south="//@fields.743" north="//@fields.741" west="//@fields.717" east="//@fields.767" xPos="29" yPos="17"/>
+  <fields south="//@fields.744" north="//@fields.742" west="//@fields.718" east="//@fields.768" xPos="29" yPos="18"/>
+  <fields south="//@fields.745" north="//@fields.743" west="//@fields.719" east="//@fields.769" xPos="29" yPos="19"/>
+  <fields south="//@fields.746" north="//@fields.744" west="//@fields.720" east="//@fields.770" xPos="29" yPos="20"/>
+  <fields south="//@fields.747" north="//@fields.745" west="//@fields.721" east="//@fields.771" xPos="29" yPos="21"/>
+  <fields south="//@fields.748" north="//@fields.746" west="//@fields.722" east="//@fields.772" xPos="29" yPos="22"/>
+  <fields south="//@fields.749" north="//@fields.747" west="//@fields.723" east="//@fields.773" xPos="29" yPos="23"/>
+  <fields north="//@fields.748" west="//@fields.724" east="//@fields.774" xPos="29" yPos="24"/>
+  <fields south="//@fields.751" west="//@fields.725" east="//@fields.775" xPos="30"/>
+  <fields south="//@fields.752" north="//@fields.750" west="//@fields.726" east="//@fields.776" xPos="30" yPos="1"/>
+  <fields south="//@fields.753" north="//@fields.751" west="//@fields.727" east="//@fields.777" xPos="30" yPos="2"/>
+  <fields south="//@fields.754" north="//@fields.752" west="//@fields.728" east="//@fields.778" xPos="30" yPos="3"/>
+  <fields south="//@fields.755" north="//@fields.753" west="//@fields.729" east="//@fields.779" xPos="30" yPos="4"/>
+  <fields south="//@fields.756" north="//@fields.754" west="//@fields.730" east="//@fields.780" xPos="30" yPos="5"/>
+  <fields south="//@fields.757" north="//@fields.755" west="//@fields.731" east="//@fields.781" xPos="30" yPos="6"/>
+  <fields south="//@fields.758" north="//@fields.756" west="//@fields.732" east="//@fields.782" xPos="30" yPos="7"/>
+  <fields south="//@fields.759" north="//@fields.757" west="//@fields.733" east="//@fields.783" xPos="30" yPos="8"/>
+  <fields south="//@fields.760" north="//@fields.758" west="//@fields.734" east="//@fields.784" xPos="30" yPos="9"/>
+  <fields south="//@fields.761" north="//@fields.759" west="//@fields.735" east="//@fields.785" xPos="30" yPos="10"/>
+  <fields south="//@fields.762" north="//@fields.760" west="//@fields.736" east="//@fields.786" xPos="30" yPos="11"/>
+  <fields south="//@fields.763" north="//@fields.761" west="//@fields.737" east="//@fields.787" xPos="30" yPos="12"/>
+  <fields south="//@fields.764" north="//@fields.762" west="//@fields.738" east="//@fields.788" xPos="30" yPos="13"/>
+  <fields south="//@fields.765" north="//@fields.763" west="//@fields.739" east="//@fields.789" xPos="30" yPos="14"/>
+  <fields south="//@fields.766" north="//@fields.764" west="//@fields.740" east="//@fields.790" xPos="30" yPos="15"/>
+  <fields south="//@fields.767" north="//@fields.765" west="//@fields.741" east="//@fields.791" xPos="30" yPos="16"/>
+  <fields south="//@fields.768" north="//@fields.766" west="//@fields.742" east="//@fields.792" xPos="30" yPos="17"/>
+  <fields south="//@fields.769" north="//@fields.767" west="//@fields.743" east="//@fields.793" xPos="30" yPos="18"/>
+  <fields south="//@fields.770" north="//@fields.768" west="//@fields.744" east="//@fields.794" xPos="30" yPos="19"/>
+  <fields south="//@fields.771" north="//@fields.769" west="//@fields.745" east="//@fields.795" xPos="30" yPos="20"/>
+  <fields south="//@fields.772" north="//@fields.770" west="//@fields.746" east="//@fields.796" xPos="30" yPos="21"/>
+  <fields south="//@fields.773" north="//@fields.771" west="//@fields.747" east="//@fields.797" xPos="30" yPos="22"/>
+  <fields south="//@fields.774" north="//@fields.772" west="//@fields.748" east="//@fields.798" xPos="30" yPos="23"/>
+  <fields north="//@fields.773" west="//@fields.749" east="//@fields.799" xPos="30" yPos="24"/>
+  <fields south="//@fields.776" west="//@fields.750" east="//@fields.800" xPos="31"/>
+  <fields south="//@fields.777" north="//@fields.775" west="//@fields.751" east="//@fields.801" xPos="31" yPos="1"/>
+  <fields south="//@fields.778" north="//@fields.776" west="//@fields.752" east="//@fields.802" xPos="31" yPos="2"/>
+  <fields south="//@fields.779" north="//@fields.777" west="//@fields.753" east="//@fields.803" xPos="31" yPos="3"/>
+  <fields south="//@fields.780" north="//@fields.778" west="//@fields.754" east="//@fields.804" xPos="31" yPos="4"/>
+  <fields south="//@fields.781" north="//@fields.779" west="//@fields.755" east="//@fields.805" xPos="31" yPos="5"/>
+  <fields south="//@fields.782" north="//@fields.780" west="//@fields.756" east="//@fields.806" xPos="31" yPos="6"/>
+  <fields south="//@fields.783" north="//@fields.781" west="//@fields.757" east="//@fields.807" xPos="31" yPos="7"/>
+  <fields players="//@players.5" south="//@fields.784" north="//@fields.782" west="//@fields.758" east="//@fields.808" xPos="31" yPos="8"/>
+  <fields south="//@fields.785" north="//@fields.783" west="//@fields.759" east="//@fields.809" xPos="31" yPos="9"/>
+  <fields south="//@fields.786" north="//@fields.784" west="//@fields.760" east="//@fields.810" xPos="31" yPos="10"/>
+  <fields south="//@fields.787" north="//@fields.785" west="//@fields.761" east="//@fields.811" xPos="31" yPos="11"/>
+  <fields south="//@fields.788" north="//@fields.786" west="//@fields.762" east="//@fields.812" xPos="31" yPos="12"/>
+  <fields south="//@fields.789" north="//@fields.787" west="//@fields.763" east="//@fields.813" xPos="31" yPos="13"/>
+  <fields south="//@fields.790" north="//@fields.788" west="//@fields.764" east="//@fields.814" xPos="31" yPos="14"/>
+  <fields south="//@fields.791" north="//@fields.789" west="//@fields.765" east="//@fields.815" xPos="31" yPos="15"/>
+  <fields players="//@players.3" south="//@fields.792" north="//@fields.790" west="//@fields.766" east="//@fields.816" xPos="31" yPos="16"/>
+  <fields south="//@fields.793" north="//@fields.791" west="//@fields.767" east="//@fields.817" xPos="31" yPos="17"/>
+  <fields south="//@fields.794" north="//@fields.792" west="//@fields.768" east="//@fields.818" xPos="31" yPos="18"/>
+  <fields south="//@fields.795" north="//@fields.793" west="//@fields.769" east="//@fields.819" xPos="31" yPos="19"/>
+  <fields south="//@fields.796" north="//@fields.794" west="//@fields.770" east="//@fields.820" xPos="31" yPos="20"/>
+  <fields south="//@fields.797" north="//@fields.795" west="//@fields.771" east="//@fields.821" xPos="31" yPos="21"/>
+  <fields south="//@fields.798" north="//@fields.796" west="//@fields.772" east="//@fields.822" xPos="31" yPos="22"/>
+  <fields south="//@fields.799" north="//@fields.797" west="//@fields.773" east="//@fields.823" xPos="31" yPos="23"/>
+  <fields north="//@fields.798" west="//@fields.774" east="//@fields.824" xPos="31" yPos="24"/>
+  <fields south="//@fields.801" west="//@fields.775" east="//@fields.825" xPos="32"/>
+  <fields south="//@fields.802" north="//@fields.800" west="//@fields.776" east="//@fields.826" xPos="32" yPos="1"/>
+  <fields south="//@fields.803" north="//@fields.801" west="//@fields.777" east="//@fields.827" xPos="32" yPos="2"/>
+  <fields south="//@fields.804" north="//@fields.802" west="//@fields.778" east="//@fields.828" xPos="32" yPos="3"/>
+  <fields south="//@fields.805" north="//@fields.803" west="//@fields.779" east="//@fields.829" xPos="32" yPos="4"/>
+  <fields south="//@fields.806" north="//@fields.804" west="//@fields.780" east="//@fields.830" xPos="32" yPos="5"/>
+  <fields south="//@fields.807" north="//@fields.805" west="//@fields.781" east="//@fields.831" xPos="32" yPos="6"/>
+  <fields south="//@fields.808" north="//@fields.806" west="//@fields.782" east="//@fields.832" xPos="32" yPos="7"/>
+  <fields south="//@fields.809" north="//@fields.807" west="//@fields.783" east="//@fields.833" xPos="32" yPos="8"/>
+  <fields south="//@fields.810" north="//@fields.808" west="//@fields.784" east="//@fields.834" xPos="32" yPos="9"/>
+  <fields south="//@fields.811" north="//@fields.809" west="//@fields.785" east="//@fields.835" xPos="32" yPos="10"/>
+  <fields south="//@fields.812" north="//@fields.810" west="//@fields.786" east="//@fields.836" xPos="32" yPos="11"/>
+  <fields south="//@fields.813" north="//@fields.811" west="//@fields.787" east="//@fields.837" xPos="32" yPos="12"/>
+  <fields south="//@fields.814" north="//@fields.812" west="//@fields.788" east="//@fields.838" xPos="32" yPos="13"/>
+  <fields south="//@fields.815" north="//@fields.813" west="//@fields.789" east="//@fields.839" xPos="32" yPos="14"/>
+  <fields south="//@fields.816" north="//@fields.814" west="//@fields.790" east="//@fields.840" xPos="32" yPos="15"/>
+  <fields south="//@fields.817" north="//@fields.815" west="//@fields.791" east="//@fields.841" xPos="32" yPos="16"/>
+  <fields south="//@fields.818" north="//@fields.816" west="//@fields.792" east="//@fields.842" xPos="32" yPos="17"/>
+  <fields south="//@fields.819" north="//@fields.817" west="//@fields.793" east="//@fields.843" xPos="32" yPos="18"/>
+  <fields south="//@fields.820" north="//@fields.818" west="//@fields.794" east="//@fields.844" xPos="32" yPos="19"/>
+  <fields south="//@fields.821" north="//@fields.819" west="//@fields.795" east="//@fields.845" xPos="32" yPos="20"/>
+  <fields south="//@fields.822" north="//@fields.820" west="//@fields.796" east="//@fields.846" xPos="32" yPos="21"/>
+  <fields south="//@fields.823" north="//@fields.821" west="//@fields.797" east="//@fields.847" xPos="32" yPos="22"/>
+  <fields south="//@fields.824" north="//@fields.822" west="//@fields.798" east="//@fields.848" xPos="32" yPos="23"/>
+  <fields north="//@fields.823" west="//@fields.799" east="//@fields.849" xPos="32" yPos="24"/>
+  <fields south="//@fields.826" west="//@fields.800" east="//@fields.850" xPos="33"/>
+  <fields south="//@fields.827" north="//@fields.825" west="//@fields.801" east="//@fields.851" xPos="33" yPos="1"/>
+  <fields south="//@fields.828" north="//@fields.826" west="//@fields.802" east="//@fields.852" xPos="33" yPos="2"/>
+  <fields south="//@fields.829" north="//@fields.827" west="//@fields.803" east="//@fields.853" xPos="33" yPos="3"/>
+  <fields south="//@fields.830" north="//@fields.828" west="//@fields.804" east="//@fields.854" xPos="33" yPos="4"/>
+  <fields south="//@fields.831" north="//@fields.829" west="//@fields.805" east="//@fields.855" xPos="33" yPos="5"/>
+  <fields south="//@fields.832" north="//@fields.830" west="//@fields.806" east="//@fields.856" xPos="33" yPos="6"/>
+  <fields south="//@fields.833" north="//@fields.831" west="//@fields.807" east="//@fields.857" xPos="33" yPos="7"/>
+  <fields south="//@fields.834" north="//@fields.832" west="//@fields.808" east="//@fields.858" xPos="33" yPos="8"/>
+  <fields south="//@fields.835" north="//@fields.833" west="//@fields.809" east="//@fields.859" xPos="33" yPos="9"/>
+  <fields south="//@fields.836" north="//@fields.834" west="//@fields.810" east="//@fields.860" xPos="33" yPos="10"/>
+  <fields south="//@fields.837" north="//@fields.835" west="//@fields.811" east="//@fields.861" xPos="33" yPos="11"/>
+  <fields south="//@fields.838" north="//@fields.836" west="//@fields.812" east="//@fields.862" xPos="33" yPos="12"/>
+  <fields south="//@fields.839" north="//@fields.837" west="//@fields.813" east="//@fields.863" xPos="33" yPos="13"/>
+  <fields south="//@fields.840" north="//@fields.838" west="//@fields.814" east="//@fields.864" xPos="33" yPos="14"/>
+  <fields south="//@fields.841" north="//@fields.839" west="//@fields.815" east="//@fields.865" xPos="33" yPos="15"/>
+  <fields south="//@fields.842" north="//@fields.840" west="//@fields.816" east="//@fields.866" xPos="33" yPos="16"/>
+  <fields south="//@fields.843" north="//@fields.841" west="//@fields.817" east="//@fields.867" xPos="33" yPos="17"/>
+  <fields south="//@fields.844" north="//@fields.842" west="//@fields.818" east="//@fields.868" xPos="33" yPos="18"/>
+  <fields south="//@fields.845" north="//@fields.843" west="//@fields.819" east="//@fields.869" xPos="33" yPos="19"/>
+  <fields south="//@fields.846" north="//@fields.844" west="//@fields.820" east="//@fields.870" xPos="33" yPos="20"/>
+  <fields south="//@fields.847" north="//@fields.845" west="//@fields.821" east="//@fields.871" xPos="33" yPos="21"/>
+  <fields south="//@fields.848" north="//@fields.846" west="//@fields.822" east="//@fields.872" xPos="33" yPos="22"/>
+  <fields south="//@fields.849" north="//@fields.847" west="//@fields.823" east="//@fields.873" xPos="33" yPos="23"/>
+  <fields north="//@fields.848" west="//@fields.824" east="//@fields.874" xPos="33" yPos="24"/>
+  <fields south="//@fields.851" west="//@fields.825" east="//@fields.875" xPos="34"/>
+  <fields south="//@fields.852" north="//@fields.850" west="//@fields.826" east="//@fields.876" xPos="34" yPos="1"/>
+  <fields south="//@fields.853" north="//@fields.851" west="//@fields.827" east="//@fields.877" xPos="34" yPos="2"/>
+  <fields south="//@fields.854" north="//@fields.852" west="//@fields.828" east="//@fields.878" xPos="34" yPos="3"/>
+  <fields south="//@fields.855" north="//@fields.853" west="//@fields.829" east="//@fields.879" xPos="34" yPos="4"/>
+  <fields south="//@fields.856" north="//@fields.854" west="//@fields.830" east="//@fields.880" xPos="34" yPos="5"/>
+  <fields south="//@fields.857" north="//@fields.855" west="//@fields.831" east="//@fields.881" xPos="34" yPos="6"/>
+  <fields south="//@fields.858" north="//@fields.856" west="//@fields.832" east="//@fields.882" xPos="34" yPos="7"/>
+  <fields south="//@fields.859" north="//@fields.857" west="//@fields.833" east="//@fields.883" xPos="34" yPos="8"/>
+  <fields south="//@fields.860" north="//@fields.858" west="//@fields.834" east="//@fields.884" xPos="34" yPos="9"/>
+  <fields south="//@fields.861" north="//@fields.859" west="//@fields.835" east="//@fields.885" xPos="34" yPos="10"/>
+  <fields south="//@fields.862" north="//@fields.860" west="//@fields.836" east="//@fields.886" xPos="34" yPos="11"/>
+  <fields south="//@fields.863" north="//@fields.861" west="//@fields.837" east="//@fields.887" xPos="34" yPos="12"/>
+  <fields south="//@fields.864" north="//@fields.862" west="//@fields.838" east="//@fields.888" xPos="34" yPos="13"/>
+  <fields south="//@fields.865" north="//@fields.863" west="//@fields.839" east="//@fields.889" xPos="34" yPos="14"/>
+  <fields south="//@fields.866" north="//@fields.864" west="//@fields.840" east="//@fields.890" xPos="34" yPos="15"/>
+  <fields south="//@fields.867" north="//@fields.865" west="//@fields.841" east="//@fields.891" xPos="34" yPos="16"/>
+  <fields south="//@fields.868" north="//@fields.866" west="//@fields.842" east="//@fields.892" xPos="34" yPos="17"/>
+  <fields south="//@fields.869" north="//@fields.867" west="//@fields.843" east="//@fields.893" xPos="34" yPos="18"/>
+  <fields south="//@fields.870" north="//@fields.868" west="//@fields.844" east="//@fields.894" xPos="34" yPos="19"/>
+  <fields south="//@fields.871" north="//@fields.869" west="//@fields.845" east="//@fields.895" xPos="34" yPos="20"/>
+  <fields south="//@fields.872" north="//@fields.870" west="//@fields.846" east="//@fields.896" xPos="34" yPos="21"/>
+  <fields south="//@fields.873" north="//@fields.871" west="//@fields.847" east="//@fields.897" xPos="34" yPos="22"/>
+  <fields south="//@fields.874" north="//@fields.872" west="//@fields.848" east="//@fields.898" xPos="34" yPos="23"/>
+  <fields north="//@fields.873" west="//@fields.849" east="//@fields.899" xPos="34" yPos="24"/>
+  <fields south="//@fields.876" west="//@fields.850" east="//@fields.900" xPos="35"/>
+  <fields south="//@fields.877" north="//@fields.875" west="//@fields.851" east="//@fields.901" xPos="35" yPos="1"/>
+  <fields south="//@fields.878" north="//@fields.876" west="//@fields.852" east="//@fields.902" xPos="35" yPos="2"/>
+  <fields south="//@fields.879" north="//@fields.877" west="//@fields.853" east="//@fields.903" xPos="35" yPos="3"/>
+  <fields south="//@fields.880" north="//@fields.878" west="//@fields.854" east="//@fields.904" xPos="35" yPos="4"/>
+  <fields south="//@fields.881" north="//@fields.879" west="//@fields.855" east="//@fields.905" xPos="35" yPos="5"/>
+  <fields south="//@fields.882" north="//@fields.880" west="//@fields.856" east="//@fields.906" xPos="35" yPos="6"/>
+  <fields south="//@fields.883" north="//@fields.881" west="//@fields.857" east="//@fields.907" xPos="35" yPos="7"/>
+  <fields south="//@fields.884" north="//@fields.882" west="//@fields.858" east="//@fields.908" xPos="35" yPos="8"/>
+  <fields south="//@fields.885" north="//@fields.883" west="//@fields.859" east="//@fields.909" xPos="35" yPos="9"/>
+  <fields south="//@fields.886" north="//@fields.884" west="//@fields.860" east="//@fields.910" xPos="35" yPos="10"/>
+  <fields south="//@fields.887" north="//@fields.885" west="//@fields.861" east="//@fields.911" xPos="35" yPos="11"/>
+  <fields south="//@fields.888" north="//@fields.886" west="//@fields.862" east="//@fields.912" xPos="35" yPos="12"/>
+  <fields south="//@fields.889" north="//@fields.887" west="//@fields.863" east="//@fields.913" xPos="35" yPos="13"/>
+  <fields south="//@fields.890" north="//@fields.888" west="//@fields.864" east="//@fields.914" xPos="35" yPos="14"/>
+  <fields south="//@fields.891" north="//@fields.889" west="//@fields.865" east="//@fields.915" xPos="35" yPos="15"/>
+  <fields south="//@fields.892" north="//@fields.890" west="//@fields.866" east="//@fields.916" xPos="35" yPos="16"/>
+  <fields south="//@fields.893" north="//@fields.891" west="//@fields.867" east="//@fields.917" xPos="35" yPos="17"/>
+  <fields south="//@fields.894" north="//@fields.892" west="//@fields.868" east="//@fields.918" xPos="35" yPos="18"/>
+  <fields south="//@fields.895" north="//@fields.893" west="//@fields.869" east="//@fields.919" xPos="35" yPos="19"/>
+  <fields south="//@fields.896" north="//@fields.894" west="//@fields.870" east="//@fields.920" xPos="35" yPos="20"/>
+  <fields south="//@fields.897" north="//@fields.895" west="//@fields.871" east="//@fields.921" xPos="35" yPos="21"/>
+  <fields south="//@fields.898" north="//@fields.896" west="//@fields.872" east="//@fields.922" xPos="35" yPos="22"/>
+  <fields south="//@fields.899" north="//@fields.897" west="//@fields.873" east="//@fields.923" xPos="35" yPos="23"/>
+  <fields north="//@fields.898" west="//@fields.874" east="//@fields.924" xPos="35" yPos="24"/>
+  <fields south="//@fields.901" west="//@fields.875" east="//@fields.925" xPos="36"/>
+  <fields south="//@fields.902" north="//@fields.900" west="//@fields.876" east="//@fields.926" xPos="36" yPos="1"/>
+  <fields south="//@fields.903" north="//@fields.901" west="//@fields.877" east="//@fields.927" xPos="36" yPos="2"/>
+  <fields south="//@fields.904" north="//@fields.902" west="//@fields.878" east="//@fields.928" xPos="36" yPos="3"/>
+  <fields south="//@fields.905" north="//@fields.903" west="//@fields.879" east="//@fields.929" xPos="36" yPos="4"/>
+  <fields south="//@fields.906" north="//@fields.904" west="//@fields.880" east="//@fields.930" xPos="36" yPos="5"/>
+  <fields south="//@fields.907" north="//@fields.905" west="//@fields.881" east="//@fields.931" xPos="36" yPos="6"/>
+  <fields south="//@fields.908" north="//@fields.906" west="//@fields.882" east="//@fields.932" xPos="36" yPos="7"/>
+  <fields south="//@fields.909" north="//@fields.907" west="//@fields.883" east="//@fields.933" xPos="36" yPos="8"/>
+  <fields south="//@fields.910" north="//@fields.908" west="//@fields.884" east="//@fields.934" xPos="36" yPos="9"/>
+  <fields south="//@fields.911" north="//@fields.909" west="//@fields.885" east="//@fields.935" xPos="36" yPos="10"/>
+  <fields south="//@fields.912" north="//@fields.910" west="//@fields.886" east="//@fields.936" xPos="36" yPos="11"/>
+  <fields south="//@fields.913" north="//@fields.911" west="//@fields.887" east="//@fields.937" xPos="36" yPos="12"/>
+  <fields south="//@fields.914" north="//@fields.912" west="//@fields.888" east="//@fields.938" xPos="36" yPos="13"/>
+  <fields south="//@fields.915" north="//@fields.913" west="//@fields.889" east="//@fields.939" xPos="36" yPos="14"/>
+  <fields south="//@fields.916" north="//@fields.914" west="//@fields.890" east="//@fields.940" xPos="36" yPos="15"/>
+  <fields south="//@fields.917" north="//@fields.915" west="//@fields.891" east="//@fields.941" xPos="36" yPos="16"/>
+  <fields south="//@fields.918" north="//@fields.916" west="//@fields.892" east="//@fields.942" xPos="36" yPos="17"/>
+  <fields south="//@fields.919" north="//@fields.917" west="//@fields.893" east="//@fields.943" xPos="36" yPos="18"/>
+  <fields south="//@fields.920" north="//@fields.918" west="//@fields.894" east="//@fields.944" xPos="36" yPos="19"/>
+  <fields south="//@fields.921" north="//@fields.919" west="//@fields.895" east="//@fields.945" xPos="36" yPos="20"/>
+  <fields south="//@fields.922" north="//@fields.920" west="//@fields.896" east="//@fields.946" xPos="36" yPos="21"/>
+  <fields south="//@fields.923" north="//@fields.921" west="//@fields.897" east="//@fields.947" xPos="36" yPos="22"/>
+  <fields south="//@fields.924" north="//@fields.922" west="//@fields.898" east="//@fields.948" xPos="36" yPos="23"/>
+  <fields north="//@fields.923" west="//@fields.899" east="//@fields.949" xPos="36" yPos="24"/>
+  <fields south="//@fields.926" west="//@fields.900" east="//@fields.950" xPos="37"/>
+  <fields south="//@fields.927" north="//@fields.925" west="//@fields.901" east="//@fields.951" xPos="37" yPos="1"/>
+  <fields south="//@fields.928" north="//@fields.926" west="//@fields.902" east="//@fields.952" xPos="37" yPos="2"/>
+  <fields south="//@fields.929" north="//@fields.927" west="//@fields.903" east="//@fields.953" xPos="37" yPos="3"/>
+  <fields south="//@fields.930" north="//@fields.928" west="//@fields.904" east="//@fields.954" xPos="37" yPos="4"/>
+  <fields south="//@fields.931" north="//@fields.929" west="//@fields.905" east="//@fields.955" xPos="37" yPos="5"/>
+  <fields south="//@fields.932" north="//@fields.930" west="//@fields.906" east="//@fields.956" xPos="37" yPos="6"/>
+  <fields south="//@fields.933" north="//@fields.931" west="//@fields.907" east="//@fields.957" xPos="37" yPos="7"/>
+  <fields south="//@fields.934" north="//@fields.932" west="//@fields.908" east="//@fields.958" xPos="37" yPos="8"/>
+  <fields south="//@fields.935" north="//@fields.933" west="//@fields.909" east="//@fields.959" xPos="37" yPos="9"/>
+  <fields south="//@fields.936" north="//@fields.934" west="//@fields.910" east="//@fields.960" xPos="37" yPos="10"/>
+  <fields south="//@fields.937" north="//@fields.935" west="//@fields.911" east="//@fields.961" xPos="37" yPos="11"/>
+  <fields south="//@fields.938" north="//@fields.936" west="//@fields.912" east="//@fields.962" xPos="37" yPos="12"/>
+  <fields south="//@fields.939" north="//@fields.937" west="//@fields.913" east="//@fields.963" xPos="37" yPos="13"/>
+  <fields south="//@fields.940" north="//@fields.938" west="//@fields.914" east="//@fields.964" xPos="37" yPos="14"/>
+  <fields south="//@fields.941" north="//@fields.939" west="//@fields.915" east="//@fields.965" xPos="37" yPos="15"/>
+  <fields south="//@fields.942" north="//@fields.940" west="//@fields.916" east="//@fields.966" xPos="37" yPos="16"/>
+  <fields south="//@fields.943" north="//@fields.941" west="//@fields.917" east="//@fields.967" xPos="37" yPos="17"/>
+  <fields south="//@fields.944" north="//@fields.942" west="//@fields.918" east="//@fields.968" xPos="37" yPos="18"/>
+  <fields south="//@fields.945" north="//@fields.943" west="//@fields.919" east="//@fields.969" xPos="37" yPos="19"/>
+  <fields south="//@fields.946" north="//@fields.944" west="//@fields.920" east="//@fields.970" xPos="37" yPos="20"/>
+  <fields south="//@fields.947" north="//@fields.945" west="//@fields.921" east="//@fields.971" xPos="37" yPos="21"/>
+  <fields south="//@fields.948" north="//@fields.946" west="//@fields.922" east="//@fields.972" xPos="37" yPos="22"/>
+  <fields south="//@fields.949" north="//@fields.947" west="//@fields.923" east="//@fields.973" xPos="37" yPos="23"/>
+  <fields north="//@fields.948" west="//@fields.924" east="//@fields.974" xPos="37" yPos="24"/>
+  <fields south="//@fields.951" west="//@fields.925" east="//@fields.975" xPos="38"/>
+  <fields south="//@fields.952" north="//@fields.950" west="//@fields.926" east="//@fields.976" xPos="38" yPos="1"/>
+  <fields south="//@fields.953" north="//@fields.951" west="//@fields.927" east="//@fields.977" xPos="38" yPos="2"/>
+  <fields south="//@fields.954" north="//@fields.952" west="//@fields.928" east="//@fields.978" xPos="38" yPos="3"/>
+  <fields south="//@fields.955" north="//@fields.953" west="//@fields.929" east="//@fields.979" xPos="38" yPos="4"/>
+  <fields south="//@fields.956" north="//@fields.954" west="//@fields.930" east="//@fields.980" xPos="38" yPos="5"/>
+  <fields south="//@fields.957" north="//@fields.955" west="//@fields.931" east="//@fields.981" xPos="38" yPos="6"/>
+  <fields south="//@fields.958" north="//@fields.956" west="//@fields.932" east="//@fields.982" xPos="38" yPos="7"/>
+  <fields south="//@fields.959" north="//@fields.957" west="//@fields.933" east="//@fields.983" xPos="38" yPos="8"/>
+  <fields south="//@fields.960" north="//@fields.958" west="//@fields.934" east="//@fields.984" xPos="38" yPos="9"/>
+  <fields south="//@fields.961" north="//@fields.959" west="//@fields.935" east="//@fields.985" xPos="38" yPos="10"/>
+  <fields south="//@fields.962" north="//@fields.960" west="//@fields.936" east="//@fields.986" xPos="38" yPos="11"/>
+  <fields south="//@fields.963" north="//@fields.961" west="//@fields.937" east="//@fields.987" xPos="38" yPos="12"/>
+  <fields south="//@fields.964" north="//@fields.962" west="//@fields.938" east="//@fields.988" xPos="38" yPos="13"/>
+  <fields south="//@fields.965" north="//@fields.963" west="//@fields.939" east="//@fields.989" xPos="38" yPos="14"/>
+  <fields south="//@fields.966" north="//@fields.964" west="//@fields.940" east="//@fields.990" xPos="38" yPos="15"/>
+  <fields south="//@fields.967" north="//@fields.965" west="//@fields.941" east="//@fields.991" xPos="38" yPos="16"/>
+  <fields south="//@fields.968" north="//@fields.966" west="//@fields.942" east="//@fields.992" xPos="38" yPos="17"/>
+  <fields south="//@fields.969" north="//@fields.967" west="//@fields.943" east="//@fields.993" xPos="38" yPos="18"/>
+  <fields south="//@fields.970" north="//@fields.968" west="//@fields.944" east="//@fields.994" xPos="38" yPos="19"/>
+  <fields south="//@fields.971" north="//@fields.969" west="//@fields.945" east="//@fields.995" xPos="38" yPos="20"/>
+  <fields south="//@fields.972" north="//@fields.970" west="//@fields.946" east="//@fields.996" xPos="38" yPos="21"/>
+  <fields south="//@fields.973" north="//@fields.971" west="//@fields.947" east="//@fields.997" xPos="38" yPos="22"/>
+  <fields south="//@fields.974" north="//@fields.972" west="//@fields.948" east="//@fields.998" xPos="38" yPos="23"/>
+  <fields north="//@fields.973" west="//@fields.949" east="//@fields.999" xPos="38" yPos="24"/>
+  <fields south="//@fields.976" west="//@fields.950" east="//@fields.1000" xPos="39"/>
+  <fields south="//@fields.977" north="//@fields.975" west="//@fields.951" east="//@fields.1001" xPos="39" yPos="1"/>
+  <fields south="//@fields.978" north="//@fields.976" west="//@fields.952" east="//@fields.1002" xPos="39" yPos="2"/>
+  <fields south="//@fields.979" north="//@fields.977" west="//@fields.953" east="//@fields.1003" xPos="39" yPos="3"/>
+  <fields south="//@fields.980" north="//@fields.978" west="//@fields.954" east="//@fields.1004" xPos="39" yPos="4"/>
+  <fields south="//@fields.981" north="//@fields.979" west="//@fields.955" east="//@fields.1005" xPos="39" yPos="5"/>
+  <fields south="//@fields.982" north="//@fields.980" west="//@fields.956" east="//@fields.1006" xPos="39" yPos="6"/>
+  <fields south="//@fields.983" north="//@fields.981" west="//@fields.957" east="//@fields.1007" xPos="39" yPos="7"/>
+  <fields south="//@fields.984" north="//@fields.982" west="//@fields.958" east="//@fields.1008" xPos="39" yPos="8"/>
+  <fields south="//@fields.985" north="//@fields.983" west="//@fields.959" east="//@fields.1009" xPos="39" yPos="9"/>
+  <fields south="//@fields.986" north="//@fields.984" west="//@fields.960" east="//@fields.1010" xPos="39" yPos="10"/>
+  <fields south="//@fields.987" north="//@fields.985" west="//@fields.961" east="//@fields.1011" xPos="39" yPos="11"/>
+  <fields south="//@fields.988" north="//@fields.986" west="//@fields.962" east="//@fields.1012" xPos="39" yPos="12"/>
+  <fields south="//@fields.989" north="//@fields.987" west="//@fields.963" east="//@fields.1013" xPos="39" yPos="13"/>
+  <fields south="//@fields.990" north="//@fields.988" west="//@fields.964" east="//@fields.1014" xPos="39" yPos="14"/>
+  <fields south="//@fields.991" north="//@fields.989" west="//@fields.965" east="//@fields.1015" xPos="39" yPos="15"/>
+  <fields south="//@fields.992" north="//@fields.990" west="//@fields.966" east="//@fields.1016" xPos="39" yPos="16"/>
+  <fields south="//@fields.993" north="//@fields.991" west="//@fields.967" east="//@fields.1017" xPos="39" yPos="17"/>
+  <fields south="//@fields.994" north="//@fields.992" west="//@fields.968" east="//@fields.1018" xPos="39" yPos="18"/>
+  <fields south="//@fields.995" north="//@fields.993" west="//@fields.969" east="//@fields.1019" xPos="39" yPos="19"/>
+  <fields south="//@fields.996" north="//@fields.994" west="//@fields.970" east="//@fields.1020" xPos="39" yPos="20"/>
+  <fields south="//@fields.997" north="//@fields.995" west="//@fields.971" east="//@fields.1021" xPos="39" yPos="21"/>
+  <fields south="//@fields.998" north="//@fields.996" west="//@fields.972" east="//@fields.1022" xPos="39" yPos="22"/>
+  <fields south="//@fields.999" north="//@fields.997" west="//@fields.973" east="//@fields.1023" xPos="39" yPos="23"/>
+  <fields north="//@fields.998" west="//@fields.974" east="//@fields.1024" xPos="39" yPos="24"/>
+  <fields south="//@fields.1001" west="//@fields.975" east="//@fields.1025" xPos="40"/>
+  <fields south="//@fields.1002" north="//@fields.1000" west="//@fields.976" east="//@fields.1026" xPos="40" yPos="1"/>
+  <fields south="//@fields.1003" north="//@fields.1001" west="//@fields.977" east="//@fields.1027" xPos="40" yPos="2"/>
+  <fields south="//@fields.1004" north="//@fields.1002" west="//@fields.978" east="//@fields.1028" xPos="40" yPos="3"/>
+  <fields south="//@fields.1005" north="//@fields.1003" west="//@fields.979" east="//@fields.1029" xPos="40" yPos="4"/>
+  <fields south="//@fields.1006" north="//@fields.1004" west="//@fields.980" east="//@fields.1030" xPos="40" yPos="5"/>
+  <fields south="//@fields.1007" north="//@fields.1005" west="//@fields.981" east="//@fields.1031" xPos="40" yPos="6"/>
+  <fields south="//@fields.1008" north="//@fields.1006" west="//@fields.982" east="//@fields.1032" xPos="40" yPos="7"/>
+  <fields south="//@fields.1009" north="//@fields.1007" west="//@fields.983" east="//@fields.1033" xPos="40" yPos="8"/>
+  <fields south="//@fields.1010" north="//@fields.1008" west="//@fields.984" east="//@fields.1034" xPos="40" yPos="9"/>
+  <fields south="//@fields.1011" north="//@fields.1009" west="//@fields.985" east="//@fields.1035" xPos="40" yPos="10"/>
+  <fields south="//@fields.1012" north="//@fields.1010" west="//@fields.986" east="//@fields.1036" xPos="40" yPos="11"/>
+  <fields south="//@fields.1013" north="//@fields.1011" west="//@fields.987" east="//@fields.1037" xPos="40" yPos="12"/>
+  <fields south="//@fields.1014" north="//@fields.1012" west="//@fields.988" east="//@fields.1038" xPos="40" yPos="13"/>
+  <fields south="//@fields.1015" north="//@fields.1013" west="//@fields.989" east="//@fields.1039" xPos="40" yPos="14"/>
+  <fields south="//@fields.1016" north="//@fields.1014" west="//@fields.990" east="//@fields.1040" xPos="40" yPos="15"/>
+  <fields south="//@fields.1017" north="//@fields.1015" west="//@fields.991" east="//@fields.1041" xPos="40" yPos="16"/>
+  <fields south="//@fields.1018" north="//@fields.1016" west="//@fields.992" east="//@fields.1042" xPos="40" yPos="17"/>
+  <fields south="//@fields.1019" north="//@fields.1017" west="//@fields.993" east="//@fields.1043" xPos="40" yPos="18"/>
+  <fields south="//@fields.1020" north="//@fields.1018" west="//@fields.994" east="//@fields.1044" xPos="40" yPos="19"/>
+  <fields south="//@fields.1021" north="//@fields.1019" west="//@fields.995" east="//@fields.1045" xPos="40" yPos="20"/>
+  <fields south="//@fields.1022" north="//@fields.1020" west="//@fields.996" east="//@fields.1046" xPos="40" yPos="21"/>
+  <fields south="//@fields.1023" north="//@fields.1021" west="//@fields.997" east="//@fields.1047" xPos="40" yPos="22"/>
+  <fields south="//@fields.1024" north="//@fields.1022" west="//@fields.998" east="//@fields.1048" xPos="40" yPos="23"/>
+  <fields north="//@fields.1023" west="//@fields.999" east="//@fields.1049" xPos="40" yPos="24"/>
+  <fields south="//@fields.1026" west="//@fields.1000" east="//@fields.1050" xPos="41"/>
+  <fields south="//@fields.1027" north="//@fields.1025" west="//@fields.1001" east="//@fields.1051" xPos="41" yPos="1"/>
+  <fields south="//@fields.1028" north="//@fields.1026" west="//@fields.1002" east="//@fields.1052" xPos="41" yPos="2"/>
+  <fields south="//@fields.1029" north="//@fields.1027" west="//@fields.1003" east="//@fields.1053" xPos="41" yPos="3"/>
+  <fields south="//@fields.1030" north="//@fields.1028" west="//@fields.1004" east="//@fields.1054" xPos="41" yPos="4"/>
+  <fields south="//@fields.1031" north="//@fields.1029" west="//@fields.1005" east="//@fields.1055" xPos="41" yPos="5"/>
+  <fields south="//@fields.1032" north="//@fields.1030" west="//@fields.1006" east="//@fields.1056" xPos="41" yPos="6"/>
+  <fields south="//@fields.1033" north="//@fields.1031" west="//@fields.1007" east="//@fields.1057" xPos="41" yPos="7"/>
+  <fields south="//@fields.1034" north="//@fields.1032" west="//@fields.1008" east="//@fields.1058" xPos="41" yPos="8"/>
+  <fields south="//@fields.1035" north="//@fields.1033" west="//@fields.1009" east="//@fields.1059" xPos="41" yPos="9"/>
+  <fields south="//@fields.1036" north="//@fields.1034" west="//@fields.1010" east="//@fields.1060" xPos="41" yPos="10"/>
+  <fields south="//@fields.1037" north="//@fields.1035" west="//@fields.1011" east="//@fields.1061" xPos="41" yPos="11"/>
+  <fields south="//@fields.1038" north="//@fields.1036" west="//@fields.1012" east="//@fields.1062" xPos="41" yPos="12"/>
+  <fields south="//@fields.1039" north="//@fields.1037" west="//@fields.1013" east="//@fields.1063" xPos="41" yPos="13"/>
+  <fields south="//@fields.1040" north="//@fields.1038" west="//@fields.1014" east="//@fields.1064" xPos="41" yPos="14"/>
+  <fields south="//@fields.1041" north="//@fields.1039" west="//@fields.1015" east="//@fields.1065" xPos="41" yPos="15"/>
+  <fields south="//@fields.1042" north="//@fields.1040" west="//@fields.1016" east="//@fields.1066" xPos="41" yPos="16"/>
+  <fields south="//@fields.1043" north="//@fields.1041" west="//@fields.1017" east="//@fields.1067" xPos="41" yPos="17"/>
+  <fields south="//@fields.1044" north="//@fields.1042" west="//@fields.1018" east="//@fields.1068" xPos="41" yPos="18"/>
+  <fields south="//@fields.1045" north="//@fields.1043" west="//@fields.1019" east="//@fields.1069" xPos="41" yPos="19"/>
+  <fields south="//@fields.1046" north="//@fields.1044" west="//@fields.1020" east="//@fields.1070" xPos="41" yPos="20"/>
+  <fields south="//@fields.1047" north="//@fields.1045" west="//@fields.1021" east="//@fields.1071" xPos="41" yPos="21"/>
+  <fields south="//@fields.1048" north="//@fields.1046" west="//@fields.1022" east="//@fields.1072" xPos="41" yPos="22"/>
+  <fields south="//@fields.1049" north="//@fields.1047" west="//@fields.1023" east="//@fields.1073" xPos="41" yPos="23"/>
+  <fields north="//@fields.1048" west="//@fields.1024" east="//@fields.1074" xPos="41" yPos="24"/>
+  <fields south="//@fields.1051" west="//@fields.1025" east="//@fields.1075" xPos="42"/>
+  <fields south="//@fields.1052" north="//@fields.1050" west="//@fields.1026" east="//@fields.1076" xPos="42" yPos="1"/>
+  <fields south="//@fields.1053" north="//@fields.1051" west="//@fields.1027" east="//@fields.1077" xPos="42" yPos="2"/>
+  <fields south="//@fields.1054" north="//@fields.1052" west="//@fields.1028" east="//@fields.1078" xPos="42" yPos="3"/>
+  <fields south="//@fields.1055" north="//@fields.1053" west="//@fields.1029" east="//@fields.1079" xPos="42" yPos="4"/>
+  <fields south="//@fields.1056" north="//@fields.1054" west="//@fields.1030" east="//@fields.1080" xPos="42" yPos="5"/>
+  <fields south="//@fields.1057" north="//@fields.1055" west="//@fields.1031" east="//@fields.1081" xPos="42" yPos="6"/>
+  <fields south="//@fields.1058" north="//@fields.1056" west="//@fields.1032" east="//@fields.1082" xPos="42" yPos="7"/>
+  <fields south="//@fields.1059" north="//@fields.1057" west="//@fields.1033" east="//@fields.1083" xPos="42" yPos="8"/>
+  <fields south="//@fields.1060" north="//@fields.1058" west="//@fields.1034" east="//@fields.1084" xPos="42" yPos="9"/>
+  <fields south="//@fields.1061" north="//@fields.1059" west="//@fields.1035" east="//@fields.1085" xPos="42" yPos="10"/>
+  <fields south="//@fields.1062" north="//@fields.1060" west="//@fields.1036" east="//@fields.1086" xPos="42" yPos="11"/>
+  <fields south="//@fields.1063" north="//@fields.1061" west="//@fields.1037" east="//@fields.1087" xPos="42" yPos="12"/>
+  <fields south="//@fields.1064" north="//@fields.1062" west="//@fields.1038" east="//@fields.1088" xPos="42" yPos="13"/>
+  <fields south="//@fields.1065" north="//@fields.1063" west="//@fields.1039" east="//@fields.1089" xPos="42" yPos="14"/>
+  <fields south="//@fields.1066" north="//@fields.1064" west="//@fields.1040" east="//@fields.1090" xPos="42" yPos="15"/>
+  <fields south="//@fields.1067" north="//@fields.1065" west="//@fields.1041" east="//@fields.1091" xPos="42" yPos="16"/>
+  <fields south="//@fields.1068" north="//@fields.1066" west="//@fields.1042" east="//@fields.1092" xPos="42" yPos="17"/>
+  <fields south="//@fields.1069" north="//@fields.1067" west="//@fields.1043" east="//@fields.1093" xPos="42" yPos="18"/>
+  <fields south="//@fields.1070" north="//@fields.1068" west="//@fields.1044" east="//@fields.1094" xPos="42" yPos="19"/>
+  <fields south="//@fields.1071" north="//@fields.1069" west="//@fields.1045" east="//@fields.1095" xPos="42" yPos="20"/>
+  <fields south="//@fields.1072" north="//@fields.1070" west="//@fields.1046" east="//@fields.1096" xPos="42" yPos="21"/>
+  <fields south="//@fields.1073" north="//@fields.1071" west="//@fields.1047" east="//@fields.1097" xPos="42" yPos="22"/>
+  <fields south="//@fields.1074" north="//@fields.1072" west="//@fields.1048" east="//@fields.1098" xPos="42" yPos="23"/>
+  <fields north="//@fields.1073" west="//@fields.1049" east="//@fields.1099" xPos="42" yPos="24"/>
+  <fields south="//@fields.1076" west="//@fields.1050" east="//@fields.1100" xPos="43"/>
+  <fields south="//@fields.1077" north="//@fields.1075" west="//@fields.1051" east="//@fields.1101" xPos="43" yPos="1"/>
+  <fields south="//@fields.1078" north="//@fields.1076" west="//@fields.1052" east="//@fields.1102" xPos="43" yPos="2"/>
+  <fields south="//@fields.1079" north="//@fields.1077" west="//@fields.1053" east="//@fields.1103" xPos="43" yPos="3"/>
+  <fields south="//@fields.1080" north="//@fields.1078" west="//@fields.1054" east="//@fields.1104" xPos="43" yPos="4"/>
+  <fields south="//@fields.1081" north="//@fields.1079" west="//@fields.1055" east="//@fields.1105" xPos="43" yPos="5"/>
+  <fields south="//@fields.1082" north="//@fields.1080" west="//@fields.1056" east="//@fields.1106" xPos="43" yPos="6"/>
+  <fields south="//@fields.1083" north="//@fields.1081" west="//@fields.1057" east="//@fields.1107" xPos="43" yPos="7"/>
+  <fields south="//@fields.1084" north="//@fields.1082" west="//@fields.1058" east="//@fields.1108" xPos="43" yPos="8"/>
+  <fields south="//@fields.1085" north="//@fields.1083" west="//@fields.1059" east="//@fields.1109" xPos="43" yPos="9"/>
+  <fields south="//@fields.1086" north="//@fields.1084" west="//@fields.1060" east="//@fields.1110" xPos="43" yPos="10"/>
+  <fields south="//@fields.1087" north="//@fields.1085" west="//@fields.1061" east="//@fields.1111" xPos="43" yPos="11"/>
+  <fields south="//@fields.1088" north="//@fields.1086" west="//@fields.1062" east="//@fields.1112" xPos="43" yPos="12"/>
+  <fields south="//@fields.1089" north="//@fields.1087" west="//@fields.1063" east="//@fields.1113" xPos="43" yPos="13"/>
+  <fields south="//@fields.1090" north="//@fields.1088" west="//@fields.1064" east="//@fields.1114" xPos="43" yPos="14"/>
+  <fields south="//@fields.1091" north="//@fields.1089" west="//@fields.1065" east="//@fields.1115" xPos="43" yPos="15"/>
+  <fields south="//@fields.1092" north="//@fields.1090" west="//@fields.1066" east="//@fields.1116" xPos="43" yPos="16"/>
+  <fields players="//@players.16" ball="//@ball" south="//@fields.1093" north="//@fields.1091" west="//@fields.1067" east="//@fields.1117" xPos="43" yPos="17"/>
+  <fields south="//@fields.1094" north="//@fields.1092" west="//@fields.1068" east="//@fields.1118" xPos="43" yPos="18"/>
+  <fields south="//@fields.1095" north="//@fields.1093" west="//@fields.1069" east="//@fields.1119" xPos="43" yPos="19"/>
+  <fields south="//@fields.1096" north="//@fields.1094" west="//@fields.1070" east="//@fields.1120" xPos="43" yPos="20"/>
+  <fields south="//@fields.1097" north="//@fields.1095" west="//@fields.1071" east="//@fields.1121" xPos="43" yPos="21"/>
+  <fields south="//@fields.1098" north="//@fields.1096" west="//@fields.1072" east="//@fields.1122" xPos="43" yPos="22"/>
+  <fields south="//@fields.1099" north="//@fields.1097" west="//@fields.1073" east="//@fields.1123" xPos="43" yPos="23"/>
+  <fields north="//@fields.1098" west="//@fields.1074" east="//@fields.1124" xPos="43" yPos="24"/>
+  <fields south="//@fields.1101" west="//@fields.1075" xPos="44"/>
+  <fields south="//@fields.1102" north="//@fields.1100" west="//@fields.1076" xPos="44" yPos="1"/>
+  <fields south="//@fields.1103" north="//@fields.1101" west="//@fields.1077" xPos="44" yPos="2"/>
+  <fields south="//@fields.1104" north="//@fields.1102" west="//@fields.1078" xPos="44" yPos="3"/>
+  <fields south="//@fields.1105" north="//@fields.1103" west="//@fields.1079" xPos="44" yPos="4"/>
+  <fields south="//@fields.1106" north="//@fields.1104" west="//@fields.1080" xPos="44" yPos="5"/>
+  <fields south="//@fields.1107" north="//@fields.1105" west="//@fields.1081" xPos="44" yPos="6"/>
+  <fields south="//@fields.1108" north="//@fields.1106" west="//@fields.1082" xPos="44" yPos="7"/>
+  <fields south="//@fields.1109" north="//@fields.1107" west="//@fields.1083" xPos="44" yPos="8"/>
+  <fields xsi:type="soccerpitch:GoalField" players="//@players.1" south="//@fields.1110" north="//@fields.1108" west="//@fields.1084" xPos="44" yPos="9" team="RED"/>
+  <fields xsi:type="soccerpitch:GoalField" south="//@fields.1111" north="//@fields.1109" west="//@fields.1085" xPos="44" yPos="10" team="RED"/>
+  <fields xsi:type="soccerpitch:GoalField" south="//@fields.1112" north="//@fields.1110" west="//@fields.1086" xPos="44" yPos="11" team="RED"/>
+  <fields xsi:type="soccerpitch:GoalField" south="//@fields.1113" north="//@fields.1111" west="//@fields.1087" xPos="44" yPos="12" team="RED"/>
+  <fields xsi:type="soccerpitch:GoalField" south="//@fields.1114" north="//@fields.1112" west="//@fields.1088" xPos="44" yPos="13" team="RED"/>
+  <fields xsi:type="soccerpitch:GoalField" south="//@fields.1115" north="//@fields.1113" west="//@fields.1089" xPos="44" yPos="14" team="RED"/>
+  <fields xsi:type="soccerpitch:GoalField" south="//@fields.1116" north="//@fields.1114" west="//@fields.1090" xPos="44" yPos="15" team="RED"/>
+  <fields south="//@fields.1117" north="//@fields.1115" west="//@fields.1091" xPos="44" yPos="16"/>
+  <fields south="//@fields.1118" north="//@fields.1116" west="//@fields.1092" xPos="44" yPos="17"/>
+  <fields south="//@fields.1119" north="//@fields.1117" west="//@fields.1093" xPos="44" yPos="18"/>
+  <fields south="//@fields.1120" north="//@fields.1118" west="//@fields.1094" xPos="44" yPos="19"/>
+  <fields south="//@fields.1121" north="//@fields.1119" west="//@fields.1095" xPos="44" yPos="20"/>
+  <fields south="//@fields.1122" north="//@fields.1120" west="//@fields.1096" xPos="44" yPos="21"/>
+  <fields south="//@fields.1123" north="//@fields.1121" west="//@fields.1097" xPos="44" yPos="22"/>
+  <fields south="//@fields.1124" north="//@fields.1122" west="//@fields.1098" xPos="44" yPos="23"/>
+  <fields north="//@fields.1123" west="//@fields.1099" xPos="44" yPos="24"/>
+  <ball player="//@players.16" field="//@fields.1092"/>
+</soccerpitch:SoccerPitch>

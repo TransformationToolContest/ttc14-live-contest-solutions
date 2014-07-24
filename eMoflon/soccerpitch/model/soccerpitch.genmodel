@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/soccerpitch/gen" modelPluginID="soccerpitch" modelName="soccerpitch"
+    updateClasspath="false" codeFormatting="true" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="7.0" copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/org.moflon.moca.MocaTree/model/MocaTree.genmodel#//MocaTree"
+    operationReflection="true">
+  <foreignModel>soccerpitch.ecore</foreignModel>
+  <genPackages prefix="Soccerpitch" disposableProviderFactory="true" ecorePackage="soccerpitch.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="soccerpitch.ecore#//Teams">
+      <genEnumLiterals ecoreEnumLiteral="soccerpitch.ecore#//Teams/RED"/>
+      <genEnumLiterals ecoreEnumLiteral="soccerpitch.ecore#//Teams/BLUE"/>
+    </genEnums>
+    <genClasses ecoreClass="soccerpitch.ecore#//Ball">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccerpitch.ecore#//Ball/player"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccerpitch.ecore#//Ball/field"/>
+    </genClasses>
+    <genClasses ecoreClass="soccerpitch.ecore#//SoccerPitch">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccerpitch.ecore#//SoccerPitch/players"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccerpitch.ecore#//SoccerPitch/fields"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccerpitch.ecore#//SoccerPitch/ball"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccerpitch.ecore#//SoccerPitch/ownTeam"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccerpitch.ecore#//SoccerPitch/opponentTeam"/>
+    </genClasses>
+    <genClasses ecoreClass="soccerpitch.ecore#//Field">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccerpitch.ecore#//Field/players"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccerpitch.ecore#//Field/ball"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccerpitch.ecore#//Field/south"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccerpitch.ecore#//Field/north"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccerpitch.ecore#//Field/west"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccerpitch.ecore#//Field/east"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccerpitch.ecore#//Field/xPos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccerpitch.ecore#//Field/yPos"/>
+    </genClasses>
+    <genClasses ecoreClass="soccerpitch.ecore#//GoalField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccerpitch.ecore#//GoalField/team"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="soccerpitch.ecore#//Player">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccerpitch.ecore#//Player/field"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccerpitch.ecore#//Player/ball"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccerpitch.ecore#//Player/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccerpitch.ecore#//Player/team"/>
+    </genClasses>
+    <genClasses ecoreClass="soccerpitch.ecore#//GoalKeeper"/>
+    <genClasses ecoreClass="soccerpitch.ecore#//FieldPlayer"/>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MoflonPropertyContainer:MoflonPropertiesContainer
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:MoflonPropertyContainer="http://www.moflon.org.MoflonPropertyContainer">
+  <metaModelProject
+      MetaModelProjectName="ttc14_specification"/>
+  <replaceGenModel/>
+  <listShuffling/>
+  <genTracingInstrumentation/>
+  <sdmCodegeneratorHandlerId/>
+  <core/>
+  <tGGBuildMode
+      buildMode="FORWARD"/>
+  <debugMode/>
+  <strictSDMConditionalBranching
+      bool="false"/>
+</MoflonPropertyContainer:MoflonPropertiesContainer>
