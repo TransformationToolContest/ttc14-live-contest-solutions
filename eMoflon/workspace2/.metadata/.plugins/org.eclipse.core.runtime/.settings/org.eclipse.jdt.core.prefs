@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+org.eclipse.jdt.core.classpathVariable.ECLIPSE_CORE_RESOURCES=/home/horn/opt/eclipse/plugins/org.eclipse.core.resources_3.9.0.v20140514-1307.jar
+org.eclipse.jdt.core.classpathVariable.ECLIPSE_CORE_RUNTIME=/home/horn/opt/eclipse/plugins/org.eclipse.core.runtime_3.10.0.v20140318-2214.jar
+org.eclipse.jdt.core.classpathVariable.EMF_COMMON=/home/horn/opt/eclipse/plugins/org.eclipse.emf.common_2.10.0.v20140514-1158.jar
+org.eclipse.jdt.core.classpathVariable.EMF_ECORE=/home/horn/opt/eclipse/plugins/org.eclipse.emf.ecore_2.10.0.v20140514-1158.jar
+org.eclipse.jdt.core.classpathVariable.EMF_ECORE_XMI=/home/horn/opt/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.0.v20140514-1158.jar
+org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
+org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
+org.eclipse.jdt.core.compiler.compliance=1.7
+org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
+org.eclipse.jdt.core.compiler.source=1.7

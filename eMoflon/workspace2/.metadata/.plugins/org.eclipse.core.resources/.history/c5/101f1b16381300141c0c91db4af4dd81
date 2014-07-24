@@ -1,0 +1,3401 @@
+/**
+ */
+package SoccerStrategy.Rules.impl;
+
+import SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red;
+import SoccerStrategy.Rules.RulesPackage;
+import SoccerStrategy.SoccerPitchToUpdate;
+import SoccerStrategy.SoccerStrategyFactory;
+import TGGLanguage.csp.*;
+import TGGRuntime.EObjectContainer;
+import TGGRuntime.Edge;
+import TGGRuntime.IsApplicableMatch;
+import TGGRuntime.IsApplicableRuleResult;
+import TGGRuntime.Match;
+import TGGRuntime.PerformRuleResult;
+import TGGRuntime.TGGRuntimeFactory;
+import TGGRuntime.impl.AbstractRuleImpl;
+import csp.constraints.*;
+import de.upb.tools.sdm.*;
+
+import java.lang.reflect.InvocationTargetException;
+import java.util.*;
+
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EOperation;
+
+import soccerpitch.Ball;
+import soccerpitch.Field;
+import soccerpitch.FieldPlayer;
+import soccerpitch.GoalField;
+import soccerpitch.GoalKeeper;
+import soccerpitch.Player;
+import soccerpitch.SoccerPitch;
+import soccerpitch.Teams;
+import updatemodel.MovePlayer;
+import updatemodel.ShootBall;
+import updatemodel.Update;
+import updatemodel.UpdatemodelFactory;
+// <-- [user defined imports]
+
+// [user defined imports] -->
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Goal Keeper Passes To Player Red</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * </p>
+ *
+ * @generated
+ */
+public class GoalKeeperPassesToPlayer_RedImpl extends AbstractRuleImpl
+		implements GoalKeeperPassesToPlayer_Red {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GoalKeeperPassesToPlayer_RedImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return RulesPackage.Literals.GOAL_KEEPER_PASSES_TO_PLAYER_RED;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IsApplicableRuleResult isApplicable_FWD(Match match) {
+		boolean fujaba__Success = false;
+		Object _TmpObject = null;
+		EClass eClass = null;
+		Iterator fujaba__IterEClassToPerformOperation = null;
+		EOperation performOperation = null;
+		IsApplicableRuleResult ruleresult = null;
+		Ball ball = null;
+		GoalKeeper goalKeeper = null;
+		Field goalKeeperField = null;
+		SoccerPitch soccerPitch = null;
+		FieldPlayer targetPlayer = null;
+		Field targetPlayerField = null;
+		IsApplicableMatch isApplicableMatch = null;
+		Update update = null;
+		Iterator fujaba__IterSoccerPitchToS2u = null;
+		SoccerPitchToUpdate s2u = null;
+
+		// story node 'prepare return value'
+		try {
+			fujaba__Success = false;
+
+			_TmpObject = (this.eClass());
+
+			// ensure correct type and really bound of object eClass
+			JavaSDM.ensure(_TmpObject instanceof EClass);
+			eClass = (EClass) _TmpObject;
+			// iterate to-many link eOperations from eClass to performOperation
+			fujaba__Success = false;
+
+			fujaba__IterEClassToPerformOperation = eClass.getEOperations()
+					.iterator();
+
+			while (!(fujaba__Success)
+					&& fujaba__IterEClassToPerformOperation.hasNext()) {
+				try {
+					performOperation = (EOperation) fujaba__IterEClassToPerformOperation
+							.next();
+
+					// check object performOperation is really bound
+					JavaSDM.ensure(performOperation != null);
+					// attribute condition
+					JavaSDM.ensure(JavaSDM.stringCompare(
+							performOperation.getName(), "perform_FWD") == 0);
+
+					fujaba__Success = true;
+				} catch (JavaSDMException fujaba__InternalException) {
+					fujaba__Success = false;
+				}
+			}
+			JavaSDM.ensure(fujaba__Success);
+			// create object ruleresult
+			ruleresult = TGGRuntimeFactory.eINSTANCE
+					.createIsApplicableRuleResult();
+
+			// assign attribute ruleresult
+			ruleresult.setSuccess(false);
+			// assign attribute ruleresult
+			ruleresult.setRule("GoalKeeperPassesToPlayer_Red");
+
+			// create link
+			org.moflon.util.eMoflonEMFUtil.addOppositeReference(ruleresult,
+					performOperation, "performOperation");
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		// story node 'core match'
+		try {
+			fujaba__Success = false;
+
+			_TmpObject = (match.getObject("ball"));
+
+			// ensure correct type and really bound of object ball
+			JavaSDM.ensure(_TmpObject instanceof Ball);
+			ball = (Ball) _TmpObject;
+			_TmpObject = (match.getObject("goalKeeper"));
+
+			// ensure correct type and really bound of object goalKeeper
+			JavaSDM.ensure(_TmpObject instanceof GoalKeeper);
+			goalKeeper = (GoalKeeper) _TmpObject;
+			_TmpObject = (match.getObject("goalKeeperField"));
+
+			// ensure correct type and really bound of object goalKeeperField
+			JavaSDM.ensure(_TmpObject instanceof Field);
+			goalKeeperField = (Field) _TmpObject;
+			_TmpObject = (match.getObject("soccerPitch"));
+
+			// ensure correct type and really bound of object soccerPitch
+			JavaSDM.ensure(_TmpObject instanceof SoccerPitch);
+			soccerPitch = (SoccerPitch) _TmpObject;
+			_TmpObject = (match.getObject("targetPlayer"));
+
+			// ensure correct type and really bound of object targetPlayer
+			JavaSDM.ensure(_TmpObject instanceof FieldPlayer);
+			targetPlayer = (FieldPlayer) _TmpObject;
+			_TmpObject = (match.getObject("targetPlayerField"));
+
+			// ensure correct type and really bound of object targetPlayerField
+			JavaSDM.ensure(_TmpObject instanceof Field);
+			targetPlayerField = (Field) _TmpObject;
+			// check object match is really bound
+			JavaSDM.ensure(match != null);
+			// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+			JavaSDM.ensure(!targetPlayerField.equals(goalKeeperField));
+
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		// story node 'find context'
+		try {
+			fujaba__Success = false;
+
+			// check object ball is really bound
+			JavaSDM.ensure(ball != null);
+			// check object goalKeeper is really bound
+			JavaSDM.ensure(goalKeeper != null);
+			// check object goalKeeperField is really bound
+			JavaSDM.ensure(goalKeeperField != null);
+			// check object soccerPitch is really bound
+			JavaSDM.ensure(soccerPitch != null);
+			// check object targetPlayer is really bound
+			JavaSDM.ensure(targetPlayer != null);
+			// check object targetPlayerField is really bound
+			JavaSDM.ensure(targetPlayerField != null);
+			// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+			JavaSDM.ensure(!targetPlayerField.equals(goalKeeperField));
+
+			// check link ball from ball to goalKeeper
+			JavaSDM.ensure(goalKeeper.equals(ball.getPlayer()));
+
+			// check link field from goalKeeperField to ball
+			JavaSDM.ensure(ball.equals(goalKeeperField.getBall()));
+
+			// check link field from goalKeeper to goalKeeperField
+			JavaSDM.ensure(goalKeeperField.equals(goalKeeper.getField()));
+
+			// check link field from targetPlayer to targetPlayerField
+			JavaSDM.ensure(targetPlayerField.equals(targetPlayer.getField()));
+
+			// check link fields from goalKeeperField to soccerPitch
+			JavaSDM.ensure(soccerPitch.equals(goalKeeperField.eContainer()));
+
+			// check link fields from targetPlayerField to soccerPitch
+			JavaSDM.ensure(soccerPitch.equals(targetPlayerField.eContainer()));
+
+			// check link players from goalKeeper to soccerPitch
+			JavaSDM.ensure(soccerPitch.equals(goalKeeper.eContainer()));
+
+			// check link players from targetPlayer to soccerPitch
+			JavaSDM.ensure(soccerPitch.equals(targetPlayer.eContainer()));
+
+			// iterate to-many link source from soccerPitch to s2u
+			fujaba__Success = false;
+
+			fujaba__IterSoccerPitchToS2u = new ArrayList(
+					org.moflon.util.eMoflonEMFUtil.getOppositeReference(
+							soccerPitch, SoccerPitchToUpdate.class, "source"))
+					.iterator();
+
+			while (fujaba__IterSoccerPitchToS2u.hasNext()) {
+				try {
+					s2u = (SoccerPitchToUpdate) fujaba__IterSoccerPitchToS2u
+							.next();
+
+					// check object s2u is really bound
+					JavaSDM.ensure(s2u != null);
+					// bind object
+					update = s2u.getTarget();
+
+					// check object update is really bound
+					JavaSDM.ensure(update != null);
+
+					// create object isApplicableMatch
+					isApplicableMatch = TGGRuntimeFactory.eINSTANCE
+							.createIsApplicableMatch();
+
+					// statement node 'solve CSP'
+					// Create CSP
+					CSP csp = CspFactory.eINSTANCE.createCSP();
+					isApplicableMatch.getAttributeInfo().add(csp);
+
+					// Create literals
+					Variable<Number> literal0 = CspFactory.eINSTANCE
+							.createVariable("literal0", true, csp);
+					literal0.setValue(7);
+
+					// Create attribute variables
+					Variable<Number> var_goalKeeper_number = CspFactory.eINSTANCE
+							.createVariable("goalKeeper.number", true, csp);
+					var_goalKeeper_number.setValue(goalKeeper.getNumber());
+					Variable<Teams> var_soccerPitch_ownTeam = CspFactory.eINSTANCE
+							.createVariable("soccerPitch.ownTeam", true, csp);
+					var_soccerPitch_ownTeam.setValue(soccerPitch.getOwnTeam());
+					Variable<Number> var_targetPlayerField_yPos = CspFactory.eINSTANCE
+							.createVariable("targetPlayerField.yPos", true, csp);
+					var_targetPlayerField_yPos.setValue(targetPlayerField
+							.getYPos());
+					Variable<Number> var_goalKeeperField_yPos = CspFactory.eINSTANCE
+							.createVariable("goalKeeperField.yPos", true, csp);
+					var_goalKeeperField_yPos
+							.setValue(goalKeeperField.getYPos());
+					Variable<Number> var_targetPlayerField_xPos = CspFactory.eINSTANCE
+							.createVariable("targetPlayerField.xPos", true, csp);
+					var_targetPlayerField_xPos.setValue(targetPlayerField
+							.getXPos());
+					Variable<Number> var_goalKeeperField_xPos = CspFactory.eINSTANCE
+							.createVariable("goalKeeperField.xPos", true, csp);
+					var_goalKeeperField_xPos
+							.setValue(goalKeeperField.getXPos());
+
+					// Create explicit parameters
+
+					// Create unbound variables
+					Variable<Number> var_shootBall_xDist = CspFactory.eINSTANCE
+							.createVariable("shootBall.xDist", csp);
+					Variable<Number> var_shootBall_yDist = CspFactory.eINSTANCE
+							.createVariable("shootBall.yDist", csp);
+					Variable<Number> var_shootBall_playerNumber = CspFactory.eINSTANCE
+							.createVariable("shootBall.playerNumber", csp);
+					Variable<Number> var_signum = CspFactory.eINSTANCE
+							.createVariable("signum", csp);
+					Variable<Number> var_maxDist = CspFactory.eINSTANCE
+							.createVariable("maxDist", csp);
+					Variable<Number> var_deltaX = CspFactory.eINSTANCE
+							.createVariable("deltaX", csp);
+					Variable<Number> var_deltaY = CspFactory.eINSTANCE
+							.createVariable("deltaY", csp);
+
+					// Create constraints
+					Eq<Number> eq = new Eq<Number>();
+					TeamToDirection teamToDirection = new TeamToDirection();
+					Sub sub = new Sub();
+					IsValidDeltaY isValidDeltaY = new IsValidDeltaY();
+					Sub sub_0 = new Sub();
+					IsValidDeltaX isValidDeltaX = new IsValidDeltaX();
+					Multiply multiply = new Multiply();
+					Eq<Number> eq_0 = new Eq<Number>();
+					Eq<Number> eq_1 = new Eq<Number>();
+
+					csp.getConstraints().add(eq);
+					csp.getConstraints().add(teamToDirection);
+					csp.getConstraints().add(sub);
+					csp.getConstraints().add(isValidDeltaY);
+					csp.getConstraints().add(sub_0);
+					csp.getConstraints().add(isValidDeltaX);
+					csp.getConstraints().add(multiply);
+					csp.getConstraints().add(eq_0);
+					csp.getConstraints().add(eq_1);
+
+					// Solve CSP
+					eq.setRuleName("");
+					eq.solve(var_goalKeeper_number, var_shootBall_playerNumber);
+					teamToDirection.setRuleName("");
+					teamToDirection.solve(var_soccerPitch_ownTeam, var_signum);
+					sub.setRuleName("");
+					sub.solve(var_targetPlayerField_yPos,
+							var_goalKeeperField_yPos, var_deltaY);
+					isValidDeltaY.setRuleName("");
+					isValidDeltaY.solve(var_deltaY);
+					sub_0.setRuleName("");
+					sub_0.solve(var_targetPlayerField_xPos,
+							var_goalKeeperField_xPos, var_deltaX);
+					isValidDeltaX.setRuleName("");
+					isValidDeltaX.solve(var_deltaX, var_soccerPitch_ownTeam);
+					multiply.setRuleName("");
+					multiply.solve(var_signum, literal0, var_maxDist);
+					eq_0.setRuleName("");
+					eq_0.solve(var_deltaY, var_shootBall_yDist);
+					eq_1.setRuleName("");
+					eq_1.solve(var_deltaX, var_shootBall_xDist);
+
+					// Snapshot pattern match on which CSP is solved
+					isApplicableMatch.registerObject("goalKeeper", goalKeeper);
+					isApplicableMatch
+							.registerObject("soccerPitch", soccerPitch);
+					isApplicableMatch.registerObject("targetPlayer",
+							targetPlayer);
+					isApplicableMatch.registerObject("update", update);
+					isApplicableMatch.registerObject("s2u", s2u);
+					isApplicableMatch.registerObject("goalKeeperField",
+							goalKeeperField);
+					isApplicableMatch.registerObject("targetPlayerField",
+							targetPlayerField);
+					isApplicableMatch.registerObject("ball", ball);
+
+					// statement node 'check CSP'
+					fujaba__Success = csp.check();
+					if (fujaba__Success) {
+						// story node 'add match to rule result'
+						try {
+							fujaba__Success = false;
+
+							// check object isApplicableMatch is really bound
+							JavaSDM.ensure(isApplicableMatch != null);
+							// check object ruleresult is really bound
+							JavaSDM.ensure(ruleresult != null);
+							// assign attribute ruleresult
+							ruleresult.setSuccess(true);
+
+							// create link
+							ruleresult.getIsApplicableMatch().add(
+									isApplicableMatch);
+
+							fujaba__Success = true;
+						} catch (JavaSDMException fujaba__InternalException) {
+							fujaba__Success = false;
+						}
+
+					} else {
+
+					}
+
+					fujaba__Success = true;
+				} catch (JavaSDMException fujaba__InternalException) {
+					fujaba__Success = false;
+				}
+			}
+			JavaSDM.ensure(fujaba__Success);
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		return ruleresult;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isAppropriate_FWD(Match match, GoalKeeper goalKeeper,
+			SoccerPitch soccerPitch, FieldPlayer targetPlayer,
+			Field goalKeeperField, Field targetPlayerField, Ball ball) {
+		boolean fujaba__Success = false;
+		Edge goalKeeper__ball__ball = null;
+		Edge soccerPitch__players__targetPlayer = null;
+		Edge soccerPitch__players__goalKeeper = null;
+		Edge targetPlayer__field__targetPlayerField = null;
+		Edge goalKeeper__field__goalKeeperField = null;
+		Edge soccerPitch__fields__targetPlayerField = null;
+		Edge ball__field__goalKeeperField = null;
+		Edge soccerPitch__fields__goalKeeperField = null;
+
+		// statement node 'Solve CSP'
+		// Create CSP
+		CSP csp = CspFactory.eINSTANCE.createCSP();
+
+		// Create literals
+
+		// Create attribute variables
+		Variable<Teams> var_soccerPitch_ownTeam = CspFactory.eINSTANCE
+				.createVariable("soccerPitch.ownTeam", true, csp);
+		var_soccerPitch_ownTeam.setValue(soccerPitch.getOwnTeam());
+		Variable<Teams> var_goalKeeper_team = CspFactory.eINSTANCE
+				.createVariable("goalKeeper.team", true, csp);
+		var_goalKeeper_team.setValue(goalKeeper.getTeam());
+		Variable<Teams> var_targetPlayer_team = CspFactory.eINSTANCE
+				.createVariable("targetPlayer.team", true, csp);
+		var_targetPlayer_team.setValue(targetPlayer.getTeam());
+
+		// Create explicit parameters
+
+		// Create unbound variables
+
+		// Create constraints
+		Eq<Teams> eq = new Eq<Teams>();
+		Eq<Teams> eq_0 = new Eq<Teams>();
+
+		csp.getConstraints().add(eq);
+		csp.getConstraints().add(eq_0);
+
+		// Solve CSP
+		eq.setRuleName("");
+		eq.solve(var_soccerPitch_ownTeam, var_goalKeeper_team);
+		eq_0.setRuleName("");
+		eq_0.solve(var_soccerPitch_ownTeam, var_targetPlayer_team);
+
+		// statement node 'Check CSP'
+		fujaba__Success = csp.check();
+		if (fujaba__Success) {
+			// story node 'collect elements to be translated'
+			try {
+				fujaba__Success = false;
+
+				// check object ball is really bound
+				JavaSDM.ensure(ball != null);
+				// check object goalKeeper is really bound
+				JavaSDM.ensure(goalKeeper != null);
+				// check object goalKeeperField is really bound
+				JavaSDM.ensure(goalKeeperField != null);
+				// check object match is really bound
+				JavaSDM.ensure(match != null);
+				// check object soccerPitch is really bound
+				JavaSDM.ensure(soccerPitch != null);
+				// check object targetPlayer is really bound
+				JavaSDM.ensure(targetPlayer != null);
+				// check object targetPlayerField is really bound
+				JavaSDM.ensure(targetPlayerField != null);
+				// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+				JavaSDM.ensure(!targetPlayerField.equals(goalKeeperField));
+
+				// create object goalKeeper__ball__ball
+				goalKeeper__ball__ball = TGGRuntimeFactory.eINSTANCE
+						.createEdge();
+
+				// create object soccerPitch__players__targetPlayer
+				soccerPitch__players__targetPlayer = TGGRuntimeFactory.eINSTANCE
+						.createEdge();
+
+				// create object soccerPitch__players__goalKeeper
+				soccerPitch__players__goalKeeper = TGGRuntimeFactory.eINSTANCE
+						.createEdge();
+
+				// create object targetPlayer__field__targetPlayerField
+				targetPlayer__field__targetPlayerField = TGGRuntimeFactory.eINSTANCE
+						.createEdge();
+
+				// create object goalKeeper__field__goalKeeperField
+				goalKeeper__field__goalKeeperField = TGGRuntimeFactory.eINSTANCE
+						.createEdge();
+
+				// assign attribute soccerPitch__players__goalKeeper
+				soccerPitch__players__goalKeeper.setName("players");
+				// assign attribute soccerPitch__players__targetPlayer
+				soccerPitch__players__targetPlayer.setName("players");
+				// assign attribute goalKeeper__field__goalKeeperField
+				goalKeeper__field__goalKeeperField.setName("field");
+				// assign attribute goalKeeper__ball__ball
+				goalKeeper__ball__ball.setName("ball");
+				// assign attribute targetPlayer__field__targetPlayerField
+				targetPlayer__field__targetPlayerField.setName("field");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(match,
+						goalKeeper__ball__ball, "toBeTranslatedEdges");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(match,
+						soccerPitch__players__targetPlayer,
+						"toBeTranslatedEdges");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(match,
+						goalKeeper, "toBeTranslatedElements");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(match,
+						targetPlayer, "toBeTranslatedElements");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil
+						.addOppositeReference(match,
+								soccerPitch__players__goalKeeper,
+								"toBeTranslatedEdges");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(match,
+						targetPlayer__field__targetPlayerField,
+						"toBeTranslatedEdges");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(match,
+						goalKeeper__field__goalKeeperField,
+						"toBeTranslatedEdges");
+
+				// create link
+				soccerPitch__players__goalKeeper.setTrg(goalKeeper);
+
+				// create link
+				goalKeeper__field__goalKeeperField.setSrc(goalKeeper);
+
+				// create link
+				goalKeeper__ball__ball.setSrc(goalKeeper);
+
+				// create link
+				soccerPitch__players__targetPlayer.setTrg(targetPlayer);
+
+				// create link
+				targetPlayer__field__targetPlayerField.setSrc(targetPlayer);
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(
+						soccerPitch__players__goalKeeper, soccerPitch, "src");
+
+				// create link
+				soccerPitch__players__targetPlayer.setSrc(soccerPitch);
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(
+						goalKeeper__field__goalKeeperField, goalKeeperField,
+						"trg");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(
+						goalKeeper__ball__ball, ball, "trg");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(
+						targetPlayer__field__targetPlayerField,
+						targetPlayerField, "trg");
+				fujaba__Success = true;
+			} catch (JavaSDMException fujaba__InternalException) {
+				fujaba__Success = false;
+			}
+
+			// story node 'collect context elements'
+			try {
+				fujaba__Success = false;
+
+				// check object ball is really bound
+				JavaSDM.ensure(ball != null);
+				// check object goalKeeperField is really bound
+				JavaSDM.ensure(goalKeeperField != null);
+				// check object match is really bound
+				JavaSDM.ensure(match != null);
+				// check object soccerPitch is really bound
+				JavaSDM.ensure(soccerPitch != null);
+				// check object targetPlayerField is really bound
+				JavaSDM.ensure(targetPlayerField != null);
+				// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+				JavaSDM.ensure(!targetPlayerField.equals(goalKeeperField));
+
+				// create object soccerPitch__fields__targetPlayerField
+				soccerPitch__fields__targetPlayerField = TGGRuntimeFactory.eINSTANCE
+						.createEdge();
+
+				// create object ball__field__goalKeeperField
+				ball__field__goalKeeperField = TGGRuntimeFactory.eINSTANCE
+						.createEdge();
+
+				// create object soccerPitch__fields__goalKeeperField
+				soccerPitch__fields__goalKeeperField = TGGRuntimeFactory.eINSTANCE
+						.createEdge();
+
+				// assign attribute soccerPitch__fields__goalKeeperField
+				soccerPitch__fields__goalKeeperField.setName("fields");
+				// assign attribute soccerPitch__fields__targetPlayerField
+				soccerPitch__fields__targetPlayerField.setName("fields");
+				// assign attribute ball__field__goalKeeperField
+				ball__field__goalKeeperField.setName("field");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(match,
+						targetPlayerField, "contextNodes");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(match,
+						ball, "contextNodes");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(match,
+						soccerPitch__fields__targetPlayerField, "contextEdges");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(match,
+						soccerPitch, "contextNodes");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(match,
+						ball__field__goalKeeperField, "contextEdges");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(match,
+						soccerPitch__fields__goalKeeperField, "contextEdges");
+
+				// create link
+				org.moflon.util.eMoflonEMFUtil.addOppositeReference(match,
+						goalKeeperField, "contextNodes");
+
+				// create link
+				soccerPitch__fields__goalKeeperField.setSrc(soccerPitch);
+
+				// create link
+				soccerPitch__fields__targetPlayerField.setSrc(soccerPitch);
+
+				// create link
+				soccerPitch__fields__goalKeeperField.setTrg(goalKeeperField);
+
+				// create link
+				ball__field__goalKeeperField.setTrg(goalKeeperField);
+
+				// create link
+				soccerPitch__fields__targetPlayerField
+						.setTrg(targetPlayerField);
+
+				// create link
+				ball__field__goalKeeperField.setSrc(ball);
+
+				fujaba__Success = true;
+			} catch (JavaSDMException fujaba__InternalException) {
+				fujaba__Success = false;
+			}
+
+			// statement node 'register objects to match'
+			match.registerObject("goalKeeper", goalKeeper);
+			match.registerObject("soccerPitch", soccerPitch);
+			match.registerObject("targetPlayer", targetPlayer);
+			match.registerObject("goalKeeperField", goalKeeperField);
+			match.registerObject("targetPlayerField", targetPlayerField);
+			match.registerObject("ball", ball);
+
+			return true;
+
+		} else {
+			return false;
+
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PerformRuleResult perform_FWD(IsApplicableMatch isApplicableMatch) {
+		boolean fujaba__Success = false;
+		Object _TmpObject = null;
+		Ball ball = null;
+		GoalKeeper goalKeeper = null;
+		Field goalKeeperField = null;
+		SoccerPitchToUpdate s2u = null;
+		SoccerPitch soccerPitch = null;
+		FieldPlayer targetPlayer = null;
+		Field targetPlayerField = null;
+		Update update = null;
+		Iterator fujaba__IterIsApplicableMatchToCsp = null;
+		CSP csp = null;
+		ShootBall shootBall = null;
+		PerformRuleResult ruleresult = null;
+		Edge goalKeeper__ball__ball = null;
+		Edge soccerPitch__players__targetPlayer = null;
+		Edge soccerPitch__players__goalKeeper = null;
+		Edge targetPlayer__field__targetPlayerField = null;
+		Edge update__actions__shootBall = null;
+		Edge goalKeeper__field__goalKeeperField = null;
+
+		// story node 'perform transformation'
+		try {
+			fujaba__Success = false;
+
+			_TmpObject = (isApplicableMatch.getObject("ball"));
+
+			// ensure correct type and really bound of object ball
+			JavaSDM.ensure(_TmpObject instanceof Ball);
+			ball = (Ball) _TmpObject;
+			_TmpObject = (isApplicableMatch.getObject("goalKeeper"));
+
+			// ensure correct type and really bound of object goalKeeper
+			JavaSDM.ensure(_TmpObject instanceof GoalKeeper);
+			goalKeeper = (GoalKeeper) _TmpObject;
+			_TmpObject = (isApplicableMatch.getObject("goalKeeperField"));
+
+			// ensure correct type and really bound of object goalKeeperField
+			JavaSDM.ensure(_TmpObject instanceof Field);
+			goalKeeperField = (Field) _TmpObject;
+			_TmpObject = (isApplicableMatch.getObject("s2u"));
+
+			// ensure correct type and really bound of object s2u
+			JavaSDM.ensure(_TmpObject instanceof SoccerPitchToUpdate);
+			s2u = (SoccerPitchToUpdate) _TmpObject;
+			_TmpObject = (isApplicableMatch.getObject("soccerPitch"));
+
+			// ensure correct type and really bound of object soccerPitch
+			JavaSDM.ensure(_TmpObject instanceof SoccerPitch);
+			soccerPitch = (SoccerPitch) _TmpObject;
+			_TmpObject = (isApplicableMatch.getObject("targetPlayer"));
+
+			// ensure correct type and really bound of object targetPlayer
+			JavaSDM.ensure(_TmpObject instanceof FieldPlayer);
+			targetPlayer = (FieldPlayer) _TmpObject;
+			_TmpObject = (isApplicableMatch.getObject("targetPlayerField"));
+
+			// ensure correct type and really bound of object targetPlayerField
+			JavaSDM.ensure(_TmpObject instanceof Field);
+			targetPlayerField = (Field) _TmpObject;
+			_TmpObject = (isApplicableMatch.getObject("update"));
+
+			// ensure correct type and really bound of object update
+			JavaSDM.ensure(_TmpObject instanceof Update);
+			update = (Update) _TmpObject;
+			// check object isApplicableMatch is really bound
+			JavaSDM.ensure(isApplicableMatch != null);
+			// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+			JavaSDM.ensure(!targetPlayerField.equals(goalKeeperField));
+
+			// iterate to-many link attributeInfo from isApplicableMatch to csp
+			fujaba__Success = false;
+
+			fujaba__IterIsApplicableMatchToCsp = isApplicableMatch
+					.getAttributeInfo().iterator();
+
+			while (!(fujaba__Success)
+					&& fujaba__IterIsApplicableMatchToCsp.hasNext()) {
+				try {
+					_TmpObject = fujaba__IterIsApplicableMatchToCsp.next();
+
+					// ensure correct type and really bound of object csp
+					JavaSDM.ensure(_TmpObject instanceof CSP);
+					csp = (CSP) _TmpObject;
+
+					fujaba__Success = true;
+				} catch (JavaSDMException fujaba__InternalException) {
+					fujaba__Success = false;
+				}
+			}
+			if (!fujaba__Success) {
+				fujaba__Success = true;
+				csp = null;
+			}
+			// create object shootBall
+			shootBall = UpdatemodelFactory.eINSTANCE.createShootBall();
+
+			// assign attribute shootBall
+			shootBall.setXDist(((Number) csp.getAttributeVariable("shootBall",
+					"xDist").getValue()).intValue());
+			// assign attribute shootBall
+			shootBall.setYDist(((Number) csp.getAttributeVariable("shootBall",
+					"yDist").getValue()).intValue());
+			// assign attribute shootBall
+			shootBall.setPlayerNumber(((Number) csp.getAttributeVariable(
+					"shootBall", "playerNumber").getValue()).intValue());
+
+			// create link
+			update.getActions().add(shootBall);
+
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		// story node 'collect translated elements'
+		try {
+			fujaba__Success = false;
+
+			// check object goalKeeper is really bound
+			JavaSDM.ensure(goalKeeper != null);
+			// check object shootBall is really bound
+			JavaSDM.ensure(shootBall != null);
+			// check object targetPlayer is really bound
+			JavaSDM.ensure(targetPlayer != null);
+			// create object ruleresult
+			ruleresult = TGGRuntimeFactory.eINSTANCE.createPerformRuleResult();
+
+			// assign attribute ruleresult
+			ruleresult.setSuccess(true);
+
+			// create link
+			org.moflon.util.eMoflonEMFUtil.addOppositeReference(ruleresult,
+					targetPlayer, "translatedElements");
+
+			// create link
+			org.moflon.util.eMoflonEMFUtil.addOppositeReference(ruleresult,
+					shootBall, "createdElements");
+
+			// create link
+			org.moflon.util.eMoflonEMFUtil.addOppositeReference(ruleresult,
+					goalKeeper, "translatedElements");
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		// story node 'bookkeeping for edges'
+		try {
+			fujaba__Success = false;
+
+			// check object ball is really bound
+			JavaSDM.ensure(ball != null);
+			// check object goalKeeper is really bound
+			JavaSDM.ensure(goalKeeper != null);
+			// check object goalKeeperField is really bound
+			JavaSDM.ensure(goalKeeperField != null);
+			// check object ruleresult is really bound
+			JavaSDM.ensure(ruleresult != null);
+			// check object s2u is really bound
+			JavaSDM.ensure(s2u != null);
+			// check object shootBall is really bound
+			JavaSDM.ensure(shootBall != null);
+			// check object soccerPitch is really bound
+			JavaSDM.ensure(soccerPitch != null);
+			// check object targetPlayer is really bound
+			JavaSDM.ensure(targetPlayer != null);
+			// check object targetPlayerField is really bound
+			JavaSDM.ensure(targetPlayerField != null);
+			// check object update is really bound
+			JavaSDM.ensure(update != null);
+			// check isomorphic binding between objects goalKeeper and ball 
+			JavaSDM.ensure(!goalKeeper.equals(ball));
+
+			// check isomorphic binding between objects goalKeeperField and ball 
+			JavaSDM.ensure(!goalKeeperField.equals(ball));
+
+			// check isomorphic binding between objects s2u and ball 
+			JavaSDM.ensure(!s2u.equals(ball));
+
+			// check isomorphic binding between objects shootBall and ball 
+			JavaSDM.ensure(!shootBall.equals(ball));
+
+			// check isomorphic binding between objects soccerPitch and ball 
+			JavaSDM.ensure(!soccerPitch.equals(ball));
+
+			// check isomorphic binding between objects targetPlayer and ball 
+			JavaSDM.ensure(!targetPlayer.equals(ball));
+
+			// check isomorphic binding between objects targetPlayerField and ball 
+			JavaSDM.ensure(!targetPlayerField.equals(ball));
+
+			// check isomorphic binding between objects update and ball 
+			JavaSDM.ensure(!update.equals(ball));
+
+			// check isomorphic binding between objects goalKeeperField and goalKeeper 
+			JavaSDM.ensure(!goalKeeperField.equals(goalKeeper));
+
+			// check isomorphic binding between objects s2u and goalKeeper 
+			JavaSDM.ensure(!s2u.equals(goalKeeper));
+
+			// check isomorphic binding between objects shootBall and goalKeeper 
+			JavaSDM.ensure(!shootBall.equals(goalKeeper));
+
+			// check isomorphic binding between objects soccerPitch and goalKeeper 
+			JavaSDM.ensure(!soccerPitch.equals(goalKeeper));
+
+			// check isomorphic binding between objects targetPlayer and goalKeeper 
+			JavaSDM.ensure(!targetPlayer.equals(goalKeeper));
+
+			// check isomorphic binding between objects targetPlayerField and goalKeeper 
+			JavaSDM.ensure(!targetPlayerField.equals(goalKeeper));
+
+			// check isomorphic binding between objects update and goalKeeper 
+			JavaSDM.ensure(!update.equals(goalKeeper));
+
+			// check isomorphic binding between objects s2u and goalKeeperField 
+			JavaSDM.ensure(!s2u.equals(goalKeeperField));
+
+			// check isomorphic binding between objects shootBall and goalKeeperField 
+			JavaSDM.ensure(!shootBall.equals(goalKeeperField));
+
+			// check isomorphic binding between objects soccerPitch and goalKeeperField 
+			JavaSDM.ensure(!soccerPitch.equals(goalKeeperField));
+
+			// check isomorphic binding between objects targetPlayer and goalKeeperField 
+			JavaSDM.ensure(!targetPlayer.equals(goalKeeperField));
+
+			// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+			JavaSDM.ensure(!targetPlayerField.equals(goalKeeperField));
+
+			// check isomorphic binding between objects update and goalKeeperField 
+			JavaSDM.ensure(!update.equals(goalKeeperField));
+
+			// check isomorphic binding between objects shootBall and s2u 
+			JavaSDM.ensure(!shootBall.equals(s2u));
+
+			// check isomorphic binding between objects soccerPitch and s2u 
+			JavaSDM.ensure(!soccerPitch.equals(s2u));
+
+			// check isomorphic binding between objects targetPlayer and s2u 
+			JavaSDM.ensure(!targetPlayer.equals(s2u));
+
+			// check isomorphic binding between objects targetPlayerField and s2u 
+			JavaSDM.ensure(!targetPlayerField.equals(s2u));
+
+			// check isomorphic binding between objects update and s2u 
+			JavaSDM.ensure(!update.equals(s2u));
+
+			// check isomorphic binding between objects soccerPitch and shootBall 
+			JavaSDM.ensure(!soccerPitch.equals(shootBall));
+
+			// check isomorphic binding between objects targetPlayer and shootBall 
+			JavaSDM.ensure(!targetPlayer.equals(shootBall));
+
+			// check isomorphic binding between objects targetPlayerField and shootBall 
+			JavaSDM.ensure(!targetPlayerField.equals(shootBall));
+
+			// check isomorphic binding between objects update and shootBall 
+			JavaSDM.ensure(!update.equals(shootBall));
+
+			// check isomorphic binding between objects targetPlayer and soccerPitch 
+			JavaSDM.ensure(!targetPlayer.equals(soccerPitch));
+
+			// check isomorphic binding between objects targetPlayerField and soccerPitch 
+			JavaSDM.ensure(!targetPlayerField.equals(soccerPitch));
+
+			// check isomorphic binding between objects update and soccerPitch 
+			JavaSDM.ensure(!update.equals(soccerPitch));
+
+			// check isomorphic binding between objects targetPlayerField and targetPlayer 
+			JavaSDM.ensure(!targetPlayerField.equals(targetPlayer));
+
+			// check isomorphic binding between objects update and targetPlayer 
+			JavaSDM.ensure(!update.equals(targetPlayer));
+
+			// check isomorphic binding between objects update and targetPlayerField 
+			JavaSDM.ensure(!update.equals(targetPlayerField));
+
+			// create object goalKeeper__ball__ball
+			goalKeeper__ball__ball = TGGRuntimeFactory.eINSTANCE.createEdge();
+
+			// create object soccerPitch__players__targetPlayer
+			soccerPitch__players__targetPlayer = TGGRuntimeFactory.eINSTANCE
+					.createEdge();
+
+			// create object soccerPitch__players__goalKeeper
+			soccerPitch__players__goalKeeper = TGGRuntimeFactory.eINSTANCE
+					.createEdge();
+
+			// create object targetPlayer__field__targetPlayerField
+			targetPlayer__field__targetPlayerField = TGGRuntimeFactory.eINSTANCE
+					.createEdge();
+
+			// create object update__actions__shootBall
+			update__actions__shootBall = TGGRuntimeFactory.eINSTANCE
+					.createEdge();
+
+			// create object goalKeeper__field__goalKeeperField
+			goalKeeper__field__goalKeeperField = TGGRuntimeFactory.eINSTANCE
+					.createEdge();
+
+			// assign attribute soccerPitch__players__goalKeeper
+			soccerPitch__players__goalKeeper.setName("players");
+			// assign attribute soccerPitch__players__targetPlayer
+			soccerPitch__players__targetPlayer.setName("players");
+			// assign attribute goalKeeper__field__goalKeeperField
+			goalKeeper__field__goalKeeperField.setName("field");
+			// assign attribute goalKeeper__ball__ball
+			goalKeeper__ball__ball.setName("ball");
+			// assign attribute targetPlayer__field__targetPlayerField
+			targetPlayer__field__targetPlayerField.setName("field");
+			// assign attribute update__actions__shootBall
+			update__actions__shootBall.setName("actions");
+
+			// create link
+			org.moflon.util.eMoflonEMFUtil.addOppositeReference(ruleresult,
+					goalKeeper__ball__ball, "translatedEdges");
+
+			// create link
+			org.moflon.util.eMoflonEMFUtil.addOppositeReference(ruleresult,
+					soccerPitch__players__targetPlayer, "translatedEdges");
+
+			// create link
+			org.moflon.util.eMoflonEMFUtil.addOppositeReference(ruleresult,
+					soccerPitch__players__goalKeeper, "translatedEdges");
+
+			// create link
+			org.moflon.util.eMoflonEMFUtil.addOppositeReference(ruleresult,
+					targetPlayer__field__targetPlayerField, "translatedEdges");
+
+			// create link
+			org.moflon.util.eMoflonEMFUtil.addOppositeReference(ruleresult,
+					update__actions__shootBall, "createdEdges");
+
+			// create link
+			org.moflon.util.eMoflonEMFUtil.addOppositeReference(ruleresult,
+					goalKeeper__field__goalKeeperField, "translatedEdges");
+
+			// create link
+			update__actions__shootBall.setTrg(shootBall);
+
+			// create link
+			soccerPitch__players__goalKeeper.setTrg(goalKeeper);
+
+			// create link
+			goalKeeper__field__goalKeeperField.setSrc(goalKeeper);
+
+			// create link
+			goalKeeper__ball__ball.setSrc(goalKeeper);
+
+			// create link
+			soccerPitch__players__goalKeeper.setSrc(soccerPitch);
+
+			// create link
+			soccerPitch__players__targetPlayer.setSrc(soccerPitch);
+
+			// create link
+			soccerPitch__players__targetPlayer.setTrg(targetPlayer);
+
+			// create link
+			targetPlayer__field__targetPlayerField.setSrc(targetPlayer);
+
+			// create link
+			update__actions__shootBall.setSrc(update);
+
+			// create link
+			goalKeeper__field__goalKeeperField.setTrg(goalKeeperField);
+
+			// create link
+			targetPlayer__field__targetPlayerField.setTrg(targetPlayerField);
+
+			// create link
+			goalKeeper__ball__ball.setTrg(ball);
+
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		// statement node 'perform postprocessing'
+		// No post processing method found
+		return ruleresult;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean checkTypes_FWD(Match match) {
+		return match
+				.getObject("goalKeeper")
+				.eClass()
+				.equals(soccerpitch.SoccerpitchPackage.eINSTANCE
+						.getGoalKeeper())
+				&& match.getObject("targetPlayer")
+						.eClass()
+						.equals(soccerpitch.SoccerpitchPackage.eINSTANCE
+								.getFieldPlayer());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObjectContainer isAppropriate_FWD_GoalKeeper_7(GoalKeeper goalKeeper) {
+		boolean fujaba__Success = false;
+		Object _TmpObject = null;
+		EClass __eClass = null;
+		Iterator fujaba__Iter__eClassTo__performOperation = null;
+		EOperation __performOperation = null;
+		EObjectContainer __result = null;
+		Field __DEC_goalKeeper_players_448607 = null;
+		Field __DEC_targetPlayer_players_128695 = null;
+		SoccerPitch __DEC_goalKeeper_players_93265 = null;
+		SoccerPitch __DEC_targetPlayer_players_682691 = null;
+		Match match = null;
+		Iterator fujaba__IterSoccerPitchToTargetPlayer = null;
+		FieldPlayer targetPlayer = null;
+		Iterator fujaba__IterSoccerPitchToTargetPlayerField = null;
+		Field targetPlayerField = null;
+		SoccerPitch soccerPitch = null;
+		Field goalKeeperField = null;
+		Ball ball = null;
+
+		// story node 'prepare return value'
+		try {
+			fujaba__Success = false;
+
+			_TmpObject = (this.eClass());
+
+			// ensure correct type and really bound of object __eClass
+			JavaSDM.ensure(_TmpObject instanceof EClass);
+			__eClass = (EClass) _TmpObject;
+			// iterate to-many link eOperations from __eClass to __performOperation
+			fujaba__Success = false;
+
+			fujaba__Iter__eClassTo__performOperation = __eClass
+					.getEOperations().iterator();
+
+			while (!(fujaba__Success)
+					&& fujaba__Iter__eClassTo__performOperation.hasNext()) {
+				try {
+					__performOperation = (EOperation) fujaba__Iter__eClassTo__performOperation
+							.next();
+
+					// check object __performOperation is really bound
+					JavaSDM.ensure(__performOperation != null);
+					// attribute condition
+					JavaSDM.ensure(JavaSDM.stringCompare(
+							__performOperation.getName(), "isApplicable_FWD") == 0);
+
+					fujaba__Success = true;
+				} catch (JavaSDMException fujaba__InternalException) {
+					fujaba__Success = false;
+				}
+			}
+			JavaSDM.ensure(fujaba__Success);
+			// create object __result
+			__result = TGGRuntimeFactory.eINSTANCE.createEObjectContainer();
+
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		// story node 'test core match kernel'
+		try {
+			fujaba__Success = false;
+
+			// check object goalKeeper is really bound
+			JavaSDM.ensure(goalKeeper != null);
+			// bind object
+			ball = goalKeeper.getBall();
+
+			// check object ball is really bound
+			JavaSDM.ensure(ball != null);
+
+			// bind object
+			goalKeeperField = goalKeeper.getField();
+
+			// check object goalKeeperField is really bound
+			JavaSDM.ensure(goalKeeperField != null);
+
+			// check link field from goalKeeperField to ball
+			JavaSDM.ensure(ball.equals(goalKeeperField.getBall()));
+
+			// bind object
+			soccerPitch = goalKeeper.eContainer() instanceof SoccerPitch ? (SoccerPitch) goalKeeper
+					.eContainer() : null;
+
+			// check object soccerPitch is really bound
+			JavaSDM.ensure(soccerPitch != null);
+
+			// check if contained via correct reference
+			JavaSDM.ensure(soccerPitch.getPlayers().contains(goalKeeper));
+
+			// check link fields from goalKeeperField to soccerPitch
+			JavaSDM.ensure(soccerPitch.equals(goalKeeperField.eContainer()));
+
+			// iterate to-many link fields from soccerPitch to targetPlayerField
+			fujaba__Success = false;
+
+			fujaba__IterSoccerPitchToTargetPlayerField = new ArrayList(
+					soccerPitch.getFields()).iterator();
+
+			while (fujaba__IterSoccerPitchToTargetPlayerField.hasNext()) {
+				try {
+					targetPlayerField = (Field) fujaba__IterSoccerPitchToTargetPlayerField
+							.next();
+
+					// check object targetPlayerField is really bound
+					JavaSDM.ensure(targetPlayerField != null);
+					// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+					JavaSDM.ensure(!targetPlayerField.equals(goalKeeperField));
+
+					// iterate to-many link players from soccerPitch to targetPlayer
+					fujaba__Success = false;
+
+					fujaba__IterSoccerPitchToTargetPlayer = new ArrayList(
+							soccerPitch.getPlayers()).iterator();
+
+					while (fujaba__IterSoccerPitchToTargetPlayer.hasNext()) {
+						try {
+							_TmpObject = fujaba__IterSoccerPitchToTargetPlayer
+									.next();
+
+							// ensure correct type and really bound of object targetPlayer
+							JavaSDM.ensure(_TmpObject instanceof FieldPlayer);
+							targetPlayer = (FieldPlayer) _TmpObject;
+							// check link field from targetPlayer to targetPlayerField
+							JavaSDM.ensure(targetPlayerField
+									.equals(targetPlayer.getField()));
+
+							// story node 'test core match and DECs'
+							try {
+								fujaba__Success = false;
+
+								// check negative bindings
+								try {
+									fujaba__Success = false;
+
+									// bind object
+									__DEC_goalKeeper_players_448607 = goalKeeper
+											.getField();
+
+									// check object __DEC_goalKeeper_players_448607 is really bound
+									JavaSDM.ensure(__DEC_goalKeeper_players_448607 != null);
+
+									// check isomorphic binding between objects __DEC_goalKeeper_players_448607 and goalKeeperField 
+									JavaSDM.ensure(!__DEC_goalKeeper_players_448607
+											.equals(goalKeeperField));
+
+									// check isomorphic binding between objects __DEC_goalKeeper_players_448607 and targetPlayerField 
+									JavaSDM.ensure(!__DEC_goalKeeper_players_448607
+											.equals(targetPlayerField));
+
+									fujaba__Success = true;
+								} catch (JavaSDMException fujaba__InternalException) {
+									fujaba__Success = false;
+								}
+
+								fujaba__Success = !(fujaba__Success);
+
+								JavaSDM.ensure(fujaba__Success);
+
+								// check negative bindings
+								try {
+									fujaba__Success = false;
+
+									// bind object
+									__DEC_targetPlayer_players_128695 = targetPlayer
+											.getField();
+
+									// check object __DEC_targetPlayer_players_128695 is really bound
+									JavaSDM.ensure(__DEC_targetPlayer_players_128695 != null);
+
+									// check isomorphic binding between objects __DEC_targetPlayer_players_128695 and goalKeeperField 
+									JavaSDM.ensure(!__DEC_targetPlayer_players_128695
+											.equals(goalKeeperField));
+
+									// check isomorphic binding between objects __DEC_targetPlayer_players_128695 and targetPlayerField 
+									JavaSDM.ensure(!__DEC_targetPlayer_players_128695
+											.equals(targetPlayerField));
+
+									fujaba__Success = true;
+								} catch (JavaSDMException fujaba__InternalException) {
+									fujaba__Success = false;
+								}
+
+								fujaba__Success = !(fujaba__Success);
+
+								JavaSDM.ensure(fujaba__Success);
+
+								// check negative bindings
+								try {
+									fujaba__Success = false;
+
+									// bind object
+									__DEC_goalKeeper_players_93265 = goalKeeper
+											.eContainer() instanceof SoccerPitch ? (SoccerPitch) goalKeeper
+											.eContainer() : null;
+
+									// check object __DEC_goalKeeper_players_93265 is really bound
+									JavaSDM.ensure(__DEC_goalKeeper_players_93265 != null);
+
+									// check if contained via correct reference
+									JavaSDM.ensure(__DEC_goalKeeper_players_93265
+											.getPlayers().contains(goalKeeper));
+
+									// check isomorphic binding between objects __DEC_goalKeeper_players_93265 and soccerPitch 
+									JavaSDM.ensure(!__DEC_goalKeeper_players_93265
+											.equals(soccerPitch));
+
+									fujaba__Success = true;
+								} catch (JavaSDMException fujaba__InternalException) {
+									fujaba__Success = false;
+								}
+
+								fujaba__Success = !(fujaba__Success);
+
+								JavaSDM.ensure(fujaba__Success);
+
+								// check negative bindings
+								try {
+									fujaba__Success = false;
+
+									// bind object
+									__DEC_targetPlayer_players_682691 = targetPlayer
+											.eContainer() instanceof SoccerPitch ? (SoccerPitch) targetPlayer
+											.eContainer() : null;
+
+									// check object __DEC_targetPlayer_players_682691 is really bound
+									JavaSDM.ensure(__DEC_targetPlayer_players_682691 != null);
+
+									// check if contained via correct reference
+									JavaSDM.ensure(__DEC_targetPlayer_players_682691
+											.getPlayers()
+											.contains(targetPlayer));
+
+									// check isomorphic binding between objects __DEC_targetPlayer_players_682691 and soccerPitch 
+									JavaSDM.ensure(!__DEC_targetPlayer_players_682691
+											.equals(soccerPitch));
+
+									fujaba__Success = true;
+								} catch (JavaSDMException fujaba__InternalException) {
+									fujaba__Success = false;
+								}
+
+								fujaba__Success = !(fujaba__Success);
+
+								JavaSDM.ensure(fujaba__Success);
+
+								// check object ball is really bound
+								JavaSDM.ensure(ball != null);
+								// check object goalKeeper is really bound
+								JavaSDM.ensure(goalKeeper != null);
+								// check object goalKeeperField is really bound
+								JavaSDM.ensure(goalKeeperField != null);
+								// check object soccerPitch is really bound
+								JavaSDM.ensure(soccerPitch != null);
+								// check object targetPlayer is really bound
+								JavaSDM.ensure(targetPlayer != null);
+								// check object targetPlayerField is really bound
+								JavaSDM.ensure(targetPlayerField != null);
+								// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+								JavaSDM.ensure(!targetPlayerField
+										.equals(goalKeeperField));
+
+								// check link ball from ball to goalKeeper
+								JavaSDM.ensure(goalKeeper.equals(ball
+										.getPlayer()));
+
+								// check link field from goalKeeperField to ball
+								JavaSDM.ensure(ball.equals(goalKeeperField
+										.getBall()));
+
+								// check link field from goalKeeper to goalKeeperField
+								JavaSDM.ensure(goalKeeperField
+										.equals(goalKeeper.getField()));
+
+								// check link field from targetPlayer to targetPlayerField
+								JavaSDM.ensure(targetPlayerField
+										.equals(targetPlayer.getField()));
+
+								// check link fields from goalKeeperField to soccerPitch
+								JavaSDM.ensure(soccerPitch
+										.equals(goalKeeperField.eContainer()));
+
+								// check link fields from targetPlayerField to soccerPitch
+								JavaSDM.ensure(soccerPitch
+										.equals(targetPlayerField.eContainer()));
+
+								// check link players from goalKeeper to soccerPitch
+								JavaSDM.ensure(soccerPitch.equals(goalKeeper
+										.eContainer()));
+
+								// check link players from targetPlayer to soccerPitch
+								JavaSDM.ensure(soccerPitch.equals(targetPlayer
+										.eContainer()));
+
+								// create object match
+								match = TGGRuntimeFactory.eINSTANCE
+										.createMatch();
+
+								// assign attribute match
+								match.setRuleName(__eClass.getName());
+								// statement node 'bookkeeping with generic isAppropriate method'
+								fujaba__Success = this.isAppropriate_FWD(match,
+										goalKeeper, soccerPitch, targetPlayer,
+										goalKeeperField, targetPlayerField,
+										ball);
+								if (fujaba__Success) {
+									// statement node ''
+									fujaba__Success = this
+											.checkTypes_FWD(match);
+									if (fujaba__Success) {
+										// story node 'Add match to rule result'
+										try {
+											fujaba__Success = false;
+
+											// check object __performOperation is really bound
+											JavaSDM.ensure(__performOperation != null);
+											// check object __result is really bound
+											JavaSDM.ensure(__result != null);
+											// check object match is really bound
+											JavaSDM.ensure(match != null);
+
+											// create link
+											org.moflon.util.eMoflonEMFUtil
+													.addOppositeReference(
+															__result, match,
+															"contents");
+
+											// create link
+											org.moflon.util.eMoflonEMFUtil
+													.addOppositeReference(
+															match,
+															__performOperation,
+															"isApplicableOperation");
+											fujaba__Success = true;
+										} catch (JavaSDMException fujaba__InternalException) {
+											fujaba__Success = false;
+										}
+
+									} else {
+
+									}
+
+								} else {
+
+								}
+								fujaba__Success = true;
+							} catch (JavaSDMException fujaba__InternalException) {
+								fujaba__Success = false;
+							}
+
+							fujaba__Success = true;
+						} catch (JavaSDMException fujaba__InternalException) {
+							fujaba__Success = false;
+						}
+					}
+					JavaSDM.ensure(fujaba__Success);
+
+					fujaba__Success = true;
+				} catch (JavaSDMException fujaba__InternalException) {
+					fujaba__Success = false;
+				}
+			}
+			JavaSDM.ensure(fujaba__Success);
+
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		return __result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObjectContainer isAppropriate_FWD_SoccerPitch_12(
+			SoccerPitch soccerPitch) {
+		boolean fujaba__Success = false;
+		Object _TmpObject = null;
+		EClass __eClass = null;
+		Iterator fujaba__Iter__eClassTo__performOperation = null;
+		EOperation __performOperation = null;
+		EObjectContainer __result = null;
+		Field __DEC_goalKeeper_players_812661 = null;
+		Field __DEC_targetPlayer_players_379383 = null;
+		SoccerPitch __DEC_goalKeeper_players_779476 = null;
+		SoccerPitch __DEC_targetPlayer_players_798368 = null;
+		Match match = null;
+		Iterator fujaba__IterSoccerPitchToTargetPlayer = null;
+		FieldPlayer targetPlayer = null;
+		Field goalKeeperField = null;
+		Ball ball = null;
+		Iterator fujaba__IterSoccerPitchToGoalKeeper = null;
+		GoalKeeper goalKeeper = null;
+		Iterator fujaba__IterSoccerPitchToTargetPlayerField = null;
+		Field targetPlayerField = null;
+
+		// story node 'prepare return value'
+		try {
+			fujaba__Success = false;
+
+			_TmpObject = (this.eClass());
+
+			// ensure correct type and really bound of object __eClass
+			JavaSDM.ensure(_TmpObject instanceof EClass);
+			__eClass = (EClass) _TmpObject;
+			// iterate to-many link eOperations from __eClass to __performOperation
+			fujaba__Success = false;
+
+			fujaba__Iter__eClassTo__performOperation = __eClass
+					.getEOperations().iterator();
+
+			while (!(fujaba__Success)
+					&& fujaba__Iter__eClassTo__performOperation.hasNext()) {
+				try {
+					__performOperation = (EOperation) fujaba__Iter__eClassTo__performOperation
+							.next();
+
+					// check object __performOperation is really bound
+					JavaSDM.ensure(__performOperation != null);
+					// attribute condition
+					JavaSDM.ensure(JavaSDM.stringCompare(
+							__performOperation.getName(), "isApplicable_FWD") == 0);
+
+					fujaba__Success = true;
+				} catch (JavaSDMException fujaba__InternalException) {
+					fujaba__Success = false;
+				}
+			}
+			JavaSDM.ensure(fujaba__Success);
+			// create object __result
+			__result = TGGRuntimeFactory.eINSTANCE.createEObjectContainer();
+
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		// story node 'test core match kernel'
+		try {
+			fujaba__Success = false;
+
+			// check object soccerPitch is really bound
+			JavaSDM.ensure(soccerPitch != null);
+			// iterate to-many link fields from soccerPitch to targetPlayerField
+			fujaba__Success = false;
+
+			fujaba__IterSoccerPitchToTargetPlayerField = new ArrayList(
+					soccerPitch.getFields()).iterator();
+
+			while (fujaba__IterSoccerPitchToTargetPlayerField.hasNext()) {
+				try {
+					targetPlayerField = (Field) fujaba__IterSoccerPitchToTargetPlayerField
+							.next();
+
+					// check object targetPlayerField is really bound
+					JavaSDM.ensure(targetPlayerField != null);
+					// iterate to-many link players from soccerPitch to goalKeeper
+					fujaba__Success = false;
+
+					fujaba__IterSoccerPitchToGoalKeeper = new ArrayList(
+							soccerPitch.getPlayers()).iterator();
+
+					while (fujaba__IterSoccerPitchToGoalKeeper.hasNext()) {
+						try {
+							_TmpObject = fujaba__IterSoccerPitchToGoalKeeper
+									.next();
+
+							// ensure correct type and really bound of object goalKeeper
+							JavaSDM.ensure(_TmpObject instanceof GoalKeeper);
+							goalKeeper = (GoalKeeper) _TmpObject;
+							// bind object
+							ball = goalKeeper.getBall();
+
+							// check object ball is really bound
+							JavaSDM.ensure(ball != null);
+
+							// bind object
+							goalKeeperField = goalKeeper.getField();
+
+							// check object goalKeeperField is really bound
+							JavaSDM.ensure(goalKeeperField != null);
+
+							// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+							JavaSDM.ensure(!targetPlayerField
+									.equals(goalKeeperField));
+
+							// check link field from goalKeeperField to ball
+							JavaSDM.ensure(ball.equals(goalKeeperField
+									.getBall()));
+
+							// check link fields from goalKeeperField to soccerPitch
+							JavaSDM.ensure(soccerPitch.equals(goalKeeperField
+									.eContainer()));
+
+							// iterate to-many link players from soccerPitch to targetPlayer
+							fujaba__Success = false;
+
+							fujaba__IterSoccerPitchToTargetPlayer = new ArrayList(
+									soccerPitch.getPlayers()).iterator();
+
+							while (fujaba__IterSoccerPitchToTargetPlayer
+									.hasNext()) {
+								try {
+									_TmpObject = fujaba__IterSoccerPitchToTargetPlayer
+											.next();
+
+									// ensure correct type and really bound of object targetPlayer
+									JavaSDM.ensure(_TmpObject instanceof FieldPlayer);
+									targetPlayer = (FieldPlayer) _TmpObject;
+									// check link field from targetPlayer to targetPlayerField
+									JavaSDM.ensure(targetPlayerField
+											.equals(targetPlayer.getField()));
+
+									// story node 'test core match and DECs'
+									try {
+										fujaba__Success = false;
+
+										// check negative bindings
+										try {
+											fujaba__Success = false;
+
+											// bind object
+											__DEC_goalKeeper_players_812661 = goalKeeper
+													.getField();
+
+											// check object __DEC_goalKeeper_players_812661 is really bound
+											JavaSDM.ensure(__DEC_goalKeeper_players_812661 != null);
+
+											// check isomorphic binding between objects __DEC_goalKeeper_players_812661 and goalKeeperField 
+											JavaSDM.ensure(!__DEC_goalKeeper_players_812661
+													.equals(goalKeeperField));
+
+											// check isomorphic binding between objects __DEC_goalKeeper_players_812661 and targetPlayerField 
+											JavaSDM.ensure(!__DEC_goalKeeper_players_812661
+													.equals(targetPlayerField));
+
+											fujaba__Success = true;
+										} catch (JavaSDMException fujaba__InternalException) {
+											fujaba__Success = false;
+										}
+
+										fujaba__Success = !(fujaba__Success);
+
+										JavaSDM.ensure(fujaba__Success);
+
+										// check negative bindings
+										try {
+											fujaba__Success = false;
+
+											// bind object
+											__DEC_targetPlayer_players_379383 = targetPlayer
+													.getField();
+
+											// check object __DEC_targetPlayer_players_379383 is really bound
+											JavaSDM.ensure(__DEC_targetPlayer_players_379383 != null);
+
+											// check isomorphic binding between objects __DEC_targetPlayer_players_379383 and goalKeeperField 
+											JavaSDM.ensure(!__DEC_targetPlayer_players_379383
+													.equals(goalKeeperField));
+
+											// check isomorphic binding between objects __DEC_targetPlayer_players_379383 and targetPlayerField 
+											JavaSDM.ensure(!__DEC_targetPlayer_players_379383
+													.equals(targetPlayerField));
+
+											fujaba__Success = true;
+										} catch (JavaSDMException fujaba__InternalException) {
+											fujaba__Success = false;
+										}
+
+										fujaba__Success = !(fujaba__Success);
+
+										JavaSDM.ensure(fujaba__Success);
+
+										// check negative bindings
+										try {
+											fujaba__Success = false;
+
+											// bind object
+											__DEC_goalKeeper_players_779476 = goalKeeper
+													.eContainer() instanceof SoccerPitch ? (SoccerPitch) goalKeeper
+													.eContainer() : null;
+
+											// check object __DEC_goalKeeper_players_779476 is really bound
+											JavaSDM.ensure(__DEC_goalKeeper_players_779476 != null);
+
+											// check if contained via correct reference
+											JavaSDM.ensure(__DEC_goalKeeper_players_779476
+													.getPlayers().contains(
+															goalKeeper));
+
+											// check isomorphic binding between objects __DEC_goalKeeper_players_779476 and soccerPitch 
+											JavaSDM.ensure(!__DEC_goalKeeper_players_779476
+													.equals(soccerPitch));
+
+											fujaba__Success = true;
+										} catch (JavaSDMException fujaba__InternalException) {
+											fujaba__Success = false;
+										}
+
+										fujaba__Success = !(fujaba__Success);
+
+										JavaSDM.ensure(fujaba__Success);
+
+										// check negative bindings
+										try {
+											fujaba__Success = false;
+
+											// bind object
+											__DEC_targetPlayer_players_798368 = targetPlayer
+													.eContainer() instanceof SoccerPitch ? (SoccerPitch) targetPlayer
+													.eContainer() : null;
+
+											// check object __DEC_targetPlayer_players_798368 is really bound
+											JavaSDM.ensure(__DEC_targetPlayer_players_798368 != null);
+
+											// check if contained via correct reference
+											JavaSDM.ensure(__DEC_targetPlayer_players_798368
+													.getPlayers().contains(
+															targetPlayer));
+
+											// check isomorphic binding between objects __DEC_targetPlayer_players_798368 and soccerPitch 
+											JavaSDM.ensure(!__DEC_targetPlayer_players_798368
+													.equals(soccerPitch));
+
+											fujaba__Success = true;
+										} catch (JavaSDMException fujaba__InternalException) {
+											fujaba__Success = false;
+										}
+
+										fujaba__Success = !(fujaba__Success);
+
+										JavaSDM.ensure(fujaba__Success);
+
+										// check object ball is really bound
+										JavaSDM.ensure(ball != null);
+										// check object goalKeeper is really bound
+										JavaSDM.ensure(goalKeeper != null);
+										// check object goalKeeperField is really bound
+										JavaSDM.ensure(goalKeeperField != null);
+										// check object soccerPitch is really bound
+										JavaSDM.ensure(soccerPitch != null);
+										// check object targetPlayer is really bound
+										JavaSDM.ensure(targetPlayer != null);
+										// check object targetPlayerField is really bound
+										JavaSDM.ensure(targetPlayerField != null);
+										// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+										JavaSDM.ensure(!targetPlayerField
+												.equals(goalKeeperField));
+
+										// check link ball from ball to goalKeeper
+										JavaSDM.ensure(goalKeeper.equals(ball
+												.getPlayer()));
+
+										// check link field from goalKeeperField to ball
+										JavaSDM.ensure(ball
+												.equals(goalKeeperField
+														.getBall()));
+
+										// check link field from goalKeeper to goalKeeperField
+										JavaSDM.ensure(goalKeeperField
+												.equals(goalKeeper.getField()));
+
+										// check link field from targetPlayer to targetPlayerField
+										JavaSDM.ensure(targetPlayerField
+												.equals(targetPlayer.getField()));
+
+										// check link fields from goalKeeperField to soccerPitch
+										JavaSDM.ensure(soccerPitch
+												.equals(goalKeeperField
+														.eContainer()));
+
+										// check link fields from targetPlayerField to soccerPitch
+										JavaSDM.ensure(soccerPitch
+												.equals(targetPlayerField
+														.eContainer()));
+
+										// check link players from goalKeeper to soccerPitch
+										JavaSDM.ensure(soccerPitch
+												.equals(goalKeeper.eContainer()));
+
+										// check link players from targetPlayer to soccerPitch
+										JavaSDM.ensure(soccerPitch
+												.equals(targetPlayer
+														.eContainer()));
+
+										// create object match
+										match = TGGRuntimeFactory.eINSTANCE
+												.createMatch();
+
+										// assign attribute match
+										match.setRuleName(__eClass.getName());
+										// statement node 'bookkeeping with generic isAppropriate method'
+										fujaba__Success = this
+												.isAppropriate_FWD(match,
+														goalKeeper,
+														soccerPitch,
+														targetPlayer,
+														goalKeeperField,
+														targetPlayerField, ball);
+										if (fujaba__Success) {
+											// statement node ''
+											fujaba__Success = this
+													.checkTypes_FWD(match);
+											if (fujaba__Success) {
+												// story node 'Add match to rule result'
+												try {
+													fujaba__Success = false;
+
+													// check object __performOperation is really bound
+													JavaSDM.ensure(__performOperation != null);
+													// check object __result is really bound
+													JavaSDM.ensure(__result != null);
+													// check object match is really bound
+													JavaSDM.ensure(match != null);
+
+													// create link
+													org.moflon.util.eMoflonEMFUtil
+															.addOppositeReference(
+																	__result,
+																	match,
+																	"contents");
+
+													// create link
+													org.moflon.util.eMoflonEMFUtil
+															.addOppositeReference(
+																	match,
+																	__performOperation,
+																	"isApplicableOperation");
+													fujaba__Success = true;
+												} catch (JavaSDMException fujaba__InternalException) {
+													fujaba__Success = false;
+												}
+
+											} else {
+
+											}
+
+										} else {
+
+										}
+										fujaba__Success = true;
+									} catch (JavaSDMException fujaba__InternalException) {
+										fujaba__Success = false;
+									}
+
+									fujaba__Success = true;
+								} catch (JavaSDMException fujaba__InternalException) {
+									fujaba__Success = false;
+								}
+							}
+							JavaSDM.ensure(fujaba__Success);
+
+							fujaba__Success = true;
+						} catch (JavaSDMException fujaba__InternalException) {
+							fujaba__Success = false;
+						}
+					}
+					JavaSDM.ensure(fujaba__Success);
+
+					fujaba__Success = true;
+				} catch (JavaSDMException fujaba__InternalException) {
+					fujaba__Success = false;
+				}
+			}
+			JavaSDM.ensure(fujaba__Success);
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		return __result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObjectContainer isAppropriate_FWD_FieldPlayer_2(
+			FieldPlayer targetPlayer) {
+		boolean fujaba__Success = false;
+		Object _TmpObject = null;
+		EClass __eClass = null;
+		Iterator fujaba__Iter__eClassTo__performOperation = null;
+		EOperation __performOperation = null;
+		EObjectContainer __result = null;
+		Field __DEC_goalKeeper_players_268055 = null;
+		Field __DEC_targetPlayer_players_508383 = null;
+		SoccerPitch __DEC_goalKeeper_players_570063 = null;
+		SoccerPitch __DEC_targetPlayer_players_199940 = null;
+		Match match = null;
+		Field goalKeeperField = null;
+		Ball ball = null;
+		Iterator fujaba__IterSoccerPitchToGoalKeeper = null;
+		GoalKeeper goalKeeper = null;
+		SoccerPitch soccerPitch = null;
+		Field targetPlayerField = null;
+
+		// story node 'prepare return value'
+		try {
+			fujaba__Success = false;
+
+			_TmpObject = (this.eClass());
+
+			// ensure correct type and really bound of object __eClass
+			JavaSDM.ensure(_TmpObject instanceof EClass);
+			__eClass = (EClass) _TmpObject;
+			// iterate to-many link eOperations from __eClass to __performOperation
+			fujaba__Success = false;
+
+			fujaba__Iter__eClassTo__performOperation = __eClass
+					.getEOperations().iterator();
+
+			while (!(fujaba__Success)
+					&& fujaba__Iter__eClassTo__performOperation.hasNext()) {
+				try {
+					__performOperation = (EOperation) fujaba__Iter__eClassTo__performOperation
+							.next();
+
+					// check object __performOperation is really bound
+					JavaSDM.ensure(__performOperation != null);
+					// attribute condition
+					JavaSDM.ensure(JavaSDM.stringCompare(
+							__performOperation.getName(), "isApplicable_FWD") == 0);
+
+					fujaba__Success = true;
+				} catch (JavaSDMException fujaba__InternalException) {
+					fujaba__Success = false;
+				}
+			}
+			JavaSDM.ensure(fujaba__Success);
+			// create object __result
+			__result = TGGRuntimeFactory.eINSTANCE.createEObjectContainer();
+
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		// story node 'test core match kernel'
+		try {
+			fujaba__Success = false;
+
+			// check object targetPlayer is really bound
+			JavaSDM.ensure(targetPlayer != null);
+			// bind object
+			targetPlayerField = targetPlayer.getField();
+
+			// check object targetPlayerField is really bound
+			JavaSDM.ensure(targetPlayerField != null);
+
+			// bind object
+			soccerPitch = targetPlayer.eContainer() instanceof SoccerPitch ? (SoccerPitch) targetPlayer
+					.eContainer() : null;
+
+			// check object soccerPitch is really bound
+			JavaSDM.ensure(soccerPitch != null);
+
+			// check if contained via correct reference
+			JavaSDM.ensure(soccerPitch.getPlayers().contains(targetPlayer));
+
+			// check link fields from targetPlayerField to soccerPitch
+			JavaSDM.ensure(soccerPitch.equals(targetPlayerField.eContainer()));
+
+			// iterate to-many link players from soccerPitch to goalKeeper
+			fujaba__Success = false;
+
+			fujaba__IterSoccerPitchToGoalKeeper = new ArrayList(
+					soccerPitch.getPlayers()).iterator();
+
+			while (fujaba__IterSoccerPitchToGoalKeeper.hasNext()) {
+				try {
+					_TmpObject = fujaba__IterSoccerPitchToGoalKeeper.next();
+
+					// ensure correct type and really bound of object goalKeeper
+					JavaSDM.ensure(_TmpObject instanceof GoalKeeper);
+					goalKeeper = (GoalKeeper) _TmpObject;
+					// bind object
+					ball = goalKeeper.getBall();
+
+					// check object ball is really bound
+					JavaSDM.ensure(ball != null);
+
+					// bind object
+					goalKeeperField = goalKeeper.getField();
+
+					// check object goalKeeperField is really bound
+					JavaSDM.ensure(goalKeeperField != null);
+
+					// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+					JavaSDM.ensure(!targetPlayerField.equals(goalKeeperField));
+
+					// check link field from goalKeeperField to ball
+					JavaSDM.ensure(ball.equals(goalKeeperField.getBall()));
+
+					// check link fields from goalKeeperField to soccerPitch
+					JavaSDM.ensure(soccerPitch.equals(goalKeeperField
+							.eContainer()));
+
+					// story node 'test core match and DECs'
+					try {
+						fujaba__Success = false;
+
+						// check negative bindings
+						try {
+							fujaba__Success = false;
+
+							// bind object
+							__DEC_goalKeeper_players_268055 = goalKeeper
+									.getField();
+
+							// check object __DEC_goalKeeper_players_268055 is really bound
+							JavaSDM.ensure(__DEC_goalKeeper_players_268055 != null);
+
+							// check isomorphic binding between objects __DEC_goalKeeper_players_268055 and goalKeeperField 
+							JavaSDM.ensure(!__DEC_goalKeeper_players_268055
+									.equals(goalKeeperField));
+
+							// check isomorphic binding between objects __DEC_goalKeeper_players_268055 and targetPlayerField 
+							JavaSDM.ensure(!__DEC_goalKeeper_players_268055
+									.equals(targetPlayerField));
+
+							fujaba__Success = true;
+						} catch (JavaSDMException fujaba__InternalException) {
+							fujaba__Success = false;
+						}
+
+						fujaba__Success = !(fujaba__Success);
+
+						JavaSDM.ensure(fujaba__Success);
+
+						// check negative bindings
+						try {
+							fujaba__Success = false;
+
+							// bind object
+							__DEC_targetPlayer_players_508383 = targetPlayer
+									.getField();
+
+							// check object __DEC_targetPlayer_players_508383 is really bound
+							JavaSDM.ensure(__DEC_targetPlayer_players_508383 != null);
+
+							// check isomorphic binding between objects __DEC_targetPlayer_players_508383 and goalKeeperField 
+							JavaSDM.ensure(!__DEC_targetPlayer_players_508383
+									.equals(goalKeeperField));
+
+							// check isomorphic binding between objects __DEC_targetPlayer_players_508383 and targetPlayerField 
+							JavaSDM.ensure(!__DEC_targetPlayer_players_508383
+									.equals(targetPlayerField));
+
+							fujaba__Success = true;
+						} catch (JavaSDMException fujaba__InternalException) {
+							fujaba__Success = false;
+						}
+
+						fujaba__Success = !(fujaba__Success);
+
+						JavaSDM.ensure(fujaba__Success);
+
+						// check negative bindings
+						try {
+							fujaba__Success = false;
+
+							// bind object
+							__DEC_goalKeeper_players_570063 = goalKeeper
+									.eContainer() instanceof SoccerPitch ? (SoccerPitch) goalKeeper
+									.eContainer() : null;
+
+							// check object __DEC_goalKeeper_players_570063 is really bound
+							JavaSDM.ensure(__DEC_goalKeeper_players_570063 != null);
+
+							// check if contained via correct reference
+							JavaSDM.ensure(__DEC_goalKeeper_players_570063
+									.getPlayers().contains(goalKeeper));
+
+							// check isomorphic binding between objects __DEC_goalKeeper_players_570063 and soccerPitch 
+							JavaSDM.ensure(!__DEC_goalKeeper_players_570063
+									.equals(soccerPitch));
+
+							fujaba__Success = true;
+						} catch (JavaSDMException fujaba__InternalException) {
+							fujaba__Success = false;
+						}
+
+						fujaba__Success = !(fujaba__Success);
+
+						JavaSDM.ensure(fujaba__Success);
+
+						// check negative bindings
+						try {
+							fujaba__Success = false;
+
+							// bind object
+							__DEC_targetPlayer_players_199940 = targetPlayer
+									.eContainer() instanceof SoccerPitch ? (SoccerPitch) targetPlayer
+									.eContainer() : null;
+
+							// check object __DEC_targetPlayer_players_199940 is really bound
+							JavaSDM.ensure(__DEC_targetPlayer_players_199940 != null);
+
+							// check if contained via correct reference
+							JavaSDM.ensure(__DEC_targetPlayer_players_199940
+									.getPlayers().contains(targetPlayer));
+
+							// check isomorphic binding between objects __DEC_targetPlayer_players_199940 and soccerPitch 
+							JavaSDM.ensure(!__DEC_targetPlayer_players_199940
+									.equals(soccerPitch));
+
+							fujaba__Success = true;
+						} catch (JavaSDMException fujaba__InternalException) {
+							fujaba__Success = false;
+						}
+
+						fujaba__Success = !(fujaba__Success);
+
+						JavaSDM.ensure(fujaba__Success);
+
+						// check object ball is really bound
+						JavaSDM.ensure(ball != null);
+						// check object goalKeeper is really bound
+						JavaSDM.ensure(goalKeeper != null);
+						// check object goalKeeperField is really bound
+						JavaSDM.ensure(goalKeeperField != null);
+						// check object soccerPitch is really bound
+						JavaSDM.ensure(soccerPitch != null);
+						// check object targetPlayer is really bound
+						JavaSDM.ensure(targetPlayer != null);
+						// check object targetPlayerField is really bound
+						JavaSDM.ensure(targetPlayerField != null);
+						// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+						JavaSDM.ensure(!targetPlayerField
+								.equals(goalKeeperField));
+
+						// check link ball from ball to goalKeeper
+						JavaSDM.ensure(goalKeeper.equals(ball.getPlayer()));
+
+						// check link field from goalKeeperField to ball
+						JavaSDM.ensure(ball.equals(goalKeeperField.getBall()));
+
+						// check link field from goalKeeper to goalKeeperField
+						JavaSDM.ensure(goalKeeperField.equals(goalKeeper
+								.getField()));
+
+						// check link field from targetPlayer to targetPlayerField
+						JavaSDM.ensure(targetPlayerField.equals(targetPlayer
+								.getField()));
+
+						// check link fields from goalKeeperField to soccerPitch
+						JavaSDM.ensure(soccerPitch.equals(goalKeeperField
+								.eContainer()));
+
+						// check link fields from targetPlayerField to soccerPitch
+						JavaSDM.ensure(soccerPitch.equals(targetPlayerField
+								.eContainer()));
+
+						// check link players from goalKeeper to soccerPitch
+						JavaSDM.ensure(soccerPitch.equals(goalKeeper
+								.eContainer()));
+
+						// check link players from targetPlayer to soccerPitch
+						JavaSDM.ensure(soccerPitch.equals(targetPlayer
+								.eContainer()));
+
+						// create object match
+						match = TGGRuntimeFactory.eINSTANCE.createMatch();
+
+						// assign attribute match
+						match.setRuleName(__eClass.getName());
+						// statement node 'bookkeeping with generic isAppropriate method'
+						fujaba__Success = this.isAppropriate_FWD(match,
+								goalKeeper, soccerPitch, targetPlayer,
+								goalKeeperField, targetPlayerField, ball);
+						if (fujaba__Success) {
+							// statement node ''
+							fujaba__Success = this.checkTypes_FWD(match);
+							if (fujaba__Success) {
+								// story node 'Add match to rule result'
+								try {
+									fujaba__Success = false;
+
+									// check object __performOperation is really bound
+									JavaSDM.ensure(__performOperation != null);
+									// check object __result is really bound
+									JavaSDM.ensure(__result != null);
+									// check object match is really bound
+									JavaSDM.ensure(match != null);
+
+									// create link
+									org.moflon.util.eMoflonEMFUtil
+											.addOppositeReference(__result,
+													match, "contents");
+
+									// create link
+									org.moflon.util.eMoflonEMFUtil
+											.addOppositeReference(match,
+													__performOperation,
+													"isApplicableOperation");
+									fujaba__Success = true;
+								} catch (JavaSDMException fujaba__InternalException) {
+									fujaba__Success = false;
+								}
+
+							} else {
+
+							}
+
+						} else {
+
+						}
+						fujaba__Success = true;
+					} catch (JavaSDMException fujaba__InternalException) {
+						fujaba__Success = false;
+					}
+
+					fujaba__Success = true;
+				} catch (JavaSDMException fujaba__InternalException) {
+					fujaba__Success = false;
+				}
+			}
+			JavaSDM.ensure(fujaba__Success);
+
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		return __result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObjectContainer isAppropriate_FWD_Field_8(Field goalKeeperField) {
+		boolean fujaba__Success = false;
+		Object _TmpObject = null;
+		EClass __eClass = null;
+		Iterator fujaba__Iter__eClassTo__performOperation = null;
+		EOperation __performOperation = null;
+		EObjectContainer __result = null;
+		Field __DEC_goalKeeper_players_2266 = null;
+		Field __DEC_targetPlayer_players_323063 = null;
+		SoccerPitch __DEC_goalKeeper_players_837413 = null;
+		SoccerPitch __DEC_targetPlayer_players_865368 = null;
+		Match match = null;
+		Field targetPlayerField = null;
+		Iterator fujaba__IterSoccerPitchToTargetPlayer = null;
+		FieldPlayer targetPlayer = null;
+		Iterator fujaba__IterGoalKeeperFieldToGoalKeeper = null;
+		GoalKeeper goalKeeper = null;
+		SoccerPitch soccerPitch = null;
+		Ball ball = null;
+
+		// story node 'prepare return value'
+		try {
+			fujaba__Success = false;
+
+			_TmpObject = (this.eClass());
+
+			// ensure correct type and really bound of object __eClass
+			JavaSDM.ensure(_TmpObject instanceof EClass);
+			__eClass = (EClass) _TmpObject;
+			// iterate to-many link eOperations from __eClass to __performOperation
+			fujaba__Success = false;
+
+			fujaba__Iter__eClassTo__performOperation = __eClass
+					.getEOperations().iterator();
+
+			while (!(fujaba__Success)
+					&& fujaba__Iter__eClassTo__performOperation.hasNext()) {
+				try {
+					__performOperation = (EOperation) fujaba__Iter__eClassTo__performOperation
+							.next();
+
+					// check object __performOperation is really bound
+					JavaSDM.ensure(__performOperation != null);
+					// attribute condition
+					JavaSDM.ensure(JavaSDM.stringCompare(
+							__performOperation.getName(), "isApplicable_FWD") == 0);
+
+					fujaba__Success = true;
+				} catch (JavaSDMException fujaba__InternalException) {
+					fujaba__Success = false;
+				}
+			}
+			JavaSDM.ensure(fujaba__Success);
+			// create object __result
+			__result = TGGRuntimeFactory.eINSTANCE.createEObjectContainer();
+
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		// story node 'test core match kernel'
+		try {
+			fujaba__Success = false;
+
+			// check object goalKeeperField is really bound
+			JavaSDM.ensure(goalKeeperField != null);
+			// bind object
+			ball = goalKeeperField.getBall();
+
+			// check object ball is really bound
+			JavaSDM.ensure(ball != null);
+
+			// bind object
+			soccerPitch = goalKeeperField.eContainer() instanceof SoccerPitch ? (SoccerPitch) goalKeeperField
+					.eContainer() : null;
+
+			// check object soccerPitch is really bound
+			JavaSDM.ensure(soccerPitch != null);
+
+			// check if contained via correct reference
+			JavaSDM.ensure(soccerPitch.getFields().contains(goalKeeperField));
+
+			// iterate to-many link field from goalKeeperField to goalKeeper
+			fujaba__Success = false;
+
+			fujaba__IterGoalKeeperFieldToGoalKeeper = new ArrayList(
+					goalKeeperField.getPlayers()).iterator();
+
+			while (fujaba__IterGoalKeeperFieldToGoalKeeper.hasNext()) {
+				try {
+					_TmpObject = fujaba__IterGoalKeeperFieldToGoalKeeper.next();
+
+					// ensure correct type and really bound of object goalKeeper
+					JavaSDM.ensure(_TmpObject instanceof GoalKeeper);
+					goalKeeper = (GoalKeeper) _TmpObject;
+					// check link ball from ball to goalKeeper
+					JavaSDM.ensure(goalKeeper.equals(ball.getPlayer()));
+
+					// check link players from goalKeeper to soccerPitch
+					JavaSDM.ensure(soccerPitch.equals(goalKeeper.eContainer()));
+
+					// iterate to-many link players from soccerPitch to targetPlayer
+					fujaba__Success = false;
+
+					fujaba__IterSoccerPitchToTargetPlayer = new ArrayList(
+							soccerPitch.getPlayers()).iterator();
+
+					while (fujaba__IterSoccerPitchToTargetPlayer.hasNext()) {
+						try {
+							_TmpObject = fujaba__IterSoccerPitchToTargetPlayer
+									.next();
+
+							// ensure correct type and really bound of object targetPlayer
+							JavaSDM.ensure(_TmpObject instanceof FieldPlayer);
+							targetPlayer = (FieldPlayer) _TmpObject;
+							// bind object
+							targetPlayerField = targetPlayer.getField();
+
+							// check object targetPlayerField is really bound
+							JavaSDM.ensure(targetPlayerField != null);
+
+							// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+							JavaSDM.ensure(!targetPlayerField
+									.equals(goalKeeperField));
+
+							// check link fields from targetPlayerField to soccerPitch
+							JavaSDM.ensure(soccerPitch.equals(targetPlayerField
+									.eContainer()));
+
+							// story node 'test core match and DECs'
+							try {
+								fujaba__Success = false;
+
+								// check negative bindings
+								try {
+									fujaba__Success = false;
+
+									// bind object
+									__DEC_goalKeeper_players_2266 = goalKeeper
+											.getField();
+
+									// check object __DEC_goalKeeper_players_2266 is really bound
+									JavaSDM.ensure(__DEC_goalKeeper_players_2266 != null);
+
+									// check isomorphic binding between objects __DEC_goalKeeper_players_2266 and goalKeeperField 
+									JavaSDM.ensure(!__DEC_goalKeeper_players_2266
+											.equals(goalKeeperField));
+
+									// check isomorphic binding between objects __DEC_goalKeeper_players_2266 and targetPlayerField 
+									JavaSDM.ensure(!__DEC_goalKeeper_players_2266
+											.equals(targetPlayerField));
+
+									fujaba__Success = true;
+								} catch (JavaSDMException fujaba__InternalException) {
+									fujaba__Success = false;
+								}
+
+								fujaba__Success = !(fujaba__Success);
+
+								JavaSDM.ensure(fujaba__Success);
+
+								// check negative bindings
+								try {
+									fujaba__Success = false;
+
+									// bind object
+									__DEC_targetPlayer_players_323063 = targetPlayer
+											.getField();
+
+									// check object __DEC_targetPlayer_players_323063 is really bound
+									JavaSDM.ensure(__DEC_targetPlayer_players_323063 != null);
+
+									// check isomorphic binding between objects __DEC_targetPlayer_players_323063 and goalKeeperField 
+									JavaSDM.ensure(!__DEC_targetPlayer_players_323063
+											.equals(goalKeeperField));
+
+									// check isomorphic binding between objects __DEC_targetPlayer_players_323063 and targetPlayerField 
+									JavaSDM.ensure(!__DEC_targetPlayer_players_323063
+											.equals(targetPlayerField));
+
+									fujaba__Success = true;
+								} catch (JavaSDMException fujaba__InternalException) {
+									fujaba__Success = false;
+								}
+
+								fujaba__Success = !(fujaba__Success);
+
+								JavaSDM.ensure(fujaba__Success);
+
+								// check negative bindings
+								try {
+									fujaba__Success = false;
+
+									// bind object
+									__DEC_goalKeeper_players_837413 = goalKeeper
+											.eContainer() instanceof SoccerPitch ? (SoccerPitch) goalKeeper
+											.eContainer() : null;
+
+									// check object __DEC_goalKeeper_players_837413 is really bound
+									JavaSDM.ensure(__DEC_goalKeeper_players_837413 != null);
+
+									// check if contained via correct reference
+									JavaSDM.ensure(__DEC_goalKeeper_players_837413
+											.getPlayers().contains(goalKeeper));
+
+									// check isomorphic binding between objects __DEC_goalKeeper_players_837413 and soccerPitch 
+									JavaSDM.ensure(!__DEC_goalKeeper_players_837413
+											.equals(soccerPitch));
+
+									fujaba__Success = true;
+								} catch (JavaSDMException fujaba__InternalException) {
+									fujaba__Success = false;
+								}
+
+								fujaba__Success = !(fujaba__Success);
+
+								JavaSDM.ensure(fujaba__Success);
+
+								// check negative bindings
+								try {
+									fujaba__Success = false;
+
+									// bind object
+									__DEC_targetPlayer_players_865368 = targetPlayer
+											.eContainer() instanceof SoccerPitch ? (SoccerPitch) targetPlayer
+											.eContainer() : null;
+
+									// check object __DEC_targetPlayer_players_865368 is really bound
+									JavaSDM.ensure(__DEC_targetPlayer_players_865368 != null);
+
+									// check if contained via correct reference
+									JavaSDM.ensure(__DEC_targetPlayer_players_865368
+											.getPlayers()
+											.contains(targetPlayer));
+
+									// check isomorphic binding between objects __DEC_targetPlayer_players_865368 and soccerPitch 
+									JavaSDM.ensure(!__DEC_targetPlayer_players_865368
+											.equals(soccerPitch));
+
+									fujaba__Success = true;
+								} catch (JavaSDMException fujaba__InternalException) {
+									fujaba__Success = false;
+								}
+
+								fujaba__Success = !(fujaba__Success);
+
+								JavaSDM.ensure(fujaba__Success);
+
+								// check object ball is really bound
+								JavaSDM.ensure(ball != null);
+								// check object goalKeeper is really bound
+								JavaSDM.ensure(goalKeeper != null);
+								// check object goalKeeperField is really bound
+								JavaSDM.ensure(goalKeeperField != null);
+								// check object soccerPitch is really bound
+								JavaSDM.ensure(soccerPitch != null);
+								// check object targetPlayer is really bound
+								JavaSDM.ensure(targetPlayer != null);
+								// check object targetPlayerField is really bound
+								JavaSDM.ensure(targetPlayerField != null);
+								// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+								JavaSDM.ensure(!targetPlayerField
+										.equals(goalKeeperField));
+
+								// check link ball from ball to goalKeeper
+								JavaSDM.ensure(goalKeeper.equals(ball
+										.getPlayer()));
+
+								// check link field from goalKeeperField to ball
+								JavaSDM.ensure(ball.equals(goalKeeperField
+										.getBall()));
+
+								// check link field from goalKeeper to goalKeeperField
+								JavaSDM.ensure(goalKeeperField
+										.equals(goalKeeper.getField()));
+
+								// check link field from targetPlayer to targetPlayerField
+								JavaSDM.ensure(targetPlayerField
+										.equals(targetPlayer.getField()));
+
+								// check link fields from goalKeeperField to soccerPitch
+								JavaSDM.ensure(soccerPitch
+										.equals(goalKeeperField.eContainer()));
+
+								// check link fields from targetPlayerField to soccerPitch
+								JavaSDM.ensure(soccerPitch
+										.equals(targetPlayerField.eContainer()));
+
+								// check link players from goalKeeper to soccerPitch
+								JavaSDM.ensure(soccerPitch.equals(goalKeeper
+										.eContainer()));
+
+								// check link players from targetPlayer to soccerPitch
+								JavaSDM.ensure(soccerPitch.equals(targetPlayer
+										.eContainer()));
+
+								// create object match
+								match = TGGRuntimeFactory.eINSTANCE
+										.createMatch();
+
+								// assign attribute match
+								match.setRuleName(__eClass.getName());
+								// statement node 'bookkeeping with generic isAppropriate method'
+								fujaba__Success = this.isAppropriate_FWD(match,
+										goalKeeper, soccerPitch, targetPlayer,
+										goalKeeperField, targetPlayerField,
+										ball);
+								if (fujaba__Success) {
+									// statement node ''
+									fujaba__Success = this
+											.checkTypes_FWD(match);
+									if (fujaba__Success) {
+										// story node 'Add match to rule result'
+										try {
+											fujaba__Success = false;
+
+											// check object __performOperation is really bound
+											JavaSDM.ensure(__performOperation != null);
+											// check object __result is really bound
+											JavaSDM.ensure(__result != null);
+											// check object match is really bound
+											JavaSDM.ensure(match != null);
+
+											// create link
+											org.moflon.util.eMoflonEMFUtil
+													.addOppositeReference(
+															__result, match,
+															"contents");
+
+											// create link
+											org.moflon.util.eMoflonEMFUtil
+													.addOppositeReference(
+															match,
+															__performOperation,
+															"isApplicableOperation");
+											fujaba__Success = true;
+										} catch (JavaSDMException fujaba__InternalException) {
+											fujaba__Success = false;
+										}
+
+									} else {
+
+									}
+
+								} else {
+
+								}
+								fujaba__Success = true;
+							} catch (JavaSDMException fujaba__InternalException) {
+								fujaba__Success = false;
+							}
+
+							fujaba__Success = true;
+						} catch (JavaSDMException fujaba__InternalException) {
+							fujaba__Success = false;
+						}
+					}
+					JavaSDM.ensure(fujaba__Success);
+
+					fujaba__Success = true;
+				} catch (JavaSDMException fujaba__InternalException) {
+					fujaba__Success = false;
+				}
+			}
+			JavaSDM.ensure(fujaba__Success);
+
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		return __result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObjectContainer isAppropriate_FWD_Field_9(Field targetPlayerField) {
+		boolean fujaba__Success = false;
+		Object _TmpObject = null;
+		EClass __eClass = null;
+		Iterator fujaba__Iter__eClassTo__performOperation = null;
+		EOperation __performOperation = null;
+		EObjectContainer __result = null;
+		Field __DEC_goalKeeper_players_165790 = null;
+		Field __DEC_targetPlayer_players_530669 = null;
+		SoccerPitch __DEC_goalKeeper_players_179358 = null;
+		SoccerPitch __DEC_targetPlayer_players_413050 = null;
+		Match match = null;
+		Field goalKeeperField = null;
+		Ball ball = null;
+		Iterator fujaba__IterSoccerPitchToGoalKeeper = null;
+		GoalKeeper goalKeeper = null;
+		Iterator fujaba__IterTargetPlayerFieldToTargetPlayer = null;
+		FieldPlayer targetPlayer = null;
+		SoccerPitch soccerPitch = null;
+
+		// story node 'prepare return value'
+		try {
+			fujaba__Success = false;
+
+			_TmpObject = (this.eClass());
+
+			// ensure correct type and really bound of object __eClass
+			JavaSDM.ensure(_TmpObject instanceof EClass);
+			__eClass = (EClass) _TmpObject;
+			// iterate to-many link eOperations from __eClass to __performOperation
+			fujaba__Success = false;
+
+			fujaba__Iter__eClassTo__performOperation = __eClass
+					.getEOperations().iterator();
+
+			while (!(fujaba__Success)
+					&& fujaba__Iter__eClassTo__performOperation.hasNext()) {
+				try {
+					__performOperation = (EOperation) fujaba__Iter__eClassTo__performOperation
+							.next();
+
+					// check object __performOperation is really bound
+					JavaSDM.ensure(__performOperation != null);
+					// attribute condition
+					JavaSDM.ensure(JavaSDM.stringCompare(
+							__performOperation.getName(), "isApplicable_FWD") == 0);
+
+					fujaba__Success = true;
+				} catch (JavaSDMException fujaba__InternalException) {
+					fujaba__Success = false;
+				}
+			}
+			JavaSDM.ensure(fujaba__Success);
+			// create object __result
+			__result = TGGRuntimeFactory.eINSTANCE.createEObjectContainer();
+
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		// story node 'test core match kernel'
+		try {
+			fujaba__Success = false;
+
+			// check object targetPlayerField is really bound
+			JavaSDM.ensure(targetPlayerField != null);
+			// bind object
+			soccerPitch = targetPlayerField.eContainer() instanceof SoccerPitch ? (SoccerPitch) targetPlayerField
+					.eContainer() : null;
+
+			// check object soccerPitch is really bound
+			JavaSDM.ensure(soccerPitch != null);
+
+			// check if contained via correct reference
+			JavaSDM.ensure(soccerPitch.getFields().contains(targetPlayerField));
+
+			// iterate to-many link field from targetPlayerField to targetPlayer
+			fujaba__Success = false;
+
+			fujaba__IterTargetPlayerFieldToTargetPlayer = new ArrayList(
+					targetPlayerField.getPlayers()).iterator();
+
+			while (fujaba__IterTargetPlayerFieldToTargetPlayer.hasNext()) {
+				try {
+					_TmpObject = fujaba__IterTargetPlayerFieldToTargetPlayer
+							.next();
+
+					// ensure correct type and really bound of object targetPlayer
+					JavaSDM.ensure(_TmpObject instanceof FieldPlayer);
+					targetPlayer = (FieldPlayer) _TmpObject;
+					// check link players from targetPlayer to soccerPitch
+					JavaSDM.ensure(soccerPitch.equals(targetPlayer.eContainer()));
+
+					// iterate to-many link players from soccerPitch to goalKeeper
+					fujaba__Success = false;
+
+					fujaba__IterSoccerPitchToGoalKeeper = new ArrayList(
+							soccerPitch.getPlayers()).iterator();
+
+					while (fujaba__IterSoccerPitchToGoalKeeper.hasNext()) {
+						try {
+							_TmpObject = fujaba__IterSoccerPitchToGoalKeeper
+									.next();
+
+							// ensure correct type and really bound of object goalKeeper
+							JavaSDM.ensure(_TmpObject instanceof GoalKeeper);
+							goalKeeper = (GoalKeeper) _TmpObject;
+							// bind object
+							ball = goalKeeper.getBall();
+
+							// check object ball is really bound
+							JavaSDM.ensure(ball != null);
+
+							// bind object
+							goalKeeperField = goalKeeper.getField();
+
+							// check object goalKeeperField is really bound
+							JavaSDM.ensure(goalKeeperField != null);
+
+							// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+							JavaSDM.ensure(!targetPlayerField
+									.equals(goalKeeperField));
+
+							// check link field from goalKeeperField to ball
+							JavaSDM.ensure(ball.equals(goalKeeperField
+									.getBall()));
+
+							// check link fields from goalKeeperField to soccerPitch
+							JavaSDM.ensure(soccerPitch.equals(goalKeeperField
+									.eContainer()));
+
+							// story node 'test core match and DECs'
+							try {
+								fujaba__Success = false;
+
+								// check negative bindings
+								try {
+									fujaba__Success = false;
+
+									// bind object
+									__DEC_goalKeeper_players_165790 = goalKeeper
+											.getField();
+
+									// check object __DEC_goalKeeper_players_165790 is really bound
+									JavaSDM.ensure(__DEC_goalKeeper_players_165790 != null);
+
+									// check isomorphic binding between objects __DEC_goalKeeper_players_165790 and goalKeeperField 
+									JavaSDM.ensure(!__DEC_goalKeeper_players_165790
+											.equals(goalKeeperField));
+
+									// check isomorphic binding between objects __DEC_goalKeeper_players_165790 and targetPlayerField 
+									JavaSDM.ensure(!__DEC_goalKeeper_players_165790
+											.equals(targetPlayerField));
+
+									fujaba__Success = true;
+								} catch (JavaSDMException fujaba__InternalException) {
+									fujaba__Success = false;
+								}
+
+								fujaba__Success = !(fujaba__Success);
+
+								JavaSDM.ensure(fujaba__Success);
+
+								// check negative bindings
+								try {
+									fujaba__Success = false;
+
+									// bind object
+									__DEC_targetPlayer_players_530669 = targetPlayer
+											.getField();
+
+									// check object __DEC_targetPlayer_players_530669 is really bound
+									JavaSDM.ensure(__DEC_targetPlayer_players_530669 != null);
+
+									// check isomorphic binding between objects __DEC_targetPlayer_players_530669 and goalKeeperField 
+									JavaSDM.ensure(!__DEC_targetPlayer_players_530669
+											.equals(goalKeeperField));
+
+									// check isomorphic binding between objects __DEC_targetPlayer_players_530669 and targetPlayerField 
+									JavaSDM.ensure(!__DEC_targetPlayer_players_530669
+											.equals(targetPlayerField));
+
+									fujaba__Success = true;
+								} catch (JavaSDMException fujaba__InternalException) {
+									fujaba__Success = false;
+								}
+
+								fujaba__Success = !(fujaba__Success);
+
+								JavaSDM.ensure(fujaba__Success);
+
+								// check negative bindings
+								try {
+									fujaba__Success = false;
+
+									// bind object
+									__DEC_goalKeeper_players_179358 = goalKeeper
+											.eContainer() instanceof SoccerPitch ? (SoccerPitch) goalKeeper
+											.eContainer() : null;
+
+									// check object __DEC_goalKeeper_players_179358 is really bound
+									JavaSDM.ensure(__DEC_goalKeeper_players_179358 != null);
+
+									// check if contained via correct reference
+									JavaSDM.ensure(__DEC_goalKeeper_players_179358
+											.getPlayers().contains(goalKeeper));
+
+									// check isomorphic binding between objects __DEC_goalKeeper_players_179358 and soccerPitch 
+									JavaSDM.ensure(!__DEC_goalKeeper_players_179358
+											.equals(soccerPitch));
+
+									fujaba__Success = true;
+								} catch (JavaSDMException fujaba__InternalException) {
+									fujaba__Success = false;
+								}
+
+								fujaba__Success = !(fujaba__Success);
+
+								JavaSDM.ensure(fujaba__Success);
+
+								// check negative bindings
+								try {
+									fujaba__Success = false;
+
+									// bind object
+									__DEC_targetPlayer_players_413050 = targetPlayer
+											.eContainer() instanceof SoccerPitch ? (SoccerPitch) targetPlayer
+											.eContainer() : null;
+
+									// check object __DEC_targetPlayer_players_413050 is really bound
+									JavaSDM.ensure(__DEC_targetPlayer_players_413050 != null);
+
+									// check if contained via correct reference
+									JavaSDM.ensure(__DEC_targetPlayer_players_413050
+											.getPlayers()
+											.contains(targetPlayer));
+
+									// check isomorphic binding between objects __DEC_targetPlayer_players_413050 and soccerPitch 
+									JavaSDM.ensure(!__DEC_targetPlayer_players_413050
+											.equals(soccerPitch));
+
+									fujaba__Success = true;
+								} catch (JavaSDMException fujaba__InternalException) {
+									fujaba__Success = false;
+								}
+
+								fujaba__Success = !(fujaba__Success);
+
+								JavaSDM.ensure(fujaba__Success);
+
+								// check object ball is really bound
+								JavaSDM.ensure(ball != null);
+								// check object goalKeeper is really bound
+								JavaSDM.ensure(goalKeeper != null);
+								// check object goalKeeperField is really bound
+								JavaSDM.ensure(goalKeeperField != null);
+								// check object soccerPitch is really bound
+								JavaSDM.ensure(soccerPitch != null);
+								// check object targetPlayer is really bound
+								JavaSDM.ensure(targetPlayer != null);
+								// check object targetPlayerField is really bound
+								JavaSDM.ensure(targetPlayerField != null);
+								// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+								JavaSDM.ensure(!targetPlayerField
+										.equals(goalKeeperField));
+
+								// check link ball from ball to goalKeeper
+								JavaSDM.ensure(goalKeeper.equals(ball
+										.getPlayer()));
+
+								// check link field from goalKeeperField to ball
+								JavaSDM.ensure(ball.equals(goalKeeperField
+										.getBall()));
+
+								// check link field from goalKeeper to goalKeeperField
+								JavaSDM.ensure(goalKeeperField
+										.equals(goalKeeper.getField()));
+
+								// check link field from targetPlayer to targetPlayerField
+								JavaSDM.ensure(targetPlayerField
+										.equals(targetPlayer.getField()));
+
+								// check link fields from goalKeeperField to soccerPitch
+								JavaSDM.ensure(soccerPitch
+										.equals(goalKeeperField.eContainer()));
+
+								// check link fields from targetPlayerField to soccerPitch
+								JavaSDM.ensure(soccerPitch
+										.equals(targetPlayerField.eContainer()));
+
+								// check link players from goalKeeper to soccerPitch
+								JavaSDM.ensure(soccerPitch.equals(goalKeeper
+										.eContainer()));
+
+								// check link players from targetPlayer to soccerPitch
+								JavaSDM.ensure(soccerPitch.equals(targetPlayer
+										.eContainer()));
+
+								// create object match
+								match = TGGRuntimeFactory.eINSTANCE
+										.createMatch();
+
+								// assign attribute match
+								match.setRuleName(__eClass.getName());
+								// statement node 'bookkeeping with generic isAppropriate method'
+								fujaba__Success = this.isAppropriate_FWD(match,
+										goalKeeper, soccerPitch, targetPlayer,
+										goalKeeperField, targetPlayerField,
+										ball);
+								if (fujaba__Success) {
+									// statement node ''
+									fujaba__Success = this
+											.checkTypes_FWD(match);
+									if (fujaba__Success) {
+										// story node 'Add match to rule result'
+										try {
+											fujaba__Success = false;
+
+											// check object __performOperation is really bound
+											JavaSDM.ensure(__performOperation != null);
+											// check object __result is really bound
+											JavaSDM.ensure(__result != null);
+											// check object match is really bound
+											JavaSDM.ensure(match != null);
+
+											// create link
+											org.moflon.util.eMoflonEMFUtil
+													.addOppositeReference(
+															__result, match,
+															"contents");
+
+											// create link
+											org.moflon.util.eMoflonEMFUtil
+													.addOppositeReference(
+															match,
+															__performOperation,
+															"isApplicableOperation");
+											fujaba__Success = true;
+										} catch (JavaSDMException fujaba__InternalException) {
+											fujaba__Success = false;
+										}
+
+									} else {
+
+									}
+
+								} else {
+
+								}
+								fujaba__Success = true;
+							} catch (JavaSDMException fujaba__InternalException) {
+								fujaba__Success = false;
+							}
+
+							fujaba__Success = true;
+						} catch (JavaSDMException fujaba__InternalException) {
+							fujaba__Success = false;
+						}
+					}
+					JavaSDM.ensure(fujaba__Success);
+
+					fujaba__Success = true;
+				} catch (JavaSDMException fujaba__InternalException) {
+					fujaba__Success = false;
+				}
+			}
+			JavaSDM.ensure(fujaba__Success);
+
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		return __result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObjectContainer isAppropriate_FWD_Ball_4(Ball ball) {
+		boolean fujaba__Success = false;
+		Object _TmpObject = null;
+		EClass __eClass = null;
+		Iterator fujaba__Iter__eClassTo__performOperation = null;
+		EOperation __performOperation = null;
+		EObjectContainer __result = null;
+		Field __DEC_goalKeeper_players_609853 = null;
+		Field __DEC_targetPlayer_players_482346 = null;
+		SoccerPitch __DEC_goalKeeper_players_278575 = null;
+		SoccerPitch __DEC_targetPlayer_players_54666 = null;
+		Match match = null;
+		Field targetPlayerField = null;
+		Iterator fujaba__IterSoccerPitchToTargetPlayer = null;
+		FieldPlayer targetPlayer = null;
+		SoccerPitch soccerPitch = null;
+		Field goalKeeperField = null;
+		GoalKeeper goalKeeper = null;
+
+		// story node 'prepare return value'
+		try {
+			fujaba__Success = false;
+
+			_TmpObject = (this.eClass());
+
+			// ensure correct type and really bound of object __eClass
+			JavaSDM.ensure(_TmpObject instanceof EClass);
+			__eClass = (EClass) _TmpObject;
+			// iterate to-many link eOperations from __eClass to __performOperation
+			fujaba__Success = false;
+
+			fujaba__Iter__eClassTo__performOperation = __eClass
+					.getEOperations().iterator();
+
+			while (!(fujaba__Success)
+					&& fujaba__Iter__eClassTo__performOperation.hasNext()) {
+				try {
+					__performOperation = (EOperation) fujaba__Iter__eClassTo__performOperation
+							.next();
+
+					// check object __performOperation is really bound
+					JavaSDM.ensure(__performOperation != null);
+					// attribute condition
+					JavaSDM.ensure(JavaSDM.stringCompare(
+							__performOperation.getName(), "isApplicable_FWD") == 0);
+
+					fujaba__Success = true;
+				} catch (JavaSDMException fujaba__InternalException) {
+					fujaba__Success = false;
+				}
+			}
+			JavaSDM.ensure(fujaba__Success);
+			// create object __result
+			__result = TGGRuntimeFactory.eINSTANCE.createEObjectContainer();
+
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		// story node 'test core match kernel'
+		try {
+			fujaba__Success = false;
+
+			// check object ball is really bound
+			JavaSDM.ensure(ball != null);
+			// bind object
+			_TmpObject = ball.getPlayer();
+
+			// ensure correct type and really bound of object goalKeeper
+			JavaSDM.ensure(_TmpObject instanceof GoalKeeper);
+			goalKeeper = (GoalKeeper) _TmpObject;
+
+			// bind object
+			goalKeeperField = goalKeeper.getField();
+
+			// check object goalKeeperField is really bound
+			JavaSDM.ensure(goalKeeperField != null);
+
+			// check link field from goalKeeperField to ball
+			JavaSDM.ensure(ball.equals(goalKeeperField.getBall()));
+
+			// bind object
+			soccerPitch = goalKeeper.eContainer() instanceof SoccerPitch ? (SoccerPitch) goalKeeper
+					.eContainer() : null;
+
+			// check object soccerPitch is really bound
+			JavaSDM.ensure(soccerPitch != null);
+
+			// check if contained via correct reference
+			JavaSDM.ensure(soccerPitch.getPlayers().contains(goalKeeper));
+
+			// check link fields from goalKeeperField to soccerPitch
+			JavaSDM.ensure(soccerPitch.equals(goalKeeperField.eContainer()));
+
+			// iterate to-many link players from soccerPitch to targetPlayer
+			fujaba__Success = false;
+
+			fujaba__IterSoccerPitchToTargetPlayer = new ArrayList(
+					soccerPitch.getPlayers()).iterator();
+
+			while (fujaba__IterSoccerPitchToTargetPlayer.hasNext()) {
+				try {
+					_TmpObject = fujaba__IterSoccerPitchToTargetPlayer.next();
+
+					// ensure correct type and really bound of object targetPlayer
+					JavaSDM.ensure(_TmpObject instanceof FieldPlayer);
+					targetPlayer = (FieldPlayer) _TmpObject;
+					// bind object
+					targetPlayerField = targetPlayer.getField();
+
+					// check object targetPlayerField is really bound
+					JavaSDM.ensure(targetPlayerField != null);
+
+					// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+					JavaSDM.ensure(!targetPlayerField.equals(goalKeeperField));
+
+					// check link fields from targetPlayerField to soccerPitch
+					JavaSDM.ensure(soccerPitch.equals(targetPlayerField
+							.eContainer()));
+
+					// story node 'test core match and DECs'
+					try {
+						fujaba__Success = false;
+
+						// check negative bindings
+						try {
+							fujaba__Success = false;
+
+							// bind object
+							__DEC_goalKeeper_players_609853 = goalKeeper
+									.getField();
+
+							// check object __DEC_goalKeeper_players_609853 is really bound
+							JavaSDM.ensure(__DEC_goalKeeper_players_609853 != null);
+
+							// check isomorphic binding between objects __DEC_goalKeeper_players_609853 and goalKeeperField 
+							JavaSDM.ensure(!__DEC_goalKeeper_players_609853
+									.equals(goalKeeperField));
+
+							// check isomorphic binding between objects __DEC_goalKeeper_players_609853 and targetPlayerField 
+							JavaSDM.ensure(!__DEC_goalKeeper_players_609853
+									.equals(targetPlayerField));
+
+							fujaba__Success = true;
+						} catch (JavaSDMException fujaba__InternalException) {
+							fujaba__Success = false;
+						}
+
+						fujaba__Success = !(fujaba__Success);
+
+						JavaSDM.ensure(fujaba__Success);
+
+						// check negative bindings
+						try {
+							fujaba__Success = false;
+
+							// bind object
+							__DEC_targetPlayer_players_482346 = targetPlayer
+									.getField();
+
+							// check object __DEC_targetPlayer_players_482346 is really bound
+							JavaSDM.ensure(__DEC_targetPlayer_players_482346 != null);
+
+							// check isomorphic binding between objects __DEC_targetPlayer_players_482346 and goalKeeperField 
+							JavaSDM.ensure(!__DEC_targetPlayer_players_482346
+									.equals(goalKeeperField));
+
+							// check isomorphic binding between objects __DEC_targetPlayer_players_482346 and targetPlayerField 
+							JavaSDM.ensure(!__DEC_targetPlayer_players_482346
+									.equals(targetPlayerField));
+
+							fujaba__Success = true;
+						} catch (JavaSDMException fujaba__InternalException) {
+							fujaba__Success = false;
+						}
+
+						fujaba__Success = !(fujaba__Success);
+
+						JavaSDM.ensure(fujaba__Success);
+
+						// check negative bindings
+						try {
+							fujaba__Success = false;
+
+							// bind object
+							__DEC_goalKeeper_players_278575 = goalKeeper
+									.eContainer() instanceof SoccerPitch ? (SoccerPitch) goalKeeper
+									.eContainer() : null;
+
+							// check object __DEC_goalKeeper_players_278575 is really bound
+							JavaSDM.ensure(__DEC_goalKeeper_players_278575 != null);
+
+							// check if contained via correct reference
+							JavaSDM.ensure(__DEC_goalKeeper_players_278575
+									.getPlayers().contains(goalKeeper));
+
+							// check isomorphic binding between objects __DEC_goalKeeper_players_278575 and soccerPitch 
+							JavaSDM.ensure(!__DEC_goalKeeper_players_278575
+									.equals(soccerPitch));
+
+							fujaba__Success = true;
+						} catch (JavaSDMException fujaba__InternalException) {
+							fujaba__Success = false;
+						}
+
+						fujaba__Success = !(fujaba__Success);
+
+						JavaSDM.ensure(fujaba__Success);
+
+						// check negative bindings
+						try {
+							fujaba__Success = false;
+
+							// bind object
+							__DEC_targetPlayer_players_54666 = targetPlayer
+									.eContainer() instanceof SoccerPitch ? (SoccerPitch) targetPlayer
+									.eContainer() : null;
+
+							// check object __DEC_targetPlayer_players_54666 is really bound
+							JavaSDM.ensure(__DEC_targetPlayer_players_54666 != null);
+
+							// check if contained via correct reference
+							JavaSDM.ensure(__DEC_targetPlayer_players_54666
+									.getPlayers().contains(targetPlayer));
+
+							// check isomorphic binding between objects __DEC_targetPlayer_players_54666 and soccerPitch 
+							JavaSDM.ensure(!__DEC_targetPlayer_players_54666
+									.equals(soccerPitch));
+
+							fujaba__Success = true;
+						} catch (JavaSDMException fujaba__InternalException) {
+							fujaba__Success = false;
+						}
+
+						fujaba__Success = !(fujaba__Success);
+
+						JavaSDM.ensure(fujaba__Success);
+
+						// check object ball is really bound
+						JavaSDM.ensure(ball != null);
+						// check object goalKeeper is really bound
+						JavaSDM.ensure(goalKeeper != null);
+						// check object goalKeeperField is really bound
+						JavaSDM.ensure(goalKeeperField != null);
+						// check object soccerPitch is really bound
+						JavaSDM.ensure(soccerPitch != null);
+						// check object targetPlayer is really bound
+						JavaSDM.ensure(targetPlayer != null);
+						// check object targetPlayerField is really bound
+						JavaSDM.ensure(targetPlayerField != null);
+						// check isomorphic binding between objects targetPlayerField and goalKeeperField 
+						JavaSDM.ensure(!targetPlayerField
+								.equals(goalKeeperField));
+
+						// check link ball from ball to goalKeeper
+						JavaSDM.ensure(goalKeeper.equals(ball.getPlayer()));
+
+						// check link field from goalKeeperField to ball
+						JavaSDM.ensure(ball.equals(goalKeeperField.getBall()));
+
+						// check link field from goalKeeper to goalKeeperField
+						JavaSDM.ensure(goalKeeperField.equals(goalKeeper
+								.getField()));
+
+						// check link field from targetPlayer to targetPlayerField
+						JavaSDM.ensure(targetPlayerField.equals(targetPlayer
+								.getField()));
+
+						// check link fields from goalKeeperField to soccerPitch
+						JavaSDM.ensure(soccerPitch.equals(goalKeeperField
+								.eContainer()));
+
+						// check link fields from targetPlayerField to soccerPitch
+						JavaSDM.ensure(soccerPitch.equals(targetPlayerField
+								.eContainer()));
+
+						// check link players from goalKeeper to soccerPitch
+						JavaSDM.ensure(soccerPitch.equals(goalKeeper
+								.eContainer()));
+
+						// check link players from targetPlayer to soccerPitch
+						JavaSDM.ensure(soccerPitch.equals(targetPlayer
+								.eContainer()));
+
+						// create object match
+						match = TGGRuntimeFactory.eINSTANCE.createMatch();
+
+						// assign attribute match
+						match.setRuleName(__eClass.getName());
+						// statement node 'bookkeeping with generic isAppropriate method'
+						fujaba__Success = this.isAppropriate_FWD(match,
+								goalKeeper, soccerPitch, targetPlayer,
+								goalKeeperField, targetPlayerField, ball);
+						if (fujaba__Success) {
+							// statement node ''
+							fujaba__Success = this.checkTypes_FWD(match);
+							if (fujaba__Success) {
+								// story node 'Add match to rule result'
+								try {
+									fujaba__Success = false;
+
+									// check object __performOperation is really bound
+									JavaSDM.ensure(__performOperation != null);
+									// check object __result is really bound
+									JavaSDM.ensure(__result != null);
+									// check object match is really bound
+									JavaSDM.ensure(match != null);
+
+									// create link
+									org.moflon.util.eMoflonEMFUtil
+											.addOppositeReference(__result,
+													match, "contents");
+
+									// create link
+									org.moflon.util.eMoflonEMFUtil
+											.addOppositeReference(match,
+													__performOperation,
+													"isApplicableOperation");
+									fujaba__Success = true;
+								} catch (JavaSDMException fujaba__InternalException) {
+									fujaba__Success = false;
+								}
+
+							} else {
+
+							}
+
+						} else {
+
+						}
+						fujaba__Success = true;
+					} catch (JavaSDMException fujaba__InternalException) {
+						fujaba__Success = false;
+					}
+
+					fujaba__Success = true;
+				} catch (JavaSDMException fujaba__InternalException) {
+					fujaba__Success = false;
+				}
+			}
+			JavaSDM.ensure(fujaba__Success);
+
+			fujaba__Success = true;
+		} catch (JavaSDMException fujaba__InternalException) {
+			fujaba__Success = false;
+		}
+
+		return __result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments)
+			throws InvocationTargetException {
+		switch (operationID) {
+		case RulesPackage.GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPLICABLE_FWD__MATCH:
+			return isApplicable_FWD((Match) arguments.get(0));
+		case RulesPackage.GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD__MATCH_GOALKEEPER_SOCCERPITCH_FIELDPLAYER_FIELD_FIELD_BALL:
+			return isAppropriate_FWD((Match) arguments.get(0),
+					(GoalKeeper) arguments.get(1),
+					(SoccerPitch) arguments.get(2),
+					(FieldPlayer) arguments.get(3), (Field) arguments.get(4),
+					(Field) arguments.get(5), (Ball) arguments.get(6));
+		case RulesPackage.GOAL_KEEPER_PASSES_TO_PLAYER_RED___PERFORM_FWD__ISAPPLICABLEMATCH:
+			return perform_FWD((IsApplicableMatch) arguments.get(0));
+		case RulesPackage.GOAL_KEEPER_PASSES_TO_PLAYER_RED___CHECK_TYPES_FWD__MATCH:
+			return checkTypes_FWD((Match) arguments.get(0));
+		case RulesPackage.GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_GOAL_KEEPER_7__GOALKEEPER:
+			return isAppropriate_FWD_GoalKeeper_7((GoalKeeper) arguments.get(0));
+		case RulesPackage.GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_SOCCER_PITCH_12__SOCCERPITCH:
+			return isAppropriate_FWD_SoccerPitch_12((SoccerPitch) arguments
+					.get(0));
+		case RulesPackage.GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_FIELD_PLAYER_2__FIELDPLAYER:
+			return isAppropriate_FWD_FieldPlayer_2((FieldPlayer) arguments
+					.get(0));
+		case RulesPackage.GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_FIELD_8__FIELD:
+			return isAppropriate_FWD_Field_8((Field) arguments.get(0));
+		case RulesPackage.GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_FIELD_9__FIELD:
+			return isAppropriate_FWD_Field_9((Field) arguments.get(0));
+		case RulesPackage.GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_BALL_4__BALL:
+			return isAppropriate_FWD_Ball_4((Ball) arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
+	}
+
+	// <-- [user code injected with eMoflon]
+	
+	// [user code injected with eMoflon] -->
+} //GoalKeeperPassesToPlayer_RedImpl

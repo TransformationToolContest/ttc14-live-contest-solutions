@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="SoccerStrategy" nsURI="http://www.moflon.org.SoccerStrategy" nsPrefix="SoccerStrategy">
+  <eClassifiers xsi:type="ecore:EClass" name="SoccerPitchToUpdate">
+    <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/updatemodel/1.0#//Update"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eSubpackages name="Rules" nsURI="http://www.moflon.org.SoccerStrategy.Rules" nsPrefix="Rules">
+    <eClassifiers xsi:type="ecore:EClass" name="CreateUpdateRule">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MoveForwardRule">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CreateEastWestLinksRule">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CreateNorthSouthLinksRule">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RegularFields">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DoNotMoveGoalKeeper">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CreateBallRule">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="LinkBallToPlayerRule">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GoalFields">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IgnoreOpponentPlayersRule">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MoveGoalKeeperNorth">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IgnoreOpponentGoalKeeperRule">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GoalKeeper_KickOffBall">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MoveGoalKeeperSouth">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IgnoreOpponentGoalKeeperWithBallRule">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GoalKeeperPassesToPlayerRule" abstract="true">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GoalKeeperPassesToPlayer_Red">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+      <eSuperTypes href="#//Rules/GoalKeeperPassesToPlayerRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PlayerToPlayerShot">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+      <eSuperTypes href="#//Rules/GoalKeeperPassesToPlayer_Red"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GoalKeeperPassesToPlayer2_Blue" abstract="true">
+      <eSuperTypes href="http://www.moflon.org.TGGRuntime#//AbstractRule"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

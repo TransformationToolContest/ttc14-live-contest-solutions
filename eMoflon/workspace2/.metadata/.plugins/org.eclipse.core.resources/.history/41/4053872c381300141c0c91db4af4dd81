@@ -1,0 +1,4569 @@
+/**
+ */
+package SoccerStrategy.Rules;
+
+import TGGRuntime.TGGRuntimePackage;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each operation of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see SoccerStrategy.Rules.RulesFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface RulesPackage extends EPackage {
+	/**
+	 * The package name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNAME = "Rules";
+
+	/**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_URI = "http://www.moflon.org.SoccerStrategy.Rules";
+
+	/**
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_PREFIX = "Rules";
+
+	/**
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	RulesPackage eINSTANCE = SoccerStrategy.Rules.impl.RulesPackageImpl.init();
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.CreateUpdateRuleImpl <em>Create Update Rule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.CreateUpdateRuleImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getCreateUpdateRule()
+	 * @generated
+	 */
+	int CREATE_UPDATE_RULE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Create Update Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_RULE_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_RULE___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_RULE___IS_APPROPRIATE_FWD__MATCH_SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_RULE___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Soccer Pitch 0</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_RULE___IS_APPROPRIATE_FWD_SOCCER_PITCH_0__SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Create Update Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_RULE_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.MoveForwardRuleImpl <em>Move Forward Rule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.MoveForwardRuleImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getMoveForwardRule()
+	 * @generated
+	 */
+	int MOVE_FORWARD_RULE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Move Forward Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_RULE_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_RULE___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_RULE___IS_APPROPRIATE_FWD__MATCH_SOCCERPITCH_FIELD_FIELDPLAYER_GOALKEEPER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_RULE___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Soccer Pitch 1</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_RULE___IS_APPROPRIATE_FWD_SOCCER_PITCH_1__SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 0</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_RULE___IS_APPROPRIATE_FWD_FIELD_0__FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field Player 0</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_RULE___IS_APPROPRIATE_FWD_FIELD_PLAYER_0__FIELDPLAYER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Keeper 0</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_RULE___IS_APPROPRIATE_FWD_GOAL_KEEPER_0__GOALKEEPER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The number of operations of the '<em>Move Forward Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_RULE_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 8;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.CreateEastWestLinksRuleImpl <em>Create East West Links Rule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.CreateEastWestLinksRuleImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getCreateEastWestLinksRule()
+	 * @generated
+	 */
+	int CREATE_EAST_WEST_LINKS_RULE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Create East West Links Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_EAST_WEST_LINKS_RULE_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_EAST_WEST_LINKS_RULE___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_EAST_WEST_LINKS_RULE___IS_APPROPRIATE_FWD__MATCH_FIELD_FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_EAST_WEST_LINKS_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_EAST_WEST_LINKS_RULE___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 1</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_EAST_WEST_LINKS_RULE___IS_APPROPRIATE_FWD_FIELD_1__FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 2</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_EAST_WEST_LINKS_RULE___IS_APPROPRIATE_FWD_FIELD_2__FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 0</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_EAST_WEST_LINKS_RULE___IS_APPROPRIATE_FWD_FIELD_0__FIELD_FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>Create East West Links Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_EAST_WEST_LINKS_RULE_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.CreateNorthSouthLinksRuleImpl <em>Create North South Links Rule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.CreateNorthSouthLinksRuleImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getCreateNorthSouthLinksRule()
+	 * @generated
+	 */
+	int CREATE_NORTH_SOUTH_LINKS_RULE = 3;
+
+	/**
+	 * The number of structural features of the '<em>Create North South Links Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_NORTH_SOUTH_LINKS_RULE_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_NORTH_SOUTH_LINKS_RULE___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_NORTH_SOUTH_LINKS_RULE___IS_APPROPRIATE_FWD__MATCH_FIELD_FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_NORTH_SOUTH_LINKS_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_NORTH_SOUTH_LINKS_RULE___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 3</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_NORTH_SOUTH_LINKS_RULE___IS_APPROPRIATE_FWD_FIELD_3__FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 4</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_NORTH_SOUTH_LINKS_RULE___IS_APPROPRIATE_FWD_FIELD_4__FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 0</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_NORTH_SOUTH_LINKS_RULE___IS_APPROPRIATE_FWD_FIELD_0__FIELD_FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>Create North South Links Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_NORTH_SOUTH_LINKS_RULE_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.RegularFieldsImpl <em>Regular Fields</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.RegularFieldsImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getRegularFields()
+	 * @generated
+	 */
+	int REGULAR_FIELDS = 4;
+
+	/**
+	 * The number of structural features of the '<em>Regular Fields</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_FIELDS_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_FIELDS___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_FIELDS___IS_APPROPRIATE_FWD__MATCH_FIELD_SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_FIELDS___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_FIELDS___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 5</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_FIELDS___IS_APPROPRIATE_FWD_FIELD_5__FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Soccer Pitch 2</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_FIELDS___IS_APPROPRIATE_FWD_SOCCER_PITCH_2__SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Regular Fields</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_FIELDS_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.DoNotMoveGoalKeeperImpl <em>Do Not Move Goal Keeper</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.DoNotMoveGoalKeeperImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getDoNotMoveGoalKeeper()
+	 * @generated
+	 */
+	int DO_NOT_MOVE_GOAL_KEEPER = 5;
+
+	/**
+	 * The number of structural features of the '<em>Do Not Move Goal Keeper</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DO_NOT_MOVE_GOAL_KEEPER_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DO_NOT_MOVE_GOAL_KEEPER___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DO_NOT_MOVE_GOAL_KEEPER___IS_APPROPRIATE_FWD__MATCH_GOALFIELD_GOALKEEPER_SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DO_NOT_MOVE_GOAL_KEEPER___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DO_NOT_MOVE_GOAL_KEEPER___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Field 0</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DO_NOT_MOVE_GOAL_KEEPER___IS_APPROPRIATE_FWD_GOAL_FIELD_0__GOALFIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Keeper 1</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DO_NOT_MOVE_GOAL_KEEPER___IS_APPROPRIATE_FWD_GOAL_KEEPER_1__GOALKEEPER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Soccer Pitch 3</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DO_NOT_MOVE_GOAL_KEEPER___IS_APPROPRIATE_FWD_SOCCER_PITCH_3__SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>Do Not Move Goal Keeper</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DO_NOT_MOVE_GOAL_KEEPER_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.CreateBallRuleImpl <em>Create Ball Rule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.CreateBallRuleImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getCreateBallRule()
+	 * @generated
+	 */
+	int CREATE_BALL_RULE = 6;
+
+	/**
+	 * The number of structural features of the '<em>Create Ball Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_BALL_RULE_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_BALL_RULE___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_BALL_RULE___IS_APPROPRIATE_FWD__MATCH_SOCCERPITCH_BALL_FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_BALL_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_BALL_RULE___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Soccer Pitch 4</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_BALL_RULE___IS_APPROPRIATE_FWD_SOCCER_PITCH_4__SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Ball 0</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_BALL_RULE___IS_APPROPRIATE_FWD_BALL_0__BALL = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 6</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_BALL_RULE___IS_APPROPRIATE_FWD_FIELD_6__FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>Create Ball Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_BALL_RULE_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.LinkBallToPlayerRuleImpl <em>Link Ball To Player Rule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.LinkBallToPlayerRuleImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getLinkBallToPlayerRule()
+	 * @generated
+	 */
+	int LINK_BALL_TO_PLAYER_RULE = 7;
+
+	/**
+	 * The number of structural features of the '<em>Link Ball To Player Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_BALL_TO_PLAYER_RULE_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_BALL_TO_PLAYER_RULE___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_BALL_TO_PLAYER_RULE___IS_APPROPRIATE_FWD__MATCH_PLAYER_BALL = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_BALL_TO_PLAYER_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_BALL_TO_PLAYER_RULE___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Player 0</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_BALL_TO_PLAYER_RULE___IS_APPROPRIATE_FWD_PLAYER_0__PLAYER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Ball 1</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_BALL_TO_PLAYER_RULE___IS_APPROPRIATE_FWD_BALL_1__BALL = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Player 0</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_BALL_TO_PLAYER_RULE___IS_APPROPRIATE_FWD_PLAYER_0__PLAYER_BALL = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>Link Ball To Player Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_BALL_TO_PLAYER_RULE_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.GoalFieldsImpl <em>Goal Fields</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.GoalFieldsImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getGoalFields()
+	 * @generated
+	 */
+	int GOAL_FIELDS = 8;
+
+	/**
+	 * The number of structural features of the '<em>Goal Fields</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_FIELDS_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_FIELDS___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_FIELDS___IS_APPROPRIATE_FWD__MATCH_SOCCERPITCH_GOALFIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_FIELDS___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_FIELDS___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Soccer Pitch 5</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_FIELDS___IS_APPROPRIATE_FWD_SOCCER_PITCH_5__SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Field 1</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_FIELDS___IS_APPROPRIATE_FWD_GOAL_FIELD_1__GOALFIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Goal Fields</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_FIELDS_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.IgnoreOpponentPlayersRuleImpl <em>Ignore Opponent Players Rule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.IgnoreOpponentPlayersRuleImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getIgnoreOpponentPlayersRule()
+	 * @generated
+	 */
+	int IGNORE_OPPONENT_PLAYERS_RULE = 9;
+
+	/**
+	 * The number of structural features of the '<em>Ignore Opponent Players Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_PLAYERS_RULE_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_PLAYERS_RULE___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_PLAYERS_RULE___IS_APPROPRIATE_FWD__MATCH_SOCCERPITCH_FIELDPLAYER_FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_PLAYERS_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_PLAYERS_RULE___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Soccer Pitch 6</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_PLAYERS_RULE___IS_APPROPRIATE_FWD_SOCCER_PITCH_6__SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field Player 1</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_PLAYERS_RULE___IS_APPROPRIATE_FWD_FIELD_PLAYER_1__FIELDPLAYER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 7</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_PLAYERS_RULE___IS_APPROPRIATE_FWD_FIELD_7__FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>Ignore Opponent Players Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_PLAYERS_RULE_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.MoveGoalKeeperNorthImpl <em>Move Goal Keeper North</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.MoveGoalKeeperNorthImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getMoveGoalKeeperNorth()
+	 * @generated
+	 */
+	int MOVE_GOAL_KEEPER_NORTH = 10;
+
+	/**
+	 * The number of structural features of the '<em>Move Goal Keeper North</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_NORTH_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_NORTH___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_NORTH___IS_APPROPRIATE_FWD__MATCH_SOCCERPITCH_GOALFIELD_GOALKEEPER_GOALFIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_NORTH___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_NORTH___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Soccer Pitch 7</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_NORTH___IS_APPROPRIATE_FWD_SOCCER_PITCH_7__SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Field 2</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_NORTH___IS_APPROPRIATE_FWD_GOAL_FIELD_2__GOALFIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Keeper 2</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_NORTH___IS_APPROPRIATE_FWD_GOAL_KEEPER_2__GOALKEEPER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Field 3</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_NORTH___IS_APPROPRIATE_FWD_GOAL_FIELD_3__GOALFIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The number of operations of the '<em>Move Goal Keeper North</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_NORTH_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 8;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.IgnoreOpponentGoalKeeperRuleImpl <em>Ignore Opponent Goal Keeper Rule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.IgnoreOpponentGoalKeeperRuleImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getIgnoreOpponentGoalKeeperRule()
+	 * @generated
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_RULE = 11;
+
+	/**
+	 * The number of structural features of the '<em>Ignore Opponent Goal Keeper Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_RULE_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_RULE___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_RULE___IS_APPROPRIATE_FWD__MATCH_SOCCERPITCH_GOALKEEPER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_RULE___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Soccer Pitch 8</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_RULE___IS_APPROPRIATE_FWD_SOCCER_PITCH_8__SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Keeper 3</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_RULE___IS_APPROPRIATE_FWD_GOAL_KEEPER_3__GOALKEEPER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Ignore Opponent Goal Keeper Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_RULE_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.GoalKeeper_KickOffBallImpl <em>Goal Keeper Kick Off Ball</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.GoalKeeper_KickOffBallImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getGoalKeeper_KickOffBall()
+	 * @generated
+	 */
+	int GOAL_KEEPER_KICK_OFF_BALL = 12;
+
+	/**
+	 * The number of structural features of the '<em>Goal Keeper Kick Off Ball</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_KICK_OFF_BALL_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_KICK_OFF_BALL___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_KICK_OFF_BALL___IS_APPROPRIATE_FWD__MATCH_GOALKEEPER_GOALFIELD_SOCCERPITCH_BALL = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_KICK_OFF_BALL___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_KICK_OFF_BALL___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Keeper 4</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_KICK_OFF_BALL___IS_APPROPRIATE_FWD_GOAL_KEEPER_4__GOALKEEPER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Field 4</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_KICK_OFF_BALL___IS_APPROPRIATE_FWD_GOAL_FIELD_4__GOALFIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Soccer Pitch 9</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_KICK_OFF_BALL___IS_APPROPRIATE_FWD_SOCCER_PITCH_9__SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Ball 2</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_KICK_OFF_BALL___IS_APPROPRIATE_FWD_BALL_2__BALL = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The number of operations of the '<em>Goal Keeper Kick Off Ball</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_KICK_OFF_BALL_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 8;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.MoveGoalKeeperSouthImpl <em>Move Goal Keeper South</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.MoveGoalKeeperSouthImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getMoveGoalKeeperSouth()
+	 * @generated
+	 */
+	int MOVE_GOAL_KEEPER_SOUTH = 13;
+
+	/**
+	 * The number of structural features of the '<em>Move Goal Keeper South</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_SOUTH_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_SOUTH___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_SOUTH___IS_APPROPRIATE_FWD__MATCH_GOALFIELD_GOALKEEPER_GOALFIELD_SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_SOUTH___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_SOUTH___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Field 5</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_SOUTH___IS_APPROPRIATE_FWD_GOAL_FIELD_5__GOALFIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Keeper 5</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_SOUTH___IS_APPROPRIATE_FWD_GOAL_KEEPER_5__GOALKEEPER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Field 6</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_SOUTH___IS_APPROPRIATE_FWD_GOAL_FIELD_6__GOALFIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Soccer Pitch 10</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_SOUTH___IS_APPROPRIATE_FWD_SOCCER_PITCH_10__SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The number of operations of the '<em>Move Goal Keeper South</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_GOAL_KEEPER_SOUTH_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 8;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.IgnoreOpponentGoalKeeperWithBallRuleImpl <em>Ignore Opponent Goal Keeper With Ball Rule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.IgnoreOpponentGoalKeeperWithBallRuleImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getIgnoreOpponentGoalKeeperWithBallRule()
+	 * @generated
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE = 14;
+
+	/**
+	 * The number of structural features of the '<em>Ignore Opponent Goal Keeper With Ball Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___IS_APPROPRIATE_FWD__MATCH_GOALKEEPER_BALL_SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Keeper 6</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___IS_APPROPRIATE_FWD_GOAL_KEEPER_6__GOALKEEPER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Ball 3</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___IS_APPROPRIATE_FWD_BALL_3__BALL = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Soccer Pitch 11</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___IS_APPROPRIATE_FWD_SOCCER_PITCH_11__SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Ball 0</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___IS_APPROPRIATE_FWD_BALL_0__BALL_GOALKEEPER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The number of operations of the '<em>Ignore Opponent Goal Keeper With Ball Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 8;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.GoalKeeperPassesToPlayerRuleImpl <em>Goal Keeper Passes To Player Rule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.GoalKeeperPassesToPlayerRuleImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getGoalKeeperPassesToPlayerRule()
+	 * @generated
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RULE = 15;
+
+	/**
+	 * The number of structural features of the '<em>Goal Keeper Passes To Player Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RULE_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Goal Keeper Passes To Player Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RULE_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.GoalKeeperPassesToPlayer_RedImpl <em>Goal Keeper Passes To Player Red</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.GoalKeeperPassesToPlayer_RedImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getGoalKeeperPassesToPlayer_Red()
+	 * @generated
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RED = 16;
+
+	/**
+	 * The number of structural features of the '<em>Goal Keeper Passes To Player Red</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RED_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD__MATCH_GOALKEEPER_SOCCERPITCH_FIELDPLAYER_FIELD_FIELD_BALL = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RED___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RED___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Keeper 7</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_GOAL_KEEPER_7__GOALKEEPER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Soccer Pitch 12</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_SOCCER_PITCH_12__SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field Player 2</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_FIELD_PLAYER_2__FIELDPLAYER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 8</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_FIELD_8__FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 9</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_FIELD_9__FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Ball 4</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_BALL_4__BALL = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
+
+	/**
+	 * The number of operations of the '<em>Goal Keeper Passes To Player Red</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER_RED_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 10;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.PlayerToPlayerShotImpl <em>Player To Player Shot</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.PlayerToPlayerShotImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getPlayerToPlayerShot()
+	 * @generated
+	 */
+	int PLAYER_TO_PLAYER_SHOT = 17;
+
+	/**
+	 * The number of structural features of the '<em>Player To Player Shot</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD__MATCH_GOALKEEPER_SOCCERPITCH_FIELDPLAYER_FIELD_FIELD_BALL = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Goal Keeper 7</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_GOAL_KEEPER_7__GOALKEEPER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Soccer Pitch 12</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_SOCCER_PITCH_12__SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field Player 2</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_FIELD_PLAYER_2__FIELDPLAYER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 8</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_FIELD_8__FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 9</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_FIELD_9__FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Ball 4</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_BALL_4__BALL = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___IS_APPLICABLE_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 10;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD__MATCH_FIELDPLAYER_SOCCERPITCH_FIELDPLAYER_FIELD_FIELD_BALL = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 11;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___PERFORM_FWD__ISAPPLICABLEMATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 12;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___CHECK_TYPES_FWD__MATCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 13;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field Player 3</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_FIELD_PLAYER_3__FIELDPLAYER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Soccer Pitch 13</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_SOCCER_PITCH_13__SOCCERPITCH = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 15;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field Player 4</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_FIELD_PLAYER_4__FIELDPLAYER = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 16;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 10</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_FIELD_10__FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 17;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Field 11</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_FIELD_11__FIELD = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 18;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD Ball 5</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_BALL_5__BALL = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 19;
+
+	/**
+	 * The number of operations of the '<em>Player To Player Shot</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER_TO_PLAYER_SHOT_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 20;
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.Rules.impl.GoalKeeperPassesToPlayer2_BlueImpl <em>Goal Keeper Passes To Player2 Blue</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.Rules.impl.GoalKeeperPassesToPlayer2_BlueImpl
+	 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getGoalKeeperPassesToPlayer2_Blue()
+	 * @generated
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER2_BLUE = 18;
+
+	/**
+	 * The number of structural features of the '<em>Goal Keeper Passes To Player2 Blue</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER2_BLUE_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Goal Keeper Passes To Player2 Blue</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_KEEPER_PASSES_TO_PLAYER2_BLUE_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.CreateUpdateRule <em>Create Update Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Create Update Rule</em>'.
+	 * @see SoccerStrategy.Rules.CreateUpdateRule
+	 * @generated
+	 */
+	EClass getCreateUpdateRule();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateUpdateRule#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateUpdateRule#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getCreateUpdateRule__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateUpdateRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.SoccerPitch) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateUpdateRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getCreateUpdateRule__IsAppropriate_FWD__Match_SoccerPitch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateUpdateRule#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateUpdateRule#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getCreateUpdateRule__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateUpdateRule#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateUpdateRule#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getCreateUpdateRule__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateUpdateRule#isAppropriate_FWD_SoccerPitch_0(soccerpitch.SoccerPitch) <em>Is Appropriate FWD Soccer Pitch 0</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Soccer Pitch 0</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateUpdateRule#isAppropriate_FWD_SoccerPitch_0(soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getCreateUpdateRule__IsAppropriate_FWD_SoccerPitch_0__SoccerPitch();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.MoveForwardRule <em>Move Forward Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Move Forward Rule</em>'.
+	 * @see SoccerStrategy.Rules.MoveForwardRule
+	 * @generated
+	 */
+	EClass getMoveForwardRule();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveForwardRule#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveForwardRule#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getMoveForwardRule__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveForwardRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.SoccerPitch, soccerpitch.Field, soccerpitch.FieldPlayer, soccerpitch.GoalKeeper) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveForwardRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.SoccerPitch, soccerpitch.Field, soccerpitch.FieldPlayer, soccerpitch.GoalKeeper)
+	 * @generated
+	 */
+	EOperation getMoveForwardRule__IsAppropriate_FWD__Match_SoccerPitch_Field_FieldPlayer_GoalKeeper();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveForwardRule#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveForwardRule#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getMoveForwardRule__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveForwardRule#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveForwardRule#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getMoveForwardRule__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveForwardRule#isAppropriate_FWD_SoccerPitch_1(soccerpitch.SoccerPitch) <em>Is Appropriate FWD Soccer Pitch 1</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Soccer Pitch 1</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveForwardRule#isAppropriate_FWD_SoccerPitch_1(soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getMoveForwardRule__IsAppropriate_FWD_SoccerPitch_1__SoccerPitch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveForwardRule#isAppropriate_FWD_Field_0(soccerpitch.Field) <em>Is Appropriate FWD Field 0</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field 0</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveForwardRule#isAppropriate_FWD_Field_0(soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getMoveForwardRule__IsAppropriate_FWD_Field_0__Field();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveForwardRule#isAppropriate_FWD_FieldPlayer_0(soccerpitch.FieldPlayer) <em>Is Appropriate FWD Field Player 0</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field Player 0</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveForwardRule#isAppropriate_FWD_FieldPlayer_0(soccerpitch.FieldPlayer)
+	 * @generated
+	 */
+	EOperation getMoveForwardRule__IsAppropriate_FWD_FieldPlayer_0__FieldPlayer();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveForwardRule#isAppropriate_FWD_GoalKeeper_0(soccerpitch.GoalKeeper) <em>Is Appropriate FWD Goal Keeper 0</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Goal Keeper 0</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveForwardRule#isAppropriate_FWD_GoalKeeper_0(soccerpitch.GoalKeeper)
+	 * @generated
+	 */
+	EOperation getMoveForwardRule__IsAppropriate_FWD_GoalKeeper_0__GoalKeeper();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.CreateEastWestLinksRule <em>Create East West Links Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Create East West Links Rule</em>'.
+	 * @see SoccerStrategy.Rules.CreateEastWestLinksRule
+	 * @generated
+	 */
+	EClass getCreateEastWestLinksRule();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateEastWestLinksRule#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateEastWestLinksRule#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getCreateEastWestLinksRule__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateEastWestLinksRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.Field, soccerpitch.Field) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateEastWestLinksRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.Field, soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getCreateEastWestLinksRule__IsAppropriate_FWD__Match_Field_Field();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateEastWestLinksRule#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateEastWestLinksRule#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getCreateEastWestLinksRule__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateEastWestLinksRule#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateEastWestLinksRule#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getCreateEastWestLinksRule__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateEastWestLinksRule#isAppropriate_FWD_Field_1(soccerpitch.Field) <em>Is Appropriate FWD Field 1</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field 1</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateEastWestLinksRule#isAppropriate_FWD_Field_1(soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getCreateEastWestLinksRule__IsAppropriate_FWD_Field_1__Field();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateEastWestLinksRule#isAppropriate_FWD_Field_2(soccerpitch.Field) <em>Is Appropriate FWD Field 2</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field 2</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateEastWestLinksRule#isAppropriate_FWD_Field_2(soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getCreateEastWestLinksRule__IsAppropriate_FWD_Field_2__Field();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateEastWestLinksRule#isAppropriate_FWD_Field_0(soccerpitch.Field, soccerpitch.Field) <em>Is Appropriate FWD Field 0</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field 0</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateEastWestLinksRule#isAppropriate_FWD_Field_0(soccerpitch.Field, soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getCreateEastWestLinksRule__IsAppropriate_FWD_Field_0__Field_Field();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.CreateNorthSouthLinksRule <em>Create North South Links Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Create North South Links Rule</em>'.
+	 * @see SoccerStrategy.Rules.CreateNorthSouthLinksRule
+	 * @generated
+	 */
+	EClass getCreateNorthSouthLinksRule();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateNorthSouthLinksRule#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateNorthSouthLinksRule#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getCreateNorthSouthLinksRule__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateNorthSouthLinksRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.Field, soccerpitch.Field) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateNorthSouthLinksRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.Field, soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getCreateNorthSouthLinksRule__IsAppropriate_FWD__Match_Field_Field();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateNorthSouthLinksRule#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateNorthSouthLinksRule#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getCreateNorthSouthLinksRule__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateNorthSouthLinksRule#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateNorthSouthLinksRule#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getCreateNorthSouthLinksRule__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateNorthSouthLinksRule#isAppropriate_FWD_Field_3(soccerpitch.Field) <em>Is Appropriate FWD Field 3</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field 3</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateNorthSouthLinksRule#isAppropriate_FWD_Field_3(soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getCreateNorthSouthLinksRule__IsAppropriate_FWD_Field_3__Field();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateNorthSouthLinksRule#isAppropriate_FWD_Field_4(soccerpitch.Field) <em>Is Appropriate FWD Field 4</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field 4</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateNorthSouthLinksRule#isAppropriate_FWD_Field_4(soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getCreateNorthSouthLinksRule__IsAppropriate_FWD_Field_4__Field();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateNorthSouthLinksRule#isAppropriate_FWD_Field_0(soccerpitch.Field, soccerpitch.Field) <em>Is Appropriate FWD Field 0</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field 0</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateNorthSouthLinksRule#isAppropriate_FWD_Field_0(soccerpitch.Field, soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getCreateNorthSouthLinksRule__IsAppropriate_FWD_Field_0__Field_Field();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.RegularFields <em>Regular Fields</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Regular Fields</em>'.
+	 * @see SoccerStrategy.Rules.RegularFields
+	 * @generated
+	 */
+	EClass getRegularFields();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.RegularFields#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.RegularFields#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getRegularFields__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.RegularFields#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.Field, soccerpitch.SoccerPitch) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.RegularFields#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.Field, soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getRegularFields__IsAppropriate_FWD__Match_Field_SoccerPitch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.RegularFields#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.RegularFields#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getRegularFields__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.RegularFields#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.RegularFields#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getRegularFields__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.RegularFields#isAppropriate_FWD_Field_5(soccerpitch.Field) <em>Is Appropriate FWD Field 5</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field 5</em>' operation.
+	 * @see SoccerStrategy.Rules.RegularFields#isAppropriate_FWD_Field_5(soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getRegularFields__IsAppropriate_FWD_Field_5__Field();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.RegularFields#isAppropriate_FWD_SoccerPitch_2(soccerpitch.SoccerPitch) <em>Is Appropriate FWD Soccer Pitch 2</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Soccer Pitch 2</em>' operation.
+	 * @see SoccerStrategy.Rules.RegularFields#isAppropriate_FWD_SoccerPitch_2(soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getRegularFields__IsAppropriate_FWD_SoccerPitch_2__SoccerPitch();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.DoNotMoveGoalKeeper <em>Do Not Move Goal Keeper</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Do Not Move Goal Keeper</em>'.
+	 * @see SoccerStrategy.Rules.DoNotMoveGoalKeeper
+	 * @generated
+	 */
+	EClass getDoNotMoveGoalKeeper();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.DoNotMoveGoalKeeper#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.DoNotMoveGoalKeeper#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getDoNotMoveGoalKeeper__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.DoNotMoveGoalKeeper#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.GoalField, soccerpitch.GoalKeeper, soccerpitch.SoccerPitch) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.DoNotMoveGoalKeeper#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.GoalField, soccerpitch.GoalKeeper, soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getDoNotMoveGoalKeeper__IsAppropriate_FWD__Match_GoalField_GoalKeeper_SoccerPitch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.DoNotMoveGoalKeeper#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.DoNotMoveGoalKeeper#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getDoNotMoveGoalKeeper__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.DoNotMoveGoalKeeper#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.DoNotMoveGoalKeeper#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getDoNotMoveGoalKeeper__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.DoNotMoveGoalKeeper#isAppropriate_FWD_GoalField_0(soccerpitch.GoalField) <em>Is Appropriate FWD Goal Field 0</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Goal Field 0</em>' operation.
+	 * @see SoccerStrategy.Rules.DoNotMoveGoalKeeper#isAppropriate_FWD_GoalField_0(soccerpitch.GoalField)
+	 * @generated
+	 */
+	EOperation getDoNotMoveGoalKeeper__IsAppropriate_FWD_GoalField_0__GoalField();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.DoNotMoveGoalKeeper#isAppropriate_FWD_GoalKeeper_1(soccerpitch.GoalKeeper) <em>Is Appropriate FWD Goal Keeper 1</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Goal Keeper 1</em>' operation.
+	 * @see SoccerStrategy.Rules.DoNotMoveGoalKeeper#isAppropriate_FWD_GoalKeeper_1(soccerpitch.GoalKeeper)
+	 * @generated
+	 */
+	EOperation getDoNotMoveGoalKeeper__IsAppropriate_FWD_GoalKeeper_1__GoalKeeper();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.DoNotMoveGoalKeeper#isAppropriate_FWD_SoccerPitch_3(soccerpitch.SoccerPitch) <em>Is Appropriate FWD Soccer Pitch 3</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Soccer Pitch 3</em>' operation.
+	 * @see SoccerStrategy.Rules.DoNotMoveGoalKeeper#isAppropriate_FWD_SoccerPitch_3(soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getDoNotMoveGoalKeeper__IsAppropriate_FWD_SoccerPitch_3__SoccerPitch();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.CreateBallRule <em>Create Ball Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Create Ball Rule</em>'.
+	 * @see SoccerStrategy.Rules.CreateBallRule
+	 * @generated
+	 */
+	EClass getCreateBallRule();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateBallRule#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateBallRule#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getCreateBallRule__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateBallRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.SoccerPitch, soccerpitch.Ball, soccerpitch.Field) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateBallRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.SoccerPitch, soccerpitch.Ball, soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getCreateBallRule__IsAppropriate_FWD__Match_SoccerPitch_Ball_Field();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateBallRule#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateBallRule#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getCreateBallRule__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateBallRule#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateBallRule#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getCreateBallRule__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateBallRule#isAppropriate_FWD_SoccerPitch_4(soccerpitch.SoccerPitch) <em>Is Appropriate FWD Soccer Pitch 4</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Soccer Pitch 4</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateBallRule#isAppropriate_FWD_SoccerPitch_4(soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getCreateBallRule__IsAppropriate_FWD_SoccerPitch_4__SoccerPitch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateBallRule#isAppropriate_FWD_Ball_0(soccerpitch.Ball) <em>Is Appropriate FWD Ball 0</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Ball 0</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateBallRule#isAppropriate_FWD_Ball_0(soccerpitch.Ball)
+	 * @generated
+	 */
+	EOperation getCreateBallRule__IsAppropriate_FWD_Ball_0__Ball();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.CreateBallRule#isAppropriate_FWD_Field_6(soccerpitch.Field) <em>Is Appropriate FWD Field 6</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field 6</em>' operation.
+	 * @see SoccerStrategy.Rules.CreateBallRule#isAppropriate_FWD_Field_6(soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getCreateBallRule__IsAppropriate_FWD_Field_6__Field();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.LinkBallToPlayerRule <em>Link Ball To Player Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Link Ball To Player Rule</em>'.
+	 * @see SoccerStrategy.Rules.LinkBallToPlayerRule
+	 * @generated
+	 */
+	EClass getLinkBallToPlayerRule();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.LinkBallToPlayerRule#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.LinkBallToPlayerRule#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getLinkBallToPlayerRule__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.LinkBallToPlayerRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.Player, soccerpitch.Ball) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.LinkBallToPlayerRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.Player, soccerpitch.Ball)
+	 * @generated
+	 */
+	EOperation getLinkBallToPlayerRule__IsAppropriate_FWD__Match_Player_Ball();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.LinkBallToPlayerRule#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.LinkBallToPlayerRule#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getLinkBallToPlayerRule__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.LinkBallToPlayerRule#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.LinkBallToPlayerRule#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getLinkBallToPlayerRule__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.LinkBallToPlayerRule#isAppropriate_FWD_Player_0(soccerpitch.Player) <em>Is Appropriate FWD Player 0</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Player 0</em>' operation.
+	 * @see SoccerStrategy.Rules.LinkBallToPlayerRule#isAppropriate_FWD_Player_0(soccerpitch.Player)
+	 * @generated
+	 */
+	EOperation getLinkBallToPlayerRule__IsAppropriate_FWD_Player_0__Player();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.LinkBallToPlayerRule#isAppropriate_FWD_Ball_1(soccerpitch.Ball) <em>Is Appropriate FWD Ball 1</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Ball 1</em>' operation.
+	 * @see SoccerStrategy.Rules.LinkBallToPlayerRule#isAppropriate_FWD_Ball_1(soccerpitch.Ball)
+	 * @generated
+	 */
+	EOperation getLinkBallToPlayerRule__IsAppropriate_FWD_Ball_1__Ball();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.LinkBallToPlayerRule#isAppropriate_FWD_Player_0(soccerpitch.Player, soccerpitch.Ball) <em>Is Appropriate FWD Player 0</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Player 0</em>' operation.
+	 * @see SoccerStrategy.Rules.LinkBallToPlayerRule#isAppropriate_FWD_Player_0(soccerpitch.Player, soccerpitch.Ball)
+	 * @generated
+	 */
+	EOperation getLinkBallToPlayerRule__IsAppropriate_FWD_Player_0__Player_Ball();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.GoalFields <em>Goal Fields</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Goal Fields</em>'.
+	 * @see SoccerStrategy.Rules.GoalFields
+	 * @generated
+	 */
+	EClass getGoalFields();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalFields#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalFields#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getGoalFields__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalFields#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.SoccerPitch, soccerpitch.GoalField) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalFields#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.SoccerPitch, soccerpitch.GoalField)
+	 * @generated
+	 */
+	EOperation getGoalFields__IsAppropriate_FWD__Match_SoccerPitch_GoalField();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalFields#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalFields#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getGoalFields__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalFields#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalFields#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getGoalFields__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalFields#isAppropriate_FWD_SoccerPitch_5(soccerpitch.SoccerPitch) <em>Is Appropriate FWD Soccer Pitch 5</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Soccer Pitch 5</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalFields#isAppropriate_FWD_SoccerPitch_5(soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getGoalFields__IsAppropriate_FWD_SoccerPitch_5__SoccerPitch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalFields#isAppropriate_FWD_GoalField_1(soccerpitch.GoalField) <em>Is Appropriate FWD Goal Field 1</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Goal Field 1</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalFields#isAppropriate_FWD_GoalField_1(soccerpitch.GoalField)
+	 * @generated
+	 */
+	EOperation getGoalFields__IsAppropriate_FWD_GoalField_1__GoalField();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.IgnoreOpponentPlayersRule <em>Ignore Opponent Players Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Ignore Opponent Players Rule</em>'.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentPlayersRule
+	 * @generated
+	 */
+	EClass getIgnoreOpponentPlayersRule();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentPlayersRule#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentPlayersRule#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentPlayersRule__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentPlayersRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.SoccerPitch, soccerpitch.FieldPlayer, soccerpitch.Field) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentPlayersRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.SoccerPitch, soccerpitch.FieldPlayer, soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentPlayersRule__IsAppropriate_FWD__Match_SoccerPitch_FieldPlayer_Field();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentPlayersRule#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentPlayersRule#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentPlayersRule__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentPlayersRule#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentPlayersRule#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentPlayersRule__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentPlayersRule#isAppropriate_FWD_SoccerPitch_6(soccerpitch.SoccerPitch) <em>Is Appropriate FWD Soccer Pitch 6</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Soccer Pitch 6</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentPlayersRule#isAppropriate_FWD_SoccerPitch_6(soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentPlayersRule__IsAppropriate_FWD_SoccerPitch_6__SoccerPitch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentPlayersRule#isAppropriate_FWD_FieldPlayer_1(soccerpitch.FieldPlayer) <em>Is Appropriate FWD Field Player 1</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field Player 1</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentPlayersRule#isAppropriate_FWD_FieldPlayer_1(soccerpitch.FieldPlayer)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentPlayersRule__IsAppropriate_FWD_FieldPlayer_1__FieldPlayer();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentPlayersRule#isAppropriate_FWD_Field_7(soccerpitch.Field) <em>Is Appropriate FWD Field 7</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field 7</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentPlayersRule#isAppropriate_FWD_Field_7(soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentPlayersRule__IsAppropriate_FWD_Field_7__Field();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.MoveGoalKeeperNorth <em>Move Goal Keeper North</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Move Goal Keeper North</em>'.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperNorth
+	 * @generated
+	 */
+	EClass getMoveGoalKeeperNorth();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperNorth#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperNorth#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperNorth__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperNorth#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.SoccerPitch, soccerpitch.GoalField, soccerpitch.GoalKeeper, soccerpitch.GoalField) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperNorth#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.SoccerPitch, soccerpitch.GoalField, soccerpitch.GoalKeeper, soccerpitch.GoalField)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperNorth__IsAppropriate_FWD__Match_SoccerPitch_GoalField_GoalKeeper_GoalField();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperNorth#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperNorth#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperNorth__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperNorth#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperNorth#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperNorth__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperNorth#isAppropriate_FWD_SoccerPitch_7(soccerpitch.SoccerPitch) <em>Is Appropriate FWD Soccer Pitch 7</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Soccer Pitch 7</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperNorth#isAppropriate_FWD_SoccerPitch_7(soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperNorth__IsAppropriate_FWD_SoccerPitch_7__SoccerPitch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperNorth#isAppropriate_FWD_GoalField_2(soccerpitch.GoalField) <em>Is Appropriate FWD Goal Field 2</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Goal Field 2</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperNorth#isAppropriate_FWD_GoalField_2(soccerpitch.GoalField)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperNorth__IsAppropriate_FWD_GoalField_2__GoalField();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperNorth#isAppropriate_FWD_GoalKeeper_2(soccerpitch.GoalKeeper) <em>Is Appropriate FWD Goal Keeper 2</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Goal Keeper 2</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperNorth#isAppropriate_FWD_GoalKeeper_2(soccerpitch.GoalKeeper)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperNorth__IsAppropriate_FWD_GoalKeeper_2__GoalKeeper();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperNorth#isAppropriate_FWD_GoalField_3(soccerpitch.GoalField) <em>Is Appropriate FWD Goal Field 3</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Goal Field 3</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperNorth#isAppropriate_FWD_GoalField_3(soccerpitch.GoalField)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperNorth__IsAppropriate_FWD_GoalField_3__GoalField();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperRule <em>Ignore Opponent Goal Keeper Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Ignore Opponent Goal Keeper Rule</em>'.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperRule
+	 * @generated
+	 */
+	EClass getIgnoreOpponentGoalKeeperRule();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperRule#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperRule#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentGoalKeeperRule__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.SoccerPitch, soccerpitch.GoalKeeper) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.SoccerPitch, soccerpitch.GoalKeeper)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentGoalKeeperRule__IsAppropriate_FWD__Match_SoccerPitch_GoalKeeper();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperRule#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperRule#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentGoalKeeperRule__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperRule#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperRule#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentGoalKeeperRule__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperRule#isAppropriate_FWD_SoccerPitch_8(soccerpitch.SoccerPitch) <em>Is Appropriate FWD Soccer Pitch 8</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Soccer Pitch 8</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperRule#isAppropriate_FWD_SoccerPitch_8(soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentGoalKeeperRule__IsAppropriate_FWD_SoccerPitch_8__SoccerPitch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperRule#isAppropriate_FWD_GoalKeeper_3(soccerpitch.GoalKeeper) <em>Is Appropriate FWD Goal Keeper 3</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Goal Keeper 3</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperRule#isAppropriate_FWD_GoalKeeper_3(soccerpitch.GoalKeeper)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentGoalKeeperRule__IsAppropriate_FWD_GoalKeeper_3__GoalKeeper();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.GoalKeeper_KickOffBall <em>Goal Keeper Kick Off Ball</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Goal Keeper Kick Off Ball</em>'.
+	 * @see SoccerStrategy.Rules.GoalKeeper_KickOffBall
+	 * @generated
+	 */
+	EClass getGoalKeeper_KickOffBall();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeper_KickOffBall#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeper_KickOffBall#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getGoalKeeper_KickOffBall__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeper_KickOffBall#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.GoalKeeper, soccerpitch.GoalField, soccerpitch.SoccerPitch, soccerpitch.Ball) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeper_KickOffBall#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.GoalKeeper, soccerpitch.GoalField, soccerpitch.SoccerPitch, soccerpitch.Ball)
+	 * @generated
+	 */
+	EOperation getGoalKeeper_KickOffBall__IsAppropriate_FWD__Match_GoalKeeper_GoalField_SoccerPitch_Ball();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeper_KickOffBall#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeper_KickOffBall#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getGoalKeeper_KickOffBall__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeper_KickOffBall#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeper_KickOffBall#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getGoalKeeper_KickOffBall__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeper_KickOffBall#isAppropriate_FWD_GoalKeeper_4(soccerpitch.GoalKeeper) <em>Is Appropriate FWD Goal Keeper 4</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Goal Keeper 4</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeper_KickOffBall#isAppropriate_FWD_GoalKeeper_4(soccerpitch.GoalKeeper)
+	 * @generated
+	 */
+	EOperation getGoalKeeper_KickOffBall__IsAppropriate_FWD_GoalKeeper_4__GoalKeeper();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeper_KickOffBall#isAppropriate_FWD_GoalField_4(soccerpitch.GoalField) <em>Is Appropriate FWD Goal Field 4</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Goal Field 4</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeper_KickOffBall#isAppropriate_FWD_GoalField_4(soccerpitch.GoalField)
+	 * @generated
+	 */
+	EOperation getGoalKeeper_KickOffBall__IsAppropriate_FWD_GoalField_4__GoalField();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeper_KickOffBall#isAppropriate_FWD_SoccerPitch_9(soccerpitch.SoccerPitch) <em>Is Appropriate FWD Soccer Pitch 9</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Soccer Pitch 9</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeper_KickOffBall#isAppropriate_FWD_SoccerPitch_9(soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getGoalKeeper_KickOffBall__IsAppropriate_FWD_SoccerPitch_9__SoccerPitch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeper_KickOffBall#isAppropriate_FWD_Ball_2(soccerpitch.Ball) <em>Is Appropriate FWD Ball 2</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Ball 2</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeper_KickOffBall#isAppropriate_FWD_Ball_2(soccerpitch.Ball)
+	 * @generated
+	 */
+	EOperation getGoalKeeper_KickOffBall__IsAppropriate_FWD_Ball_2__Ball();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.MoveGoalKeeperSouth <em>Move Goal Keeper South</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Move Goal Keeper South</em>'.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperSouth
+	 * @generated
+	 */
+	EClass getMoveGoalKeeperSouth();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperSouth#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperSouth#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperSouth__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperSouth#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.GoalField, soccerpitch.GoalKeeper, soccerpitch.GoalField, soccerpitch.SoccerPitch) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperSouth#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.GoalField, soccerpitch.GoalKeeper, soccerpitch.GoalField, soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperSouth__IsAppropriate_FWD__Match_GoalField_GoalKeeper_GoalField_SoccerPitch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperSouth#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperSouth#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperSouth__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperSouth#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperSouth#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperSouth__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperSouth#isAppropriate_FWD_GoalField_5(soccerpitch.GoalField) <em>Is Appropriate FWD Goal Field 5</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Goal Field 5</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperSouth#isAppropriate_FWD_GoalField_5(soccerpitch.GoalField)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperSouth__IsAppropriate_FWD_GoalField_5__GoalField();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperSouth#isAppropriate_FWD_GoalKeeper_5(soccerpitch.GoalKeeper) <em>Is Appropriate FWD Goal Keeper 5</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Goal Keeper 5</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperSouth#isAppropriate_FWD_GoalKeeper_5(soccerpitch.GoalKeeper)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperSouth__IsAppropriate_FWD_GoalKeeper_5__GoalKeeper();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperSouth#isAppropriate_FWD_GoalField_6(soccerpitch.GoalField) <em>Is Appropriate FWD Goal Field 6</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Goal Field 6</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperSouth#isAppropriate_FWD_GoalField_6(soccerpitch.GoalField)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperSouth__IsAppropriate_FWD_GoalField_6__GoalField();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.MoveGoalKeeperSouth#isAppropriate_FWD_SoccerPitch_10(soccerpitch.SoccerPitch) <em>Is Appropriate FWD Soccer Pitch 10</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Soccer Pitch 10</em>' operation.
+	 * @see SoccerStrategy.Rules.MoveGoalKeeperSouth#isAppropriate_FWD_SoccerPitch_10(soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getMoveGoalKeeperSouth__IsAppropriate_FWD_SoccerPitch_10__SoccerPitch();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule <em>Ignore Opponent Goal Keeper With Ball Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Ignore Opponent Goal Keeper With Ball Rule</em>'.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule
+	 * @generated
+	 */
+	EClass getIgnoreOpponentGoalKeeperWithBallRule();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentGoalKeeperWithBallRule__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.GoalKeeper, soccerpitch.Ball, soccerpitch.SoccerPitch) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.GoalKeeper, soccerpitch.Ball, soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentGoalKeeperWithBallRule__IsAppropriate_FWD__Match_GoalKeeper_Ball_SoccerPitch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentGoalKeeperWithBallRule__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentGoalKeeperWithBallRule__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#isAppropriate_FWD_GoalKeeper_6(soccerpitch.GoalKeeper) <em>Is Appropriate FWD Goal Keeper 6</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Goal Keeper 6</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#isAppropriate_FWD_GoalKeeper_6(soccerpitch.GoalKeeper)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentGoalKeeperWithBallRule__IsAppropriate_FWD_GoalKeeper_6__GoalKeeper();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#isAppropriate_FWD_Ball_3(soccerpitch.Ball) <em>Is Appropriate FWD Ball 3</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Ball 3</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#isAppropriate_FWD_Ball_3(soccerpitch.Ball)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentGoalKeeperWithBallRule__IsAppropriate_FWD_Ball_3__Ball();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#isAppropriate_FWD_SoccerPitch_11(soccerpitch.SoccerPitch) <em>Is Appropriate FWD Soccer Pitch 11</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Soccer Pitch 11</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#isAppropriate_FWD_SoccerPitch_11(soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentGoalKeeperWithBallRule__IsAppropriate_FWD_SoccerPitch_11__SoccerPitch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#isAppropriate_FWD_Ball_0(soccerpitch.Ball, soccerpitch.GoalKeeper) <em>Is Appropriate FWD Ball 0</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Ball 0</em>' operation.
+	 * @see SoccerStrategy.Rules.IgnoreOpponentGoalKeeperWithBallRule#isAppropriate_FWD_Ball_0(soccerpitch.Ball, soccerpitch.GoalKeeper)
+	 * @generated
+	 */
+	EOperation getIgnoreOpponentGoalKeeperWithBallRule__IsAppropriate_FWD_Ball_0__Ball_GoalKeeper();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.GoalKeeperPassesToPlayerRule <em>Goal Keeper Passes To Player Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Goal Keeper Passes To Player Rule</em>'.
+	 * @see SoccerStrategy.Rules.GoalKeeperPassesToPlayerRule
+	 * @generated
+	 */
+	EClass getGoalKeeperPassesToPlayerRule();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red <em>Goal Keeper Passes To Player Red</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Goal Keeper Passes To Player Red</em>'.
+	 * @see SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red
+	 * @generated
+	 */
+	EClass getGoalKeeperPassesToPlayer_Red();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getGoalKeeperPassesToPlayer_Red__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.GoalKeeper, soccerpitch.SoccerPitch, soccerpitch.FieldPlayer, soccerpitch.Field, soccerpitch.Field, soccerpitch.Ball) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.GoalKeeper, soccerpitch.SoccerPitch, soccerpitch.FieldPlayer, soccerpitch.Field, soccerpitch.Field, soccerpitch.Ball)
+	 * @generated
+	 */
+	EOperation getGoalKeeperPassesToPlayer_Red__IsAppropriate_FWD__Match_GoalKeeper_SoccerPitch_FieldPlayer_Field_Field_Ball();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getGoalKeeperPassesToPlayer_Red__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getGoalKeeperPassesToPlayer_Red__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isAppropriate_FWD_GoalKeeper_7(soccerpitch.GoalKeeper) <em>Is Appropriate FWD Goal Keeper 7</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Goal Keeper 7</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isAppropriate_FWD_GoalKeeper_7(soccerpitch.GoalKeeper)
+	 * @generated
+	 */
+	EOperation getGoalKeeperPassesToPlayer_Red__IsAppropriate_FWD_GoalKeeper_7__GoalKeeper();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isAppropriate_FWD_SoccerPitch_12(soccerpitch.SoccerPitch) <em>Is Appropriate FWD Soccer Pitch 12</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Soccer Pitch 12</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isAppropriate_FWD_SoccerPitch_12(soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getGoalKeeperPassesToPlayer_Red__IsAppropriate_FWD_SoccerPitch_12__SoccerPitch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isAppropriate_FWD_FieldPlayer_2(soccerpitch.FieldPlayer) <em>Is Appropriate FWD Field Player 2</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field Player 2</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isAppropriate_FWD_FieldPlayer_2(soccerpitch.FieldPlayer)
+	 * @generated
+	 */
+	EOperation getGoalKeeperPassesToPlayer_Red__IsAppropriate_FWD_FieldPlayer_2__FieldPlayer();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isAppropriate_FWD_Field_8(soccerpitch.Field) <em>Is Appropriate FWD Field 8</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field 8</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isAppropriate_FWD_Field_8(soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getGoalKeeperPassesToPlayer_Red__IsAppropriate_FWD_Field_8__Field();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isAppropriate_FWD_Field_9(soccerpitch.Field) <em>Is Appropriate FWD Field 9</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field 9</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isAppropriate_FWD_Field_9(soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getGoalKeeperPassesToPlayer_Red__IsAppropriate_FWD_Field_9__Field();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isAppropriate_FWD_Ball_4(soccerpitch.Ball) <em>Is Appropriate FWD Ball 4</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Ball 4</em>' operation.
+	 * @see SoccerStrategy.Rules.GoalKeeperPassesToPlayer_Red#isAppropriate_FWD_Ball_4(soccerpitch.Ball)
+	 * @generated
+	 */
+	EOperation getGoalKeeperPassesToPlayer_Red__IsAppropriate_FWD_Ball_4__Ball();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.PlayerToPlayerShot <em>Player To Player Shot</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Player To Player Shot</em>'.
+	 * @see SoccerStrategy.Rules.PlayerToPlayerShot
+	 * @generated
+	 */
+	EClass getPlayerToPlayerShot();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.PlayerToPlayerShot#isApplicable_FWD(TGGRuntime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.PlayerToPlayerShot#isApplicable_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getPlayerToPlayerShot__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.PlayerToPlayerShot#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.FieldPlayer, soccerpitch.SoccerPitch, soccerpitch.FieldPlayer, soccerpitch.Field, soccerpitch.Field, soccerpitch.Ball) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.PlayerToPlayerShot#isAppropriate_FWD(TGGRuntime.Match, soccerpitch.FieldPlayer, soccerpitch.SoccerPitch, soccerpitch.FieldPlayer, soccerpitch.Field, soccerpitch.Field, soccerpitch.Ball)
+	 * @generated
+	 */
+	EOperation getPlayerToPlayerShot__IsAppropriate_FWD__Match_FieldPlayer_SoccerPitch_FieldPlayer_Field_Field_Ball();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.PlayerToPlayerShot#perform_FWD(TGGRuntime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.PlayerToPlayerShot#perform_FWD(TGGRuntime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getPlayerToPlayerShot__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.PlayerToPlayerShot#checkTypes_FWD(TGGRuntime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see SoccerStrategy.Rules.PlayerToPlayerShot#checkTypes_FWD(TGGRuntime.Match)
+	 * @generated
+	 */
+	EOperation getPlayerToPlayerShot__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.PlayerToPlayerShot#isAppropriate_FWD_FieldPlayer_3(soccerpitch.FieldPlayer) <em>Is Appropriate FWD Field Player 3</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field Player 3</em>' operation.
+	 * @see SoccerStrategy.Rules.PlayerToPlayerShot#isAppropriate_FWD_FieldPlayer_3(soccerpitch.FieldPlayer)
+	 * @generated
+	 */
+	EOperation getPlayerToPlayerShot__IsAppropriate_FWD_FieldPlayer_3__FieldPlayer();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.PlayerToPlayerShot#isAppropriate_FWD_SoccerPitch_13(soccerpitch.SoccerPitch) <em>Is Appropriate FWD Soccer Pitch 13</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Soccer Pitch 13</em>' operation.
+	 * @see SoccerStrategy.Rules.PlayerToPlayerShot#isAppropriate_FWD_SoccerPitch_13(soccerpitch.SoccerPitch)
+	 * @generated
+	 */
+	EOperation getPlayerToPlayerShot__IsAppropriate_FWD_SoccerPitch_13__SoccerPitch();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.PlayerToPlayerShot#isAppropriate_FWD_FieldPlayer_4(soccerpitch.FieldPlayer) <em>Is Appropriate FWD Field Player 4</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field Player 4</em>' operation.
+	 * @see SoccerStrategy.Rules.PlayerToPlayerShot#isAppropriate_FWD_FieldPlayer_4(soccerpitch.FieldPlayer)
+	 * @generated
+	 */
+	EOperation getPlayerToPlayerShot__IsAppropriate_FWD_FieldPlayer_4__FieldPlayer();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.PlayerToPlayerShot#isAppropriate_FWD_Field_10(soccerpitch.Field) <em>Is Appropriate FWD Field 10</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field 10</em>' operation.
+	 * @see SoccerStrategy.Rules.PlayerToPlayerShot#isAppropriate_FWD_Field_10(soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getPlayerToPlayerShot__IsAppropriate_FWD_Field_10__Field();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.PlayerToPlayerShot#isAppropriate_FWD_Field_11(soccerpitch.Field) <em>Is Appropriate FWD Field 11</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Field 11</em>' operation.
+	 * @see SoccerStrategy.Rules.PlayerToPlayerShot#isAppropriate_FWD_Field_11(soccerpitch.Field)
+	 * @generated
+	 */
+	EOperation getPlayerToPlayerShot__IsAppropriate_FWD_Field_11__Field();
+
+	/**
+	 * Returns the meta object for the '{@link SoccerStrategy.Rules.PlayerToPlayerShot#isAppropriate_FWD_Ball_5(soccerpitch.Ball) <em>Is Appropriate FWD Ball 5</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD Ball 5</em>' operation.
+	 * @see SoccerStrategy.Rules.PlayerToPlayerShot#isAppropriate_FWD_Ball_5(soccerpitch.Ball)
+	 * @generated
+	 */
+	EOperation getPlayerToPlayerShot__IsAppropriate_FWD_Ball_5__Ball();
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.Rules.GoalKeeperPassesToPlayer2_Blue <em>Goal Keeper Passes To Player2 Blue</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Goal Keeper Passes To Player2 Blue</em>'.
+	 * @see SoccerStrategy.Rules.GoalKeeperPassesToPlayer2_Blue
+	 * @generated
+	 */
+	EClass getGoalKeeperPassesToPlayer2_Blue();
+
+	/**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+	RulesFactory getRulesFactory();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Defines literals for the meta objects that represent
+	 * <ul>
+	 *   <li>each class,</li>
+	 *   <li>each feature of each class,</li>
+	 *   <li>each operation of each class,</li>
+	 *   <li>each enum,</li>
+	 *   <li>and each data type</li>
+	 * </ul>
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	interface Literals {
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.CreateUpdateRuleImpl <em>Create Update Rule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.CreateUpdateRuleImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getCreateUpdateRule()
+		 * @generated
+		 */
+		EClass CREATE_UPDATE_RULE = eINSTANCE.getCreateUpdateRule();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_UPDATE_RULE___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getCreateUpdateRule__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_UPDATE_RULE___IS_APPROPRIATE_FWD__MATCH_SOCCERPITCH = eINSTANCE
+				.getCreateUpdateRule__IsAppropriate_FWD__Match_SoccerPitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_UPDATE_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getCreateUpdateRule__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_UPDATE_RULE___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getCreateUpdateRule__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Soccer Pitch 0</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_UPDATE_RULE___IS_APPROPRIATE_FWD_SOCCER_PITCH_0__SOCCERPITCH = eINSTANCE
+				.getCreateUpdateRule__IsAppropriate_FWD_SoccerPitch_0__SoccerPitch();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.MoveForwardRuleImpl <em>Move Forward Rule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.MoveForwardRuleImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getMoveForwardRule()
+		 * @generated
+		 */
+		EClass MOVE_FORWARD_RULE = eINSTANCE.getMoveForwardRule();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_FORWARD_RULE___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getMoveForwardRule__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_FORWARD_RULE___IS_APPROPRIATE_FWD__MATCH_SOCCERPITCH_FIELD_FIELDPLAYER_GOALKEEPER = eINSTANCE
+				.getMoveForwardRule__IsAppropriate_FWD__Match_SoccerPitch_Field_FieldPlayer_GoalKeeper();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_FORWARD_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getMoveForwardRule__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_FORWARD_RULE___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getMoveForwardRule__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Soccer Pitch 1</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_FORWARD_RULE___IS_APPROPRIATE_FWD_SOCCER_PITCH_1__SOCCERPITCH = eINSTANCE
+				.getMoveForwardRule__IsAppropriate_FWD_SoccerPitch_1__SoccerPitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field 0</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_FORWARD_RULE___IS_APPROPRIATE_FWD_FIELD_0__FIELD = eINSTANCE
+				.getMoveForwardRule__IsAppropriate_FWD_Field_0__Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field Player 0</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_FORWARD_RULE___IS_APPROPRIATE_FWD_FIELD_PLAYER_0__FIELDPLAYER = eINSTANCE
+				.getMoveForwardRule__IsAppropriate_FWD_FieldPlayer_0__FieldPlayer();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Goal Keeper 0</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_FORWARD_RULE___IS_APPROPRIATE_FWD_GOAL_KEEPER_0__GOALKEEPER = eINSTANCE
+				.getMoveForwardRule__IsAppropriate_FWD_GoalKeeper_0__GoalKeeper();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.CreateEastWestLinksRuleImpl <em>Create East West Links Rule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.CreateEastWestLinksRuleImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getCreateEastWestLinksRule()
+		 * @generated
+		 */
+		EClass CREATE_EAST_WEST_LINKS_RULE = eINSTANCE
+				.getCreateEastWestLinksRule();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_EAST_WEST_LINKS_RULE___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getCreateEastWestLinksRule__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_EAST_WEST_LINKS_RULE___IS_APPROPRIATE_FWD__MATCH_FIELD_FIELD = eINSTANCE
+				.getCreateEastWestLinksRule__IsAppropriate_FWD__Match_Field_Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_EAST_WEST_LINKS_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getCreateEastWestLinksRule__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_EAST_WEST_LINKS_RULE___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getCreateEastWestLinksRule__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field 1</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_EAST_WEST_LINKS_RULE___IS_APPROPRIATE_FWD_FIELD_1__FIELD = eINSTANCE
+				.getCreateEastWestLinksRule__IsAppropriate_FWD_Field_1__Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field 2</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_EAST_WEST_LINKS_RULE___IS_APPROPRIATE_FWD_FIELD_2__FIELD = eINSTANCE
+				.getCreateEastWestLinksRule__IsAppropriate_FWD_Field_2__Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field 0</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_EAST_WEST_LINKS_RULE___IS_APPROPRIATE_FWD_FIELD_0__FIELD_FIELD = eINSTANCE
+				.getCreateEastWestLinksRule__IsAppropriate_FWD_Field_0__Field_Field();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.CreateNorthSouthLinksRuleImpl <em>Create North South Links Rule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.CreateNorthSouthLinksRuleImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getCreateNorthSouthLinksRule()
+		 * @generated
+		 */
+		EClass CREATE_NORTH_SOUTH_LINKS_RULE = eINSTANCE
+				.getCreateNorthSouthLinksRule();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_NORTH_SOUTH_LINKS_RULE___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getCreateNorthSouthLinksRule__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_NORTH_SOUTH_LINKS_RULE___IS_APPROPRIATE_FWD__MATCH_FIELD_FIELD = eINSTANCE
+				.getCreateNorthSouthLinksRule__IsAppropriate_FWD__Match_Field_Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_NORTH_SOUTH_LINKS_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getCreateNorthSouthLinksRule__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_NORTH_SOUTH_LINKS_RULE___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getCreateNorthSouthLinksRule__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field 3</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_NORTH_SOUTH_LINKS_RULE___IS_APPROPRIATE_FWD_FIELD_3__FIELD = eINSTANCE
+				.getCreateNorthSouthLinksRule__IsAppropriate_FWD_Field_3__Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field 4</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_NORTH_SOUTH_LINKS_RULE___IS_APPROPRIATE_FWD_FIELD_4__FIELD = eINSTANCE
+				.getCreateNorthSouthLinksRule__IsAppropriate_FWD_Field_4__Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field 0</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_NORTH_SOUTH_LINKS_RULE___IS_APPROPRIATE_FWD_FIELD_0__FIELD_FIELD = eINSTANCE
+				.getCreateNorthSouthLinksRule__IsAppropriate_FWD_Field_0__Field_Field();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.RegularFieldsImpl <em>Regular Fields</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.RegularFieldsImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getRegularFields()
+		 * @generated
+		 */
+		EClass REGULAR_FIELDS = eINSTANCE.getRegularFields();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation REGULAR_FIELDS___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getRegularFields__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation REGULAR_FIELDS___IS_APPROPRIATE_FWD__MATCH_FIELD_SOCCERPITCH = eINSTANCE
+				.getRegularFields__IsAppropriate_FWD__Match_Field_SoccerPitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation REGULAR_FIELDS___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getRegularFields__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation REGULAR_FIELDS___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getRegularFields__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field 5</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation REGULAR_FIELDS___IS_APPROPRIATE_FWD_FIELD_5__FIELD = eINSTANCE
+				.getRegularFields__IsAppropriate_FWD_Field_5__Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Soccer Pitch 2</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation REGULAR_FIELDS___IS_APPROPRIATE_FWD_SOCCER_PITCH_2__SOCCERPITCH = eINSTANCE
+				.getRegularFields__IsAppropriate_FWD_SoccerPitch_2__SoccerPitch();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.DoNotMoveGoalKeeperImpl <em>Do Not Move Goal Keeper</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.DoNotMoveGoalKeeperImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getDoNotMoveGoalKeeper()
+		 * @generated
+		 */
+		EClass DO_NOT_MOVE_GOAL_KEEPER = eINSTANCE.getDoNotMoveGoalKeeper();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DO_NOT_MOVE_GOAL_KEEPER___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getDoNotMoveGoalKeeper__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DO_NOT_MOVE_GOAL_KEEPER___IS_APPROPRIATE_FWD__MATCH_GOALFIELD_GOALKEEPER_SOCCERPITCH = eINSTANCE
+				.getDoNotMoveGoalKeeper__IsAppropriate_FWD__Match_GoalField_GoalKeeper_SoccerPitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DO_NOT_MOVE_GOAL_KEEPER___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getDoNotMoveGoalKeeper__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DO_NOT_MOVE_GOAL_KEEPER___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getDoNotMoveGoalKeeper__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Goal Field 0</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DO_NOT_MOVE_GOAL_KEEPER___IS_APPROPRIATE_FWD_GOAL_FIELD_0__GOALFIELD = eINSTANCE
+				.getDoNotMoveGoalKeeper__IsAppropriate_FWD_GoalField_0__GoalField();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Goal Keeper 1</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DO_NOT_MOVE_GOAL_KEEPER___IS_APPROPRIATE_FWD_GOAL_KEEPER_1__GOALKEEPER = eINSTANCE
+				.getDoNotMoveGoalKeeper__IsAppropriate_FWD_GoalKeeper_1__GoalKeeper();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Soccer Pitch 3</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DO_NOT_MOVE_GOAL_KEEPER___IS_APPROPRIATE_FWD_SOCCER_PITCH_3__SOCCERPITCH = eINSTANCE
+				.getDoNotMoveGoalKeeper__IsAppropriate_FWD_SoccerPitch_3__SoccerPitch();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.CreateBallRuleImpl <em>Create Ball Rule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.CreateBallRuleImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getCreateBallRule()
+		 * @generated
+		 */
+		EClass CREATE_BALL_RULE = eINSTANCE.getCreateBallRule();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_BALL_RULE___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getCreateBallRule__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_BALL_RULE___IS_APPROPRIATE_FWD__MATCH_SOCCERPITCH_BALL_FIELD = eINSTANCE
+				.getCreateBallRule__IsAppropriate_FWD__Match_SoccerPitch_Ball_Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_BALL_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getCreateBallRule__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_BALL_RULE___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getCreateBallRule__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Soccer Pitch 4</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_BALL_RULE___IS_APPROPRIATE_FWD_SOCCER_PITCH_4__SOCCERPITCH = eINSTANCE
+				.getCreateBallRule__IsAppropriate_FWD_SoccerPitch_4__SoccerPitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Ball 0</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_BALL_RULE___IS_APPROPRIATE_FWD_BALL_0__BALL = eINSTANCE
+				.getCreateBallRule__IsAppropriate_FWD_Ball_0__Ball();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field 6</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CREATE_BALL_RULE___IS_APPROPRIATE_FWD_FIELD_6__FIELD = eINSTANCE
+				.getCreateBallRule__IsAppropriate_FWD_Field_6__Field();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.LinkBallToPlayerRuleImpl <em>Link Ball To Player Rule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.LinkBallToPlayerRuleImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getLinkBallToPlayerRule()
+		 * @generated
+		 */
+		EClass LINK_BALL_TO_PLAYER_RULE = eINSTANCE.getLinkBallToPlayerRule();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LINK_BALL_TO_PLAYER_RULE___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getLinkBallToPlayerRule__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LINK_BALL_TO_PLAYER_RULE___IS_APPROPRIATE_FWD__MATCH_PLAYER_BALL = eINSTANCE
+				.getLinkBallToPlayerRule__IsAppropriate_FWD__Match_Player_Ball();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LINK_BALL_TO_PLAYER_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getLinkBallToPlayerRule__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LINK_BALL_TO_PLAYER_RULE___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getLinkBallToPlayerRule__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Player 0</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LINK_BALL_TO_PLAYER_RULE___IS_APPROPRIATE_FWD_PLAYER_0__PLAYER = eINSTANCE
+				.getLinkBallToPlayerRule__IsAppropriate_FWD_Player_0__Player();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Ball 1</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LINK_BALL_TO_PLAYER_RULE___IS_APPROPRIATE_FWD_BALL_1__BALL = eINSTANCE
+				.getLinkBallToPlayerRule__IsAppropriate_FWD_Ball_1__Ball();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Player 0</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LINK_BALL_TO_PLAYER_RULE___IS_APPROPRIATE_FWD_PLAYER_0__PLAYER_BALL = eINSTANCE
+				.getLinkBallToPlayerRule__IsAppropriate_FWD_Player_0__Player_Ball();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.GoalFieldsImpl <em>Goal Fields</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.GoalFieldsImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getGoalFields()
+		 * @generated
+		 */
+		EClass GOAL_FIELDS = eINSTANCE.getGoalFields();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_FIELDS___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getGoalFields__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_FIELDS___IS_APPROPRIATE_FWD__MATCH_SOCCERPITCH_GOALFIELD = eINSTANCE
+				.getGoalFields__IsAppropriate_FWD__Match_SoccerPitch_GoalField();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_FIELDS___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getGoalFields__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_FIELDS___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getGoalFields__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Soccer Pitch 5</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_FIELDS___IS_APPROPRIATE_FWD_SOCCER_PITCH_5__SOCCERPITCH = eINSTANCE
+				.getGoalFields__IsAppropriate_FWD_SoccerPitch_5__SoccerPitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Goal Field 1</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_FIELDS___IS_APPROPRIATE_FWD_GOAL_FIELD_1__GOALFIELD = eINSTANCE
+				.getGoalFields__IsAppropriate_FWD_GoalField_1__GoalField();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.IgnoreOpponentPlayersRuleImpl <em>Ignore Opponent Players Rule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.IgnoreOpponentPlayersRuleImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getIgnoreOpponentPlayersRule()
+		 * @generated
+		 */
+		EClass IGNORE_OPPONENT_PLAYERS_RULE = eINSTANCE
+				.getIgnoreOpponentPlayersRule();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_PLAYERS_RULE___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getIgnoreOpponentPlayersRule__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_PLAYERS_RULE___IS_APPROPRIATE_FWD__MATCH_SOCCERPITCH_FIELDPLAYER_FIELD = eINSTANCE
+				.getIgnoreOpponentPlayersRule__IsAppropriate_FWD__Match_SoccerPitch_FieldPlayer_Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_PLAYERS_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getIgnoreOpponentPlayersRule__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_PLAYERS_RULE___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getIgnoreOpponentPlayersRule__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Soccer Pitch 6</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_PLAYERS_RULE___IS_APPROPRIATE_FWD_SOCCER_PITCH_6__SOCCERPITCH = eINSTANCE
+				.getIgnoreOpponentPlayersRule__IsAppropriate_FWD_SoccerPitch_6__SoccerPitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field Player 1</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_PLAYERS_RULE___IS_APPROPRIATE_FWD_FIELD_PLAYER_1__FIELDPLAYER = eINSTANCE
+				.getIgnoreOpponentPlayersRule__IsAppropriate_FWD_FieldPlayer_1__FieldPlayer();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field 7</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_PLAYERS_RULE___IS_APPROPRIATE_FWD_FIELD_7__FIELD = eINSTANCE
+				.getIgnoreOpponentPlayersRule__IsAppropriate_FWD_Field_7__Field();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.MoveGoalKeeperNorthImpl <em>Move Goal Keeper North</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.MoveGoalKeeperNorthImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getMoveGoalKeeperNorth()
+		 * @generated
+		 */
+		EClass MOVE_GOAL_KEEPER_NORTH = eINSTANCE.getMoveGoalKeeperNorth();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_NORTH___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getMoveGoalKeeperNorth__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_NORTH___IS_APPROPRIATE_FWD__MATCH_SOCCERPITCH_GOALFIELD_GOALKEEPER_GOALFIELD = eINSTANCE
+				.getMoveGoalKeeperNorth__IsAppropriate_FWD__Match_SoccerPitch_GoalField_GoalKeeper_GoalField();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_NORTH___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getMoveGoalKeeperNorth__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_NORTH___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getMoveGoalKeeperNorth__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Soccer Pitch 7</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_NORTH___IS_APPROPRIATE_FWD_SOCCER_PITCH_7__SOCCERPITCH = eINSTANCE
+				.getMoveGoalKeeperNorth__IsAppropriate_FWD_SoccerPitch_7__SoccerPitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Goal Field 2</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_NORTH___IS_APPROPRIATE_FWD_GOAL_FIELD_2__GOALFIELD = eINSTANCE
+				.getMoveGoalKeeperNorth__IsAppropriate_FWD_GoalField_2__GoalField();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Goal Keeper 2</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_NORTH___IS_APPROPRIATE_FWD_GOAL_KEEPER_2__GOALKEEPER = eINSTANCE
+				.getMoveGoalKeeperNorth__IsAppropriate_FWD_GoalKeeper_2__GoalKeeper();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Goal Field 3</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_NORTH___IS_APPROPRIATE_FWD_GOAL_FIELD_3__GOALFIELD = eINSTANCE
+				.getMoveGoalKeeperNorth__IsAppropriate_FWD_GoalField_3__GoalField();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.IgnoreOpponentGoalKeeperRuleImpl <em>Ignore Opponent Goal Keeper Rule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.IgnoreOpponentGoalKeeperRuleImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getIgnoreOpponentGoalKeeperRule()
+		 * @generated
+		 */
+		EClass IGNORE_OPPONENT_GOAL_KEEPER_RULE = eINSTANCE
+				.getIgnoreOpponentGoalKeeperRule();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_GOAL_KEEPER_RULE___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getIgnoreOpponentGoalKeeperRule__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_GOAL_KEEPER_RULE___IS_APPROPRIATE_FWD__MATCH_SOCCERPITCH_GOALKEEPER = eINSTANCE
+				.getIgnoreOpponentGoalKeeperRule__IsAppropriate_FWD__Match_SoccerPitch_GoalKeeper();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_GOAL_KEEPER_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getIgnoreOpponentGoalKeeperRule__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_GOAL_KEEPER_RULE___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getIgnoreOpponentGoalKeeperRule__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Soccer Pitch 8</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_GOAL_KEEPER_RULE___IS_APPROPRIATE_FWD_SOCCER_PITCH_8__SOCCERPITCH = eINSTANCE
+				.getIgnoreOpponentGoalKeeperRule__IsAppropriate_FWD_SoccerPitch_8__SoccerPitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Goal Keeper 3</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_GOAL_KEEPER_RULE___IS_APPROPRIATE_FWD_GOAL_KEEPER_3__GOALKEEPER = eINSTANCE
+				.getIgnoreOpponentGoalKeeperRule__IsAppropriate_FWD_GoalKeeper_3__GoalKeeper();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.GoalKeeper_KickOffBallImpl <em>Goal Keeper Kick Off Ball</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.GoalKeeper_KickOffBallImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getGoalKeeper_KickOffBall()
+		 * @generated
+		 */
+		EClass GOAL_KEEPER_KICK_OFF_BALL = eINSTANCE
+				.getGoalKeeper_KickOffBall();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_KICK_OFF_BALL___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getGoalKeeper_KickOffBall__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_KICK_OFF_BALL___IS_APPROPRIATE_FWD__MATCH_GOALKEEPER_GOALFIELD_SOCCERPITCH_BALL = eINSTANCE
+				.getGoalKeeper_KickOffBall__IsAppropriate_FWD__Match_GoalKeeper_GoalField_SoccerPitch_Ball();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_KICK_OFF_BALL___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getGoalKeeper_KickOffBall__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_KICK_OFF_BALL___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getGoalKeeper_KickOffBall__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Goal Keeper 4</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_KICK_OFF_BALL___IS_APPROPRIATE_FWD_GOAL_KEEPER_4__GOALKEEPER = eINSTANCE
+				.getGoalKeeper_KickOffBall__IsAppropriate_FWD_GoalKeeper_4__GoalKeeper();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Goal Field 4</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_KICK_OFF_BALL___IS_APPROPRIATE_FWD_GOAL_FIELD_4__GOALFIELD = eINSTANCE
+				.getGoalKeeper_KickOffBall__IsAppropriate_FWD_GoalField_4__GoalField();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Soccer Pitch 9</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_KICK_OFF_BALL___IS_APPROPRIATE_FWD_SOCCER_PITCH_9__SOCCERPITCH = eINSTANCE
+				.getGoalKeeper_KickOffBall__IsAppropriate_FWD_SoccerPitch_9__SoccerPitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Ball 2</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_KICK_OFF_BALL___IS_APPROPRIATE_FWD_BALL_2__BALL = eINSTANCE
+				.getGoalKeeper_KickOffBall__IsAppropriate_FWD_Ball_2__Ball();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.MoveGoalKeeperSouthImpl <em>Move Goal Keeper South</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.MoveGoalKeeperSouthImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getMoveGoalKeeperSouth()
+		 * @generated
+		 */
+		EClass MOVE_GOAL_KEEPER_SOUTH = eINSTANCE.getMoveGoalKeeperSouth();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_SOUTH___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getMoveGoalKeeperSouth__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_SOUTH___IS_APPROPRIATE_FWD__MATCH_GOALFIELD_GOALKEEPER_GOALFIELD_SOCCERPITCH = eINSTANCE
+				.getMoveGoalKeeperSouth__IsAppropriate_FWD__Match_GoalField_GoalKeeper_GoalField_SoccerPitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_SOUTH___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getMoveGoalKeeperSouth__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_SOUTH___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getMoveGoalKeeperSouth__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Goal Field 5</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_SOUTH___IS_APPROPRIATE_FWD_GOAL_FIELD_5__GOALFIELD = eINSTANCE
+				.getMoveGoalKeeperSouth__IsAppropriate_FWD_GoalField_5__GoalField();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Goal Keeper 5</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_SOUTH___IS_APPROPRIATE_FWD_GOAL_KEEPER_5__GOALKEEPER = eINSTANCE
+				.getMoveGoalKeeperSouth__IsAppropriate_FWD_GoalKeeper_5__GoalKeeper();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Goal Field 6</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_SOUTH___IS_APPROPRIATE_FWD_GOAL_FIELD_6__GOALFIELD = eINSTANCE
+				.getMoveGoalKeeperSouth__IsAppropriate_FWD_GoalField_6__GoalField();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Soccer Pitch 10</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOVE_GOAL_KEEPER_SOUTH___IS_APPROPRIATE_FWD_SOCCER_PITCH_10__SOCCERPITCH = eINSTANCE
+				.getMoveGoalKeeperSouth__IsAppropriate_FWD_SoccerPitch_10__SoccerPitch();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.IgnoreOpponentGoalKeeperWithBallRuleImpl <em>Ignore Opponent Goal Keeper With Ball Rule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.IgnoreOpponentGoalKeeperWithBallRuleImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getIgnoreOpponentGoalKeeperWithBallRule()
+		 * @generated
+		 */
+		EClass IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE = eINSTANCE
+				.getIgnoreOpponentGoalKeeperWithBallRule();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getIgnoreOpponentGoalKeeperWithBallRule__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___IS_APPROPRIATE_FWD__MATCH_GOALKEEPER_BALL_SOCCERPITCH = eINSTANCE
+				.getIgnoreOpponentGoalKeeperWithBallRule__IsAppropriate_FWD__Match_GoalKeeper_Ball_SoccerPitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getIgnoreOpponentGoalKeeperWithBallRule__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getIgnoreOpponentGoalKeeperWithBallRule__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Goal Keeper 6</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___IS_APPROPRIATE_FWD_GOAL_KEEPER_6__GOALKEEPER = eINSTANCE
+				.getIgnoreOpponentGoalKeeperWithBallRule__IsAppropriate_FWD_GoalKeeper_6__GoalKeeper();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Ball 3</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___IS_APPROPRIATE_FWD_BALL_3__BALL = eINSTANCE
+				.getIgnoreOpponentGoalKeeperWithBallRule__IsAppropriate_FWD_Ball_3__Ball();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Soccer Pitch 11</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___IS_APPROPRIATE_FWD_SOCCER_PITCH_11__SOCCERPITCH = eINSTANCE
+				.getIgnoreOpponentGoalKeeperWithBallRule__IsAppropriate_FWD_SoccerPitch_11__SoccerPitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Ball 0</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IGNORE_OPPONENT_GOAL_KEEPER_WITH_BALL_RULE___IS_APPROPRIATE_FWD_BALL_0__BALL_GOALKEEPER = eINSTANCE
+				.getIgnoreOpponentGoalKeeperWithBallRule__IsAppropriate_FWD_Ball_0__Ball_GoalKeeper();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.GoalKeeperPassesToPlayerRuleImpl <em>Goal Keeper Passes To Player Rule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.GoalKeeperPassesToPlayerRuleImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getGoalKeeperPassesToPlayerRule()
+		 * @generated
+		 */
+		EClass GOAL_KEEPER_PASSES_TO_PLAYER_RULE = eINSTANCE
+				.getGoalKeeperPassesToPlayerRule();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.GoalKeeperPassesToPlayer_RedImpl <em>Goal Keeper Passes To Player Red</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.GoalKeeperPassesToPlayer_RedImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getGoalKeeperPassesToPlayer_Red()
+		 * @generated
+		 */
+		EClass GOAL_KEEPER_PASSES_TO_PLAYER_RED = eINSTANCE
+				.getGoalKeeperPassesToPlayer_Red();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getGoalKeeperPassesToPlayer_Red__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD__MATCH_GOALKEEPER_SOCCERPITCH_FIELDPLAYER_FIELD_FIELD_BALL = eINSTANCE
+				.getGoalKeeperPassesToPlayer_Red__IsAppropriate_FWD__Match_GoalKeeper_SoccerPitch_FieldPlayer_Field_Field_Ball();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_PASSES_TO_PLAYER_RED___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getGoalKeeperPassesToPlayer_Red__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_PASSES_TO_PLAYER_RED___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getGoalKeeperPassesToPlayer_Red__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Goal Keeper 7</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_GOAL_KEEPER_7__GOALKEEPER = eINSTANCE
+				.getGoalKeeperPassesToPlayer_Red__IsAppropriate_FWD_GoalKeeper_7__GoalKeeper();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Soccer Pitch 12</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_SOCCER_PITCH_12__SOCCERPITCH = eINSTANCE
+				.getGoalKeeperPassesToPlayer_Red__IsAppropriate_FWD_SoccerPitch_12__SoccerPitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field Player 2</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_FIELD_PLAYER_2__FIELDPLAYER = eINSTANCE
+				.getGoalKeeperPassesToPlayer_Red__IsAppropriate_FWD_FieldPlayer_2__FieldPlayer();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field 8</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_FIELD_8__FIELD = eINSTANCE
+				.getGoalKeeperPassesToPlayer_Red__IsAppropriate_FWD_Field_8__Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field 9</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_FIELD_9__FIELD = eINSTANCE
+				.getGoalKeeperPassesToPlayer_Red__IsAppropriate_FWD_Field_9__Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Ball 4</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GOAL_KEEPER_PASSES_TO_PLAYER_RED___IS_APPROPRIATE_FWD_BALL_4__BALL = eINSTANCE
+				.getGoalKeeperPassesToPlayer_Red__IsAppropriate_FWD_Ball_4__Ball();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.PlayerToPlayerShotImpl <em>Player To Player Shot</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.PlayerToPlayerShotImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getPlayerToPlayerShot()
+		 * @generated
+		 */
+		EClass PLAYER_TO_PLAYER_SHOT = eINSTANCE.getPlayerToPlayerShot();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Applicable FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PLAYER_TO_PLAYER_SHOT___IS_APPLICABLE_FWD__MATCH = eINSTANCE
+				.getPlayerToPlayerShot__IsApplicable_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD__MATCH_FIELDPLAYER_SOCCERPITCH_FIELDPLAYER_FIELD_FIELD_BALL = eINSTANCE
+				.getPlayerToPlayerShot__IsAppropriate_FWD__Match_FieldPlayer_SoccerPitch_FieldPlayer_Field_Field_Ball();
+
+		/**
+		 * The meta object literal for the '<em><b>Perform FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PLAYER_TO_PLAYER_SHOT___PERFORM_FWD__ISAPPLICABLEMATCH = eINSTANCE
+				.getPlayerToPlayerShot__Perform_FWD__IsApplicableMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Types FWD</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PLAYER_TO_PLAYER_SHOT___CHECK_TYPES_FWD__MATCH = eINSTANCE
+				.getPlayerToPlayerShot__CheckTypes_FWD__Match();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field Player 3</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_FIELD_PLAYER_3__FIELDPLAYER = eINSTANCE
+				.getPlayerToPlayerShot__IsAppropriate_FWD_FieldPlayer_3__FieldPlayer();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Soccer Pitch 13</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_SOCCER_PITCH_13__SOCCERPITCH = eINSTANCE
+				.getPlayerToPlayerShot__IsAppropriate_FWD_SoccerPitch_13__SoccerPitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field Player 4</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_FIELD_PLAYER_4__FIELDPLAYER = eINSTANCE
+				.getPlayerToPlayerShot__IsAppropriate_FWD_FieldPlayer_4__FieldPlayer();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field 10</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_FIELD_10__FIELD = eINSTANCE
+				.getPlayerToPlayerShot__IsAppropriate_FWD_Field_10__Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Field 11</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_FIELD_11__FIELD = eINSTANCE
+				.getPlayerToPlayerShot__IsAppropriate_FWD_Field_11__Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Appropriate FWD Ball 5</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PLAYER_TO_PLAYER_SHOT___IS_APPROPRIATE_FWD_BALL_5__BALL = eINSTANCE
+				.getPlayerToPlayerShot__IsAppropriate_FWD_Ball_5__Ball();
+
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.Rules.impl.GoalKeeperPassesToPlayer2_BlueImpl <em>Goal Keeper Passes To Player2 Blue</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.Rules.impl.GoalKeeperPassesToPlayer2_BlueImpl
+		 * @see SoccerStrategy.Rules.impl.RulesPackageImpl#getGoalKeeperPassesToPlayer2_Blue()
+		 * @generated
+		 */
+		EClass GOAL_KEEPER_PASSES_TO_PLAYER2_BLUE = eINSTANCE
+				.getGoalKeeperPassesToPlayer2_Blue();
+
+	}
+
+} //RulesPackage

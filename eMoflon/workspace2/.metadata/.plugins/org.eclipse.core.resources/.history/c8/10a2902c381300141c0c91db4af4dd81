@@ -1,0 +1,192 @@
+/**
+ */
+package SoccerStrategy;
+
+import TGGRuntime.TGGRuntimePackage;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each operation of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see SoccerStrategy.SoccerStrategyFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface SoccerStrategyPackage extends EPackage {
+	/**
+	 * The package name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNAME = "SoccerStrategy";
+
+	/**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_URI = "http://www.moflon.org.SoccerStrategy";
+
+	/**
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_PREFIX = "SoccerStrategy";
+
+	/**
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	SoccerStrategyPackage eINSTANCE = SoccerStrategy.impl.SoccerStrategyPackageImpl
+			.init();
+
+	/**
+	 * The meta object id for the '{@link SoccerStrategy.impl.SoccerPitchToUpdateImpl <em>Soccer Pitch To Update</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SoccerStrategy.impl.SoccerPitchToUpdateImpl
+	 * @see SoccerStrategy.impl.SoccerStrategyPackageImpl#getSoccerPitchToUpdate()
+	 * @generated
+	 */
+	int SOCCER_PITCH_TO_UPDATE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOCCER_PITCH_TO_UPDATE__SOURCE = TGGRuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOCCER_PITCH_TO_UPDATE__TARGET = TGGRuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Soccer Pitch To Update</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOCCER_PITCH_TO_UPDATE_FEATURE_COUNT = TGGRuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Soccer Pitch To Update</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOCCER_PITCH_TO_UPDATE_OPERATION_COUNT = TGGRuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
+
+	/**
+	 * Returns the meta object for class '{@link SoccerStrategy.SoccerPitchToUpdate <em>Soccer Pitch To Update</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Soccer Pitch To Update</em>'.
+	 * @see SoccerStrategy.SoccerPitchToUpdate
+	 * @generated
+	 */
+	EClass getSoccerPitchToUpdate();
+
+	/**
+	 * Returns the meta object for the reference '{@link SoccerStrategy.SoccerPitchToUpdate#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see SoccerStrategy.SoccerPitchToUpdate#getSource()
+	 * @see #getSoccerPitchToUpdate()
+	 * @generated
+	 */
+	EReference getSoccerPitchToUpdate_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link SoccerStrategy.SoccerPitchToUpdate#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see SoccerStrategy.SoccerPitchToUpdate#getTarget()
+	 * @see #getSoccerPitchToUpdate()
+	 * @generated
+	 */
+	EReference getSoccerPitchToUpdate_Target();
+
+	/**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+	SoccerStrategyFactory getSoccerStrategyFactory();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Defines literals for the meta objects that represent
+	 * <ul>
+	 *   <li>each class,</li>
+	 *   <li>each feature of each class,</li>
+	 *   <li>each operation of each class,</li>
+	 *   <li>each enum,</li>
+	 *   <li>and each data type</li>
+	 * </ul>
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	interface Literals {
+		/**
+		 * The meta object literal for the '{@link SoccerStrategy.impl.SoccerPitchToUpdateImpl <em>Soccer Pitch To Update</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SoccerStrategy.impl.SoccerPitchToUpdateImpl
+		 * @see SoccerStrategy.impl.SoccerStrategyPackageImpl#getSoccerPitchToUpdate()
+		 * @generated
+		 */
+		EClass SOCCER_PITCH_TO_UPDATE = eINSTANCE.getSoccerPitchToUpdate();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SOCCER_PITCH_TO_UPDATE__SOURCE = eINSTANCE
+				.getSoccerPitchToUpdate_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SOCCER_PITCH_TO_UPDATE__TARGET = eINSTANCE
+				.getSoccerPitchToUpdate_Target();
+
+	}
+
+} //SoccerStrategyPackage

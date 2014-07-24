@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1406209210139_1" label="eMoflonSoccerStrategyLanguage" name="eMoflonSoccerStrategyLanguage">
+<item elementID="=SoccerStrategy" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=SoccerStrategy" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1406209211952_2" label="Soccer Pitch Language" name="Soccer Pitch Language">
+<item elementID="=soccerpitch" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=soccerpitch" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1406209171532_0" label="Window Working Set" name="Aggregate for window 1406209171532"/>
+</workingSetManager>

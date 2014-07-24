@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="ASCII"?>
+<TGGLanguage:TripleGraphGrammar xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TGGLanguage="http://www.moflon.org.TGGLanguage" xmlns:csp="http://www.moflon.org.TGGLanguage.csp" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:expressions="http://www.moflon.org.SDMLanguage.expressions" xmlns:patternExpressions="http://www.moflon.org.SDMLanguage.patterns.patternExpressions" name="SoccerStrategy">
+  <domain name="Source" metamodel="//@metamodel.1" type="SOURCE"/>
+  <domain name="Target" metamodel="//@metamodel.2" type="TARGET"/>
+  <domain name="Correspondence" metamodel="//@metamodel.0"/>
+  <tggRule name="CreateUpdateRule" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pitch" incomingLink="//@tggRule.0/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="update" incomingLink="//@tggRule.0/@linkVariable.0" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/updatemodel/1.0#//Update"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="P2U" outgoingLink="//@tggRule.0/@linkVariable.0 //@tggRule.0/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="http://www.moflon.org.SoccerStrategy#//SoccerPitchToUpdate"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.0/@objectVariable.1" source="//@tggRule.0/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.2"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.0/@objectVariable.0" source="//@tggRule.0/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.2"/>
+  </tggRule>
+  <tggRule name="MoveForwardRule" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="eq(player.number, moveAction.playerNumber)teamToDirection(pitch.ownTeam, moveAction.xDist)eq(player.team, pitch.ownTeam)isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pitch" incomingLink="//@tggRule.1/@linkVariable.4" outgoingLink="//@tggRule.1/@linkVariable.0 //@tggRule.1/@linkVariable.1 //@tggRule.1/@linkVariable.2" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="update" incomingLink="//@tggRule.1/@linkVariable.5" outgoingLink="//@tggRule.1/@linkVariable.3" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/updatemodel/1.0#//Update"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="u2p" outgoingLink="//@tggRule.1/@linkVariable.4 //@tggRule.1/@linkVariable.5" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="http://www.moflon.org.SoccerStrategy#//SoccerPitchToUpdate"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="field" incomingLink="//@tggRule.1/@linkVariable.2 //@tggRule.1/@linkVariable.6" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Field"/>
+      <constraint>
+        <constraintExpression xsi:type="expressions:ComparisonExpression" operator="GREATER">
+          <rightExpression xsi:type="expressions:LiteralExpression" value="0"/>
+          <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//@tggRule.1/@objectVariable.3">
+            <attribute href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Field/xPos"/>
+          </leftExpression>
+        </constraintExpression>
+      </constraint>
+      <constraint>
+        <constraintExpression xsi:type="expressions:ComparisonExpression">
+          <rightExpression xsi:type="expressions:LiteralExpression" value="44"/>
+          <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//@tggRule.1/@objectVariable.3">
+            <attribute href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Field/xPos"/>
+          </leftExpression>
+        </constraintExpression>
+      </constraint>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="moveAction" incomingLink="//@tggRule.1/@linkVariable.3" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/updatemodel/1.0#//MovePlayer"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="player" incomingLink="//@tggRule.1/@linkVariable.1" outgoingLink="//@tggRule.1/@linkVariable.6" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//FieldPlayer"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="goalKeeper" incomingLink="//@tggRule.1/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalKeeper"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="players" target="//@tggRule.1/@objectVariable.6" source="//@tggRule.1/@objectVariable.0" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="players" target="//@tggRule.1/@objectVariable.5" source="//@tggRule.1/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.1/@objectVariable.3" source="//@tggRule.1/@objectVariable.0" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="actions" target="//@tggRule.1/@objectVariable.4" source="//@tggRule.1/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.1"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.1/@objectVariable.0" source="//@tggRule.1/@objectVariable.2" domain="//@domain.2"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.1/@objectVariable.1" source="//@tggRule.1/@objectVariable.2" domain="//@domain.2"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.1/@objectVariable.3" source="//@tggRule.1/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.0"/>
+    <csp>
+      <constraints variables="//@tggRule.1/@csp/@variables.0 //@tggRule.1/@csp/@variables.1" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.1/@csp/@variables.2 //@tggRule.1/@csp/@variables.3" name="teamToDirection">
+        <signature type="Teams"/>
+        <signature type="EInt" index="1"/>
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.1/@csp/@variables.4 //@tggRule.1/@csp/@variables.2" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="number" objectVariable="player"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="playerNumber" objectVariable="moveAction"/>
+      <variables xsi:type="csp:AttributeVariable" type="soccerpitch.Teams" attribute="ownTeam" objectVariable="pitch"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="xDist" objectVariable="moveAction"/>
+      <variables xsi:type="csp:AttributeVariable" type="soccerpitch.Teams" attribute="team" objectVariable="player"/>
+    </csp>
+  </tggRule>
+  <tggRule name="CreateEastWestLinksRule" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="field2" incomingLink="//@tggRule.2/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Field"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="field1" outgoingLink="//@tggRule.2/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Field"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="west" target="//@tggRule.2/@objectVariable.0" source="//@tggRule.2/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.0"/>
+  </tggRule>
+  <tggRule name="CreateNorthSouthLinksRule" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="field1" outgoingLink="//@tggRule.3/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Field"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="field2" incomingLink="//@tggRule.3/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Field"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="north" target="//@tggRule.3/@objectVariable.1" source="//@tggRule.3/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0"/>
+  </tggRule>
+  <tggRule name="RegularFields" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="field" incomingLink="//@tggRule.4/@linkVariable.0" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Field"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="soccerPitch" outgoingLink="//@tggRule.4/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.4/@objectVariable.0" source="//@tggRule.4/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.0"/>
+  </tggRule>
+  <tggRule name="DoNotMoveGoalKeeper" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="field" incomingLink="//@tggRule.5/@linkVariable.0 //@tggRule.5/@linkVariable.1 //@tggRule.5/@linkVariable.4" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalField"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="goalKeeper" incomingLink="//@tggRule.5/@linkVariable.2" outgoingLink="//@tggRule.5/@linkVariable.0" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalKeeper"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pitch" outgoingLink="//@tggRule.5/@linkVariable.1 //@tggRule.5/@linkVariable.2 //@tggRule.5/@linkVariable.3" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="northernGoalField" incomingLink="//@tggRule.5/@linkVariable.3" outgoingLink="//@tggRule.5/@linkVariable.4" bindingSemantics="NEGATIVE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalField"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.5/@objectVariable.0" source="//@tggRule.5/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.5/@objectVariable.0" source="//@tggRule.5/@objectVariable.2" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="players" target="//@tggRule.5/@objectVariable.1" source="//@tggRule.5/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.5/@objectVariable.3" source="//@tggRule.5/@objectVariable.2" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="south" target="//@tggRule.5/@objectVariable.0" source="//@tggRule.5/@objectVariable.3" domain="//@domain.0"/>
+  </tggRule>
+  <tggRule name="CreateBallRule" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pitch" outgoingLink="//@tggRule.6/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="ball" incomingLink="//@tggRule.6/@linkVariable.0" outgoingLink="//@tggRule.6/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Ball"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="field" incomingLink="//@tggRule.6/@linkVariable.1" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Field"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="ball" target="//@tggRule.6/@objectVariable.1" source="//@tggRule.6/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.6/@objectVariable.2" source="//@tggRule.6/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.0"/>
+  </tggRule>
+  <tggRule name="LinkBallToPlayerRule" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="player" outgoingLink="//@tggRule.7/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Player"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="ball" incomingLink="//@tggRule.7/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Ball"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="ball" target="//@tggRule.7/@objectVariable.1" source="//@tggRule.7/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0"/>
+  </tggRule>
+  <tggRule name="GoalFields" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pitch" outgoingLink="//@tggRule.8/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="goalField" incomingLink="//@tggRule.8/@linkVariable.0" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalField"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.8/@objectVariable.1" source="//@tggRule.8/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0"/>
+  </tggRule>
+  <tggRule name="IgnoreOpponentPlayersRule" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="eq(player.team, pitch.opponentTeam)isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pitch" outgoingLink="//@tggRule.9/@linkVariable.0 //@tggRule.9/@linkVariable.1" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="player" incomingLink="//@tggRule.9/@linkVariable.0" outgoingLink="//@tggRule.9/@linkVariable.2" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//FieldPlayer"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="field" incomingLink="//@tggRule.9/@linkVariable.1 //@tggRule.9/@linkVariable.2" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Field"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="players" target="//@tggRule.9/@objectVariable.1" source="//@tggRule.9/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.9/@objectVariable.2" source="//@tggRule.9/@objectVariable.0" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.9/@objectVariable.2" source="//@tggRule.9/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.0"/>
+    <csp>
+      <constraints variables="//@tggRule.9/@csp/@variables.0 //@tggRule.9/@csp/@variables.1" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="soccerpitch.Teams" attribute="team" objectVariable="player"/>
+      <variables xsi:type="csp:AttributeVariable" type="soccerpitch.Teams" attribute="opponentTeam" objectVariable="pitch"/>
+    </csp>
+  </tggRule>
+  <tggRule name="MoveGoalKeeperNorth" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="eq(goalKeeper.number, moveAction.playerNumber)eq(goalField.team, pitch.ownTeam)isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pitch" incomingLink="//@tggRule.10/@linkVariable.5" outgoingLink="//@tggRule.10/@linkVariable.0 //@tggRule.10/@linkVariable.1 //@tggRule.10/@linkVariable.2" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="goalField" incomingLink="//@tggRule.10/@linkVariable.0 //@tggRule.10/@linkVariable.3 //@tggRule.10/@linkVariable.7" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalField"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="goalKeeper" incomingLink="//@tggRule.10/@linkVariable.1" outgoingLink="//@tggRule.10/@linkVariable.3" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalKeeper"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="update" incomingLink="//@tggRule.10/@linkVariable.6" outgoingLink="//@tggRule.10/@linkVariable.4" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/updatemodel/1.0#//Update"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="p2u" outgoingLink="//@tggRule.10/@linkVariable.5 //@tggRule.10/@linkVariable.6" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="http://www.moflon.org.SoccerStrategy#//SoccerPitchToUpdate"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="moveAction" incomingLink="//@tggRule.10/@linkVariable.4" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/updatemodel/1.0#//MovePlayer"/>
+      <attributeAssignment>
+        <attribute href="http://www.transformation-tool-contest.eu/updatemodel/1.0#//Action/yDist"/>
+        <valueExpression xsi:type="expressions:LiteralExpression" value="-1"/>
+      </attributeAssignment>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="northernField" incomingLink="//@tggRule.10/@linkVariable.2" outgoingLink="//@tggRule.10/@linkVariable.7" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalField"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.10/@objectVariable.1" source="//@tggRule.10/@objectVariable.0" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="players" target="//@tggRule.10/@objectVariable.2" source="//@tggRule.10/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.10/@objectVariable.6" source="//@tggRule.10/@objectVariable.0" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.10/@objectVariable.1" source="//@tggRule.10/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="actions" target="//@tggRule.10/@objectVariable.5" source="//@tggRule.10/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.1"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.10/@objectVariable.0" source="//@tggRule.10/@objectVariable.4" domain="//@domain.2"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.10/@objectVariable.3" source="//@tggRule.10/@objectVariable.4" domain="//@domain.2"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="south" target="//@tggRule.10/@objectVariable.1" source="//@tggRule.10/@objectVariable.6" domain="//@domain.0"/>
+    <csp>
+      <constraints variables="//@tggRule.10/@csp/@variables.0 //@tggRule.10/@csp/@variables.1" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.10/@csp/@variables.2 //@tggRule.10/@csp/@variables.3" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="number" objectVariable="goalKeeper"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="playerNumber" objectVariable="moveAction"/>
+      <variables xsi:type="csp:AttributeVariable" type="soccerpitch.Teams" attribute="team" objectVariable="goalField"/>
+      <variables xsi:type="csp:AttributeVariable" type="soccerpitch.Teams" attribute="ownTeam" objectVariable="pitch"/>
+    </csp>
+  </tggRule>
+  <tggRule name="IgnoreOpponentGoalKeeperRule" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pitch" outgoingLink="//@tggRule.11/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="opponentGoalKeeper" incomingLink="//@tggRule.11/@linkVariable.0" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalKeeper"/>
+      <attributeAssignment>
+        <attribute href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Player/team"/>
+        <valueExpression xsi:type="patternExpressions:AttributeValueExpression" object="//@tggRule.11/@objectVariable.0">
+          <attribute href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch/opponentTeam"/>
+        </valueExpression>
+      </attributeAssignment>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="players" target="//@tggRule.11/@objectVariable.1" source="//@tggRule.11/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0"/>
+  </tggRule>
+  <tggRule name="GoalKeeper_KickOffBall" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="eq(goalKeeper.number, shootAction.playerNumber)teamToDirection(pitch.ownTeam, shootAction.xDist)eq(goalKeeper.team, pitch.ownTeam)eq(shootAction.yDist, 5)isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="shootAction" incomingLink="//@tggRule.12/@linkVariable.0" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/updatemodel/1.0#//ShootBall"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="update" incomingLink="//@tggRule.12/@linkVariable.6" outgoingLink="//@tggRule.12/@linkVariable.0" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/updatemodel/1.0#//Update"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="goalKeeper" incomingLink="//@tggRule.12/@linkVariable.2 //@tggRule.12/@linkVariable.7" outgoingLink="//@tggRule.12/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalKeeper"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="goalField" incomingLink="//@tggRule.12/@linkVariable.1 //@tggRule.12/@linkVariable.4 //@tggRule.12/@linkVariable.8" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalField"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pitch" incomingLink="//@tggRule.12/@linkVariable.5" outgoingLink="//@tggRule.12/@linkVariable.2 //@tggRule.12/@linkVariable.3 //@tggRule.12/@linkVariable.4" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="p2u" outgoingLink="//@tggRule.12/@linkVariable.5 //@tggRule.12/@linkVariable.6" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="http://www.moflon.org.SoccerStrategy#//SoccerPitchToUpdate"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="ball" incomingLink="//@tggRule.12/@linkVariable.3" outgoingLink="//@tggRule.12/@linkVariable.7 //@tggRule.12/@linkVariable.8" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Ball"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="actions" target="//@tggRule.12/@objectVariable.0" source="//@tggRule.12/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.1"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.12/@objectVariable.3" source="//@tggRule.12/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="players" target="//@tggRule.12/@objectVariable.2" source="//@tggRule.12/@objectVariable.4" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="ball" target="//@tggRule.12/@objectVariable.6" source="//@tggRule.12/@objectVariable.4" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.12/@objectVariable.3" source="//@tggRule.12/@objectVariable.4" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.12/@objectVariable.4" source="//@tggRule.12/@objectVariable.5" domain="//@domain.2"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.12/@objectVariable.1" source="//@tggRule.12/@objectVariable.5" domain="//@domain.2"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="player" target="//@tggRule.12/@objectVariable.2" source="//@tggRule.12/@objectVariable.6" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.12/@objectVariable.3" source="//@tggRule.12/@objectVariable.6" domain="//@domain.0"/>
+    <csp>
+      <constraints variables="//@tggRule.12/@csp/@variables.0 //@tggRule.12/@csp/@variables.1" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.12/@csp/@variables.2 //@tggRule.12/@csp/@variables.3" name="teamToDirection">
+        <signature type="Teams"/>
+        <signature type="EInt" index="1"/>
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.12/@csp/@variables.4 //@tggRule.12/@csp/@variables.2" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.12/@csp/@variables.5 //@tggRule.12/@csp/@variables.6" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="number" objectVariable="goalKeeper"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="playerNumber" objectVariable="shootAction"/>
+      <variables xsi:type="csp:AttributeVariable" type="soccerpitch.Teams" attribute="ownTeam" objectVariable="pitch"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="xDist" objectVariable="shootAction"/>
+      <variables xsi:type="csp:AttributeVariable" type="soccerpitch.Teams" attribute="team" objectVariable="goalKeeper"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="yDist" objectVariable="shootAction"/>
+      <variables xsi:type="csp:Literal" bound="true" value="ACED000574000135" type="Number"/>
+    </csp>
+  </tggRule>
+  <tggRule name="MoveGoalKeeperSouth" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="eq(goalKeeper.number, moveAction.playerNumber)eq(goalField.team, pitch.ownTeam)eq(moveAction.yDist, 1)isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="southernField" incomingLink="//@tggRule.13/@linkVariable.5" outgoingLink="//@tggRule.13/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalField"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="moveAction" incomingLink="//@tggRule.13/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/updatemodel/1.0#//MovePlayer"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="update" incomingLink="//@tggRule.13/@linkVariable.7" outgoingLink="//@tggRule.13/@linkVariable.1" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/updatemodel/1.0#//Update"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="goalKeeper" incomingLink="//@tggRule.13/@linkVariable.4" outgoingLink="//@tggRule.13/@linkVariable.2" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalKeeper"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="goalField" incomingLink="//@tggRule.13/@linkVariable.0 //@tggRule.13/@linkVariable.2 //@tggRule.13/@linkVariable.3" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalField"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pitch" incomingLink="//@tggRule.13/@linkVariable.6" outgoingLink="//@tggRule.13/@linkVariable.3 //@tggRule.13/@linkVariable.4 //@tggRule.13/@linkVariable.5" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="p2u" outgoingLink="//@tggRule.13/@linkVariable.6 //@tggRule.13/@linkVariable.7" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="http://www.moflon.org.SoccerStrategy#//SoccerPitchToUpdate"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="north" target="//@tggRule.13/@objectVariable.4" source="//@tggRule.13/@objectVariable.0" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="actions" target="//@tggRule.13/@objectVariable.1" source="//@tggRule.13/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.1"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.13/@objectVariable.4" source="//@tggRule.13/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.13/@objectVariable.4" source="//@tggRule.13/@objectVariable.5" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="players" target="//@tggRule.13/@objectVariable.3" source="//@tggRule.13/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.13/@objectVariable.0" source="//@tggRule.13/@objectVariable.5" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.13/@objectVariable.5" source="//@tggRule.13/@objectVariable.6" domain="//@domain.2"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.13/@objectVariable.2" source="//@tggRule.13/@objectVariable.6" domain="//@domain.2"/>
+    <csp>
+      <constraints variables="//@tggRule.13/@csp/@variables.0 //@tggRule.13/@csp/@variables.1" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.13/@csp/@variables.2 //@tggRule.13/@csp/@variables.3" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.13/@csp/@variables.4 //@tggRule.13/@csp/@variables.5" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="number" objectVariable="goalKeeper"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="playerNumber" objectVariable="moveAction"/>
+      <variables xsi:type="csp:AttributeVariable" type="soccerpitch.Teams" attribute="team" objectVariable="goalField"/>
+      <variables xsi:type="csp:AttributeVariable" type="soccerpitch.Teams" attribute="ownTeam" objectVariable="pitch"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="yDist" objectVariable="moveAction"/>
+      <variables xsi:type="csp:Literal" bound="true" value="ACED000574000131" type="Number"/>
+    </csp>
+  </tggRule>
+  <tggRule name="IgnoreOpponentGoalKeeperWithBallRule" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="opponentGoalKeeper" incomingLink="//@tggRule.14/@linkVariable.0 //@tggRule.14/@linkVariable.1" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalKeeper"/>
+      <constraint>
+        <constraintExpression xsi:type="expressions:ComparisonExpression" operator="EQUAL">
+          <rightExpression xsi:type="patternExpressions:AttributeValueExpression" object="//@tggRule.14/@objectVariable.2">
+            <attribute href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch/opponentTeam"/>
+          </rightExpression>
+          <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//@tggRule.14/@objectVariable.0">
+            <attribute href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Player/team"/>
+          </leftExpression>
+        </constraintExpression>
+      </constraint>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="ball" outgoingLink="//@tggRule.14/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Ball"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pitch" outgoingLink="//@tggRule.14/@linkVariable.1" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="player" target="//@tggRule.14/@objectVariable.0" source="//@tggRule.14/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="players" target="//@tggRule.14/@objectVariable.0" source="//@tggRule.14/@objectVariable.2" domain="//@domain.0"/>
+  </tggRule>
+  <tggRule name="GoalKeeperPassesToPlayer_Red" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="teamToDirection(soccerPitch.ownTeam, signum)multiply(signum, 7, maxDist)isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)sub(targetPlayerField.yPos, goalKeeperField.yPos, deltaY)sub(targetPlayerField.xPos, goalKeeperField.xPos, deltaX)eq(deltaX, shootBall.xDist)eq(deltaY, shootBall.yDist)eq(goalKeeper.number, shootBall.playerNumber)eq(soccerPitch.ownTeam, goalKeeper.team)eq(soccerPitch.ownTeam, targetPlayer.team)isValidDeltaX(deltaX, soccerPitch.ownTeam)isValidDeltaY(deltaY)isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="shootBall" incomingLink="//@tggRule.15/@linkVariable.7" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/updatemodel/1.0#//ShootBall"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="goalKeeper" incomingLink="//@tggRule.15/@linkVariable.0" outgoingLink="//@tggRule.15/@linkVariable.4 //@tggRule.15/@linkVariable.5" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//GoalKeeper"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="soccerPitch" incomingLink="//@tggRule.15/@linkVariable.8" outgoingLink="//@tggRule.15/@linkVariable.0 //@tggRule.15/@linkVariable.1 //@tggRule.15/@linkVariable.2 //@tggRule.15/@linkVariable.3" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="targetPlayer" incomingLink="//@tggRule.15/@linkVariable.1" outgoingLink="//@tggRule.15/@linkVariable.6" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//FieldPlayer"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="update" incomingLink="//@tggRule.15/@linkVariable.9" outgoingLink="//@tggRule.15/@linkVariable.7" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/updatemodel/1.0#//Update"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="s2u" outgoingLink="//@tggRule.15/@linkVariable.8 //@tggRule.15/@linkVariable.9" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="http://www.moflon.org.SoccerStrategy#//SoccerPitchToUpdate"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="goalKeeperField" incomingLink="//@tggRule.15/@linkVariable.2 //@tggRule.15/@linkVariable.4 //@tggRule.15/@linkVariable.10" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Field"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="targetPlayerField" incomingLink="//@tggRule.15/@linkVariable.3 //@tggRule.15/@linkVariable.6" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Field"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="ball" incomingLink="//@tggRule.15/@linkVariable.5" outgoingLink="//@tggRule.15/@linkVariable.10" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Ball"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="players" target="//@tggRule.15/@objectVariable.1" source="//@tggRule.15/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="players" target="//@tggRule.15/@objectVariable.3" source="//@tggRule.15/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.15/@objectVariable.6" source="//@tggRule.15/@objectVariable.2" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.15/@objectVariable.7" source="//@tggRule.15/@objectVariable.2" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.15/@objectVariable.6" source="//@tggRule.15/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="ball" target="//@tggRule.15/@objectVariable.8" source="//@tggRule.15/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.15/@objectVariable.7" source="//@tggRule.15/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="actions" target="//@tggRule.15/@objectVariable.0" source="//@tggRule.15/@objectVariable.4" bindingOperator="CREATE" domain="//@domain.1"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.15/@objectVariable.2" source="//@tggRule.15/@objectVariable.5" domain="//@domain.2"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.15/@objectVariable.4" source="//@tggRule.15/@objectVariable.5" domain="//@domain.2"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.15/@objectVariable.6" source="//@tggRule.15/@objectVariable.8" domain="//@domain.0"/>
+    <csp>
+      <constraints variables="//@tggRule.15/@csp/@variables.0 //@tggRule.15/@csp/@variables.1" name="teamToDirection">
+        <signature type="Teams"/>
+        <signature type="EInt" index="1"/>
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.15/@csp/@variables.1 //@tggRule.15/@csp/@variables.2 //@tggRule.15/@csp/@variables.3" name="multiply">
+        <signature type="EDouble"/>
+        <signature type="EDouble" index="1"/>
+        <signature type="EDouble" index="2"/>
+        <allowedAdornments value="BBB"/>
+        <allowedAdornments value="BBF"/>
+        <allowedAdornments value="BFB"/>
+        <allowedAdornments value="FBB"/>
+      </constraints>
+      <constraints variables="//@tggRule.15/@csp/@variables.4 //@tggRule.15/@csp/@variables.5 //@tggRule.15/@csp/@variables.6" name="sub">
+        <signature type="EDouble"/>
+        <signature type="EDouble" index="1"/>
+        <signature type="EDouble" index="2"/>
+        <allowedAdornments value="BBB"/>
+        <allowedAdornments value="BBF"/>
+        <allowedAdornments value="BFB"/>
+        <allowedAdornments value="FBB"/>
+      </constraints>
+      <constraints variables="//@tggRule.15/@csp/@variables.7 //@tggRule.15/@csp/@variables.8 //@tggRule.15/@csp/@variables.9" name="sub">
+        <signature type="EDouble"/>
+        <signature type="EDouble" index="1"/>
+        <signature type="EDouble" index="2"/>
+        <allowedAdornments value="BBB"/>
+        <allowedAdornments value="BBF"/>
+        <allowedAdornments value="BFB"/>
+        <allowedAdornments value="FBB"/>
+      </constraints>
+      <constraints variables="//@tggRule.15/@csp/@variables.9 //@tggRule.15/@csp/@variables.10" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.15/@csp/@variables.6 //@tggRule.15/@csp/@variables.11" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.15/@csp/@variables.12 //@tggRule.15/@csp/@variables.13" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.15/@csp/@variables.0 //@tggRule.15/@csp/@variables.14" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.15/@csp/@variables.0 //@tggRule.15/@csp/@variables.15" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.15/@csp/@variables.9 //@tggRule.15/@csp/@variables.0" name="isValidDeltaX">
+        <signature type="EInt"/>
+        <signature type="Teams" index="1"/>
+        <allowedAdornments value="BB"/>
+      </constraints>
+      <constraints variables="//@tggRule.15/@csp/@variables.6" name="isValidDeltaY">
+        <signature type="EInt"/>
+        <allowedAdornments value="B"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="Teams" attribute="ownTeam" objectVariable="soccerPitch"/>
+      <variables xsi:type="csp:LocalVariable" type="Number" name="signum"/>
+      <variables xsi:type="csp:Literal" bound="true" value="ACED000574000137" type="Number"/>
+      <variables xsi:type="csp:LocalVariable" type="Number" name="maxDist"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="yPos" objectVariable="targetPlayerField"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="yPos" objectVariable="goalKeeperField"/>
+      <variables xsi:type="csp:LocalVariable" type="Number" name="deltaY"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="xPos" objectVariable="targetPlayerField"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="xPos" objectVariable="goalKeeperField"/>
+      <variables xsi:type="csp:LocalVariable" type="Number" name="deltaX"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="xDist" objectVariable="shootBall"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="yDist" objectVariable="shootBall"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="number" objectVariable="goalKeeper"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="playerNumber" objectVariable="shootBall"/>
+      <variables xsi:type="csp:AttributeVariable" type="Teams" attribute="team" objectVariable="goalKeeper"/>
+      <variables xsi:type="csp:AttributeVariable" type="Teams" attribute="team" objectVariable="targetPlayer"/>
+    </csp>
+  </tggRule>
+  <tggRule name="PlayerToPlayerShot" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)teamToDirection(soccerPitch.ownTeam, signum)multiply(signum, 7, maxDist)isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)sub(targetPlayerField.yPos, goalKeeperField.yPos, deltaY)sub(targetPlayerField.xPos, goalKeeperField.xPos, deltaX)eq(deltaX, shootBall.xDist)eq(deltaY, shootBall.yDist)eq(goalKeeper.number, shootBall.playerNumber)eq(soccerPitch.ownTeam, goalKeeper.team)eq(soccerPitch.ownTeam, targetPlayer.team)isValidDeltaX(deltaX, soccerPitch.ownTeam)isValidDeltaY(deltaY)isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="goalKeeper" incomingLink="//@tggRule.16/@linkVariable.0" outgoingLink="//@tggRule.16/@linkVariable.4 //@tggRule.16/@linkVariable.5" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//FieldPlayer"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="shootBall" incomingLink="//@tggRule.16/@linkVariable.7" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/updatemodel/1.0#//ShootBall"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="soccerPitch" incomingLink="//@tggRule.16/@linkVariable.8" outgoingLink="//@tggRule.16/@linkVariable.0 //@tggRule.16/@linkVariable.1 //@tggRule.16/@linkVariable.2 //@tggRule.16/@linkVariable.3" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="targetPlayer" incomingLink="//@tggRule.16/@linkVariable.1" outgoingLink="//@tggRule.16/@linkVariable.6" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//FieldPlayer"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="update" incomingLink="//@tggRule.16/@linkVariable.9" outgoingLink="//@tggRule.16/@linkVariable.7" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/updatemodel/1.0#//Update"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="s2u" outgoingLink="//@tggRule.16/@linkVariable.8 //@tggRule.16/@linkVariable.9" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="http://www.moflon.org.SoccerStrategy#//SoccerPitchToUpdate"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="goalKeeperField" incomingLink="//@tggRule.16/@linkVariable.2 //@tggRule.16/@linkVariable.4 //@tggRule.16/@linkVariable.10" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Field"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="targetPlayerField" incomingLink="//@tggRule.16/@linkVariable.3 //@tggRule.16/@linkVariable.6" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Field"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="ball" incomingLink="//@tggRule.16/@linkVariable.5" outgoingLink="//@tggRule.16/@linkVariable.10" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//Ball"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="players" target="//@tggRule.16/@objectVariable.0" source="//@tggRule.16/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="players" target="//@tggRule.16/@objectVariable.3" source="//@tggRule.16/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.16/@objectVariable.6" source="//@tggRule.16/@objectVariable.2" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.16/@objectVariable.7" source="//@tggRule.16/@objectVariable.2" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.16/@objectVariable.6" source="//@tggRule.16/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="ball" target="//@tggRule.16/@objectVariable.8" source="//@tggRule.16/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.16/@objectVariable.7" source="//@tggRule.16/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.0"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="actions" target="//@tggRule.16/@objectVariable.1" source="//@tggRule.16/@objectVariable.4" bindingOperator="CREATE" domain="//@domain.1"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.16/@objectVariable.2" source="//@tggRule.16/@objectVariable.5" domain="//@domain.2"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.16/@objectVariable.4" source="//@tggRule.16/@objectVariable.5" domain="//@domain.2"/>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.16/@objectVariable.6" source="//@tggRule.16/@objectVariable.8" domain="//@domain.0"/>
+    <csp>
+      <constraints variables="//@tggRule.16/@csp/@variables.0 //@tggRule.16/@csp/@variables.1" name="teamToDirection">
+        <signature type="Teams"/>
+        <signature type="EInt" index="1"/>
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.16/@csp/@variables.1 //@tggRule.16/@csp/@variables.2 //@tggRule.16/@csp/@variables.3" name="multiply">
+        <signature type="EDouble"/>
+        <signature type="EDouble" index="1"/>
+        <signature type="EDouble" index="2"/>
+        <allowedAdornments value="BBB"/>
+        <allowedAdornments value="BBF"/>
+        <allowedAdornments value="BFB"/>
+        <allowedAdornments value="FBB"/>
+      </constraints>
+      <constraints variables="//@tggRule.16/@csp/@variables.4 //@tggRule.16/@csp/@variables.5 //@tggRule.16/@csp/@variables.6" name="sub">
+        <signature type="EDouble"/>
+        <signature type="EDouble" index="1"/>
+        <signature type="EDouble" index="2"/>
+        <allowedAdornments value="BBB"/>
+        <allowedAdornments value="BBF"/>
+        <allowedAdornments value="BFB"/>
+        <allowedAdornments value="FBB"/>
+      </constraints>
+      <constraints variables="//@tggRule.16/@csp/@variables.7 //@tggRule.16/@csp/@variables.8 //@tggRule.16/@csp/@variables.9" name="sub">
+        <signature type="EDouble"/>
+        <signature type="EDouble" index="1"/>
+        <signature type="EDouble" index="2"/>
+        <allowedAdornments value="BBB"/>
+        <allowedAdornments value="BBF"/>
+        <allowedAdornments value="BFB"/>
+        <allowedAdornments value="FBB"/>
+      </constraints>
+      <constraints variables="//@tggRule.16/@csp/@variables.9 //@tggRule.16/@csp/@variables.10" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.16/@csp/@variables.6 //@tggRule.16/@csp/@variables.11" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.16/@csp/@variables.12 //@tggRule.16/@csp/@variables.13" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.16/@csp/@variables.0 //@tggRule.16/@csp/@variables.14" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.16/@csp/@variables.0 //@tggRule.16/@csp/@variables.15" name="eq">
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+      </constraints>
+      <constraints variables="//@tggRule.16/@csp/@variables.9 //@tggRule.16/@csp/@variables.0" name="isValidDeltaX">
+        <signature type="EInt"/>
+        <signature type="Teams" index="1"/>
+        <allowedAdornments value="BB"/>
+      </constraints>
+      <constraints variables="//@tggRule.16/@csp/@variables.6" name="isValidDeltaY">
+        <signature type="EInt"/>
+        <allowedAdornments value="B"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="Teams" attribute="ownTeam" objectVariable="soccerPitch"/>
+      <variables xsi:type="csp:LocalVariable" type="Number" name="signum"/>
+      <variables xsi:type="csp:Literal" bound="true" value="ACED000574000137" type="Number"/>
+      <variables xsi:type="csp:LocalVariable" type="Number" name="maxDist"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="yPos" objectVariable="targetPlayerField"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="yPos" objectVariable="goalKeeperField"/>
+      <variables xsi:type="csp:LocalVariable" type="Number" name="deltaY"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="xPos" objectVariable="targetPlayerField"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="xPos" objectVariable="goalKeeperField"/>
+      <variables xsi:type="csp:LocalVariable" type="Number" name="deltaX"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="xDist" objectVariable="shootBall"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="yDist" objectVariable="shootBall"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="number" objectVariable="goalKeeper"/>
+      <variables xsi:type="csp:AttributeVariable" type="Number" attribute="playerNumber" objectVariable="shootBall"/>
+      <variables xsi:type="csp:AttributeVariable" type="Teams" attribute="team" objectVariable="goalKeeper"/>
+      <variables xsi:type="csp:AttributeVariable" type="Teams" attribute="team" objectVariable="targetPlayer"/>
+    </csp>
+  </tggRule>
+  <metamodel name="SoccerStrategy">
+    <outermostPackage href="http://www.moflon.org.SoccerStrategy#/"/>
+  </metamodel>
+  <metamodel name="soccerpitch">
+    <outermostPackage href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#/"/>
+  </metamodel>
+  <metamodel name="updatemodel">
+    <outermostPackage href="http://www.transformation-tool-contest.eu/updatemodel/1.0#/"/>
+  </metamodel>
+</TGGLanguage:TripleGraphGrammar>

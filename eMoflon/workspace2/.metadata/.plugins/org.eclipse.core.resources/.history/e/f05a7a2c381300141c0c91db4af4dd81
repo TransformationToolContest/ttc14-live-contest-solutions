@@ -1,0 +1,76 @@
+/**
+ */
+package SoccerStrategy.Rules.impl;
+
+import SoccerStrategy.Rules.GoalKeeperPassesToPlayerRule;
+import SoccerStrategy.Rules.RulesPackage;
+
+import SoccerStrategy.SoccerPitchToUpdate;
+import SoccerStrategy.SoccerStrategyFactory;
+
+import TGGLanguage.csp.*;
+
+import TGGRuntime.EObjectContainer;
+import TGGRuntime.Edge;
+import TGGRuntime.IsApplicableMatch;
+import TGGRuntime.IsApplicableRuleResult;
+import TGGRuntime.Match;
+import TGGRuntime.PerformRuleResult;
+import TGGRuntime.TGGRuntimeFactory;
+
+import TGGRuntime.impl.AbstractRuleImpl;
+
+import csp.constraints.*;
+
+import de.upb.tools.sdm.*;
+
+import java.util.*;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EOperation;
+
+import soccerpitch.Ball;
+import soccerpitch.Field;
+import soccerpitch.FieldPlayer;
+import soccerpitch.GoalField;
+import soccerpitch.GoalKeeper;
+import soccerpitch.Player;
+import soccerpitch.SoccerPitch;
+
+import updatemodel.MovePlayer;
+import updatemodel.ShootBall;
+import updatemodel.Update;
+import updatemodel.UpdatemodelFactory;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Goal Keeper Passes To Player Rule</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * </p>
+ *
+ * @generated
+ */
+public abstract class GoalKeeperPassesToPlayerRuleImpl extends AbstractRuleImpl
+		implements GoalKeeperPassesToPlayerRule {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GoalKeeperPassesToPlayerRuleImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return RulesPackage.Literals.GOAL_KEEPER_PASSES_TO_PLAYER_RULE;
+	}
+
+} //GoalKeeperPassesToPlayerRuleImpl
