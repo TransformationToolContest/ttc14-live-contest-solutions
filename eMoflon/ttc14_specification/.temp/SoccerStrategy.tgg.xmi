@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <TGGLanguage:TripleGraphGrammar xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TGGLanguage="http://www.moflon.org.TGGLanguage" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:expressions="http://www.moflon.org.SDMLanguage.expressions" xmlns:patternExpressions="http://www.moflon.org.SDMLanguage.patterns.patternExpressions" name="SoccerStrategy">
-  <domain name="Source" metamodel="//@metamodel.2" type="SOURCE"/>
-  <domain name="Target" metamodel="//@metamodel.0" type="TARGET"/>
-  <domain name="Correspondence" metamodel="//@metamodel.1"/>
+  <domain name="Source" metamodel="//@metamodel.1" type="SOURCE"/>
+  <domain name="Target" metamodel="//@metamodel.2" type="TARGET"/>
+  <domain name="Correspondence" metamodel="//@metamodel.0"/>
   <tggRule name="CreateUpdateRule" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" cspSpec="isInDirectionOfGoal[BBBBB](EInt,EInt,EInt,EInt,Teams)isValidDeltaX[BB](EInt,Teams)isValidDeltaY[B](EInt)teamToDirection[BB, BF, FB](Teams,EInt)">
     <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pitch" incomingLink="//@tggRule.0/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.0">
       <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//SoccerPitch"/>
@@ -383,13 +383,13 @@
       <type xsi:type="ecore:EClass" href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#//FieldPlayer"/>
     </objectVariable>
   </tggRule>
-  <metamodel name="updatemodel">
-    <outermostPackage href="http://www.transformation-tool-contest.eu/updatemodel/1.0#/"/>
-  </metamodel>
   <metamodel name="SoccerStrategy">
     <outermostPackage href="http://www.moflon.org.SoccerStrategy#/"/>
   </metamodel>
   <metamodel name="soccerpitch">
     <outermostPackage href="http://www.transformation-tool-contest.eu/soccerpitch/1.0#/"/>
+  </metamodel>
+  <metamodel name="updatemodel">
+    <outermostPackage href="http://www.transformation-tool-contest.eu/updatemodel/1.0#/"/>
   </metamodel>
 </TGGLanguage:TripleGraphGrammar>
