@@ -1,0 +1,215 @@
+<html>
+<head><meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="includes/diagramstyle.css" rel="stylesheet" type="text/css">
+
+<script src="includes/dagre.js"></script>
+<script src="includes/drawer.js"></script>
+<script src="includes/graph.js"></script>
+</head><body onload="init();">
+<p>Storyboard <a href='../src/org/sdmlib/ttc2014livecase/ImportECore.java' type='text/x-java'>main</a></p>
+<p>main</p>
+<script>
+   var json = {
+   "typ":"class",
+   "value":{
+      "nodes":[
+      {
+            "typ":"node",
+            "id":"Field",
+            "attributes":[
+            "xPos : int",
+               "yPos : int",
+               "opponentDistance : int"
+            ]
+         },
+         {
+            "typ":"node",
+            "id":"Player",
+            "attributes":[
+            "team : String",
+               "number : int",
+               "tackleDistance : int",
+               "tgtX : int",
+               "tgtY : int",
+               "inGoalShootDistance : boolean",
+               "inPosition : boolean",
+               "onSaveField : boolean",
+               "shootableFields : org.sdmlib.ttc2014livecase.soccerpitch.util.FieldSet",
+               "runnableFields : org.sdmlib.ttc2014livecase.soccerpitch.util.FieldSet"
+            ]
+         },
+         {
+            "typ":"node",
+            "id":"Ball",
+            "attributes":[]
+         },
+         {
+            "typ":"node",
+            "id":"FieldPlayer",
+            "attributes":[]
+         },
+         {
+            "typ":"node",
+            "id":"GoalKeeper",
+            "attributes":[]
+         },
+         {
+            "typ":"node",
+            "id":"GoalField",
+            "attributes":[
+            "team : String"
+            ]
+         },
+         {
+            "typ":"node",
+            "id":"SoccerPitch",
+            "attributes":[]
+         }
+      ],
+      "edges":[
+      {
+            "typ":"edge",
+            "sourcecardinality":"one",
+            "targetcardinality":"one",
+            "sourceproperty":"south",
+            "targetproperty":"north",
+            "source":"Field",
+            "target":"Field"
+         },
+         {
+            "typ":"edge",
+            "sourcecardinality":"one",
+            "targetcardinality":"one",
+            "sourceproperty":"west",
+            "targetproperty":"east",
+            "source":"Field",
+            "target":"Field"
+         },
+         {
+            "typ":"edge",
+            "sourcecardinality":"one",
+            "targetcardinality":"many",
+            "sourceproperty":"field",
+            "targetproperty":"players",
+            "source":"Field",
+            "target":"Player"
+         },
+         {
+            "typ":"edge",
+            "sourcecardinality":"one",
+            "targetcardinality":"one",
+            "sourceproperty":"field",
+            "targetproperty":"ball",
+            "source":"Field",
+            "target":"Ball"
+         },
+         {
+            "typ":"edge",
+            "sourcecardinality":"one",
+            "targetcardinality":"many",
+            "sourceproperty":"pitch",
+            "targetproperty":"fields",
+            "source":"SoccerPitch",
+            "target":"Field"
+         },
+         {
+            "typ":"edge",
+            "sourcecardinality":"one",
+            "targetcardinality":"one",
+            "sourceproperty":"player",
+            "targetproperty":"ball",
+            "source":"Player",
+            "target":"Ball"
+         },
+         {
+            "typ":"edge",
+            "sourcecardinality":"one",
+            "targetcardinality":"many",
+            "sourceproperty":"pitch",
+            "targetproperty":"players",
+            "source":"SoccerPitch",
+            "target":"Player"
+         },
+         {
+            "typ":"edge",
+            "sourcecardinality":"one",
+            "targetcardinality":"one",
+            "sourceproperty":"pitch",
+            "targetproperty":"ball",
+            "source":"SoccerPitch",
+            "target":"Ball"
+         },
+         {
+            "typ":"generalisation",
+            "source":"FieldPlayer",
+            "target":"Player"
+         },
+         {
+            "typ":"generalisation",
+            "source":"GoalKeeper",
+            "target":"Player"
+         },
+         {
+            "typ":"generalisation",
+            "source":"GoalField",
+            "target":"Field"
+         }
+      ]
+   }
+}   ;
+   json["options"]={"canvasid":"canvasmainClassDiagram1", "display":"html", "fontsize":10,"bar":true};   var g = new Graph(json);
+   g.layout(100,100);
+</script>
+<script>
+   var json = {
+   "typ":"class",
+   "value":{
+      "nodes":[
+      {
+            "typ":"node",
+            "id":"Update",
+            "attributes":[
+            "actions : ActionSet"
+            ]
+         },
+         {
+            "typ":"node",
+            "id":"Action",
+            "attributes":[
+            "playerNumber : int",
+               "xDist : int",
+               "yDist : int"
+            ]
+         },
+         {
+            "typ":"node",
+            "id":"MovePlayer",
+            "attributes":[]
+         },
+         {
+            "typ":"node",
+            "id":"ShootBall",
+            "attributes":[]
+         }
+      ],
+      "edges":[
+      {
+            "typ":"generalisation",
+            "source":"MovePlayer",
+            "target":"Action"
+         },
+         {
+            "typ":"generalisation",
+            "source":"ShootBall",
+            "target":"Action"
+         }
+      ]
+   }
+}   ;
+   json["options"]={"canvasid":"canvasmainClassDiagram2", "display":"html", "fontsize":10,"bar":true};   var g = new Graph(json);
+   g.layout(100,100);
+</script>
+
+</body>
+</html>

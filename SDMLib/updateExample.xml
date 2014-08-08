@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<update:Update xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:update="http://www.transformation-tool-contest.eu/updatemodel/1.0">
+  <actions xsi:type="update:MovePlayer" playerNumber="1"/>
+  <actions xsi:type="update:MovePlayer" playerNumber="2" xDist="-3"/>
+  <actions xsi:type="update:MovePlayer" playerNumber="3" xDist="-3"/>
+  <actions xsi:type="update:MovePlayer" playerNumber="4" xDist="-3"/>
+  <actions xsi:type="update:MovePlayer" playerNumber="5" xDist="-2"/>
+  <actions xsi:type="update:MovePlayer" playerNumber="6" xDist="-3"/>
+  <actions xsi:type="update:MovePlayer" playerNumber="7" xDist="-3"/>
+  <actions xsi:type="update:MovePlayer" playerNumber="8" xDist="-3"/>
+  <actions xsi:type="update:MovePlayer" playerNumber="9" xDist="-3"/>
+</update:Update>
+
+
+<org.sdmlib.ttc2014livecase.updatemodel.Update>
+   <org.sdmlib.ttc2014livecase.updatemodel.MovePlayer playerNumber="2" xDist="3"/>
+   <org.sdmlib.ttc2014livecase.updatemodel.MovePlayer playerNumber="3" xDist="3"/>
+   <org.sdmlib.ttc2014livecase.updatemodel.MovePlayer playerNumber="4" xDist="3"/>
+   <org.sdmlib.ttc2014livecase.updatemodel.MovePlayer playerNumber="5" xDist="3"/>
+   <org.sdmlib.ttc2014livecase.updatemodel.MovePlayer playerNumber="6" xDist="3"/>
+   <org.sdmlib.ttc2014livecase.updatemodel.MovePlayer playerNumber="7" xDist="3"/>
+   <org.sdmlib.ttc2014livecase.updatemodel.MovePlayer playerNumber="8" xDist="3"/>
+   <org.sdmlib.ttc2014livecase.updatemodel.MovePlayer playerNumber="9" xDist="3"/>
+</org.sdmlib.ttc2014livecase.updatemodel.Update>
